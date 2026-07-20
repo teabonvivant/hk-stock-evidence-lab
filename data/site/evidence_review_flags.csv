@@ -1,0 +1,241 @@
+row,expert_zh,expert_en,title,material_type,source_type,evidence_level,proposed_review_state,flags,source_url
+2,查爾斯・道,Charles H. Dow,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/financial-theory/10/pioneers-technical-analysis.asp
+3,查爾斯・道,Charles H. Dow,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/d/dowtheory.asp
+4,威廉・彼得・漢密爾頓,William Peter Hamilton,,book,book_reference,medium,medium,book_reference_without_identifier,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=58690
+5,威廉・彼得・漢密爾頓,William Peter Hamilton,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://archive.org/details/stockmarketbarom00hami
+6,威廉・彼得・漢密爾頓,William Peter Hamilton,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://openlibrary.org/books/OL7031671M/The_stock_market_barometer
+7,威廉・彼得・漢密爾頓,William Peter Hamilton,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=58690
+8,羅伯特・里亞,Robert Rhea,,book,book_catalog,high,medium,book_reference_without_identifier,https://books.google.com/books/about/The_Dow_Theory.html?id=FO65ngEACAAJ
+9,羅伯特・里亞,Robert Rhea,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://books.google.com/books/about/The_Dow_Theory.html?id=FO65ngEACAAJ
+10,羅伯特・里亞,Robert Rhea,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://openlibrary.org/books/OL6279382M/The_Dow_theory
+13,理查・威科夫,Richard D. Wyckoff,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/market-analysis/wyckoff-analysis-articles/the-wyckoff-method-a-tutorial
+15,傑西・李佛摩,Jesse Livermore,,source,web_reference,medium,low_review,missing_year_review; wikipedia_or_encyclopedia_only; source_row_support_only,https://en.wikipedia.org/wiki/Jesse_Livermore
+18,威廉・江恩,W. D. Gann,,source,web_reference,medium,low_review,missing_year_review; wikipedia_or_encyclopedia_only; source_row_support_only,https://en.wikipedia.org/wiki/William_Delbert_Gann
+19,拉爾夫・尼爾森・艾略特,Ralph Nelson Elliott,,book,book_reference,medium,low_review,wikipedia_or_encyclopedia_only; book_reference_without_identifier,https://en.wikipedia.org/wiki/Ralph_Nelson_Elliott
+20,拉爾夫・尼爾森・艾略特,Ralph Nelson Elliott,,source,web_reference,medium,low_review,missing_year_review; wikipedia_or_encyclopedia_only; source_row_support_only,https://en.wikipedia.org/wiki/Ralph_Nelson_Elliott
+21,拉爾夫・尼爾森・艾略特,Ralph Nelson Elliott,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/e/elliottwavetheory.asp
+22,理查・沙巴克,Richard W. Schabacker,,book,book_reference,medium,medium,book_reference_without_identifier,https://harriman-house.com/authors/richard-schabacker/technical-analysis-and-stock-market-profits/9780857199164
+23,理查・沙巴克,Richard W. Schabacker,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/chart-analysis/introduction-to-chart-patterns
+24,理查・沙巴克,Richard W. Schabacker,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://harriman-house.com/authors/richard-schabacker/technical-analysis-and-stock-market-profits/9780857199164
+25,羅伯特・愛德華茲,Robert D. Edwards,,book,book_catalog,high,medium,book_reference_without_identifier,https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X
+26,羅伯特・愛德華茲,Robert D. Edwards,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X
+27,羅伯特・愛德華茲,Robert D. Edwards,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/personal-finance/090916/top-5-books-learn-technical-analysis.asp
+28,約翰・麥基,John Magee,,book,book_catalog,high,medium,book_reference_without_identifier,https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X
+29,約翰・麥基,John Magee,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X
+30,約翰・麥基,John Magee,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/financial-theory/10/pioneers-technical-analysis.asp
+32,約翰・墨菲,John J. Murphy,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Technical-Analysis-Financial-Markets-Comprehensive/dp/0735200661
+33,約翰・墨菲,John J. Murphy,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/personal-finance/090916/top-5-books-learn-technical-analysis.asp
+34,馬丁・普林格,Martin J. Pring,,book,book_catalog,high,medium,book_reference_without_identifier,https://www.amazon.com/Technical-Analysis-Explained-Successful-Investment/dp/1260466020
+35,馬丁・普林格,Martin J. Pring,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Technical-Analysis-Explained-Successful-Investment/dp/1260466020
+36,馬丁・普林格,Martin J. Pring,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/personal-finance/090916/top-5-books-learn-technical-analysis.asp
+38,傑克・施瓦格,Jack D. Schwager,,book,book_catalog,high,medium,book_reference_without_identifier,https://www.amazon.com/Getting-Started-Technical-Analysis-Schwager/dp/0471295426
+39,傑克・施瓦格,Jack D. Schwager,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Getting-Started-Technical-Analysis-Schwager/dp/0471295426
+40,傑克・施瓦格,Jack D. Schwager,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/personal-finance/090916/top-5-books-learn-technical-analysis.asp
+41,查爾斯・柯克派翠克二世,Charles D. Kirkpatrick II,,book,award_or_professional,high,medium,book_reference_without_identifier,https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/
+43,查爾斯・柯克派翠克二世,Charles D. Kirkpatrick II,,source,award_or_professional,high,medium,missing_year_review; source_row_support_only,https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/
+44,茱莉・達爾奎斯特,Julie R. Dahlquist,,book,award_or_professional,high,medium,book_reference_without_identifier,https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/
+46,茱莉・達爾奎斯特,Julie R. Dahlquist,,source,award_or_professional,high,medium,missing_year_review; source_row_support_only,https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/
+48,史蒂文・阿契利斯,Steven B. Achelis,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://guides.newman.baruch.cuny.edu/c.php?g=188442&p=1243542
+49,羅伯特・科爾比,Robert W. Colby,,book,book_reference,medium,medium,book_reference_without_identifier,https://www.mheducation.com/highered/mhp/product/encyclopedia-technical-market-indicators-second-edition.html
+50,羅伯特・科爾比,Robert W. Colby,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://books.google.com/books/about/The_Encyclopedia_Of_Technical_Market_Ind.html?id=f82LUFQVGOUC
+51,羅伯特・科爾比,Robert W. Colby,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://openlibrary.org/books/OL17060688M/The_encyclopedia_of_technical_market_indicators
+52,羅伯特・科爾比,Robert W. Colby,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.mheducation.com/highered/mhp/product/encyclopedia-technical-market-indicators-second-edition.html
+55,佩里・考夫曼,Perry J. Kaufman,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://trendspider.com/learning-center/what-is-the-kaufman-adaptive-moving-average/
+57,威爾斯・威爾德,J. Welles Wilder Jr.,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://books.google.com/books/about/New_Concepts_in_Technical_Trading_System.html?id=WesJAQAAMAAJ
+58,威爾斯・威爾德,J. Welles Wilder Jr.,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/r/rsi.asp
+59,傑拉德・阿佩爾,Gerald Appel,,book,award_or_professional,high,medium,book_reference_without_identifier,https://cmtassociation.org/presenter/gerald-appel/
+60,傑拉德・阿佩爾,Gerald Appel,,source,award_or_professional,high,medium,missing_year_review; source_row_support_only,https://cmtassociation.org/presenter/gerald-appel/
+61,傑拉德・阿佩爾,Gerald Appel,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://traders.com/documentation/feedbk_docs/2003/09/Abstracts_new/Interview/interview.html
+62,傑拉德・阿佩爾,Gerald Appel,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/trading/macd/
+64,約翰・布林格,John Bollinger,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.bollingerbands.com/
+65,約翰・布林格,John Bollinger,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.bollingercapital.com/team
+66,喬治・藍恩,George C. Lane,,indicator,indicator_reference,medium,medium,missing_year_review,https://www.investopedia.com/terms/s/stochasticoscillator.asp
+67,喬治・藍恩,George C. Lane,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/stochastic-oscillator-fast-slow-and-full
+68,喬治・藍恩,George C. Lane,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/s/stochasticoscillator.asp
+70,理查・唐奇安,Richard Donchian,,source,web_reference,medium,low_review,missing_year_review; wikipedia_or_encyclopedia_only; source_row_support_only,https://en.wikipedia.org/wiki/Richard_Donchian
+71,理查・唐奇安,Richard Donchian,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/donchian-channels-formula-8415235
+72,圖沙・昌德,Tushar S. Chande,,book,indicator_reference,medium,medium,book_reference_without_identifier,https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/aroon
+73,圖沙・昌德,Tushar S. Chande,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/aroon
+74,圖沙・昌德,Tushar S. Chande,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/cmo
+75,圖沙・昌德,Tushar S. Chande,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/s/stochrsi.asp
+76,史丹利・克羅爾,Stanley Kroll,,book,indicator_reference,medium,medium,book_reference_without_identifier,https://www.investopedia.com/terms/s/stochrsi.asp
+77,史丹利・克羅爾,Stanley Kroll,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.fxcorporate.com/help/MS/LOGOUT/i_Vidya.html
+78,史丹利・克羅爾,Stanley Kroll,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/s/stochrsi.asp
+80,唐納德・蘭伯特,Donald R. Lambert,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/commodity-channel-index-cci
+81,拉瑞・威廉斯,Larry Williams,,book,indicator_reference,medium,medium,book_reference_without_identifier,https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/williams-r
+83,拉瑞・威廉斯,Larry Williams,,source,award_or_professional,high,medium,missing_year_review; source_row_support_only,https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/
+84,拉瑞・威廉斯,Larry Williams,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/williams-r
+85,馬克・柴金,Marc Chaikin,,indicator,indicator_reference,medium,medium,missing_year_review,https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/cmf
+86,馬克・柴金,Marc Chaikin,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://chaikinanalytics.com/
+87,馬克・柴金,Marc Chaikin,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/cmf
+88,約瑟夫・格蘭維爾,Joseph Granville,,book,indicator_reference,medium,medium,book_reference_without_identifier,https://www.investopedia.com/terms/o/onbalancevolume.asp
+89,約瑟夫・格蘭維爾,Joseph Granville,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://books.google.com/books/about/New_Key_to_Stock_Market_Profits.html?id=Z8xl5AAACAAJ
+90,約瑟夫・格蘭維爾,Joseph Granville,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://openlibrary.org/works/OL3510350W/New_key_to_stock_market_profits
+91,約瑟夫・格蘭維爾,Joseph Granville,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/o/onbalancevolume.asp
+92,謝爾曼・麥克萊倫,Sherman McClellan,,book,book_reference,medium,medium,missing_year_review; book_reference_without_identifier,https://www.mcoscillator.com/learning_center/kb/mcclellan_oscillator/the_origin_story_of_the_mcclellan_oscillator/
+93,謝爾曼・麥克萊倫,Sherman McClellan,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/m/mcclellanoscillator.asp
+94,謝爾曼・麥克萊倫,Sherman McClellan,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.mcoscillator.com/learning_center/kb/mcclellan_oscillator/the_origin_story_of_the_mcclellan_oscillator/
+95,瑪麗安・麥克萊倫,Marian McClellan,,book,book_reference,medium,medium,missing_year_review; book_reference_without_identifier,https://www.mcoscillator.com/learning_center/kb/mcclellan_oscillator/the_origin_story_of_the_mcclellan_oscillator/
+96,瑪麗安・麥克萊倫,Marian McClellan,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/m/mcclellanoscillator.asp
+97,瑪麗安・麥克萊倫,Marian McClellan,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.mcoscillator.com/learning_center/kb/mcclellan_oscillator/the_origin_story_of_the_mcclellan_oscillator/
+99,理查・阿姆斯,Richard W. Arms Jr.,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/market-indicators/arms-index-trin
+100,理查・阿姆斯,Richard W. Arms Jr.,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/a/arms.asp
+101,艾德溫・科波克,Edwin S. Coppock,,indicator,web_reference,medium,low_review,wikipedia_or_encyclopedia_only; web_reference_needs_retyping,https://en.wikipedia.org/wiki/Coppock_curve
+102,艾德溫・科波克,Edwin S. Coppock,,source,web_reference,medium,low_review,missing_year_review; wikipedia_or_encyclopedia_only; source_row_support_only,https://en.wikipedia.org/wiki/Coppock_curve
+103,艾德溫・科波克,Edwin S. Coppock,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.incrediblecharts.com/indicators/coppock_indicator.php
+104,艾德溫・科波克,Edwin S. Coppock,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/active-trading/031814/using-coppock-curve-generate-stock-trade-signals.asp
+105,湯姆・迪馬克,Tom DeMark,,book,book_reference,medium,medium,book_reference_without_identifier,https://demark.com/about/
+106,湯姆・迪馬克,Tom DeMark,,indicator_library,web_reference,medium,medium,missing_year_review; web_reference_needs_retyping,https://demark.com/about/
+107,湯姆・迪馬克,Tom DeMark,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://demark.com/about/
+108,湯姆・迪馬克,Tom DeMark,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://demark.com/demark-indicators/
+110,亞歷山大・艾爾德,Alexander Elder,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/trading/03/022603.asp
+111,史蒂夫・尼森,Steve Nison,,book,book_reference,medium,medium,book_reference_without_identifier,https://candlecharts.com/about-steve-nison/
+112,史蒂夫・尼森,Steve Nison,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://candlecharts.com/about-steve-nison/
+113,史蒂夫・尼森,Steve Nison,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://openlibrary.org/books/OL1864784M/Japanese_candlestick_charting_techniques
+114,史蒂夫・尼森,Steve Nison,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Japanese-Candlestick-Charting-Techniques-Second/dp/0735201811
+115,細田悟一,Goichi Hosoda,,book_series,indicator_reference,medium,medium,book_reference_without_identifier,https://www.investopedia.com/terms/i/ichimoku-cloud.asp
+116,細田悟一,Goichi Hosoda,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/i/ichimoku-cloud.asp
+117,細田悟一,Goichi Hosoda,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.swissquote.com/en-ch/private/inspire/blog/technical-analysis/what-ichimoku-kinko-hyo-trading-method
+118,本間宗久,Munehisa Homma,,historical_method,web_reference,medium,low_review,missing_year_review; wikipedia_or_encyclopedia_only; web_reference_needs_retyping,https://en.wikipedia.org/wiki/Munehisa_Homma
+119,本間宗久,Munehisa Homma,,source,web_reference,medium,low_review,missing_year_review; wikipedia_or_encyclopedia_only; source_row_support_only,https://en.wikipedia.org/wiki/Munehisa_Homma
+120,本間宗久,Munehisa Homma,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://ftmo.com/en/blog/technical-analysis-history-of-candlestick-charts/
+121,本間宗久,Munehisa Homma,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.hotcandlestick.com/candlesticks.htm
+122,湯瑪斯・布考斯基,Thomas N. Bulkowski,,book,book_catalog,high,medium,book_reference_without_identifier,https://www.amazon.com/Encyclopedia-Chart-Patterns-Thomas-Bulkowski/dp/0471668265
+123,湯瑪斯・布考斯基,Thomas N. Bulkowski,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://thepatternsite.com/
+124,湯瑪斯・布考斯基,Thomas N. Bulkowski,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Encyclopedia-Chart-Patterns-Thomas-Bulkowski/dp/0471668265
+125,路易絲・山田,Louise Yamada,,book,award_or_professional,high,medium,book_reference_without_identifier,https://cmtassociation.org/presenter/louise-yamada/
+126,路易絲・山田,Louise Yamada,,source,award_or_professional,high,medium,missing_year_review; source_row_support_only,https://cmtassociation.org/presenter/louise-yamada/
+127,路易絲・山田,Louise Yamada,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.lyadvisors.com/
+129,拉爾夫・阿坎波拉,Ralph Acampora,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.nyif.com/faculties/acampora-ralph
+131,羅伯特・普萊切特,Robert Prechter,,source,web_reference,medium,low_review,missing_year_review; wikipedia_or_encyclopedia_only; source_row_support_only,https://en.wikipedia.org/wiki/Robert_Prechter
+132,羅伯特・普萊切特,Robert Prechter,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Elliott-Wave-Principle-Key-Market/dp/1616041374
+134,A・J・佛羅斯特,A. J. Frost,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Elliott-Wave-Principle-Key-Market/dp/1616041374
+135,A・J・佛羅斯特,A. J. Frost,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.elliottwave.com/books/elliott-wave-principle/
+137,格倫・尼利,Glenn Neely,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://glennneely.com/
+138,格倫・尼利,Glenn Neely,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Mastering-Elliott-Wave-Glenn-Neely/dp/0930233441
+139,格倫・尼利,Glenn Neely,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.neowave.com/product-book.asp
+140,艾德森・古爾德,Edson Gould,,newsletter,indicator_reference,medium,medium,missing_year_review,https://www.investopedia.com/articles/financial-theory/10/pioneers-technical-analysis.asp
+141,艾德森・古爾德,Edson Gould,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/chart-analysis/chart-annotation-tools/speed-resistance-lines
+142,艾德森・古爾德,Edson Gould,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/financial-theory/10/pioneers-technical-analysis.asp
+143,艾德森・古爾德,Edson Gould,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.mcoscillator.com/learning_center/weekly_chart/edson_goulds_daily_point_index/
+145,保羅・德斯蒙德,Paul Desmond,,source,award_or_professional,high,medium,missing_year_review; source_row_support_only,https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/
+146,理查・羅素,Richard Russell,,newsletter,web_reference,medium,low_review,wikipedia_or_encyclopedia_only; web_reference_needs_retyping,https://en.wikipedia.org/wiki/Richard_Russell_(Dow_Theory)
+147,理查・羅素,Richard Russell,,source,web_reference,medium,low_review,missing_year_review; wikipedia_or_encyclopedia_only; source_row_support_only,https://en.wikipedia.org/wiki/Richard_Russell_(Dow_Theory)
+148,理查・羅素,Richard Russell,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.fa-mag.com/news/richard-russell--publisher-of-dow-theory-letters--dies-at-91-23996.html?print=
+149,理查・羅素,Richard Russell,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.trendfollowing.com/2013/03/16/ep-109-richard-russell-and-dow-theory-with-michael-covel-on-trend-following-radio/
+150,史坦・溫斯坦,Stan Weinstein,,book,indicator_reference,medium,medium,book_reference_without_identifier,https://www.investopedia.com/articles/investing/070715/trading-stage-analysis.asp
+151,史坦・溫斯坦,Stan Weinstein,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/investing/070715/trading-stage-analysis.asp
+152,史坦・溫斯坦,Stan Weinstein,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.stageanalysis.net/
+153,威廉・歐尼爾,William J. O'Neil,,book,indicator_reference,medium,medium,book_reference_without_identifier,https://www.investopedia.com/terms/c/canslim.asp
+154,威廉・歐尼爾,William J. O'Neil,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/cup-with-handle
+155,威廉・歐尼爾,William J. O'Neil,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/c/canslim.asp
+157,馬克・米勒維尼,Mark Minervini,,book,book_reference,medium,medium,book_reference_without_identifier,https://trendspider.com/learning-center/volatility-contraction-pattern-vcp/
+158,馬克・米勒維尼,Mark Minervini,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://trendspider.com/learning-center/volatility-contraction-pattern-vcp/
+160,尼古拉斯・達瓦斯,Nicolas Darvas,,source,web_reference,medium,low_review,missing_year_review; wikipedia_or_encyclopedia_only; source_row_support_only,https://en.wikipedia.org/wiki/Nicolas_Darvas
+163,布萊恩・香農,Brian Shannon,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://books.google.com/books/about/Maximum_Trading_Gains_With_Anchored_VWAP.html?id=p3aCzwEACAAJ
+164,琳達・布拉德福德・拉什克,Linda Bradford Raschke,,book,book_catalog,high,medium,book_reference_without_identifier,https://www.amazon.com/Street-Smarts-Probability-Short-Term-Strategies/dp/0965046109
+165,琳達・布拉德福德・拉什克,Linda Bradford Raschke,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://lindaraschke.net/recommended-reading/
+166,琳達・布拉德福德・拉什克,Linda Bradford Raschke,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Street-Smarts-Probability-Short-Term-Strategies/dp/0965046109
+167,拉倫斯・康納斯,Laurence A. Connors,,book,indicator_reference,medium,medium,book_reference_without_identifier,https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/connorsrsi
+170,拉倫斯・康納斯,Laurence A. Connors,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/connorsrsi
+171,拉倫斯・康納斯,Laurence A. Connors,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Street-Smarts-Probability-Short-Term-Strategies/dp/0965046109
+172,安德魯・卡德威爾,Andrew Cardwell,,method,web_reference,medium,medium,missing_year_review; web_reference_needs_retyping,https://www.linkedin.com/in/andrew-cardwell-b318099
+173,安德魯・卡德威爾,Andrew Cardwell,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/active-trading/042114/overbought-or-oversold-use-relative-strength-index-find-out.asp
+174,安德魯・卡德威爾,Andrew Cardwell,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.linkedin.com/in/andrew-cardwell-b318099
+176,康斯坦絲・布朗,Constance Brown,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Technical-Analysis-Trading-Professional-Second/dp/007175914X
+177,康斯坦絲・布朗,Constance Brown,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.barchart.com/education/technical-indicators/cmb-composite-index
+178,約翰・艾勒斯,John F. Ehlers,,book,book_reference,medium,medium,book_reference_without_identifier,https://www.mesasoftware.com/TechnicalArticles.htm
+180,約翰・艾勒斯,John F. Ehlers,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.mesasoftware.com/TechnicalArticles.htm
+182,穆雷・魯傑羅,Murray A. Ruggiero Jr.,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://guides.newman.baruch.cuny.edu/c.php?g=188442&p=1243542
+184,羅伯特・帕多,Robert Pardo,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://guides.newman.baruch.cuny.edu/c.php?g=188442&p=1243542
+186,霍華德・班迪,Howard Bandy,,book,book_reference,medium,medium,book_reference_without_identifier,https://guides.newman.baruch.cuny.edu/c.php?g=188442&p=1243542
+187,霍華德・班迪,Howard Bandy,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://guides.newman.baruch.cuny.edu/c.php?g=188442&p=1243542
+189,湯瑪斯・史翠茲曼,Thomas Stridsman,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://guides.newman.baruch.cuny.edu/c.php?g=188442&p=1243542
+191,達利・古比,Daryl Guppy,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/g/guppy-multiple-moving-average.asp
+192,艾倫・霍爾,Alan Hull,,indicator,web_reference,medium,medium,web_reference_needs_retyping,https://alanhull.com/the-hull-moving-average/
+193,艾倫・霍爾,Alan Hull,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://alanhull.com/the-hull-moving-average/
+194,艾倫・霍爾,Alan Hull,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/hull-moving-average-hma
+195,約翰・麥金利,John R. McGinley,,indicator,web_reference,medium,medium,web_reference_needs_retyping,https://www.earn2trade.com/blog/mcginley-dynamic-indicator/
+196,約翰・麥金利,John R. McGinley,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://dotnet.stockindicators.dev/indicators/Dynamic/
+197,約翰・麥金利,John R. McGinley,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.earn2trade.com/blog/mcginley-dynamic-indicator/
+198,約翰・麥金利,John R. McGinley,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/m/mcginley-dynamic.asp
+200,派翠克・馬洛伊,Patrick G. Mulloy,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/triple-exponential-moving-average-tema
+201,派翠克・馬洛伊,Patrick G. Mulloy,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/ask/answers/041315/why-triple-exponential-moving-average-tema-important-traders-and-analysts.asp
+203,傑克・哈特森,Jack K. Hutson,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/trix
+204,金・匡,Gene Quong,,indicator,web_reference,medium,medium,web_reference_needs_retyping,https://www.tradingview.com/support/solutions/43000502348-money-flow-mfi/
+205,金・匡,Gene Quong,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://help.stockstrader.com/en/support/solutions/articles/33000210228-money-flow-index-mfi-
+206,金・匡,Gene Quong,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://library.tradingtechnologies.com/trade/chrt-ti-money-flow-index.html
+207,金・匡,Gene Quong,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.tradingview.com/support/solutions/43000502348-money-flow-mfi/
+208,阿夫魯姆・蘇達克,Avrum Soudack,,indicator,web_reference,medium,medium,web_reference_needs_retyping,https://www.tradingview.com/support/solutions/43000502348-money-flow-mfi/
+209,阿夫魯姆・蘇達克,Avrum Soudack,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://help.stockstrader.com/en/support/solutions/articles/33000210228-money-flow-index-mfi-
+210,阿夫魯姆・蘇達克,Avrum Soudack,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://library.tradingtechnologies.com/trade/chrt-ti-money-flow-index.html
+211,阿夫魯姆・蘇達克,Avrum Soudack,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.tradingview.com/support/solutions/43000502348-money-flow-mfi/
+213,彼得・馬丁,Peter G. Martin,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/ulcer-index
+215,拜倫・麥肯,Byron McCann,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/ulcer-index
+217,艾蒂安・博特斯,Etienne Botes,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://traders.com/documentation/feedbk_docs/2010/01/Botes.html
+218,艾蒂安・博特斯,Etienne Botes,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/v/vortex-indicator-vi.asp
+220,道格拉斯・西普曼,Douglas Siepman,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://traders.com/documentation/feedbk_docs/2010/01/Botes.html
+221,道格拉斯・西普曼,Douglas Siepman,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/v/vortex-indicator-vi.asp
+222,奧利維耶・塞班,Olivier Seban,,indicator,web_reference,medium,medium,web_reference_needs_retyping,https://www.tradingview.com/support/solutions/43000634738-supertrend/
+223,奧利維耶・塞班,Olivier Seban,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/supertrend-indicator-7976167
+224,奧利維耶・塞班,Olivier Seban,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.tradingview.com/support/solutions/43000634738-supertrend/
+226,漢克・普魯登,Hank Pruden,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/market-analysis/wyckoff-analysis-articles/the-wyckoff-method-a-tutorial
+227,漢克・普魯登,Hank Pruden,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.wyckoffanalytics.com/hank-pruden/
+229,大衛・韋斯,David Weis,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://books.google.com/books/about/Trades_About_to_Happen.html?id=IPw1CgAAQBAJ
+230,大衛・韋斯,David Weis,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.wyckoffanalytics.com/david-weis/
+232,湯姆・威廉斯,Tom Williams,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.acmetrades.com/tom-williams
+233,湯姆・威廉斯,Tom Williams,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.tradeguider.com/resource_center1.asp
+234,A・W・科恩,A. W. Cohen,,book,indicator_reference,medium,medium,book_reference_without_identifier,https://chartschool.stockcharts.com/table-of-contents/chart-analysis/point-and-figure-charts/point-and-figure-basics/introduction-to-point-and-figure-charts
+235,A・W・科恩,A. W. Cohen,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://books.google.com/books/about/How_to_Use_the_Three_point_Reversal_Meth.html?id=iMdEAAAAIAAJ
+236,A・W・科恩,A. W. Cohen,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://chartschool.stockcharts.com/table-of-contents/chart-analysis/point-and-figure-charts/point-and-figure-basics/introduction-to-point-and-figure-charts
+237,A・W・科恩,A. W. Cohen,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://openlibrary.org/works/OL174845W/How_to_use_the_three-point_reversal_method_of_point_figure_stock_market_trading
+239,湯瑪斯・多爾西,Thomas J. Dorsey,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://oxlive.dorseywright.com/university/faq.html
+240,湯瑪斯・多爾西,Thomas J. Dorsey,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/terms/p/pointandfigurechart.asp
+243,傑瑞米・杜普萊西斯,Jeremy du Plessis,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://harriman-house.com/authors/jeremy-du-plessis/21st-century-point-and-figure/9780857194428
+245,彼得・史戴梅爾,J. Peter Steidlmayer,,book,book_reference,medium,medium,book_reference_without_identifier,https://www.profiletrading.com/about/
+246,彼得・史戴梅爾,J. Peter Steidlmayer,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.profiletrading.com/about/
+248,詹姆斯・道爾頓,James F. Dalton,,book,book_reference,medium,medium,book_reference_without_identifier,https://jimdaltontrading.com/books/
+249,詹姆斯・道爾頓,James F. Dalton,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://jimdaltontrading.com/books/
+251,馬克・費雪,Mark B. Fisher,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/technical/04/032404.asp
+252,馬克・費雪,Mark B. Fisher,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/technical/04/040704.asp
+254,托比・克拉貝爾,Toby Crabel,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://oxfordstrat.com/trading-strategies/toby-crabel-narrow-range-1/
+256,維克多・斯佩蘭迪奧,Victor Sperandeo,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://thepatternsite.com/2B.html
+257,羅伯特・邁納,Robert C. Miner,,book,book_reference,medium,medium,book_reference_without_identifier,https://dynamictraders.com/dt-books/
+258,羅伯特・邁納,Robert C. Miner,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://books.google.com/books/about/Dynamic_Trading.html?id=ymtaAAAAYAAJ
+259,羅伯特・邁納,Robert C. Miner,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://dynamictraders.com/dt-books/
+260,羅伯特・邁納,Robert C. Miner,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Dynamic-Trading-Practical-Strategies-Investors/dp/093438083X
+261,卡洛琳・波羅登,Carolyn Boroden,,book,book_reference,medium,medium,book_reference_without_identifier,https://www.moneyshow.com/expert/ote17731/carolyn-boroden/
+262,卡洛琳・波羅登,Carolyn Boroden,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.elliottwavetrader.net/analyst/Carolyn-Boroden
+263,卡洛琳・波羅登,Carolyn Boroden,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.moneyshow.com/expert/ote17731/carolyn-boroden/
+264,喬・迪納波利,Joe DiNapoli,,book,book_reference,medium,medium,book_reference_without_identifier,https://www.mql5.com/en/articles/3061
+265,喬・迪納波利,Joe DiNapoli,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/DiNapoli-Levels-Practical-Application-Investment/dp/1891159046
+266,喬・迪納波利,Joe DiNapoli,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.moneyshow.com/expert/2160spk/
+267,喬・迪納波利,Joe DiNapoli,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.mql5.com/en/articles/3061
+268,艾倫・安德魯斯,Alan Andrews,,drawing_tool,indicator_reference,medium,medium,missing_year_review,https://www.investopedia.com/articles/forex/05/andrewspitchfork.asp
+269,艾倫・安德魯斯,Alan Andrews,,source,indicator_reference,medium,medium,missing_year_review; source_row_support_only,https://www.investopedia.com/articles/forex/05/andrewspitchfork.asp
+270,艾倫・安德魯斯,Alan Andrews,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.optuma.com/blog/pitchforks-part-1
+271,亞瑟・梅里爾,Arthur A. Merrill,,book,book_catalog,high,medium,book_reference_without_identifier,https://www.amazon.com/Filtered-Waves-Basic-Theory-Analysis/dp/0911894365
+272,亞瑟・梅里爾,Arthur A. Merrill,,book,book_catalog,high,medium,book_reference_without_identifier,https://www.amazon.com/Filtered-Waves-Basic-Theory-Analysis/dp/0911894365
+273,亞瑟・梅里爾,Arthur A. Merrill,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://books.google.com/books/about/Behavior_of_Prices_on_Wall_Street.html?id=wEsUAQAAMAAJ
+274,亞瑟・梅里爾,Arthur A. Merrill,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://openlibrary.org/books/OL5991950M/Behavior_of_prices_on_Wall_Street.
+275,亞瑟・梅里爾,Arthur A. Merrill,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Filtered-Waves-Basic-Theory-Analysis/dp/0911894365
+278,漢弗萊・尼爾,Humphrey B. Neill,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://books.google.com/books/about/Tape_Reading_and_Market_Tactics.html?id=XuiREQAAQBAJ
+279,華特・迪默,Walter Deemer,,archive,web_reference,medium,medium,web_reference_needs_retyping,https://www.walterdeemer.com/
+281,華特・迪默,Walter Deemer,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://deemermarketmemos.com/
+282,華特・迪默,Walter Deemer,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.walterdeemer.com/
+283,內德・戴維斯,Ned Davis,,book,book_reference,medium,medium,book_reference_without_identifier,https://info.ndr.com/ndr-signals/which-indicators-should-i-follow
+284,內德・戴維斯,Ned Davis,,book,book_reference,medium,medium,book_reference_without_identifier,https://info.ndr.com/ndr-signals/which-indicators-should-i-follow
+285,內德・戴維斯,Ned Davis,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://books.google.com/books/about/Being_Right_or_Making_Money.html?id=wLhYBQAAQBAJ
+286,內德・戴維斯,Ned Davis,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://info.ndr.com/ndr-signals
+287,內德・戴維斯,Ned Davis,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://info.ndr.com/ndr-signals/which-indicators-should-i-follow
+288,內德・戴維斯,Ned Davis,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Being-Right-Making-Money-Davis/dp/1118992067
+290,傑森・戈普弗特,Jason Goepfert,,source,award_or_professional,high,medium,missing_year_review; source_row_support_only,https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/
+293,巴夫・多米爾,Buff Dormeier,,source,award_or_professional,high,medium,missing_year_review; source_row_support_only,https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/
+296,安德魯・思拉舍,Andrew Thrasher,,source,award_or_professional,high,medium,missing_year_review; source_row_support_only,https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/
+298,亞歷克斯・斯皮羅格魯,Alex Spiroglou,,source,award_or_professional,high,medium,missing_year_review; source_row_support_only,https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/
+301,拉爾夫・文斯,Ralph Vince,,source,award_or_professional,high,medium,missing_year_review; source_row_support_only,https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/
+304,蓋瑞・安東納奇,Gary Antonacci,,source,award_or_professional,high,medium,missing_year_review; source_row_support_only,https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/
+307,安德魯・羅,Andrew W. Lo,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://ideas.repec.org/p/nbr/nberwo/7613.html
+308,安德魯・羅,Andrew W. Lo,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=228099
+310,大衛・阿隆森,David Aronson,,source,book_catalog,medium,medium,missing_year_review; source_row_support_only,https://www.amazon.com/Evidence-Based-Technical-Analysis-Scientific-Statistical/dp/0470008741
+311,大衛・阿隆森,David Aronson,,source,web_reference,medium,medium,missing_year_review; source_row_support_only,https://www.wiley.com/en-ca/Evidence-Based%2BTechnical%2BAnalysis%3A%2BApplying%2Bthe%2BScientific%2BMethod%2Band%2BStatistical%2BInference%2Bto%2BTrading%2BSignals-p-9780470008744

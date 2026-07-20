@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="為香港讀者而設的技術分析學習網站：先判斷市況、成交量和風險，再用指標、陰陽燭、案例與 TradingView 工具檢視交易計劃。"
+    />
+    <meta
+      name="keywords"
+      content="股票技術指標, RSI, MACD, 布林帶, 移動平均線, TradingView 腳本, Pine Script, 港股, 美股, 技術分析"
+    />
+    <meta property="og:title" content="技術指標研究室" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="用香港讀者熟悉的語氣拆解技術指標：何時可用、何時要收手、錯了在哪裡離場。"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "技術指標研究室",
+        "inLanguage": "zh-Hant-HK",
+        "description": "為香港讀者而設的技術分析學習網站：先判斷市況、成交量和風險，再用指標、陰陽燭、案例與 TradingView 工具檢視交易計劃。",
+        "applicationCategory": "FinanceApplication",
+        "educationalUse": "技術分析教學與交易前風險訓練",
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "港股與美股技術分析學習者"
+        },
+        "hasPart": [
+          {
+            "@type": "LearningResource",
+            "name": "全部技術指標",
+            "description": "82 個技術指標頁，按入門、中級和進階分級；每頁都說清楚用途、失效位、常見誤用和風險。"
+          },
+          {
+            "@type": "LearningResource",
+            "name": "陰陽燭教學專區",
+            "description": "30 個陰陽燭形態，分為入門、中級和進階，並配合情境判讀和交易劇本。"
+          },
+          {
+            "@type": "LearningResource",
+            "name": "TradingView 策略研究",
+            "description": "拆解 Pine Script 策略和 TradingView 策略測試器，說明歷史回測的限制，不把回測結果當成未來表現。"
+          },
+          {
+            "@type": "LearningResource",
+            "name": "策略回測案例庫",
+            "description": "整理公開網絡上已有回測資料的交易策略案例，拆解交易邏輯、參數、標的、測試數據與風險。"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "TradingView 自家開發腳本示範",
+            "applicationCategory": "FinanceApplication",
+            "description": "說明如何把指標教學變成 TradingView 決策輔助腳本、實戰示範和試用流程。"
+          },
+          {
+            "@type": "LearningResource",
+            "name": "歷史型市況案例庫",
+            "description": "用恐慌急跌、下降趨勢、主升段和消息裂口等市況，練習怎樣寫劇本、認錯和控制風險。"
+          }
+        ]
+      }
+    </script>
+    <title>技術指標研究室 | 港股美股技術分析教學</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css?v=20260703-tv-strategy-1" />
+  </head>
+  <body>
+    <a class="skip-link" href="#app">跳到主要內容</a>
+    <header class="site-header">
+      <a class="brand" href="#/" aria-label="返回首頁">
+        <span class="brand-mark" aria-hidden="true">TI</span>
+        <span>
+          <strong>技術指標研究室</strong>
+          <small>先讀圖，再決定用甚麼指標</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="主要導覽">
+        <a href="#/">總覽</a>
+        <a href="#/learn">學習</a>
+        <a href="#/indicators">指標庫</a>
+        <a href="#/playground">練習場</a>
+        <a href="#/toolbox">工具箱</a>
+        <a href="#/script">Pine Script</a>
+      </nav>
+    </header>
+
+    <main id="app" class="app-shell" tabindex="-1"></main>
+
+    <footer class="site-footer">
+      <span>只作教育研究，不構成投資建議；任何交易都要自己承擔風險。</span>
+      <span>圖表示範使用本地歷史開、高、低、收及成交量資料，不提供<span class="no-break">即時行情</span>。</span>
+      <span>內容版本：2026-07-03，已加入 TradingView 策略研究資料。</span>
+    </footer>
+
+    <script src="data/market_cases_yahoo.js?v=20260622-real-line-1"></script>
+    <script src="data/site/technical_indicators_site_data.js?v=20260703-p1-p4-1"></script>
+    <script src="data/site/site_readiness_overlay.js?v=20260703-p1-p4-1"></script>
+    <script src="data/site/tradingview_strategy_cases.js?v=20260703-tv-strategy-2"></script>
+    <script src="data/site/public_copy.js?v=20260713-copy-1"></script>
+    <script src="app.js?v=20260703-tv-strategy-2"></script>
+  </body>
+</html>

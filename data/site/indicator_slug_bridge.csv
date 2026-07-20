@@ -1,0 +1,83 @@
+site_slug,site_abbr,site_name_zh,site_name_en,site_category,concept_slug,all_concept_slugs,concept_en,match_type,match_confidence,owner_note
+accumulation-distribution,A/D,累積派發線,Accumulation Distribution Line,成交量,volume-analysis,volume-analysis; chaikin-money-flow,Volume Analysis,split,medium,A/D line is a Marc Chaikin price-volume tool but research only has CMF as a named Chaikin concept.
+advance-decline-line,A/D Line,漲跌家數線,Advance Decline Line,市場寬度,breadth,breadth,Market Breadth,merge,high,Specific market-breadth indicator under the broader breadth research concept.
+adx,ADX,平均趨向指數,Average Directional Index,趨勢,adx-dmi,adx-dmi,Average Directional Index / Directional Movement,alias,high,Research combines ADX and DMI under one Wilder concept.
+aroon,Aroon,阿隆指標,Aroon,趨勢,aroon,aroon,Aroon,exact,high,Exact slug match.
+atr,ATR,平均真實波幅,Average True Range,波動率,atr,atr; volatility,Average True Range,exact,high,Exact slug match; volatility is the broader family.
+awesome-oscillator,AO,動量震盪器,Awesome Oscillator,動能,momentum,momentum,Momentum,merge,medium,No standalone AO concept; classify under momentum.
+beta,Beta,貝塔係數,Beta,綜合,risk,risk,Risk / Drawdown,merge,medium,Beta is risk/market-sensitivity data rather than a core TA concept in the research table.
+bollinger-bands,BB,布林帶,Bollinger Bands,波動率,bollinger-bands,bollinger-bands; volatility,Bollinger Bands,exact,high,Exact slug match; volatility is the broader family.
+bollinger-bandwidth,BBW,布林帶寬度,Bollinger Bandwidth,波動率,bollinger-bands,bollinger-bands; volatility,Bollinger Bands,alias,high,Derived Bollinger Bands measure.
+bullish-percent-index,BPI,看漲百分比指數,Bullish Percent Index,市場寬度,breadth,breadth; point-and-figure,Market Breadth,split,high,BPI is market breadth commonly built from point-and-figure buy signals.
+cci,CCI,商品通道指數,Commodity Channel Index,動能,cci,cci,Commodity Channel Index,exact,high,Exact slug match.
+chaikin-money-flow,CMF,蔡金資金流量,Chaikin Money Flow,成交量,chaikin-money-flow,chaikin-money-flow; volume-analysis,Chaikin Money Flow,exact,high,Exact slug match.
+chaikin-oscillator,Chaikin Osc,蔡金震盪器,Chaikin Oscillator,成交量,volume-analysis,volume-analysis; chaikin-money-flow,Volume Analysis,split,medium,Chaikin oscillator uses the A/D line; research has CMF as the named Chaikin money-flow concept.
+chande-momentum-oscillator,CMO,錢德動量震盪器,Chande Momentum Oscillator,動能,cmo,cmo; momentum,Chande Momentum Oscillator,alias,high,Same concept; research uses the abbreviation slug.
+chandelier-exit,CE,吊燈止蝕,Chandelier Exit,波動率,atr,atr; risk; volatility,Average True Range,split,high,Chandelier Exit is an ATR-based trailing stop; no standalone research concept exists.
+coppock-curve,Coppock,科波克曲線,Coppock Curve,動能,coppock-curve,coppock-curve; momentum,Coppock Curve,exact,high,Exact slug match.
+correlation,Corr,相關係數,Correlation,綜合,risk,risk; evidence-based-ta,Risk / Drawdown,merge,medium,Correlation is portfolio/risk context; evidence-based-ta is a secondary quantitative validation context.
+demarker,DeM,DeMarker 指標,DeMarker,動能,demark-indicators,demark-indicators; market_timing,DeMARK Indicators,alias,high,DeMarker belongs to the DeMARK indicator family.
+dmi,DMI,趨向指標,Directional Movement Index,趨勢,adx-dmi,adx-dmi,Average Directional Index / Directional Movement,alias,high,Research combines DMI with ADX under one Wilder concept.
+donchian-channel,DC,唐奇安通道,Donchian Channel,通道/型態,donchian-channel,donchian-channel; trend-following,Donchian Channel,exact,high,Exact slug match; trend-following is the broader method family.
+dpo,DPO,去趨勢價格震盪器,Detrended Price Oscillator,動能,cycle-analysis,cycle-analysis; momentum,Cycle Analysis,split,medium,DPO removes trend to expose cycles; momentum is a secondary oscillator family.
+ease-of-movement,EOM,簡易波動指標,Ease of Movement,成交量,volume-analysis,volume-analysis,Volume Analysis,merge,medium,No standalone EOM concept; it is a price-volume/volume-flow indicator.
+elder-ray,Elder Ray,艾達透視指標,Elder Ray,動能,elder-ray,elder-ray,Elder-Ray Index,exact,high,Exact slug match.
+ema,EMA,指數移動平均線,Exponential Moving Average,趨勢,moving-average,moving-average,Moving Average,merge,high,EMA is a moving-average variant; keep the frontend slug as the display-specific variant.
+fibonacci-retracement,Fib,斐波那契回調,Fibonacci Retracement,支撐阻力,fibonacci,fibonacci; support-resistance,Fibonacci Time and Price,alias,high,Frontend retracement is the common price-level use of the broader Fibonacci time/price concept.
+fisher-transform,Fisher,費雪轉換,Fisher Transform,動能,ehlers-filters,ehlers-filters; cycle-analysis,Ehlers Filters,split,medium,Fisher Transform is closely associated with Ehlers-style signal processing and cycle/filter work.
+force-index,FI,強力指數,Force Index,成交量,force-index,force-index; volume-analysis,Force Index,exact,high,Exact slug match.
+heikin-ashi,HA,平均 K 線,Heikin Ashi,通道/型態,candlestick,candlestick; trend-following,Candlestick Charting,alias,high,Heikin-Ashi is a candlestick-derived smoothing chart used for trend context.
+historical-volatility,HV,歷史波動率,Historical Volatility,波動率,volatility,volatility,Volatility,alias,high,Historical volatility is a direct instance of the broader volatility concept.
+hma,HMA,赫爾移動平均線,Hull Moving Average,趨勢,hull-ma,hull-ma; moving-average,Hull Moving Average,alias,high,Same concept with a shorter frontend slug; moving-average is useful as a family roll-up.
+ichimoku,Ichimoku,一目均衡表,Ichimoku Cloud,趨勢,ichimoku,ichimoku,Ichimoku Kinko Hyo,exact,high,Exact slug match.
+kama,KAMA,考夫曼自適應均線,Kaufman Adaptive Moving Average,趨勢,kama,kama; adaptive-moving-average,Kaufman Adaptive Moving Average,exact,high,Exact slug match; adaptive-moving-average is a broader/duplicate research concept to preserve for search.
+kdj,KDJ,KDJ 指標,KDJ Indicator,動能,stochastic,stochastic,Stochastic Oscillator,alias,high,KDJ is a stochastic oscillator variant with the extra J line.
+keltner-channel,KC,肯特納通道,Keltner Channel,波動率,volatility,volatility; atr; moving-average,Volatility,split,medium,No standalone Keltner concept; modern Keltner channels combine MA centerlines with ATR-style volatility bands.
+kst,KST,確知指標,Know Sure Thing,動能,momentum,momentum,Momentum,merge,medium,No standalone KST concept; classify as a multi-rate momentum oscillator.
+linear-regression-slope,LRS,線性回歸斜率,Linear Regression Slope,趨勢,trend-following,trend-following; evidence-based-ta,Trend Following,merge,medium,No standalone regression-slope concept; use trend-following as primary and quantitative validation as secondary.
+ma-ribbon,MA Ribbon,均線帶,Moving Average Ribbon,趨勢,moving-average,moving-average; guppy-mma,Moving Average,split,medium,Generic MA ribbons should roll up to moving-average; Guppy MMA is the closest named multi-MA research concept.
+macd,MACD,指數平滑異同移動平均線,Moving Average Convergence Divergence,動能,macd,macd,Moving Average Convergence/Divergence,exact,high,Exact slug match.
+mass-index,MI,質量指數,Mass Index,波動率,volatility,volatility,Volatility,merge,medium,No standalone Mass Index concept; classify as volatility/expansion analysis.
+mcclellan-oscillator,McClellan,麥克連震盪器,McClellan Oscillator,市場寬度,mcclellan-oscillator,mcclellan-oscillator; breadth,McClellan Oscillator,exact,high,Exact slug match.
+mfi,MFI,資金流量指標,Money Flow Index,成交量,mfi,mfi; volume-analysis,Money Flow Index,exact,high,Exact slug match.
+momentum,MOM,動量指標,Momentum,動能,momentum,momentum,Momentum,exact,high,Exact slug match.
+moving-average-envelope,MA Envelope,移動平均包絡線,Moving Average Envelope,通道/型態,moving-average,moving-average; volatility,Moving Average,split,high,Envelope is a moving-average channel; volatility is secondary when bands are interpreted as spread.
+natr,NATR,標準化平均真實波幅,Normalized Average True Range,波動率,atr,atr; volatility,Average True Range,alias,high,NATR is a normalized ATR variant.
+new-high-new-low,NH-NL,新高新低數,New High New Low,市場寬度,breadth,breadth,Market Breadth,merge,high,Specific market-breadth indicator under the broader breadth research concept.
+nvi,NVI,負成交量指標,Negative Volume Index,成交量,volume-analysis,volume-analysis,Volume Analysis,merge,medium,No standalone NVI concept; classify under volume-analysis.
+obv,OBV,能量潮,On Balance Volume,成交量,obv,obv; volume-analysis,On-Balance Volume,exact,high,Exact slug match; volume-analysis is the broader family.
+percent-b,%B,布林百分比,Bollinger %B,波動率,bollinger-bands,bollinger-bands; volatility,Bollinger Bands,alias,high,Derived Bollinger Bands measure.
+pivot-points,Pivot,樞軸點,Pivot Points,支撐阻力,support-resistance,support-resistance; price-action,Support and Resistance,merge,high,Pivot points are support/resistance levels; research support-resistance includes pivot-range work.
+ppo,PPO,百分比價格震盪器,Percentage Price Oscillator,動能,macd,macd; momentum,Moving Average Convergence/Divergence,alias,medium,PPO is a percentage-normalized MACD-style oscillator.
+price-channel,Channel,價格通道,Price Channel,通道/型態,trend-following,trend-following; support-resistance; donchian-channel,Trend Following,split,medium,"Generic price channels can be trend-following structure, dynamic support/resistance, or Donchian-style breakout context."
+psar,PSAR,拋物線轉向指標,Parabolic SAR,趨勢,parabolic-sar,parabolic-sar,Parabolic SAR,alias,high,Same Wilder indicator; frontend uses the common abbreviation.
+put-call-ratio,PCR,認沽認購比率,Put Call Ratio,綜合,sentiment,sentiment,Sentiment,alias,high,Put/call ratio is a standard sentiment indicator.
+pvi,PVI,正成交量指標,Positive Volume Index,成交量,volume-analysis,volume-analysis,Volume Analysis,merge,medium,No standalone PVI concept; classify under volume-analysis.
+pvt,PVT,價量趨勢指標,Price Volume Trend,成交量,volume-analysis,volume-analysis,Volume Analysis,merge,medium,No standalone PVT concept; classify under price-volume analysis.
+relative-strength-comparative,RSC,相對強弱比較,Relative Strength Comparative,綜合,relative-strength,relative-strength; stock_selection,Relative Strength,alias,high,Frontend describes comparative relative strength; research concept is the canonical relative-strength stock-selection topic.
+relative-vigor-index,RVI,相對活力指數,Relative Vigor Index,動能,momentum,momentum,Momentum,merge,medium,No standalone RVI concept; classify under momentum oscillators.
+renko,Renko,磚形圖,Renko,通道/型態,chart-patterns,chart-patterns; price-action,Chart Patterns,merge,medium,No standalone Renko concept; treat as a charting/pattern visualization.
+roc,ROC,變動率,Rate of Change,動能,momentum,momentum,Momentum,merge,high,ROC is a classic momentum-rate measure but has no standalone research concept.
+rsi,RSI,相對強弱指數,Relative Strength Index,動能,rsi,rsi,Relative Strength Index,exact,high,Exact slug match.
+sma,SMA,簡單移動平均線,Simple Moving Average,趨勢,moving-average,moving-average,Moving Average,merge,high,SMA is a moving-average variant; research rolls generic MA variants into moving-average.
+standard-deviation,SD,標準差,Standard Deviation,波動率,volatility,volatility,Volatility,merge,high,Statistical volatility measure with no standalone research concept.
+stochastic,KD,隨機指標,Stochastic Oscillator,動能,stochastic,stochastic,Stochastic Oscillator,exact,high,Exact slug match.
+stochastic-rsi,StochRSI,隨機 RSI,Stochastic RSI,動能,stochastic-rsi,stochastic-rsi,Stochastic RSI,exact,high,Exact slug match.
+supertrend,Supertrend,超級趨勢線,Supertrend,趨勢,supertrend,supertrend; atr; trend-following,SuperTrend,exact,high,Exact slug match; ATR and trend-following are useful secondary concepts.
+support-resistance,S/R,支撐與阻力,Support and Resistance,支撐阻力,support-resistance,support-resistance,Support and Resistance,exact,high,Exact slug match.
+trendline,TL,趨勢線,Trendline,支撐阻力,support-resistance,support-resistance; trend-following; price-action,Support and Resistance,split,high,Trendlines are support/resistance objects and are also used for trend-following and price-action context.
+trin,TRIN,阿姆斯指數,Arms Index,市場寬度,trin-arms-index,trin-arms-index; breadth,Arms Index,alias,high,Same concept; frontend uses ticker-style TRIN slug.
+trix,TRIX,三重指數平滑平均,Triple Exponential Average,動能,trix,trix; tema-dema,Triple Exponential Average,exact,high,"Exact slug match; TEMA/DEMA is adjacent smoothing research, not the primary concept."
+tsi,TSI,真實強弱指數,True Strength Index,動能,momentum,momentum,Momentum,merge,medium,No standalone TSI concept; classify under momentum.
+ulcer-index,UI,潰瘍指數,Ulcer Index,波動率,ulcer-index,ulcer-index; risk,Ulcer Index,exact,high,Exact slug match; risk/drawdown is the broader family.
+ultimate-oscillator,UO,終極震盪指標,Ultimate Oscillator,動能,momentum,momentum; williams-r,Momentum,merge,medium,No standalone Ultimate Oscillator concept; Larry Williams coverage exists via Williams %R and broader momentum.
+volatility-stop,VStop,波動止蝕,Volatility Stop,波動率,volatility,volatility; atr; risk,Volatility,split,medium,"Stop logic spans volatility measurement, ATR-style sizing, and risk/drawdown handling."
+volume,Volume,成交量,Volume,成交量,volume-analysis,volume-analysis,Volume Analysis,merge,high,Raw volume is best treated as the base layer of volume analysis.
+volume-ma,Vol MA,成交量均線,Volume Moving Average,成交量,volume-analysis,volume-analysis; moving-average,Volume Analysis,split,high,Applies moving-average smoothing to volume data.
+volume-oscillator,VO,成交量震盪器,Volume Oscillator,成交量,volume-analysis,volume-analysis; moving-average,Volume Analysis,split,high,Volume oscillator compares smoothed volume averages.
+volume-profile,VP,成交量分佈,Volume Profile,成交量,market-profile,market-profile; volume-analysis,Market Profile,split,medium,"Volume Profile is not identical to Market Profile, but both are price-distribution/auction-market tools."
+vortex-indicator,VI,漩渦指標,Vortex Indicator,趨勢,vortex-indicator,vortex-indicator; trend-following,Vortex Indicator,exact,high,Exact slug match.
+vwap,VWAP,成交量加權平均價,Volume Weighted Average Price,成交量,vwap,vwap; volume-analysis,VWAP / Anchored VWAP,exact,high,Exact slug match; research concept includes VWAP / Anchored VWAP.
+williams-r,%R,威廉指標,Williams %R,動能,williams-r,williams-r,Williams %R,exact,high,Exact slug match.
+wma,WMA,加權移動平均線,Weighted Moving Average,趨勢,moving-average,moving-average,Moving Average,merge,high,WMA belongs under the broader moving-average research concept.
+zig-zag,Zig Zag,Zig Zag 指標,Zig Zag,通道/型態,price-action,price-action; chart-patterns,Price Action,split,medium,Zig Zag is a swing-filtering price-action tool used to simplify patterns.

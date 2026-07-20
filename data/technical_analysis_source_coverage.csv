@@ -1,0 +1,101 @@
+﻿rank,name_zh,name_en,category,material_count,distinct_source_count,book_count,paper_article_count,api_enriched_count
+1,查爾斯・道,Charles H. Dow,foundation,3,2,0,0,0
+2,威廉・彼得・漢密爾頓,William Peter Hamilton,foundation,4,3,1,0,0
+3,羅伯特・里亞,Robert Rhea,foundation,3,2,1,0,0
+4,理查・威科夫,Richard D. Wyckoff,foundation,3,3,2,0,2
+5,傑西・李佛摩,Jesse Livermore,practitioner,2,2,1,0,1
+6,威廉・江恩,W. D. Gann,foundation,3,3,2,0,2
+7,拉爾夫・尼爾森・艾略特,Ralph Nelson Elliott,foundation,3,2,1,0,0
+8,理查・沙巴克,Richard W. Schabacker,author,3,2,1,0,0
+9,羅伯特・愛德華茲,Robert D. Edwards,author,3,2,1,0,0
+10,約翰・麥基,John Magee,author,3,2,1,0,0
+11,約翰・墨菲,John J. Murphy,author,3,2,1,0,1
+12,馬丁・普林格,Martin J. Pring,author,3,2,1,0,0
+13,傑克・施瓦格,Jack D. Schwager,author,4,3,2,0,1
+14,查爾斯・柯克派翠克二世,Charles D. Kirkpatrick II,author_researcher,3,2,1,1,1
+15,茱莉・達爾奎斯特,Julie R. Dahlquist,author_researcher,3,2,1,1,1
+16,史蒂文・阿契利斯,Steven B. Achelis,author,2,2,1,0,1
+17,羅伯特・科爾比,Robert W. Colby,author,4,3,1,0,0
+18,佩里・考夫曼,Perry J. Kaufman,system_developer,3,3,2,0,2
+19,威爾斯・威爾德,J. Welles Wilder Jr.,indicator_creator,3,2,1,0,1
+20,傑拉德・阿佩爾,Gerald Appel,indicator_creator,4,3,1,0,0
+21,約翰・布林格,John Bollinger,indicator_creator,3,3,1,0,1
+22,喬治・藍恩,George C. Lane,indicator_creator,3,2,0,0,0
+23,理查・唐奇安,Richard Donchian,indicator_creator,3,2,0,0,0
+24,圖沙・昌德,Tushar S. Chande,indicator_creator,4,3,1,0,0
+25,史丹利・克羅爾,Stanley Kroll,indicator_creator,3,2,1,0,0
+26,唐納德・蘭伯特,Donald R. Lambert,indicator_creator,2,2,0,1,1
+27,拉瑞・威廉斯,Larry Williams,indicator_creator,4,3,1,1,1
+28,馬克・柴金,Marc Chaikin,indicator_creator,3,2,0,0,0
+29,約瑟夫・格蘭維爾,Joseph Granville,indicator_creator,4,3,1,0,0
+30,謝爾曼・麥克萊倫,Sherman McClellan,indicator_creator,3,2,1,0,0
+31,瑪麗安・麥克萊倫,Marian McClellan,indicator_creator,3,2,1,0,0
+32,理查・阿姆斯,Richard W. Arms Jr.,indicator_creator,3,2,0,0,0
+33,艾德溫・科波克,Edwin S. Coppock,indicator_creator,4,3,0,0,0
+34,湯姆・迪馬克,Tom DeMark,indicator_creator,4,2,1,0,0
+35,亞歷山大・艾爾德,Alexander Elder,indicator_creator,2,2,1,0,1
+36,史蒂夫・尼森,Steve Nison,author,4,3,1,0,0
+37,細田悟一,Goichi Hosoda,indicator_creator,3,2,1,0,0
+38,本間宗久,Munehisa Homma,foundation,4,3,0,0,0
+39,湯瑪斯・布考斯基,Thomas N. Bulkowski,author_researcher,3,2,1,0,0
+40,路易絲・山田,Louise Yamada,practitioner,3,2,1,0,0
+41,拉爾夫・阿坎波拉,Ralph Acampora,practitioner,2,2,1,0,1
+42,羅伯特・普萊切特,Robert Prechter,author,3,2,1,0,1
+43,A・J・佛羅斯特,A. J. Frost,author,3,2,1,0,1
+44,格倫・尼利,Glenn Neely,author,4,3,1,0,1
+45,艾德森・古爾德,Edson Gould,foundation,4,3,0,0,0
+46,保羅・德斯蒙德,Paul Desmond,researcher,2,2,0,1,1
+47,理查・羅素,Richard Russell,practitioner,4,3,0,0,0
+48,史坦・溫斯坦,Stan Weinstein,author,3,2,1,0,0
+49,威廉・歐尼爾,William J. O'Neil,author_practitioner,3,2,1,0,0
+50,馬克・米勒維尼,Mark Minervini,practitioner_author,3,2,2,0,1
+51,尼古拉斯・達瓦斯,Nicolas Darvas,practitioner_author,2,2,1,0,1
+52,布萊恩・香農,Brian Shannon,author_practitioner,3,2,2,0,2
+53,琳達・布拉德福德・拉什克,Linda Bradford Raschke,practitioner_author,3,2,1,0,0
+54,拉倫斯・康納斯,Laurence A. Connors,indicator_creator,5,3,2,0,1
+55,安德魯・卡德威爾,Andrew Cardwell,indicator_specialist,3,2,0,0,0
+56,康斯坦絲・布朗,Constance Brown,indicator_specialist,3,2,1,0,1
+57,約翰・艾勒斯,John F. Ehlers,indicator_creator,3,2,2,0,1
+58,穆雷・魯傑羅,Murray A. Ruggiero Jr.,system_developer,2,2,1,0,1
+59,羅伯特・帕多,Robert Pardo,system_developer,2,2,1,0,1
+60,霍華德・班迪,Howard Bandy,system_developer,3,2,2,0,1
+61,湯瑪斯・史翠茲曼,Thomas Stridsman,system_developer,2,2,1,0,1
+62,達利・古比,Daryl Guppy,indicator_creator,2,2,1,0,1
+63,艾倫・霍爾,Alan Hull,indicator_creator,3,2,0,0,0
+64,約翰・麥金利,John R. McGinley,indicator_creator,4,3,0,0,0
+65,派翠克・馬洛伊,Patrick G. Mulloy,indicator_creator,3,3,0,1,1
+66,傑克・哈特森,Jack K. Hutson,indicator_creator,2,2,0,1,1
+67,金・匡,Gene Quong,indicator_creator,4,3,0,0,0
+68,阿夫魯姆・蘇達克,Avrum Soudack,indicator_creator,4,3,0,0,0
+69,彼得・馬丁,Peter G. Martin,indicator_creator,2,2,1,0,1
+70,拜倫・麥肯,Byron McCann,indicator_creator,2,2,1,0,1
+71,艾蒂安・博特斯,Etienne Botes,indicator_creator,3,3,0,1,1
+72,道格拉斯・西普曼,Douglas Siepman,indicator_creator,3,3,0,1,1
+73,奧利維耶・塞班,Olivier Seban,indicator_creator,3,2,0,0,0
+74,漢克・普魯登,Hank Pruden,educator,3,3,1,0,1
+75,大衛・韋斯,David Weis,educator,3,2,1,0,1
+76,湯姆・威廉斯,Tom Williams,indicator_specialist,3,3,1,0,1
+77,A・W・科恩,A. W. Cohen,charting_specialist,4,3,1,0,0
+78,湯瑪斯・多爾西,Thomas J. Dorsey,charting_specialist,3,3,1,0,1
+79,傑瑞米・杜普萊西斯,Jeremy du Plessis,charting_specialist,3,2,2,0,2
+80,彼得・史戴梅爾,J. Peter Steidlmayer,indicator_creator,3,2,2,0,1
+81,詹姆斯・道爾頓,James F. Dalton,author_practitioner,3,2,2,0,1
+82,馬克・費雪,Mark B. Fisher,practitioner_author,3,3,1,0,1
+83,托比・克拉貝爾,Toby Crabel,practitioner_author,2,2,1,0,1
+84,維克多・斯佩蘭迪奧,Victor Sperandeo,practitioner_author,2,2,1,0,1
+85,羅伯特・邁納,Robert C. Miner,author_practitioner,4,3,1,0,0
+86,卡洛琳・波羅登,Carolyn Boroden,indicator_specialist,3,2,1,0,0
+87,喬・迪納波利,Joe DiNapoli,indicator_specialist,4,3,1,0,0
+88,艾倫・安德魯斯,Alan Andrews,indicator_creator,3,2,0,0,0
+89,亞瑟・梅里爾,Arthur A. Merrill,author_researcher,5,3,2,0,0
+90,漢弗萊・尼爾,Humphrey B. Neill,author,3,2,2,0,2
+91,華特・迪默,Walter Deemer,practitioner_author,4,3,1,0,1
+92,內德・戴維斯,Ned Davis,researcher,6,4,2,0,0
+93,傑森・戈普弗特,Jason Goepfert,researcher,2,2,0,1,1
+94,巴夫・多米爾,Buff Dormeier,researcher_author,3,3,1,1,2
+95,安德魯・思拉舍,Andrew Thrasher,researcher,3,3,0,2,2
+96,亞歷克斯・斯皮羅格魯,Alex Spiroglou,researcher,2,2,0,1,1
+97,拉爾夫・文斯,Ralph Vince,researcher_author,3,3,1,1,2
+98,蓋瑞・安東納奇,Gary Antonacci,researcher_author,3,3,1,1,2
+99,安德魯・羅,Andrew W. Lo,academic,4,3,1,1,2
+100,大衛・阿隆森,David Aronson,academic_practitioner,3,2,1,0,1

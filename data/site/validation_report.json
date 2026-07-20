@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-11T01:57:58.267480+00:00",
+  "status": "pass",
+  "scope": "P4 data/site validation gate",
+  "gates": [
+    {
+      "name": "site_json_indicator_count_82",
+      "passed": true,
+      "severity": "error",
+      "detail": "82 found; expected 82"
+    },
+    {
+      "name": "site_csv_indicator_count_82",
+      "passed": true,
+      "severity": "error",
+      "detail": "82 found; expected 82"
+    },
+    {
+      "name": "bridge_mapping_count_82",
+      "passed": true,
+      "severity": "error",
+      "detail": "82 found; expected 82"
+    },
+    {
+      "name": "taxonomy_mapping_count_82",
+      "passed": true,
+      "severity": "error",
+      "detail": "82 found; expected 82"
+    },
+    {
+      "name": "research_concept_count_72",
+      "passed": true,
+      "severity": "error",
+      "detail": "72 found; expected 72"
+    },
+    {
+      "name": "expert_count_100",
+      "passed": true,
+      "severity": "error",
+      "detail": "100 found; expected 100"
+    },
+    {
+      "name": "family_count_18",
+      "passed": true,
+      "severity": "error",
+      "detail": "18 found; expected 18"
+    },
+    {
+      "name": "material_count_311",
+      "passed": true,
+      "severity": "error",
+      "detail": "311 found; expected 311"
+    },
+    {
+      "name": "comparison_count_261",
+      "passed": true,
+      "severity": "error",
+      "detail": "261 found; expected 261"
+    },
+    {
+      "name": "winner_count_72",
+      "passed": true,
+      "severity": "error",
+      "detail": "72 found; expected 72"
+    },
+    {
+      "name": "market_case_count_5",
+      "passed": true,
+      "severity": "error",
+      "detail": "5 found; expected 5"
+    },
+    {
+      "name": "site_stats_match_source_counts",
+      "passed": true,
+      "severity": "error",
+      "detail": "mismatches: []"
+    },
+    {
+      "name": "site_csv_matches_json_slugs",
+      "passed": true,
+      "severity": "error",
+      "detail": "csv=82 json=82"
+    },
+    {
+      "name": "bridge_covers_all_site_slugs",
+      "passed": true,
+      "severity": "error",
+      "detail": "bridge=82 site=82"
+    },
+    {
+      "name": "site_csv_primary_concepts_match_bridge",
+      "passed": true,
+      "severity": "error",
+      "detail": "mismatches=[]"
+    },
+    {
+      "name": "bridge_primary_concepts_exist",
+      "passed": true,
+      "severity": "error",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "bridge_all_concepts_exist",
+      "passed": true,
+      "severity": "error",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "winner_rows_cover_research_concepts",
+      "passed": true,
+      "severity": "error",
+      "detail": "profiles=72 winners=72"
+    },
+    {
+      "name": "comparison_rows_cover_research_concepts",
+      "passed": true,
+      "severity": "error",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "indicator_formula_fields_present",
+      "passed": true,
+      "severity": "error",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "taxonomy_frontend_slugs_unique",
+      "passed": true,
+      "severity": "error",
+      "detail": "frontend slug uniqueness checked"
+    },
+    {
+      "name": "taxonomy_primary_concepts_populated",
+      "passed": true,
+      "severity": "error",
+      "detail": "blank=0"
+    },
+    {
+      "name": "taxonomy_relation_counts_match_stats",
+      "passed": true,
+      "severity": "error",
+      "detail": "actual={'merge': 23, 'alias': 17, 'exact': 26, 'split': 16} stats={'merge': 23, 'alias': 17, 'exact': 26, 'split': 16}"
+    },
+    {
+      "name": "taxonomy_review_items_tracked",
+      "passed": true,
+      "severity": "error",
+      "detail": "64 merge/split/medium-confidence review markers accepted"
+    },
+    {
+      "name": "evidence_stats_match_materials",
+      "passed": true,
+      "severity": "error",
+      "detail": "actual={'medium': 222, 'high': 89} stats={'medium': 222, 'high': 89}"
+    },
+    {
+      "name": "evidence_review_flags_count_match",
+      "passed": true,
+      "severity": "error",
+      "detail": "csv=240 json=240"
+    },
+    {
+      "name": "evidence_review_flags_described",
+      "passed": true,
+      "severity": "error",
+      "detail": "blank flag rows=[]"
+    },
+    {
+      "name": "evidence_low_review_rows_accepted",
+      "passed": true,
+      "severity": "error",
+      "detail": "13 low-review evidence rows accepted as support-only"
+    },
+    {
+      "name": "site_runner_up_warning_markers",
+      "passed": true,
+      "severity": "warning",
+      "detail": "0 site rows lack runner-up text/status"
+    },
+    {
+      "name": "multi_expert_runner_up_warnings",
+      "passed": true,
+      "severity": "warning",
+      "detail": "0 multi-expert concepts lack runner-up text/status: []"
+    },
+    {
+      "name": "market_case_sets_match_site_summary",
+      "passed": true,
+      "severity": "error",
+      "detail": "raw=5 site=5"
+    },
+    {
+      "name": "market_cases_have_usable_bars",
+      "passed": true,
+      "severity": "error",
+      "detail": "bad=[]"
+    },
+    {
+      "name": "market_case_dates_and_counts_match",
+      "passed": true,
+      "severity": "error",
+      "detail": "bad=[]"
+    },
+    {
+      "name": "market_cases_cover_us_and_hk",
+      "passed": true,
+      "severity": "error",
+      "detail": "markets=['HK', 'US']"
+    },
+    {
+      "name": "market_js_wrapper_shape",
+      "passed": true,
+      "severity": "error",
+      "detail": "window.__MARKET_CASES__ assignment checked"
+    },
+    {
+      "name": "readiness_overlay_policy_fields",
+      "passed": true,
+      "severity": "error",
+      "detail": "fields=['failureConditionReadiness', 'formulaReadiness', 'marketDataStatus', 'quantCaveat', 'sourceReadiness', 'tradePlaybookReadiness']"
+    },
+    {
+      "name": "readiness_overlay_market_caveats",
+      "passed": true,
+      "severity": "error",
+      "detail": "unused=['momentumBreakout']"
+    },
+    {
+      "name": "site_js_wrapper_shape",
+      "passed": true,
+      "severity": "error",
+      "detail": "window.__TI_DATA__ assignment checked"
+    },
+    {
+      "name": "readiness_js_wrapper_shape",
+      "passed": true,
+      "severity": "error",
+      "detail": "window.__TI_READINESS__ assignment checked"
+    },
+    {
+      "name": "script_load_order_market_site_readiness_app",
+      "passed": true,
+      "severity": "error",
+      "detail": "positions={'data/market_cases_yahoo.js': 0, 'data/site/technical_indicators_site_data.js': 1, 'data/site/site_readiness_overlay.js': 2, 'app.js': 4}"
+    },
+    {
+      "name": "app_reads_site_bundle_conditionally",
+      "passed": true,
+      "severity": "error",
+      "detail": "conditional site data read checked"
+    },
+    {
+      "name": "static_fallback_paths_present",
+      "passed": true,
+      "severity": "error",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "no_static_yahoo_fallback_copy",
+      "passed": true,
+      "severity": "error",
+      "detail": "a missing market snapshot cannot leave a static Yahoo Finance label behind"
+    },
+    {
+      "name": "app_rejects_malformed_site_bundle",
+      "passed": true,
+      "severity": "error",
+      "detail": "site bundle requires schema, indicators, and stats before loaded=true"
+    },
+    {
+      "name": "app_reads_readiness_overlay",
+      "passed": true,
+      "severity": "error",
+      "detail": "readiness overlay drives P2/market caveat copy"
+    },
+    {
+      "name": "tradingview_strategy_validation_status",
+      "passed": true,
+      "severity": "error",
+      "detail": "status=pass_with_warnings; errors=0"
+    },
+    {
+      "name": "tradingview_strategy_validation_report_fresh",
+      "passed": true,
+      "severity": "error",
+      "detail": "generatedAt=2026-07-11T01:57:43.866799+00:00; stale_dependencies=[]"
+    },
+    {
+      "name": "tradingview_strategy_policy_checks",
+      "passed": true,
+      "severity": "error",
+      "detail": "missing/failing=[]"
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "outputs": {
+    "json": "data/site/validation_report.json",
+    "markdown": "data/site/validation_report.md"
+  }
+}

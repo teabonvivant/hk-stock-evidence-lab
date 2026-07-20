@@ -1,0 +1,2036 @@
+{
+  "schemaVersion": 2,
+  "version": "2026-07-05-tradingview-strategy-settings-and-local-pine-templates",
+  "generatedAt": "2026-07-05T15:08:40.850Z",
+  "status": "settings_and_code_templates_enriched_pending_original_verification",
+  "targetAcceptedCases": 100,
+  "rawLeadTarget": 200,
+  "rawLeadsCollected": 200,
+  "metricFramingZh": "PF、勝率、回撤和回報只代表指定歷史資料、測試期間、成本、滑價和參數設定下的回測結果，不構成投資或交易建議。",
+  "sources": {
+    "sourcePolicy": ".omo/teams/team-tradingview-20260703/artifacts/A-source-feasibility.md",
+    "candidateSchema": ".omo/teams/team-tradingview-20260703/artifacts/B-candidate-schema.csv",
+    "backtestRubric": ".omo/teams/team-tradingview-20260703/artifacts/C-backtest-verifier.md",
+    "siteArchitecture": ".omo/teams/team-tradingview-20260703/artifacts/D-site-architecture.md",
+    "copyGuide": ".omo/teams/team-tradingview-20260703/artifacts/E-zh-hk-editor.md"
+  },
+  "stats": {
+    "totalCases": 10,
+    "rawLeadsCollected": 200,
+    "acceptedCases": 0,
+    "supportOnlyCases": 8,
+    "rejectedCases": 2,
+    "openSourceChecked": 6,
+    "metadataOnly": 2,
+    "highPfCaveatCount": 3,
+    "missingOosCount": 10,
+    "rawLeadTarget": 200,
+    "targetAcceptedCases": 100,
+    "settingsAuditCases": 10,
+    "scriptAuditCases": 10,
+    "localTemplateCases": 7,
+    "originalCodeRenderedCases": 0,
+    "blockedCodeCases": 3,
+    "detailedSettingsCases": 7
+  },
+  "validation": {
+    "includeStatusValues": [
+      "accepted",
+      "rejected",
+      "support-only"
+    ],
+    "noExternalLinks": "required",
+    "sourceUrlPolicy": "audit-only",
+    "fullScriptPolicy": "original-source-gated; local teaching templates rendered with warning; invite-only or unverified source code is not rendered",
+    "codePolicy": "original TradingView source requires verified open visibility, attribution, and license; local templates must be labelled non-original"
+  },
+  "cases": [
+    {
+      "slug": "supertrend-ai-adaptive-btc",
+      "title": "SuperTrend AI Adaptive - Strategy BTC",
+      "shortTitle": "SuperTrend AI BTC",
+      "author": "DefinedEdge",
+      "sourceName": "TradingView public strategy page",
+      "sourceEvidenceId": "TVE-0001",
+      "strategyType": "趨勢跟隨",
+      "market": "Crypto",
+      "symbol": "BTCUSDT",
+      "timeframe": "4H",
+      "chartType": "standard",
+      "includeStatus": "support-only",
+      "evidenceStatus": "needs_manual_strategy_report",
+      "verifierStatus": "research_only",
+      "qualityFlags": [
+        "open-source-check-needed",
+        "missing-oos",
+        "single-market",
+        "author-page-metadata"
+      ],
+      "displayCaveat": "公開頁面有 PF、期間、設定和成本線索，但仍需要人工打開 Strategy Report / Properties 核對後才可計入 100 個正式案例。",
+      "pfNumeric": 1.94,
+      "pfRange": {
+        "low": 1.94,
+        "high": 1.94
+      },
+      "winRate": null,
+      "trades": null,
+      "maxDrawdown": "公開頁描述為低於 buy-and-hold，需核對原報告",
+      "backtestPeriod": "Jan 2015 至 Feb 2026（待人工核對）",
+      "backtestStart": "2015-01-01",
+      "backtestEnd": "2026-02-28",
+      "parameters": [
+        {
+          "name": "ATR Length",
+          "value": "10",
+          "role": "volatility",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "以 SuperTrend 為趨勢引擎，公開頁只提供概念和部分設定線索。"
+        },
+        {
+          "name": "SuperTrend Factor",
+          "value": "3.0",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "用來調整趨勢濾網敏感度；實際數值需要在 Inputs tab 核對。"
+        },
+        {
+          "name": "EMA Filter Length",
+          "value": "200",
+          "role": "regime-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "控制波幅計算，會直接影響止蝕距離和訊號延遲。"
+        },
+        {
+          "name": "Commission",
+          "value": "0.10%",
+          "role": "execution-cost",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "公開資料顯示使用 4H BTC，仍要核對交易所、時區和資料源。"
+        },
+        {
+          "name": "Slippage",
+          "value": "1 tick",
+          "role": "execution-cost",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "成本、滑價和訂單填補假設必須在 Properties 裏逐項確認。"
+        }
+      ],
+      "rules": [
+        {
+          "phase": "entry",
+          "text": "Use adaptive SuperTrend regime signals only after source settings are verified."
+        },
+        {
+          "phase": "exit",
+          "text": "Exit/risk rules must be copied from verified Strategy Properties before publication."
+        }
+      ],
+      "rubricBadges": {
+        "trueData": "review",
+        "sampleSize": "unknown",
+        "pfCredible": "review",
+        "drawdownPresent": "review",
+        "periodPresent": "yes",
+        "parametersComplete": "partial",
+        "costsModeled": "review",
+        "marketTimeframePresent": "yes",
+        "oosCaveat": "missing",
+        "sourceApproved": "review"
+      },
+      "settingsAudit": {
+        "status": "partial_enriched",
+        "completeness": "teaching_template_enriched_not_original_verified",
+        "completenessPercent": 62,
+        "checkedAt": "2026-07-05",
+        "sourceEvidenceId": "TVE-0001",
+        "basis": "Manual audit placeholder; accepted cases require TradingView Properties, Inputs, and Strategy Report evidence.",
+        "gaps": [
+          "trades_count",
+          "complete_drawdown",
+          "original_properties_screenshot",
+          "oos_forward_test"
+        ]
+      },
+      "strategyProperties": {
+        "status": "local_teaching_baseline_pending_original_properties",
+        "source": "local teaching baseline; original TradingView Properties still need manual screenshot or exported report",
+        "initialCapital": "US$10,000 teaching baseline",
+        "baseCurrency": "USD teaching baseline",
+        "orderSize": "100% equity teaching baseline",
+        "pyramiding": "0, one position at a time",
+        "commission": "0.10% percent in local template",
+        "slippage": "1 tick in local template",
+        "fillAssumptions": "Bar-close simulation; limit-fill verification and Bar Magnifier pending",
+        "margin": "100% teaching baseline; broker margin pending",
+        "recalculation": "Bar close only in template; tick/order-fill recalculation pending",
+        "barMagnifier": "Off in template unless stated",
+        "verifiedStatus": "not_verified_original_settings"
+      },
+      "inputParameters": [
+        {
+          "name": "ATR Length",
+          "value": "10",
+          "role": "volatility",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "以 SuperTrend 為趨勢引擎，公開頁只提供概念和部分設定線索。"
+        },
+        {
+          "name": "SuperTrend Factor",
+          "value": "3.0",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "用來調整趨勢濾網敏感度；實際數值需要在 Inputs tab 核對。"
+        },
+        {
+          "name": "EMA Filter Length",
+          "value": "200",
+          "role": "regime-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "控制波幅計算，會直接影響止蝕距離和訊號延遲。"
+        },
+        {
+          "name": "Commission",
+          "value": "0.10%",
+          "role": "execution-cost",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "公開資料顯示使用 4H BTC，仍要核對交易所、時區和資料源。"
+        },
+        {
+          "name": "Slippage",
+          "value": "1 tick",
+          "role": "execution-cost",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "成本、滑價和訂單填補假設必須在 Properties 裏逐項確認。"
+        }
+      ],
+      "scriptAccess": {
+        "sourceEvidenceId": "TVE-0001",
+        "visibility": "open",
+        "sourceCodeStatus": "local_template_only",
+        "licenseStatus": "open_house_rules_reuse_restricted",
+        "attribution": "TradingView public strategy page / DefinedEdge",
+        "renderPolicy": "render_local_template_with_warning",
+        "checkedAt": "2026-07-03",
+        "policyNote": "Original TradingView source can be included only after verified open visibility, attribution, and license review. Local templates are non-original."
+      },
+      "pineScript": {
+        "status": "local_template",
+        "pineVersion": "Pine Script v6 teaching template",
+        "kind": "local_reconstruction_template",
+        "isOriginalTradingViewSource": false,
+        "code": "//@version=6\nstrategy(\"Local teaching template - SuperTrend regime\", overlay=true, initial_capital=10000, commission_type=strategy.commission.percent, commission_value=0.10, slippage=1, pyramiding=0)\natrLength = input.int(10, \"ATR Length\", minval=1)\nfactor = input.float(3.0, \"SuperTrend Factor\", minval=0.1, step=0.1)\nemaLength = input.int(200, \"EMA Filter Length\", minval=1)\nlongOnly = input.bool(true, \"Long only teaching mode\")\n[superTrend, direction] = ta.supertrend(factor, atrLength)\nemaFilter = ta.ema(close, emaLength)\nlongSignal = ta.change(direction) < 0 and close > emaFilter\nshortSignal = ta.change(direction) > 0 or close < emaFilter\nif longSignal\n    strategy.entry(\"Long\", strategy.long)\nif shortSignal\n    strategy.close(\"Long\")\nif not longOnly and shortSignal\n    strategy.entry(\"Short\", strategy.short)\nif not longOnly and longSignal\n    strategy.close(\"Short\")\nplot(superTrend, \"SuperTrend\", color=direction < 0 ? color.green : color.red, linewidth=2)\nplot(emaFilter, \"EMA Filter\", color=color.orange)\nalertcondition(longSignal, \"Teaching long setup\", \"SuperTrend regime turned up above EMA filter\")\n",
+        "unavailableReason": "original_source_not_copied_local_template_only",
+        "reviewWarningZh": "If code is shown, it is a local teaching template, not the original TradingView author source."
+      },
+      "scriptCodeAudit": {
+        "status": "local_template",
+        "sourceEvidenceId": "TVE-0001",
+        "visibility": "open",
+        "sourceCodeStatus": "local_template_only",
+        "renderPolicy": "render_local_template_with_warning",
+        "includeOriginalCode": false,
+        "codeLines": 21,
+        "summary": "original_source_not_copied_local_template_only",
+        "limitations": [
+          "not_original_tradingview_author_source",
+          "parameters_are_teaching_baselines_until_original_inputs_verified",
+          "backtest_metrics_must_be_recreated_on real symbol/timeframe before use"
+        ]
+      },
+      "metricFramingZh": "PF、勝率、回撤和回報只代表指定歷史資料、測試期間、成本、滑價和參數設定下的回測結果，不構成投資或交易建議。",
+      "parameterCompleteness": {
+        "status": "teaching_template_complete_original_pending",
+        "requiredOriginalEvidence": [
+          "TradingView Inputs tab",
+          "TradingView Properties tab",
+          "Strategy Report overview",
+          "List of trades sample",
+          "source visibility and license check"
+        ]
+      }
+    },
+    {
+      "slug": "nq-mnq-super-scalper-backtest",
+      "title": "NQ/MNQ Super Scalper BACKTEST",
+      "shortTitle": "NQ/MNQ Super Scalper",
+      "author": "Crispigino",
+      "sourceName": "TradingView open-source strategy page",
+      "sourceEvidenceId": "TVE-0002",
+      "strategyType": "日內剝頭皮",
+      "market": "Futures",
+      "symbol": "MNQ",
+      "timeframe": "1m",
+      "chartType": "standard",
+      "includeStatus": "support-only",
+      "evidenceStatus": "needs_manual_strategy_report",
+      "verifierStatus": "research_only",
+      "qualityFlags": [
+        "pf-below-high-threshold",
+        "intraday-cost-sensitive",
+        "exact-dates-missing"
+      ],
+      "displayCaveat": "PF 1.23 並不屬高 PF；此列只示範如何記錄開源日內策略，不能當成高質策略推薦。",
+      "pfNumeric": 1.23,
+      "pfRange": {
+        "low": 1.23,
+        "high": 1.23
+      },
+      "winRate": null,
+      "trades": null,
+      "maxDrawdown": null,
+      "backtestPeriod": "1-year window（exact dates pending）",
+      "backtestStart": null,
+      "backtestEnd": null,
+      "parameters": [
+        {
+          "name": "Fast EMA",
+          "value": "9",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "日內 scalper 對 tick size、滑價和時段非常敏感。"
+        },
+        {
+          "name": "Slow EMA",
+          "value": "21",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "快線/慢線設定會影響訊號密度和假突破比例。"
+        },
+        {
+          "name": "RSI Length",
+          "value": "14",
+          "role": "momentum",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "ATR 或固定止蝕會改變 R 值和回撤形態。"
+        },
+        {
+          "name": "RSI Long Threshold",
+          "value": "55",
+          "role": "entry-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "50 tick 這類設定必須換算成 NQ/MNQ 合約價值。"
+        },
+        {
+          "name": "Regular Session",
+          "value": "09:30-16:00",
+          "role": "market-session",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "交易時段濾網需要配合美股期貨流動性。"
+        },
+        {
+          "name": "Stop / Take Profit",
+          "value": "40 / 60 ticks",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "佣金和滑價要用保守設定，否則 scalper PF 會被高估。"
+        }
+      ],
+      "rules": [
+        {
+          "phase": "risk",
+          "text": "Treat as high-cost intraday research until spread, commission, and slippage are verified."
+        }
+      ],
+      "rubricBadges": {
+        "trueData": "review",
+        "sampleSize": "unknown",
+        "pfCredible": "weak",
+        "drawdownPresent": "unknown",
+        "periodPresent": "relative",
+        "parametersComplete": "partial",
+        "costsModeled": "review",
+        "marketTimeframePresent": "yes",
+        "oosCaveat": "missing",
+        "sourceApproved": "review"
+      },
+      "settingsAudit": {
+        "status": "partial_enriched",
+        "completeness": "teaching_template_enriched_not_original_verified",
+        "completenessPercent": 58,
+        "checkedAt": "2026-07-05",
+        "sourceEvidenceId": "TVE-0002",
+        "basis": "Manual audit placeholder; accepted cases require TradingView Properties, Inputs, and Strategy Report evidence.",
+        "gaps": [
+          "exact_date_range",
+          "trades_count",
+          "drawdown",
+          "original_inputs",
+          "broker_cost_model"
+        ]
+      },
+      "strategyProperties": {
+        "status": "local_teaching_baseline_pending_original_properties",
+        "source": "local teaching baseline; original TradingView Properties still need manual screenshot or exported report",
+        "initialCapital": "US$10,000 teaching baseline",
+        "baseCurrency": "USD teaching baseline",
+        "orderSize": "1 MNQ contract teaching baseline",
+        "pyramiding": "0, one position at a time",
+        "commission": "US$1.20 cash per contract in local template",
+        "slippage": "2 ticks in local template",
+        "fillAssumptions": "Bar-close simulation; limit-fill verification and Bar Magnifier pending",
+        "margin": "100% teaching baseline; broker margin pending",
+        "recalculation": "Bar close only in template; tick/order-fill recalculation pending",
+        "barMagnifier": "Off in template unless stated",
+        "verifiedStatus": "not_verified_original_settings"
+      },
+      "inputParameters": [
+        {
+          "name": "Fast EMA",
+          "value": "9",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "日內 scalper 對 tick size、滑價和時段非常敏感。"
+        },
+        {
+          "name": "Slow EMA",
+          "value": "21",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "快線/慢線設定會影響訊號密度和假突破比例。"
+        },
+        {
+          "name": "RSI Length",
+          "value": "14",
+          "role": "momentum",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "ATR 或固定止蝕會改變 R 值和回撤形態。"
+        },
+        {
+          "name": "RSI Long Threshold",
+          "value": "55",
+          "role": "entry-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "50 tick 這類設定必須換算成 NQ/MNQ 合約價值。"
+        },
+        {
+          "name": "Regular Session",
+          "value": "09:30-16:00",
+          "role": "market-session",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "交易時段濾網需要配合美股期貨流動性。"
+        },
+        {
+          "name": "Stop / Take Profit",
+          "value": "40 / 60 ticks",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "佣金和滑價要用保守設定，否則 scalper PF 會被高估。"
+        }
+      ],
+      "scriptAccess": {
+        "sourceEvidenceId": "TVE-0002",
+        "visibility": "open",
+        "sourceCodeStatus": "local_template_only",
+        "licenseStatus": "open_house_rules_reuse_restricted",
+        "attribution": "TradingView open-source strategy page / Crispigino",
+        "renderPolicy": "render_local_template_with_warning",
+        "checkedAt": "2026-07-03",
+        "policyNote": "Original TradingView source can be included only after verified open visibility, attribution, and license review. Local templates are non-original."
+      },
+      "pineScript": {
+        "status": "local_template",
+        "pineVersion": "Pine Script v6 teaching template",
+        "kind": "local_reconstruction_template",
+        "isOriginalTradingViewSource": false,
+        "code": "//@version=6\nstrategy(\"Local teaching template - NQ/MNQ momentum scalper\", overlay=true, initial_capital=10000, commission_type=strategy.commission.cash_per_contract, commission_value=1.20, slippage=2, pyramiding=0)\nfastEma = input.int(9, \"Fast EMA\", minval=1)\nslowEma = input.int(21, \"Slow EMA\", minval=2)\nrsiLength = input.int(14, \"RSI Length\", minval=2)\nrsiTrigger = input.float(55, \"RSI long threshold\", minval=1, maxval=99)\ntradeSession = input.session(\"0930-1600\", \"Regular session\")\nstopTicks = input.int(40, \"Stop loss ticks\", minval=1)\ntakeTicks = input.int(60, \"Take profit ticks\", minval=1)\ninSession = not na(time(timeframe.period, tradeSession))\nfast = ta.ema(close, fastEma)\nslow = ta.ema(close, slowEma)\ntrendUp = fast > slow\nmomentum = ta.rsi(close, rsiLength) > rsiTrigger\nif inSession and trendUp and momentum\n    strategy.entry(\"Long\", strategy.long)\nstrategy.exit(\"Long risk exit\", \"Long\", loss=stopTicks, profit=takeTicks)\nplot(fast, \"Fast EMA\", color=color.teal)\nplot(slow, \"Slow EMA\", color=color.gray)\n",
+        "unavailableReason": "original_source_not_copied_local_template_only",
+        "reviewWarningZh": "If code is shown, it is a local teaching template, not the original TradingView author source."
+      },
+      "scriptCodeAudit": {
+        "status": "local_template",
+        "sourceEvidenceId": "TVE-0002",
+        "visibility": "open",
+        "sourceCodeStatus": "local_template_only",
+        "renderPolicy": "render_local_template_with_warning",
+        "includeOriginalCode": false,
+        "codeLines": 19,
+        "summary": "original_source_not_copied_local_template_only",
+        "limitations": [
+          "not_original_tradingview_author_source",
+          "parameters_are_teaching_baselines_until_original_inputs_verified",
+          "backtest_metrics_must_be_recreated_on real symbol/timeframe before use"
+        ]
+      },
+      "metricFramingZh": "PF、勝率、回撤和回報只代表指定歷史資料、測試期間、成本、滑價和參數設定下的回測結果，不構成投資或交易建議。",
+      "parameterCompleteness": {
+        "status": "teaching_template_complete_original_pending",
+        "requiredOriginalEvidence": [
+          "TradingView Inputs tab",
+          "TradingView Properties tab",
+          "Strategy Report overview",
+          "List of trades sample",
+          "source visibility and license check"
+        ]
+      }
+    },
+    {
+      "slug": "nq-mnq-ct-scalper-backtest",
+      "title": "NQ/MNQ CT Scalper BACKTEST",
+      "shortTitle": "NQ/MNQ CT Scalper",
+      "author": "Crispigino",
+      "sourceName": "TradingView open-source strategy page",
+      "sourceEvidenceId": "TVE-0003",
+      "strategyType": "日內反向剝頭皮",
+      "market": "Futures",
+      "symbol": "MNQ",
+      "timeframe": "1m",
+      "chartType": "standard",
+      "includeStatus": "support-only",
+      "evidenceStatus": "needs_manual_strategy_report",
+      "verifierStatus": "research_only",
+      "qualityFlags": [
+        "exact-dates-missing",
+        "intraday-cost-sensitive",
+        "missing-oos"
+      ],
+      "displayCaveat": "公開頁提供 PF 1.41 線索，但日內期貨策略必須先核對交易次數、滑價和成交假設。",
+      "pfNumeric": 1.41,
+      "pfRange": {
+        "low": 1.41,
+        "high": 1.41
+      },
+      "winRate": null,
+      "trades": null,
+      "maxDrawdown": null,
+      "backtestPeriod": "1-year window（exact dates pending）",
+      "backtestStart": null,
+      "backtestEnd": null,
+      "parameters": [
+        {
+          "name": "RSI Length",
+          "value": "14",
+          "role": "mean-reversion",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "以 RSI 或均值回歸作反向觸發，容易在趨勢日連續止蝕。"
+        },
+        {
+          "name": "Oversold / Overbought",
+          "value": "30 / 70",
+          "role": "entry-exit",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "超買超賣門檻愈窄，交易次數愈多但雜訊也愈多。"
+        },
+        {
+          "name": "Mean Filter EMA",
+          "value": "50",
+          "role": "regime-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "止盈止蝕距離必須跟 NQ/MNQ tick value 對齊。"
+        },
+        {
+          "name": "Stop / Take Profit",
+          "value": "35 / 45 ticks",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "日內期貨策略要特別檢查滑價、開市時段和消息時段。"
+        }
+      ],
+      "rules": [
+        {
+          "phase": "entry",
+          "text": "Do not reproduce until source settings and execution Properties are checked."
+        }
+      ],
+      "rubricBadges": {
+        "trueData": "review",
+        "sampleSize": "unknown",
+        "pfCredible": "review",
+        "drawdownPresent": "unknown",
+        "periodPresent": "relative",
+        "parametersComplete": "partial",
+        "costsModeled": "review",
+        "marketTimeframePresent": "yes",
+        "oosCaveat": "missing",
+        "sourceApproved": "review"
+      },
+      "settingsAudit": {
+        "status": "partial_enriched",
+        "completeness": "teaching_template_enriched_not_original_verified",
+        "completenessPercent": 55,
+        "checkedAt": "2026-07-05",
+        "sourceEvidenceId": "TVE-0003",
+        "basis": "Manual audit placeholder; accepted cases require TradingView Properties, Inputs, and Strategy Report evidence.",
+        "gaps": [
+          "exact_date_range",
+          "trades_count",
+          "drawdown",
+          "session_filter",
+          "walk_forward_check"
+        ]
+      },
+      "strategyProperties": {
+        "status": "local_teaching_baseline_pending_original_properties",
+        "source": "local teaching baseline; original TradingView Properties still need manual screenshot or exported report",
+        "initialCapital": "US$10,000 teaching baseline",
+        "baseCurrency": "USD teaching baseline",
+        "orderSize": "1 MNQ contract teaching baseline",
+        "pyramiding": "0, one position at a time",
+        "commission": "US$1.20 cash per contract in local template",
+        "slippage": "2 ticks in local template",
+        "fillAssumptions": "Bar-close simulation; limit-fill verification and Bar Magnifier pending",
+        "margin": "100% teaching baseline; broker margin pending",
+        "recalculation": "Bar close only in template; tick/order-fill recalculation pending",
+        "barMagnifier": "Off in template unless stated",
+        "verifiedStatus": "not_verified_original_settings"
+      },
+      "inputParameters": [
+        {
+          "name": "RSI Length",
+          "value": "14",
+          "role": "mean-reversion",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "以 RSI 或均值回歸作反向觸發，容易在趨勢日連續止蝕。"
+        },
+        {
+          "name": "Oversold / Overbought",
+          "value": "30 / 70",
+          "role": "entry-exit",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "超買超賣門檻愈窄，交易次數愈多但雜訊也愈多。"
+        },
+        {
+          "name": "Mean Filter EMA",
+          "value": "50",
+          "role": "regime-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "止盈止蝕距離必須跟 NQ/MNQ tick value 對齊。"
+        },
+        {
+          "name": "Stop / Take Profit",
+          "value": "35 / 45 ticks",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "日內期貨策略要特別檢查滑價、開市時段和消息時段。"
+        }
+      ],
+      "scriptAccess": {
+        "sourceEvidenceId": "TVE-0003",
+        "visibility": "open",
+        "sourceCodeStatus": "local_template_only",
+        "licenseStatus": "open_house_rules_reuse_restricted",
+        "attribution": "TradingView open-source strategy page / Crispigino",
+        "renderPolicy": "render_local_template_with_warning",
+        "checkedAt": "2026-07-03",
+        "policyNote": "Original TradingView source can be included only after verified open visibility, attribution, and license review. Local templates are non-original."
+      },
+      "pineScript": {
+        "status": "local_template",
+        "pineVersion": "Pine Script v6 teaching template",
+        "kind": "local_reconstruction_template",
+        "isOriginalTradingViewSource": false,
+        "code": "//@version=6\nstrategy(\"Local teaching template - NQ/MNQ counter-trend scalper\", overlay=true, initial_capital=10000, commission_type=strategy.commission.cash_per_contract, commission_value=1.20, slippage=2, pyramiding=0)\nrsiLength = input.int(14, \"RSI Length\", minval=2)\noversold = input.float(30, \"Oversold threshold\", minval=1, maxval=50)\noverBought = input.float(70, \"Overbought threshold\", minval=50, maxval=99)\nemaLength = input.int(50, \"Mean filter EMA\", minval=1)\nstopTicks = input.int(35, \"Stop loss ticks\", minval=1)\ntakeTicks = input.int(45, \"Take profit ticks\", minval=1)\nrsi = ta.rsi(close, rsiLength)\nmean = ta.ema(close, emaLength)\nlongSignal = close < mean and ta.crossunder(rsi, oversold)\nflatSignal = ta.crossover(rsi, overBought) or close > mean\nif longSignal\n    strategy.entry(\"Mean reversion long\", strategy.long)\nif flatSignal\n    strategy.close(\"Mean reversion long\")\nstrategy.exit(\"Risk exit\", \"Mean reversion long\", loss=stopTicks, profit=takeTicks)\nplot(mean, \"Mean filter\", color=color.orange)\n",
+        "unavailableReason": "original_source_not_copied_local_template_only",
+        "reviewWarningZh": "If code is shown, it is a local teaching template, not the original TradingView author source."
+      },
+      "scriptCodeAudit": {
+        "status": "local_template",
+        "sourceEvidenceId": "TVE-0003",
+        "visibility": "open",
+        "sourceCodeStatus": "local_template_only",
+        "renderPolicy": "render_local_template_with_warning",
+        "includeOriginalCode": false,
+        "codeLines": 18,
+        "summary": "original_source_not_copied_local_template_only",
+        "limitations": [
+          "not_original_tradingview_author_source",
+          "parameters_are_teaching_baselines_until_original_inputs_verified",
+          "backtest_metrics_must_be_recreated_on real symbol/timeframe before use"
+        ]
+      },
+      "metricFramingZh": "PF、勝率、回撤和回報只代表指定歷史資料、測試期間、成本、滑價和參數設定下的回測結果，不構成投資或交易建議。",
+      "parameterCompleteness": {
+        "status": "teaching_template_complete_original_pending",
+        "requiredOriginalEvidence": [
+          "TradingView Inputs tab",
+          "TradingView Properties tab",
+          "Strategy Report overview",
+          "List of trades sample",
+          "source visibility and license check"
+        ]
+      }
+    },
+    {
+      "slug": "po3-ict-sweep-v2",
+      "title": "PO3 x ICT Sweep STRATEGY V2",
+      "shortTitle": "PO3 x ICT Sweep",
+      "author": "murp11",
+      "sourceName": "TradingView invite-only strategy page",
+      "sourceEvidenceId": "TVE-0004",
+      "strategyType": "ICT / liquidity sweep setup",
+      "market": "Futures",
+      "symbol": "CME_MINI:NQ1!",
+      "timeframe": "4H / 1H / 15m",
+      "chartType": "standard",
+      "includeStatus": "support-only",
+      "evidenceStatus": "metadata_only",
+      "verifierStatus": "research_only",
+      "qualityFlags": [
+        "invite-only",
+        "source-unavailable",
+        "metadata-only",
+        "short-window"
+      ],
+      "displayCaveat": "此策略屬 invite-only；可作概念研究，但不能作本站可重建策略案例。",
+      "pfNumeric": 1.83,
+      "pfRange": {
+        "low": 1.09,
+        "high": 1.83
+      },
+      "winRate": 49,
+      "trades": null,
+      "maxDrawdown": "1.65%（author-stated preset）",
+      "backtestPeriod": "3 months / 30 days presets（author-stated）",
+      "backtestStart": null,
+      "backtestEnd": null,
+      "parameters": [
+        {
+          "name": "PO3 Boundaries",
+          "value": "preset-dependent",
+          "role": "level-filter",
+          "status": "blocked-source",
+          "source": "local_teaching_template",
+          "note": "用來描述 accumulation / manipulation / distribution 的概念階段。"
+        },
+        {
+          "name": "Liquidity Sweep Lookback",
+          "value": "20 bars teaching placeholder",
+          "role": "entry-filter",
+          "status": "blocked-source",
+          "source": "local_teaching_template",
+          "note": "流動性掃盤和反轉判斷需要明確定義觸發條件。"
+        },
+        {
+          "name": "FVG Confirmation",
+          "value": "required in teaching checklist",
+          "role": "confirmation",
+          "status": "blocked-source",
+          "source": "local_teaching_template",
+          "note": "來源屬 invite-only 或 metadata-only，不可展示原始 Pine 代碼。"
+        },
+        {
+          "name": "TP / SL",
+          "value": "fixed preset claimed, exact values unavailable",
+          "role": "risk",
+          "status": "blocked-source",
+          "source": "local_teaching_template",
+          "note": "TP/SL、時段和風險設定必須先在 Properties 裏核對。"
+        }
+      ],
+      "rules": [
+        {
+          "phase": "entry",
+          "text": "Detect liquidity sweep and reversal around PO3 levels; source cannot be verified locally."
+        }
+      ],
+      "rubricBadges": {
+        "trueData": "review",
+        "sampleSize": "unknown",
+        "pfCredible": "review",
+        "drawdownPresent": "yes",
+        "periodPresent": "relative",
+        "parametersComplete": "partial",
+        "costsModeled": "unknown",
+        "marketTimeframePresent": "yes",
+        "oosCaveat": "missing",
+        "sourceApproved": "no"
+      },
+      "settingsAudit": {
+        "status": "partial_enriched",
+        "completeness": "teaching_template_enriched_not_original_verified",
+        "completenessPercent": 35,
+        "checkedAt": "2026-07-05",
+        "sourceEvidenceId": "TVE-0004",
+        "basis": "Manual audit placeholder; accepted cases require TradingView Properties, Inputs, and Strategy Report evidence.",
+        "gaps": [
+          "invite_only_source",
+          "no_original_code",
+          "no_properties_screenshot",
+          "trades_count",
+          "oos_forward_test"
+        ]
+      },
+      "strategyProperties": {
+        "status": "metadata_only_blocked_source",
+        "source": "invite-only source; exact Properties unavailable",
+        "initialCapital": "US$10,000 teaching baseline",
+        "baseCurrency": "USD teaching baseline",
+        "orderSize": "blocked by invite-only source",
+        "pyramiding": "0, one position at a time",
+        "commission": "blocked by invite-only source",
+        "slippage": "blocked by invite-only source",
+        "fillAssumptions": "Bar-close simulation; limit-fill verification and Bar Magnifier pending",
+        "margin": "100% teaching baseline; broker margin pending",
+        "recalculation": "Bar close only in template; tick/order-fill recalculation pending",
+        "barMagnifier": "Off in template unless stated",
+        "verifiedStatus": "blocked_invite_only"
+      },
+      "inputParameters": [
+        {
+          "name": "PO3 Boundaries",
+          "value": "preset-dependent",
+          "role": "level-filter",
+          "status": "blocked-source",
+          "source": "local_teaching_template",
+          "note": "用來描述 accumulation / manipulation / distribution 的概念階段。"
+        },
+        {
+          "name": "Liquidity Sweep Lookback",
+          "value": "20 bars teaching placeholder",
+          "role": "entry-filter",
+          "status": "blocked-source",
+          "source": "local_teaching_template",
+          "note": "流動性掃盤和反轉判斷需要明確定義觸發條件。"
+        },
+        {
+          "name": "FVG Confirmation",
+          "value": "required in teaching checklist",
+          "role": "confirmation",
+          "status": "blocked-source",
+          "source": "local_teaching_template",
+          "note": "來源屬 invite-only 或 metadata-only，不可展示原始 Pine 代碼。"
+        },
+        {
+          "name": "TP / SL",
+          "value": "fixed preset claimed, exact values unavailable",
+          "role": "risk",
+          "status": "blocked-source",
+          "source": "local_teaching_template",
+          "note": "TP/SL、時段和風險設定必須先在 Properties 裏核對。"
+        }
+      ],
+      "scriptAccess": {
+        "sourceEvidenceId": "TVE-0004",
+        "visibility": "invite-only",
+        "sourceCodeStatus": "blocked_invite_only",
+        "licenseStatus": "invite_only_no_code_access",
+        "attribution": "TradingView invite-only strategy page / murp11",
+        "renderPolicy": "do_not_render_code",
+        "checkedAt": "2026-07-03",
+        "policyNote": "Original TradingView source can be included only after verified open visibility, attribution, and license review. Local templates are non-original."
+      },
+      "pineScript": {
+        "status": "not_available",
+        "pineVersion": "not_rendered",
+        "kind": "blocked_or_unverified_source",
+        "isOriginalTradingViewSource": false,
+        "code": "",
+        "unavailableReason": "invite_only_source_no_code_access",
+        "reviewWarningZh": "If code is shown, it is a local teaching template, not the original TradingView author source."
+      },
+      "scriptCodeAudit": {
+        "status": "not_rendered",
+        "sourceEvidenceId": "TVE-0004",
+        "visibility": "invite-only",
+        "sourceCodeStatus": "blocked_invite_only",
+        "renderPolicy": "do_not_render_code",
+        "includeOriginalCode": false,
+        "summary": "code_not_rendered_due_source_or_case_status"
+      },
+      "metricFramingZh": "PF、勝率、回撤和回報只代表指定歷史資料、測試期間、成本、滑價和參數設定下的回測結果，不構成投資或交易建議。",
+      "parameterCompleteness": {
+        "status": "teaching_template_complete_original_pending",
+        "requiredOriginalEvidence": [
+          "TradingView Inputs tab",
+          "TradingView Properties tab",
+          "Strategy Report overview",
+          "List of trades sample",
+          "source visibility and license check"
+        ]
+      }
+    },
+    {
+      "slug": "smoothed-heikin-ashi-trend-backtest",
+      "title": "Smoothed Heikin Ashi Trend BACKTEST",
+      "shortTitle": "Smoothed HA Trend",
+      "author": "TraderHalai",
+      "sourceName": "TradingView open-source strategy page",
+      "sourceEvidenceId": "TVE-0005",
+      "strategyType": "?? Heikin Ashi ?? / non-standard chart caution",
+      "market": "Multi",
+      "symbol": "not verified",
+      "timeframe": "8H example",
+      "chartType": "heikin_ashi",
+      "includeStatus": "support-only",
+      "evidenceStatus": "needs_manual_strategy_report",
+      "verifierStatus": "research_only",
+      "qualityFlags": [
+        "non-standard-chart",
+        "standard-ohlc-fill-unverified",
+        "missing-oos"
+      ],
+      "displayCaveat": "Heikin Ashi 相關回測必須核對是否用標準 OHLC 成交；未核對前只可作非標準圖表風險教材。",
+      "pfNumeric": null,
+      "pfRange": {
+        "low": null,
+        "high": null
+      },
+      "winRate": null,
+      "trades": null,
+      "maxDrawdown": null,
+      "backtestPeriod": "public update notes, exact report pending",
+      "backtestStart": null,
+      "backtestEnd": null,
+      "parameters": [
+        {
+          "name": "HA Smoothing Length",
+          "value": "6",
+          "role": "signal-smoothing",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "以 HA close 平滑趨勢，但非標準 K 線可能美化回測。"
+        },
+        {
+          "name": "Trend EMA Length",
+          "value": "21",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "EMA 平滑長度愈大，訊號愈慢但雜訊較少。"
+        },
+        {
+          "name": "ATR Length",
+          "value": "14",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "反轉條件需要用標準 OHLC 再核對一次。"
+        },
+        {
+          "name": "ATR Stop Multiple",
+          "value": "2.5",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "必須標明是否使用非標準圖表成交，否則只能作風險教材。"
+        }
+      ],
+      "rules": [
+        {
+          "phase": "validation",
+          "text": "Confirm fill_orders_on_standard_ohlc or exclude from performance cases."
+        }
+      ],
+      "rubricBadges": {
+        "trueData": "no",
+        "sampleSize": "unknown",
+        "pfCredible": "unknown",
+        "drawdownPresent": "unknown",
+        "periodPresent": "review",
+        "parametersComplete": "partial",
+        "costsModeled": "review",
+        "marketTimeframePresent": "partial",
+        "oosCaveat": "missing",
+        "sourceApproved": "review"
+      },
+      "settingsAudit": {
+        "status": "partial_enriched",
+        "completeness": "teaching_template_enriched_not_original_verified",
+        "completenessPercent": 52,
+        "checkedAt": "2026-07-05",
+        "sourceEvidenceId": "TVE-0005",
+        "basis": "Manual audit placeholder; accepted cases require TradingView Properties, Inputs, and Strategy Report evidence.",
+        "gaps": [
+          "standard_ohlc_rerun",
+          "trades_count",
+          "pf_missing",
+          "drawdown",
+          "original_inputs"
+        ]
+      },
+      "strategyProperties": {
+        "status": "local_teaching_baseline_pending_original_properties",
+        "source": "local teaching baseline; original TradingView Properties still need manual screenshot or exported report",
+        "initialCapital": "US$10,000 teaching baseline",
+        "baseCurrency": "USD teaching baseline",
+        "orderSize": "1 contract or 100% equity teaching baseline",
+        "pyramiding": "0, one position at a time",
+        "commission": "0.10% percent in local template",
+        "slippage": "1 tick in local template",
+        "fillAssumptions": "Non-standard Heikin Ashi chart warning; standard OHLC rerun required",
+        "margin": "100% teaching baseline; broker margin pending",
+        "recalculation": "Bar close only in template; tick/order-fill recalculation pending",
+        "barMagnifier": "Off in template unless stated",
+        "verifiedStatus": "not_verified_original_settings"
+      },
+      "inputParameters": [
+        {
+          "name": "HA Smoothing Length",
+          "value": "6",
+          "role": "signal-smoothing",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "以 HA close 平滑趨勢，但非標準 K 線可能美化回測。"
+        },
+        {
+          "name": "Trend EMA Length",
+          "value": "21",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "EMA 平滑長度愈大，訊號愈慢但雜訊較少。"
+        },
+        {
+          "name": "ATR Length",
+          "value": "14",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "反轉條件需要用標準 OHLC 再核對一次。"
+        },
+        {
+          "name": "ATR Stop Multiple",
+          "value": "2.5",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "必須標明是否使用非標準圖表成交，否則只能作風險教材。"
+        }
+      ],
+      "scriptAccess": {
+        "sourceEvidenceId": "TVE-0005",
+        "visibility": "open",
+        "sourceCodeStatus": "local_template_only",
+        "licenseStatus": "open_house_rules_reuse_restricted",
+        "attribution": "TradingView open-source strategy page / TraderHalai",
+        "renderPolicy": "render_local_template_with_warning",
+        "checkedAt": "2026-07-03",
+        "policyNote": "Original TradingView source can be included only after verified open visibility, attribution, and license review. Local templates are non-original."
+      },
+      "pineScript": {
+        "status": "local_template",
+        "pineVersion": "Pine Script v6 teaching template",
+        "kind": "local_reconstruction_template",
+        "isOriginalTradingViewSource": false,
+        "code": "//@version=6\nstrategy(\"Local teaching template - Smoothed Heikin Ashi trend\", overlay=true, initial_capital=10000, commission_type=strategy.commission.percent, commission_value=0.10, slippage=1, pyramiding=0)\nhaSymbol = ticker.heikinashi(syminfo.tickerid)\nhaClose = request.security(haSymbol, timeframe.period, close)\nhaOpen = request.security(haSymbol, timeframe.period, open)\nsmoothLength = input.int(6, \"HA smoothing length\", minval=1)\ntrendLength = input.int(21, \"Trend EMA length\", minval=1)\natrLength = input.int(14, \"ATR length\", minval=1)\natrStop = input.float(2.5, \"ATR stop multiple\", minval=0.1, step=0.1)\nsmoothed = ta.ema(haClose, smoothLength)\ntrend = ta.ema(smoothed, trendLength)\nlongSignal = smoothed > trend and haClose > haOpen\nflatSignal = smoothed < trend or haClose < haOpen\nif longSignal\n    strategy.entry(\"HA trend long\", strategy.long)\nstrategy.exit(\"HA ATR stop\", \"HA trend long\", stop=strategy.position_avg_price - ta.atr(atrLength) * atrStop)\nif flatSignal\n    strategy.close(\"HA trend long\")\nplot(smoothed, \"Smoothed HA close\", color=color.teal)\nplot(trend, \"Trend EMA\", color=color.gray)\n",
+        "unavailableReason": "original_source_not_copied_local_template_only",
+        "reviewWarningZh": "If code is shown, it is a local teaching template, not the original TradingView author source."
+      },
+      "scriptCodeAudit": {
+        "status": "local_template",
+        "sourceEvidenceId": "TVE-0005",
+        "visibility": "open",
+        "sourceCodeStatus": "local_template_only",
+        "renderPolicy": "render_local_template_with_warning",
+        "includeOriginalCode": false,
+        "codeLines": 20,
+        "summary": "original_source_not_copied_local_template_only",
+        "limitations": [
+          "not_original_tradingview_author_source",
+          "parameters_are_teaching_baselines_until_original_inputs_verified",
+          "backtest_metrics_must_be_recreated_on real symbol/timeframe before use"
+        ]
+      },
+      "metricFramingZh": "PF、勝率、回撤和回報只代表指定歷史資料、測試期間、成本、滑價和參數設定下的回測結果，不構成投資或交易建議。",
+      "parameterCompleteness": {
+        "status": "teaching_template_complete_original_pending",
+        "requiredOriginalEvidence": [
+          "TradingView Inputs tab",
+          "TradingView Properties tab",
+          "Strategy Report overview",
+          "List of trades sample",
+          "source visibility and license check"
+        ]
+      }
+    },
+    {
+      "slug": "superatr-7-step-profit",
+      "title": "SuperATR 7-Step Profit Strategy",
+      "shortTitle": "SuperATR 7-Step",
+      "author": "presentTrading",
+      "sourceName": "TradingView public strategy page",
+      "sourceEvidenceId": "TVE-0006",
+      "strategyType": "ATR ?? / staged profit ladder",
+      "market": "Multi",
+      "symbol": "not verified",
+      "timeframe": "not verified",
+      "chartType": "standard",
+      "includeStatus": "support-only",
+      "evidenceStatus": "needs_manual_strategy_report",
+      "verifierStatus": "research_only",
+      "qualityFlags": [
+        "very-high-pf",
+        "missing-symbol-timeframe",
+        "manual-report-required"
+      ],
+      "displayCaveat": "公開頁出現極高 PF 數字；按 C 門檻，PF 大於 5 必須先檢查交易次數、成本、OOS 和是否曲線擬合。",
+      "pfNumeric": 27.295,
+      "pfRange": {
+        "low": 27.295,
+        "high": 27.295
+      },
+      "winRate": 97.06,
+      "trades": null,
+      "maxDrawdown": null,
+      "backtestPeriod": "not verified",
+      "backtestStart": null,
+      "backtestEnd": null,
+      "parameters": [
+        {
+          "name": "ATR SMA Length",
+          "value": "12",
+          "role": "volatility",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "公開描述提到 ATR SMA 12，需核對是否為原始設定。"
+        },
+        {
+          "name": "SuperTrend ATR Length",
+          "value": "10",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "ATR 倍數會同時影響止蝕距離和出場速度。"
+        },
+        {
+          "name": "SuperTrend Factor",
+          "value": "3.0",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "多段止盈需要定義每段比例和剩餘倉位處理。"
+        },
+        {
+          "name": "Stop ATR Multiple",
+          "value": "2.0",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "極高 PF 必須先檢查交易次數、成本、OOS 和曲線擬合。"
+        },
+        {
+          "name": "TP ATR Ladder",
+          "value": "1 / 2 / 3 / 4 ATR",
+          "role": "exit",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "7-step 出場容易過度優化，只適合用作教學拆解。"
+        }
+      ],
+      "rules": [
+        {
+          "phase": "exit",
+          "text": "Use multi-level take-profit only after report fields are verified."
+        }
+      ],
+      "rubricBadges": {
+        "trueData": "review",
+        "sampleSize": "unknown",
+        "pfCredible": "suspicious",
+        "drawdownPresent": "unknown",
+        "periodPresent": "no",
+        "parametersComplete": "partial",
+        "costsModeled": "unknown",
+        "marketTimeframePresent": "no",
+        "oosCaveat": "missing",
+        "sourceApproved": "review"
+      },
+      "settingsAudit": {
+        "status": "partial_enriched",
+        "completeness": "teaching_template_enriched_not_original_verified",
+        "completenessPercent": 50,
+        "checkedAt": "2026-07-05",
+        "sourceEvidenceId": "TVE-0006",
+        "basis": "Manual audit placeholder; accepted cases require TradingView Properties, Inputs, and Strategy Report evidence.",
+        "gaps": [
+          "source_visibility_unknown",
+          "very_high_pf_manual_review",
+          "trades_count",
+          "drawdown",
+          "oos_forward_test"
+        ]
+      },
+      "strategyProperties": {
+        "status": "local_teaching_baseline_pending_original_properties",
+        "source": "local teaching baseline; original TradingView Properties still need manual screenshot or exported report",
+        "initialCapital": "US$10,000 teaching baseline",
+        "baseCurrency": "USD teaching baseline",
+        "orderSize": "100% equity teaching baseline",
+        "pyramiding": "0, one position at a time",
+        "commission": "0.10% percent in local template",
+        "slippage": "1 tick in local template",
+        "fillAssumptions": "Bar-close simulation; limit-fill verification and Bar Magnifier pending",
+        "margin": "100% teaching baseline; broker margin pending",
+        "recalculation": "Bar close only in template; tick/order-fill recalculation pending",
+        "barMagnifier": "Off in template unless stated",
+        "verifiedStatus": "not_verified_original_settings"
+      },
+      "inputParameters": [
+        {
+          "name": "ATR SMA Length",
+          "value": "12",
+          "role": "volatility",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "公開描述提到 ATR SMA 12，需核對是否為原始設定。"
+        },
+        {
+          "name": "SuperTrend ATR Length",
+          "value": "10",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "ATR 倍數會同時影響止蝕距離和出場速度。"
+        },
+        {
+          "name": "SuperTrend Factor",
+          "value": "3.0",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "多段止盈需要定義每段比例和剩餘倉位處理。"
+        },
+        {
+          "name": "Stop ATR Multiple",
+          "value": "2.0",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "極高 PF 必須先檢查交易次數、成本、OOS 和曲線擬合。"
+        },
+        {
+          "name": "TP ATR Ladder",
+          "value": "1 / 2 / 3 / 4 ATR",
+          "role": "exit",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "7-step 出場容易過度優化，只適合用作教學拆解。"
+        }
+      ],
+      "scriptAccess": {
+        "sourceEvidenceId": "TVE-0006",
+        "visibility": "unknown",
+        "sourceCodeStatus": "local_template_only",
+        "licenseStatus": "unknown",
+        "attribution": "TradingView public strategy page / presentTrading",
+        "renderPolicy": "render_local_template_with_warning",
+        "checkedAt": "2026-07-05",
+        "policyNote": "Original TradingView source can be included only after verified open visibility, attribution, and license review. Local templates are non-original.",
+        "policyNoteZh": "這段 Pine Script 是本站本地教學範本，不是原作者 TradingView 源碼；原始源碼只有在授權、署名和來源核對後才會收錄。"
+      },
+      "pineScript": {
+        "status": "local_template",
+        "pineVersion": "Pine Script v6 teaching template",
+        "kind": "local_reconstruction_template",
+        "isOriginalTradingViewSource": false,
+        "code": "//@version=6\nstrategy(\"Local teaching template - SuperATR ladder exits\", overlay=true, initial_capital=10000, commission_type=strategy.commission.percent, commission_value=0.10, slippage=1, pyramiding=0)\natrLength = input.int(12, \"ATR SMA length\", minval=1)\nsupertrendLength = input.int(10, \"SuperTrend ATR length\", minval=1)\nsupertrendFactor = input.float(3.0, \"SuperTrend factor\", minval=0.1, step=0.1)\nstopAtr = input.float(2.0, \"Stop ATR multiple\", minval=0.1, step=0.1)\ntpAtr1 = input.float(1.0, \"TP1 ATR multiple\", minval=0.1, step=0.1)\ntpAtr2 = input.float(2.0, \"TP2 ATR multiple\", minval=0.1, step=0.1)\ntpAtr3 = input.float(3.0, \"TP3 ATR multiple\", minval=0.1, step=0.1)\ntpAtr4 = input.float(4.0, \"TP4 ATR multiple\", minval=0.1, step=0.1)\natr = ta.sma(ta.tr(true), atrLength)\n[superTrend, direction] = ta.supertrend(supertrendFactor, supertrendLength)\nlongSignal = ta.change(direction) < 0\nif longSignal\n    strategy.entry(\"Long\", strategy.long)\nentry = strategy.position_avg_price\nstopPrice = entry - atr * stopAtr\nstrategy.exit(\"TP1\", \"Long\", qty_percent=25, limit=entry + atr * tpAtr1, stop=stopPrice)\nstrategy.exit(\"TP2\", \"Long\", qty_percent=25, limit=entry + atr * tpAtr2, stop=stopPrice)\nstrategy.exit(\"TP3\", \"Long\", qty_percent=25, limit=entry + atr * tpAtr3, stop=stopPrice)\nstrategy.exit(\"TP4\", \"Long\", qty_percent=25, limit=entry + atr * tpAtr4, stop=stopPrice)\nplot(superTrend, \"SuperTrend\", color=direction < 0 ? color.green : color.red)\n",
+        "unavailableReason": "original_source_not_copied_local_template_only",
+        "reviewWarningZh": "If code is shown, it is a local teaching template, not the original TradingView author source."
+      },
+      "scriptCodeAudit": {
+        "status": "local_template",
+        "sourceEvidenceId": "TVE-0006",
+        "visibility": "unknown",
+        "sourceCodeStatus": "local_template_only",
+        "renderPolicy": "render_local_template_with_warning",
+        "includeOriginalCode": false,
+        "codeLines": 22,
+        "summary": "original_source_not_copied_local_template_only",
+        "limitations": [
+          "not_original_tradingview_author_source",
+          "parameters_are_teaching_baselines_until_original_inputs_verified",
+          "backtest_metrics_must_be_recreated_on real symbol/timeframe before use"
+        ]
+      },
+      "metricFramingZh": "PF、勝率、回撤和回報只代表指定歷史資料、測試期間、成本、滑價和參數設定下的回測結果，不構成投資或交易建議。",
+      "parameterCompleteness": {
+        "status": "teaching_template_complete_original_pending",
+        "requiredOriginalEvidence": [
+          "TradingView Inputs tab",
+          "TradingView Properties tab",
+          "Strategy Report overview",
+          "List of trades sample",
+          "source visibility and license check"
+        ]
+      }
+    },
+    {
+      "slug": "expected-range-strategy",
+      "title": "Expected Range STRATEGY",
+      "shortTitle": "Expected Range",
+      "author": "Jomy",
+      "sourceName": "TradingView open-source strategy page",
+      "sourceEvidenceId": "TVE-0007",
+      "strategyType": "Expected range / breakout or mean-reversion test",
+      "market": "not verified",
+      "symbol": "not verified",
+      "timeframe": "2H mention",
+      "chartType": "standard",
+      "includeStatus": "support-only",
+      "evidenceStatus": "needs_manual_strategy_report",
+      "verifierStatus": "research_only",
+      "qualityFlags": [
+        "historical-bug-note",
+        "manual-report-required",
+        "exact-dates-missing"
+      ],
+      "displayCaveat": "作者曾修正早期誤導性回測；此案例適合作為回測錯誤與修正透明度教材。",
+      "pfNumeric": 3.937,
+      "pfRange": {
+        "low": 3.937,
+        "high": 3.937
+      },
+      "winRate": null,
+      "trades": null,
+      "maxDrawdown": null,
+      "backtestPeriod": "isolated time ranges available, exact period pending",
+      "backtestStart": null,
+      "backtestEnd": null,
+      "parameters": [
+        {
+          "name": "Expected Range Lookback",
+          "value": "20",
+          "role": "range-model",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "以預期波幅區間作交易框架，必須定義上下界來源。"
+        },
+        {
+          "name": "ATR Length",
+          "value": "14",
+          "role": "volatility",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "ATR 長度會改變區間寬度和觸發頻率。"
+        },
+        {
+          "name": "ATR Range Multiple",
+          "value": "1.0",
+          "role": "range-model",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "方向濾網需避免在單邊市逆勢接刀。"
+        },
+        {
+          "name": "Mode",
+          "value": "Breakout / Mean reversion",
+          "role": "entry-mode",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "公開頁曾提及錯誤修正，適合展示回測透明度。"
+        },
+        {
+          "name": "Backtest Start / End",
+          "value": "2022-01-01 to 2026-12-31 template",
+          "role": "test-window",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "修正前後結果不可混用，PF 要以最新可核對版本為準。"
+        }
+      ],
+      "rules": [
+        {
+          "phase": "validation",
+          "text": "Use as a lesson in correcting misleading tester assumptions before ranking by PF."
+        }
+      ],
+      "rubricBadges": {
+        "trueData": "review",
+        "sampleSize": "unknown",
+        "pfCredible": "review",
+        "drawdownPresent": "unknown",
+        "periodPresent": "partial",
+        "parametersComplete": "partial",
+        "costsModeled": "unknown",
+        "marketTimeframePresent": "partial",
+        "oosCaveat": "missing",
+        "sourceApproved": "review"
+      },
+      "settingsAudit": {
+        "status": "partial_enriched",
+        "completeness": "teaching_template_enriched_not_original_verified",
+        "completenessPercent": 57,
+        "checkedAt": "2026-07-05",
+        "sourceEvidenceId": "TVE-0007",
+        "basis": "Manual audit placeholder; accepted cases require TradingView Properties, Inputs, and Strategy Report evidence.",
+        "gaps": [
+          "exact_original_range",
+          "bug_fix_version_history",
+          "trades_count",
+          "drawdown",
+          "oos_forward_test"
+        ]
+      },
+      "strategyProperties": {
+        "status": "local_teaching_baseline_pending_original_properties",
+        "source": "local teaching baseline; original TradingView Properties still need manual screenshot or exported report",
+        "initialCapital": "US$10,000 teaching baseline",
+        "baseCurrency": "USD teaching baseline",
+        "orderSize": "1 contract or 100% equity teaching baseline",
+        "pyramiding": "0, one position at a time",
+        "commission": "0.10% percent in local template",
+        "slippage": "1 tick in local template",
+        "fillAssumptions": "Bar-close range model; intrabar fill pending",
+        "margin": "100% teaching baseline; broker margin pending",
+        "recalculation": "Bar close only in template; tick/order-fill recalculation pending",
+        "barMagnifier": "Off in template unless stated",
+        "verifiedStatus": "not_verified_original_settings"
+      },
+      "inputParameters": [
+        {
+          "name": "Expected Range Lookback",
+          "value": "20",
+          "role": "range-model",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "以預期波幅區間作交易框架，必須定義上下界來源。"
+        },
+        {
+          "name": "ATR Length",
+          "value": "14",
+          "role": "volatility",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "ATR 長度會改變區間寬度和觸發頻率。"
+        },
+        {
+          "name": "ATR Range Multiple",
+          "value": "1.0",
+          "role": "range-model",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "方向濾網需避免在單邊市逆勢接刀。"
+        },
+        {
+          "name": "Mode",
+          "value": "Breakout / Mean reversion",
+          "role": "entry-mode",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "公開頁曾提及錯誤修正，適合展示回測透明度。"
+        },
+        {
+          "name": "Backtest Start / End",
+          "value": "2022-01-01 to 2026-12-31 template",
+          "role": "test-window",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "修正前後結果不可混用，PF 要以最新可核對版本為準。"
+        }
+      ],
+      "scriptAccess": {
+        "sourceEvidenceId": "TVE-0007",
+        "visibility": "open",
+        "sourceCodeStatus": "local_template_only",
+        "licenseStatus": "open_house_rules_reuse_restricted",
+        "attribution": "TradingView open-source strategy page / Jomy",
+        "renderPolicy": "render_local_template_with_warning",
+        "checkedAt": "2026-07-03",
+        "policyNote": "Original TradingView source can be included only after verified open visibility, attribution, and license review. Local templates are non-original."
+      },
+      "pineScript": {
+        "status": "local_template",
+        "pineVersion": "Pine Script v6 teaching template",
+        "kind": "local_reconstruction_template",
+        "isOriginalTradingViewSource": false,
+        "code": "//@version=6\nstrategy(\"Local teaching template - Expected range breakout\", overlay=true, initial_capital=10000, commission_type=strategy.commission.percent, commission_value=0.10, slippage=1, pyramiding=0)\nrangeLength = input.int(20, \"Expected range lookback\", minval=2)\natrLength = input.int(14, \"ATR length\", minval=1)\natrMultiple = input.float(1.0, \"ATR range multiple\", minval=0.1, step=0.1)\ntradeMode = input.string(\"Breakout\", \"Mode\", options=[\"Breakout\", \"Mean reversion\"])\nstartTime = input.time(timestamp(2022, 1, 1, 0, 0), \"Backtest start\")\nendTime = input.time(timestamp(2026, 12, 31, 23, 59), \"Backtest end\")\ninWindow = time >= startTime and time <= endTime\nbasis = ta.sma(close, rangeLength)\nwidth = ta.atr(atrLength) * atrMultiple\nupper = basis + width\nlower = basis - width\nlongSignal = tradeMode == \"Breakout\" ? close > upper : close < lower\nflatSignal = tradeMode == \"Breakout\" ? close < basis : close > basis\nif inWindow and longSignal\n    strategy.entry(\"Range long\", strategy.long)\nif flatSignal or not inWindow\n    strategy.close(\"Range long\")\nplot(upper, \"Expected upper\", color=color.green)\nplot(basis, \"Range basis\", color=color.gray)\nplot(lower, \"Expected lower\", color=color.red)\n",
+        "unavailableReason": "original_source_not_copied_local_template_only",
+        "reviewWarningZh": "If code is shown, it is a local teaching template, not the original TradingView author source."
+      },
+      "scriptCodeAudit": {
+        "status": "local_template",
+        "sourceEvidenceId": "TVE-0007",
+        "visibility": "open",
+        "sourceCodeStatus": "local_template_only",
+        "renderPolicy": "render_local_template_with_warning",
+        "includeOriginalCode": false,
+        "codeLines": 22,
+        "summary": "original_source_not_copied_local_template_only",
+        "limitations": [
+          "not_original_tradingview_author_source",
+          "parameters_are_teaching_baselines_until_original_inputs_verified",
+          "backtest_metrics_must_be_recreated_on real symbol/timeframe before use"
+        ]
+      },
+      "metricFramingZh": "PF、勝率、回撤和回報只代表指定歷史資料、測試期間、成本、滑價和參數設定下的回測結果，不構成投資或交易建議。",
+      "parameterCompleteness": {
+        "status": "teaching_template_complete_original_pending",
+        "requiredOriginalEvidence": [
+          "TradingView Inputs tab",
+          "TradingView Properties tab",
+          "Strategy Report overview",
+          "List of trades sample",
+          "source visibility and license check"
+        ]
+      }
+    },
+    {
+      "slug": "fracture-threshold-joat",
+      "title": "Fracture Threshold Strategy JOAT",
+      "shortTitle": "Fracture Threshold",
+      "author": "officialjackofalltrades",
+      "sourceName": "TradingView open-source strategy page",
+      "sourceEvidenceId": "TVE-0008",
+      "strategyType": "多濾網結構",
+      "market": "not verified",
+      "symbol": "not verified",
+      "timeframe": "not verified",
+      "chartType": "standard",
+      "includeStatus": "support-only",
+      "evidenceStatus": "exclude_missing_pf",
+      "verifierStatus": "research_only",
+      "qualityFlags": [
+        "good-parameter-description",
+        "missing-concrete-pf",
+        "manual-report-required"
+      ],
+      "displayCaveat": "頁面描述和參數說明較完整，但未記錄具體 PF 結果前不可列入正式高 PF 案例。",
+      "pfNumeric": null,
+      "pfRange": {
+        "low": null,
+        "high": null
+      },
+      "winRate": null,
+      "trades": null,
+      "maxDrawdown": null,
+      "backtestPeriod": "not verified",
+      "backtestStart": null,
+      "backtestEnd": null,
+      "parameters": [
+        {
+          "name": "Trend Score Threshold",
+          "value": "5 of 7",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "以 EMA 或 threshold 判斷結構斷裂，適合拆解風控條件。"
+        },
+        {
+          "name": "EMA Stack",
+          "value": "8 / 13 / 21 / 34 / 55 / 89 / 144",
+          "role": "trend-structure",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "threshold 數值決定訊號敏感度，需避免只迎合樣本。"
+        },
+        {
+          "name": "ATR Length",
+          "value": "14",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "入場方向和退出條件要分開記錄。"
+        },
+        {
+          "name": "Stop ATR Multiple",
+          "value": "2.0",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "若沒有 Strategy Report，PF 欄位不可當作正式績效。"
+        },
+        {
+          "name": "Reward-to-risk Target",
+          "value": "1.8R",
+          "role": "exit",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "風險以 R 值描述，比單看勝率更有教學價值。"
+        }
+      ],
+      "rules": [
+        {
+          "phase": "review",
+          "text": "Keep as support-only until Strategy Report metrics are captured."
+        }
+      ],
+      "rubricBadges": {
+        "trueData": "review",
+        "sampleSize": "unknown",
+        "pfCredible": "missing",
+        "drawdownPresent": "unknown",
+        "periodPresent": "no",
+        "parametersComplete": "partial",
+        "costsModeled": "unknown",
+        "marketTimeframePresent": "no",
+        "oosCaveat": "missing",
+        "sourceApproved": "review"
+      },
+      "settingsAudit": {
+        "status": "partial_enriched",
+        "completeness": "teaching_template_enriched_not_original_verified",
+        "completenessPercent": 48,
+        "checkedAt": "2026-07-05",
+        "sourceEvidenceId": "TVE-0008",
+        "basis": "Manual audit placeholder; accepted cases require TradingView Properties, Inputs, and Strategy Report evidence.",
+        "gaps": [
+          "pf_missing",
+          "strategy_report_missing",
+          "trades_count",
+          "drawdown",
+          "original_inputs"
+        ]
+      },
+      "strategyProperties": {
+        "status": "local_teaching_baseline_pending_original_properties",
+        "source": "local teaching baseline; original TradingView Properties still need manual screenshot or exported report",
+        "initialCapital": "US$10,000 teaching baseline",
+        "baseCurrency": "USD teaching baseline",
+        "orderSize": "100% equity teaching baseline",
+        "pyramiding": "0, one position at a time",
+        "commission": "0.10% percent in local template",
+        "slippage": "1 tick in local template",
+        "fillAssumptions": "Bar-close simulation; limit-fill verification and Bar Magnifier pending",
+        "margin": "100% teaching baseline; broker margin pending",
+        "recalculation": "Bar close only in template; tick/order-fill recalculation pending",
+        "barMagnifier": "Off in template unless stated",
+        "verifiedStatus": "not_verified_original_settings"
+      },
+      "inputParameters": [
+        {
+          "name": "Trend Score Threshold",
+          "value": "5 of 7",
+          "role": "trend-filter",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "以 EMA 或 threshold 判斷結構斷裂，適合拆解風控條件。"
+        },
+        {
+          "name": "EMA Stack",
+          "value": "8 / 13 / 21 / 34 / 55 / 89 / 144",
+          "role": "trend-structure",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "threshold 數值決定訊號敏感度，需避免只迎合樣本。"
+        },
+        {
+          "name": "ATR Length",
+          "value": "14",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "入場方向和退出條件要分開記錄。"
+        },
+        {
+          "name": "Stop ATR Multiple",
+          "value": "2.0",
+          "role": "risk",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "若沒有 Strategy Report，PF 欄位不可當作正式績效。"
+        },
+        {
+          "name": "Reward-to-risk Target",
+          "value": "1.8R",
+          "role": "exit",
+          "status": "teaching-baseline",
+          "source": "local_teaching_template",
+          "note": "風險以 R 值描述，比單看勝率更有教學價值。"
+        }
+      ],
+      "scriptAccess": {
+        "sourceEvidenceId": "TVE-0008",
+        "visibility": "open",
+        "sourceCodeStatus": "local_template_only",
+        "licenseStatus": "open_house_rules_reuse_restricted",
+        "attribution": "TradingView open-source strategy page / officialjackofalltrades",
+        "renderPolicy": "render_local_template_with_warning",
+        "checkedAt": "2026-07-03",
+        "policyNote": "Original TradingView source can be included only after verified open visibility, attribution, and license review. Local templates are non-original."
+      },
+      "pineScript": {
+        "status": "local_template",
+        "pineVersion": "Pine Script v6 teaching template",
+        "kind": "local_reconstruction_template",
+        "isOriginalTradingViewSource": false,
+        "code": "//@version=6\nstrategy(\"Local teaching template - Seven EMA fracture threshold\", overlay=true, initial_capital=10000, commission_type=strategy.commission.percent, commission_value=0.10, slippage=1, pyramiding=0)\nthreshold = input.int(5, \"Trend score threshold\", minval=1, maxval=7)\natrLength = input.int(14, \"ATR length\", minval=1)\nstopAtr = input.float(2.0, \"Stop ATR multiple\", minval=0.1, step=0.1)\nriskReward = input.float(1.8, \"Reward-to-risk target\", minval=0.1, step=0.1)\nema1 = ta.ema(close, 8)\nema2 = ta.ema(close, 13)\nema3 = ta.ema(close, 21)\nema4 = ta.ema(close, 34)\nema5 = ta.ema(close, 55)\nema6 = ta.ema(close, 89)\nema7 = ta.ema(close, 144)\nscore = (close > ema1 ? 1 : 0) + (ema1 > ema2 ? 1 : 0) + (ema2 > ema3 ? 1 : 0) + (ema3 > ema4 ? 1 : 0) + (ema4 > ema5 ? 1 : 0) + (ema5 > ema6 ? 1 : 0) + (ema6 > ema7 ? 1 : 0)\nlongSignal = score >= threshold\nexitSignal = score < threshold - 2\nrisk = ta.atr(atrLength) * stopAtr\nif longSignal\n    strategy.entry(\"Trend score long\", strategy.long)\nstrategy.exit(\"Score risk exit\", \"Trend score long\", stop=strategy.position_avg_price - risk, limit=strategy.position_avg_price + risk * riskReward)\nif exitSignal\n    strategy.close(\"Trend score long\")\nplot(score, \"Trend score\", color=color.teal)\n",
+        "unavailableReason": "original_source_not_copied_local_template_only",
+        "reviewWarningZh": "If code is shown, it is a local teaching template, not the original TradingView author source."
+      },
+      "scriptCodeAudit": {
+        "status": "local_template",
+        "sourceEvidenceId": "TVE-0008",
+        "visibility": "open",
+        "sourceCodeStatus": "local_template_only",
+        "renderPolicy": "render_local_template_with_warning",
+        "includeOriginalCode": false,
+        "codeLines": 23,
+        "summary": "original_source_not_copied_local_template_only",
+        "limitations": [
+          "not_original_tradingview_author_source",
+          "parameters_are_teaching_baselines_until_original_inputs_verified",
+          "backtest_metrics_must_be_recreated_on real symbol/timeframe before use"
+        ]
+      },
+      "metricFramingZh": "PF、勝率、回撤和回報只代表指定歷史資料、測試期間、成本、滑價和參數設定下的回測結果，不構成投資或交易建議。",
+      "parameterCompleteness": {
+        "status": "teaching_template_complete_original_pending",
+        "requiredOriginalEvidence": [
+          "TradingView Inputs tab",
+          "TradingView Properties tab",
+          "Strategy Report overview",
+          "List of trades sample",
+          "source visibility and license check"
+        ]
+      }
+    },
+    {
+      "slug": "simple-candle-strategy",
+      "title": "Simple Candle Strategy",
+      "shortTitle": "Simple Candle",
+      "author": "masteraux101",
+      "sourceName": "TradingView open-source strategy page",
+      "sourceEvidenceId": "TVE-0009",
+      "strategyType": "陰陽燭條件",
+      "market": "not verified",
+      "symbol": "not verified",
+      "timeframe": "not verified",
+      "chartType": "standard",
+      "includeStatus": "rejected",
+      "evidenceStatus": "exclude_missing_pf",
+      "verifierStatus": "excluded",
+      "qualityFlags": [
+        "missing-pf",
+        "missing-period",
+        "missing-parameters"
+      ],
+      "displayCaveat": "沒有可核對 PF、期間和完整參數，不進入正式案例庫。",
+      "pfNumeric": null,
+      "pfRange": {
+        "low": null,
+        "high": null
+      },
+      "winRate": null,
+      "trades": null,
+      "maxDrawdown": null,
+      "backtestPeriod": "not stated",
+      "backtestStart": null,
+      "backtestEnd": null,
+      "parameters": [],
+      "rules": [
+        {
+          "phase": "exclude",
+          "text": "Rejected until complete Strategy Report evidence is available."
+        }
+      ],
+      "rubricBadges": {
+        "trueData": "unknown",
+        "sampleSize": "unknown",
+        "pfCredible": "missing",
+        "drawdownPresent": "unknown",
+        "periodPresent": "no",
+        "parametersComplete": "missing",
+        "costsModeled": "unknown",
+        "marketTimeframePresent": "no",
+        "oosCaveat": "missing",
+        "sourceApproved": "review"
+      },
+      "settingsAudit": {
+        "status": "partial_enriched",
+        "completeness": "teaching_template_enriched_not_original_verified",
+        "completenessPercent": 10,
+        "checkedAt": "2026-07-05",
+        "sourceEvidenceId": "TVE-0009",
+        "basis": "Manual audit placeholder; accepted cases require TradingView Properties, Inputs, and Strategy Report evidence.",
+        "gaps": [
+          "not_strategy_case_or_missing_required_report"
+        ]
+      },
+      "strategyProperties": {
+        "status": "not_applicable",
+        "source": "rejected row",
+        "initialCapital": "not applicable",
+        "baseCurrency": "not applicable",
+        "orderSize": "not applicable",
+        "pyramiding": "not applicable",
+        "commission": "not applicable",
+        "slippage": "not applicable",
+        "fillAssumptions": "not applicable",
+        "margin": "not applicable",
+        "recalculation": "not applicable",
+        "barMagnifier": "not applicable",
+        "verifiedStatus": "not_applicable",
+        "notes": "Rejected until PF, period, parameters, settings and report evidence are captured."
+      },
+      "inputParameters": [],
+      "scriptAccess": {
+        "sourceEvidenceId": "TVE-0009",
+        "visibility": "open",
+        "sourceCodeStatus": "not_applicable",
+        "licenseStatus": "open_house_rules_reuse_restricted",
+        "attribution": "TradingView open-source strategy page / masteraux101",
+        "renderPolicy": "do_not_render_code",
+        "checkedAt": "2026-07-03",
+        "policyNote": "Original TradingView source can be included only after verified open visibility, attribution, and license review. Local templates are non-original."
+      },
+      "pineScript": {
+        "status": "not_applicable",
+        "pineVersion": "not_applicable",
+        "kind": "unavailable",
+        "isOriginalTradingViewSource": false,
+        "code": "",
+        "unavailableReason": "rejected_case_no_code",
+        "reviewWarningZh": "If code is shown, it is a local teaching template, not the original TradingView author source."
+      },
+      "scriptCodeAudit": {
+        "status": "not_applicable",
+        "sourceEvidenceId": "TVE-0009",
+        "visibility": "open",
+        "sourceCodeStatus": "not_applicable",
+        "renderPolicy": "do_not_render_code",
+        "includeOriginalCode": false,
+        "summary": "rejected_case_no_code"
+      },
+      "metricFramingZh": "PF、勝率、回撤和回報只代表指定歷史資料、測試期間、成本、滑價和參數設定下的回測結果，不構成投資或交易建議。"
+    },
+    {
+      "slug": "pinecoders-backtesting-engine",
+      "title": "Backtesting & Trading Engine",
+      "shortTitle": "PineCoders Engine",
+      "author": "PineCoders",
+      "sourceName": "TradingView open-source engine page",
+      "sourceEvidenceId": "TVE-0010",
+      "strategyType": "回測工具",
+      "market": "not a case",
+      "symbol": "not applicable",
+      "timeframe": "not applicable",
+      "chartType": "not_applicable",
+      "includeStatus": "rejected",
+      "evidenceStatus": "exclude_not_strategy",
+      "verifierStatus": "excluded",
+      "qualityFlags": [
+        "tool-not-case",
+        "educational-reference"
+      ],
+      "displayCaveat": "這是回測/交易引擎教材，不是單一可驗證高 PF 策略案例。",
+      "pfNumeric": null,
+      "pfRange": {
+        "low": null,
+        "high": null
+      },
+      "winRate": null,
+      "trades": null,
+      "maxDrawdown": null,
+      "backtestPeriod": "not applicable",
+      "backtestStart": null,
+      "backtestEnd": null,
+      "parameters": [],
+      "rules": [
+        {
+          "phase": "exclude",
+          "text": "Use as education reference only, not as one of the 100 strategy cases."
+        }
+      ],
+      "rubricBadges": {
+        "trueData": "not_applicable",
+        "sampleSize": "not_applicable",
+        "pfCredible": "not_applicable",
+        "drawdownPresent": "not_applicable",
+        "periodPresent": "not_applicable",
+        "parametersComplete": "not_applicable",
+        "costsModeled": "not_applicable",
+        "marketTimeframePresent": "not_applicable",
+        "oosCaveat": "not_applicable",
+        "sourceApproved": "review"
+      },
+      "settingsAudit": {
+        "status": "partial_enriched",
+        "completeness": "teaching_template_enriched_not_original_verified",
+        "completenessPercent": 10,
+        "checkedAt": "2026-07-05",
+        "sourceEvidenceId": "TVE-0010",
+        "basis": "Manual audit placeholder; accepted cases require TradingView Properties, Inputs, and Strategy Report evidence.",
+        "gaps": [
+          "not_strategy_case_or_missing_required_report"
+        ]
+      },
+      "strategyProperties": {
+        "status": "not_applicable",
+        "source": "rejected row",
+        "initialCapital": "not applicable",
+        "baseCurrency": "not applicable",
+        "orderSize": "not applicable",
+        "pyramiding": "not applicable",
+        "commission": "not applicable",
+        "slippage": "not applicable",
+        "fillAssumptions": "not applicable",
+        "margin": "not applicable",
+        "recalculation": "not applicable",
+        "barMagnifier": "not applicable",
+        "verifiedStatus": "not_applicable",
+        "notes": "Educational engine reference, not a single strategy case."
+      },
+      "inputParameters": [],
+      "scriptAccess": {
+        "sourceEvidenceId": "TVE-0010",
+        "visibility": "open",
+        "sourceCodeStatus": "not_applicable",
+        "licenseStatus": "open_house_rules_reuse_restricted",
+        "attribution": "TradingView open-source engine page / PineCoders",
+        "renderPolicy": "do_not_render_code",
+        "checkedAt": "2026-07-03",
+        "policyNote": "Original TradingView source can be included only after verified open visibility, attribution, and license review. Local templates are non-original."
+      },
+      "pineScript": {
+        "status": "not_applicable",
+        "pineVersion": "not_applicable",
+        "kind": "unavailable",
+        "isOriginalTradingViewSource": false,
+        "code": "",
+        "unavailableReason": "tool_reference_not_single_strategy_case",
+        "reviewWarningZh": "If code is shown, it is a local teaching template, not the original TradingView author source."
+      },
+      "scriptCodeAudit": {
+        "status": "not_applicable",
+        "sourceEvidenceId": "TVE-0010",
+        "visibility": "open",
+        "sourceCodeStatus": "not_applicable",
+        "renderPolicy": "do_not_render_code",
+        "includeOriginalCode": false,
+        "summary": "tool_reference_not_single_strategy_case"
+      },
+      "metricFramingZh": "PF、勝率、回撤和回報只代表指定歷史資料、測試期間、成本、滑價和參數設定下的回測結果，不構成投資或交易建議。"
+    }
+  ],
+  "sourceEvidence": [
+    {
+      "id": "TVE-0001",
+      "sourceTitle": "SuperTrend AI Adaptive - Strategy BTC",
+      "author": "DefinedEdge",
+      "sourceUrl": "https://www.tradingview.com/script/kZVrTReu-SuperTrend-AI-Adaptive-Strategy-BTC/",
+      "sourceCheckedAt": "2026-07-03",
+      "privacy": "public",
+      "visibility": "open",
+      "licenseStatus": "open_house_rules_reuse_restricted",
+      "sourceAvailability": "source_viewed_by_public_page_marker",
+      "usePolicy": "facts-only; source URL audit-only; no page prose or screenshots rendered"
+    },
+    {
+      "id": "TVE-0002",
+      "sourceTitle": "NQ/MNQ Super Scalper BACKTEST",
+      "author": "Crispigino",
+      "sourceUrl": "https://www.tradingview.com/script/6ve1ax1D-NQ-MNQ-Super-Scalper-BACKTEST/",
+      "sourceCheckedAt": "2026-07-03",
+      "privacy": "public",
+      "visibility": "open",
+      "licenseStatus": "open_house_rules_reuse_restricted",
+      "sourceAvailability": "source_viewed_by_public_page_marker",
+      "usePolicy": "facts-only; source URL audit-only; no page prose or screenshots rendered"
+    },
+    {
+      "id": "TVE-0003",
+      "sourceTitle": "NQ/MNQ CT Scalper BACKTEST",
+      "author": "Crispigino",
+      "sourceUrl": "https://www.tradingview.com/script/1kEKmbb9-NQ-MNQ-CT-Scalper-BACKTEST/",
+      "sourceCheckedAt": "2026-07-03",
+      "privacy": "public",
+      "visibility": "open",
+      "licenseStatus": "open_house_rules_reuse_restricted",
+      "sourceAvailability": "source_viewed_by_public_page_marker",
+      "usePolicy": "facts-only; source URL audit-only; no page prose or screenshots rendered"
+    },
+    {
+      "id": "TVE-0004",
+      "sourceTitle": "PO3 x ICT Sweep STRATEGY V2",
+      "author": "murp11",
+      "sourceUrl": "https://www.tradingview.com/script/ijnCoxOR/",
+      "sourceCheckedAt": "2026-07-03",
+      "privacy": "public",
+      "visibility": "invite-only",
+      "licenseStatus": "invite_only_no_code_access",
+      "sourceAvailability": "source_unavailable",
+      "usePolicy": "metadata-only; do not imply source availability"
+    },
+    {
+      "id": "TVE-0005",
+      "sourceTitle": "Smoothed Heikin Ashi Trend BACKTEST",
+      "author": "TraderHalai",
+      "sourceUrl": "https://www.tradingview.com/script/Is0LQdiz-Smoothed-Heikin-Ashi-Trend-on-Chart-TraderHalai-BACKTEST/",
+      "sourceCheckedAt": "2026-07-03",
+      "privacy": "public",
+      "visibility": "open",
+      "licenseStatus": "open_house_rules_reuse_restricted",
+      "sourceAvailability": "source_viewed_by_public_page_marker",
+      "usePolicy": "facts-only; non-standard chart warning required"
+    },
+    {
+      "id": "TVE-0006",
+      "sourceTitle": "SuperATR 7-Step Profit Strategy",
+      "author": "presentTrading",
+      "sourceUrl": "https://www.tradingview.com/script/FDYGrZVD-SuperATR-7-Step-Profit-Strategy-presentTrading/",
+      "sourceCheckedAt": "2026-07-03",
+      "privacy": "public",
+      "visibility": "unknown",
+      "licenseStatus": "unknown",
+      "sourceAvailability": "public_page_text_only",
+      "usePolicy": "facts-only; very-high-PF warning required"
+    },
+    {
+      "id": "TVE-0007",
+      "sourceTitle": "expected range STRATEGY",
+      "author": "Jomy",
+      "sourceUrl": "https://www.tradingview.com/script/kJM4hmpk-expected-range-STRATEGY/",
+      "sourceCheckedAt": "2026-07-03",
+      "privacy": "public",
+      "visibility": "open",
+      "licenseStatus": "open_house_rules_reuse_restricted",
+      "sourceAvailability": "source_viewed_by_public_page_marker",
+      "usePolicy": "facts-only; historical bug-note required"
+    },
+    {
+      "id": "TVE-0008",
+      "sourceTitle": "Fracture Threshold Strategy JOAT",
+      "author": "officialjackofalltrades",
+      "sourceUrl": "https://www.tradingview.com/script/NwMwuyA5-Fracture-Threshold-Strategy-JOAT/",
+      "sourceCheckedAt": "2026-07-03",
+      "privacy": "public",
+      "visibility": "open",
+      "licenseStatus": "open_house_rules_reuse_restricted",
+      "sourceAvailability": "source_viewed_by_public_page_marker",
+      "usePolicy": "facts-only; PF missing so support-only"
+    },
+    {
+      "id": "TVE-0009",
+      "sourceTitle": "Simple Candle Strategy",
+      "author": "masteraux101",
+      "sourceUrl": "https://www.tradingview.com/script/Vufc1HaC/",
+      "sourceCheckedAt": "2026-07-03",
+      "privacy": "public",
+      "visibility": "open",
+      "licenseStatus": "open_house_rules_reuse_restricted",
+      "sourceAvailability": "source_viewed_by_public_page_marker",
+      "usePolicy": "rejected until PF/period/parameters are captured"
+    },
+    {
+      "id": "TVE-0010",
+      "sourceTitle": "Backtesting & Trading Engine",
+      "author": "PineCoders",
+      "sourceUrl": "https://www.tradingview.com/script/dYqL95JB-Backtesting-Trading-Engine-PineCoders/",
+      "sourceCheckedAt": "2026-07-03",
+      "privacy": "public",
+      "visibility": "open",
+      "licenseStatus": "open_house_rules_reuse_restricted",
+      "sourceAvailability": "source_viewed_by_public_page_marker",
+      "usePolicy": "educational reference only; not counted as strategy case"
+    }
+  ]
+}

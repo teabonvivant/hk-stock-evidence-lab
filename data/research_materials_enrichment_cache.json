@@ -1,0 +1,1635 @@
+{
+  "openlibrary::The Stock Market Barometer": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+Stock+Market+Barometer&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::The Stock Market Barometer": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22The+Stock+Market+Barometer%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::The Dow Theory": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+Dow+Theory&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::The Dow Theory": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22The+Dow+Theory%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Studies in Tape Reading": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Studies+in+Tape+Reading&limit=5",
+    "error": "",
+    "best": {
+      "title": "Studies in Tape Reading",
+      "authors": [
+        "Rollo Tape Aka Rollo Tape"
+      ],
+      "first_publish_year": 2009,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL17554455W",
+      "url": "https://openlibrary.org/works/OL17554455W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::How I Trade and Invest in Stocks and Bonds": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=How+I+Trade+and+Invest+in+Stocks+and+Bonds&limit=5",
+    "error": "",
+    "best": {
+      "title": "How I trade and invest in stocks and bonds",
+      "authors": [
+        "Wyckoff, Richard Demille"
+      ],
+      "first_publish_year": 1922,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL124134W",
+      "url": "https://openlibrary.org/works/OL124134W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::How to Trade in Stocks": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=How+to+Trade+in+Stocks&limit=5",
+    "error": "",
+    "best": {
+      "title": "How to Trade In Stocks",
+      "authors": [
+        "Jesse Livermore"
+      ],
+      "first_publish_year": 2006,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL7913587W",
+      "url": "https://openlibrary.org/works/OL7913587W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Truth of the Stock Tape": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Truth+of+the+Stock+Tape&limit=5",
+    "error": "",
+    "best": {
+      "title": "Truth of the Stock Tape",
+      "authors": [
+        "William D. Gann"
+      ],
+      "first_publish_year": 1923,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL7423643W",
+      "url": "https://openlibrary.org/works/OL7423643W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::45 Years in Wall Street": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=45+Years+in+Wall+Street&limit=5",
+    "error": "",
+    "best": {
+      "title": "45 years in Wall Street",
+      "authors": [
+        "William D. Gann"
+      ],
+      "first_publish_year": 1949,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL7423632W",
+      "url": "https://openlibrary.org/works/OL7423632W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::The Wave Principle": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+Wave+Principle&limit=5",
+    "error": "<urlopen error _ssl.c:989: The handshake operation timed out>",
+    "best": null
+  },
+  "google_books::The Wave Principle": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22The+Wave+Principle%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Technical Analysis and Stock Market Profits": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Technical+Analysis+and+Stock+Market+Profits&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Technical Analysis and Stock Market Profits": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Technical+Analysis+and+Stock+Market+Profits%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Technical Analysis of Stock Trends": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Technical+Analysis+of+Stock+Trends&limit=5",
+    "error": "<urlopen error _ssl.c:989: The handshake operation timed out>",
+    "best": null
+  },
+  "google_books::Technical Analysis of Stock Trends": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Technical+Analysis+of+Stock+Trends%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Technical Analysis of the Financial Markets": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Technical+Analysis+of+the+Financial+Markets&limit=5",
+    "error": "",
+    "best": {
+      "title": "Technical Analysis of the Financial Markets",
+      "authors": [
+        "John J. Murphy"
+      ],
+      "first_publish_year": 1999,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL1957750W",
+      "url": "https://openlibrary.org/works/OL1957750W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Technical Analysis Explained": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Technical+Analysis+Explained&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Technical Analysis Explained": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Technical+Analysis+Explained%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Getting Started in Technical Analysis": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Getting+Started+in+Technical+Analysis&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Getting Started in Technical Analysis": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Getting+Started+in+Technical+Analysis%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Market Wizards": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Market+Wizards&limit=5",
+    "error": "",
+    "best": {
+      "title": "Market wizards",
+      "authors": [
+        "Jack D. Schwager"
+      ],
+      "first_publish_year": 1993,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL15838199W",
+      "url": "https://openlibrary.org/works/OL15838199W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Technical Analysis: The Complete Resource for Financial Market Technicians": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Technical+Analysis%3A+The+Complete+Resource+for+Financial+Market+Technicians&limit=5",
+    "error": "",
+    "best": null
+  },
+  "google_books::Technical Analysis: The Complete Resource for Financial Market Technicians": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Technical+Analysis%3A+The+Complete+Resource+for+Financial+Market+Technicians%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "crossref::Stock Selection: A Test of Relative Stock Values Reported Over 17 1/2 Years": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=Stock+Selection%3A+A+Test+of+Relative+Stock+Values+Reported+Over+17+1%2F2+Years&rows=5",
+    "error": "",
+    "best": {
+      "title": "Taking Stock of Housing Wealth: Reported Home Values",
+      "authors": [
+        "Grace Wong Bucchianeri",
+        "Talya Miron-Shatz"
+      ],
+      "year": 2010,
+      "publisher": "Elsevier BV",
+      "container_title": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.1877206",
+      "url": "https://doi.org/10.2139/ssrn.1877206"
+    },
+    "score": 0.425
+  },
+  "crossref::Analyzing Gaps for Profitable Trading Strategies": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=Analyzing+Gaps+for+Profitable+Trading+Strategies&rows=5",
+    "error": "",
+    "best": {
+      "title": "Profitable trading strategies using EVA",
+      "authors": [
+        "B. Brian Lee",
+        "Byeonghee Choi",
+        "George Kanaan"
+      ],
+      "year": 2004,
+      "publisher": "Inderscience Publishers",
+      "container_title": "Global Business and Economics Review",
+      "doi": "10.1504/gber.2004.006224",
+      "url": "https://doi.org/10.1504/gber.2004.006224"
+    },
+    "score": 0.667
+  },
+  "openlibrary::Technical Analysis from A to Z": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Technical+Analysis+from+A+to+Z&limit=5",
+    "error": "",
+    "best": {
+      "title": "Technical Analysis from A to Z",
+      "authors": [
+        "Steven B. Achelis"
+      ],
+      "first_publish_year": 2000,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL3180759W",
+      "url": "https://openlibrary.org/works/OL3180759W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::The Encyclopedia of Technical Market Indicators": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+Encyclopedia+of+Technical+Market+Indicators&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::The Encyclopedia of Technical Market Indicators": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22The+Encyclopedia+of+Technical+Market+Indicators%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Trading Systems and Methods": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Trading+Systems+and+Methods&limit=5",
+    "error": "",
+    "best": {
+      "title": "Trading Systems and Methods",
+      "authors": [
+        "Perry J. Kaufman"
+      ],
+      "first_publish_year": 2013,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL25697417W",
+      "url": "https://openlibrary.org/works/OL25697417W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Smarter Trading": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Smarter+Trading&limit=5",
+    "error": "",
+    "best": {
+      "title": "Smarter trading",
+      "authors": [
+        "Perry J. Kaufman"
+      ],
+      "first_publish_year": 1994,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL1904518W",
+      "url": "https://openlibrary.org/works/OL1904518W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::New Concepts in Technical Trading Systems": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=New+Concepts+in+Technical+Trading+Systems&limit=5",
+    "error": "",
+    "best": {
+      "title": "New concepts in technical trading systems",
+      "authors": [
+        "J. Welles Wilder"
+      ],
+      "first_publish_year": 1978,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL5039607W",
+      "url": "https://openlibrary.org/works/OL5039607W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Technical Analysis: Power Tools for Active Investors": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Technical+Analysis%3A+Power+Tools+for+Active+Investors&limit=5",
+    "error": "",
+    "best": null
+  },
+  "google_books::Technical Analysis: Power Tools for Active Investors": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Technical+Analysis%3A+Power+Tools+for+Active+Investors%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Bollinger on Bollinger Bands": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Bollinger+on+Bollinger+Bands&limit=5",
+    "error": "",
+    "best": {
+      "title": "Bollinger on Bollinger Bands",
+      "authors": [
+        "John Bollinger"
+      ],
+      "first_publish_year": 2001,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL282159W",
+      "url": "https://openlibrary.org/works/OL282159W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::The New Technical Trader": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+New+Technical+Trader&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::The New Technical Trader": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22The+New+Technical+Trader%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "crossref::Commodity Channel Index": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=Commodity+Channel+Index&rows=5",
+    "error": "",
+    "best": {
+      "title": "Commodity Index",
+      "authors": [],
+      "year": 1989,
+      "publisher": "Oxford University Press (OUP)",
+      "container_title": "Insecticide and Acaricide Tests",
+      "doi": "10.1093/iat/14.1.419",
+      "url": "https://doi.org/10.1093/iat/14.1.419"
+    },
+    "score": 0.789
+  },
+  "openlibrary::How I Made One Million Dollars Last Year Trading Commodities": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=How+I+Made+One+Million+Dollars+Last+Year+Trading+Commodities&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::How I Made One Million Dollars Last Year Trading Commodities": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22How+I+Made+One+Million+Dollars+Last+Year+Trading+Commodities%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "crossref::The Ripple Effect of Daily New Lows": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=The+Ripple+Effect+of+Daily+New+Lows&rows=5",
+    "error": "",
+    "best": {
+      "title": "An Empirical Model of Daily Highs and Lows",
+      "authors": [
+        "Yin-Wong Cheung"
+      ],
+      "year": 2006,
+      "publisher": "Elsevier BV",
+      "container_title": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.897900",
+      "url": "https://doi.org/10.2139/ssrn.897900"
+    },
+    "score": 0.545
+  },
+  "openlibrary::Granville's New Key to Stock Market Profits": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Granville%27s+New+Key+to+Stock+Market+Profits&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Granville's New Key to Stock Market Profits": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Granville%27s+New+Key+to+Stock+Market+Profits%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Patterns for Profit": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Patterns+for+Profit&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Patterns for Profit": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Patterns+for+Profit%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::The New Science of Technical Analysis": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+New+Science+of+Technical+Analysis&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::The New Science of Technical Analysis": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22The+New+Science+of+Technical+Analysis%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Trading for a Living": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Trading+for+a+Living&limit=5",
+    "error": "",
+    "best": {
+      "title": "Trading for a Living",
+      "authors": [
+        "Alexander Elder"
+      ],
+      "first_publish_year": 1993,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL1940236W",
+      "url": "https://openlibrary.org/works/OL1940236W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Japanese Candlestick Charting Techniques": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Japanese+Candlestick+Charting+Techniques&limit=5",
+    "error": "<urlopen error _ssl.c:989: The handshake operation timed out>",
+    "best": null
+  },
+  "google_books::Japanese Candlestick Charting Techniques": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Japanese+Candlestick+Charting+Techniques%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Ichimoku Kinko Hyo": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Ichimoku+Kinko+Hyo&limit=5",
+    "error": "<urlopen error _ssl.c:989: The handshake operation timed out>",
+    "best": null
+  },
+  "google_books::Ichimoku Kinko Hyo": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Ichimoku+Kinko+Hyo%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Encyclopedia of Chart Patterns": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Encyclopedia+of+Chart+Patterns&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Encyclopedia of Chart Patterns": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Encyclopedia+of+Chart+Patterns%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Market Magic: Riding the Greatest Bull Market of the Century": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Market+Magic%3A+Riding+the+Greatest+Bull+Market+of+the+Century&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Market Magic: Riding the Greatest Bull Market of the Century": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Market+Magic%3A+Riding+the+Greatest+Bull+Market+of+the+Century%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::The Fourth Mega-Market": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+Fourth+Mega-Market&limit=5",
+    "error": "",
+    "best": {
+      "title": "The fourth mega-market, now through 2011",
+      "authors": [
+        "Ralph Acampora",
+        "Michael D'Angelo"
+      ],
+      "first_publish_year": 2000,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL15830673W",
+      "url": "https://openlibrary.org/works/OL15830673W"
+    },
+    "score": 0.71
+  },
+  "openlibrary::Elliott Wave Principle": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Elliott+Wave+Principle&limit=5",
+    "error": "",
+    "best": {
+      "title": "Elliott wave principle",
+      "authors": [
+        "A. J. Frost",
+        "Robert R. Prechter",
+        "Robert R. Prechter Jr.",
+        "Robert Rougelot Prechter"
+      ],
+      "first_publish_year": 1978,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL2017557W",
+      "url": "https://openlibrary.org/works/OL2017557W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Mastering Elliott Wave": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Mastering+Elliott+Wave&limit=5",
+    "error": "",
+    "best": {
+      "title": "Mastering Elliott wave",
+      "authors": [
+        "Glenn Neely",
+        "Eric Hall"
+      ],
+      "first_publish_year": 1990,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL2476876W",
+      "url": "https://openlibrary.org/works/OL2476876W"
+    },
+    "score": 1.0
+  },
+  "crossref::Identifying Bear Market Bottoms and New Bull Markets": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=Identifying+Bear+Market+Bottoms+and+New+Bull+Markets&rows=5",
+    "error": "",
+    "best": {
+      "title": "Identifying Bull and Bear Markets in Stock Returns",
+      "authors": [
+        "John M. maheu",
+        "Thomas H. McCurdy"
+      ],
+      "year": 2000,
+      "publisher": "Informa UK Limited",
+      "container_title": "Journal of Business &amp; Economic Statistics",
+      "doi": "10.1080/07350015.2000.10524851",
+      "url": "https://doi.org/10.1080/07350015.2000.10524851"
+    },
+    "score": 0.608
+  },
+  "openlibrary::Secrets for Profiting in Bull and Bear Markets": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Secrets+for+Profiting+in+Bull+and+Bear+Markets&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Secrets for Profiting in Bull and Bear Markets": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Secrets+for+Profiting+in+Bull+and+Bear+Markets%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::How to Make Money in Stocks": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=How+to+Make+Money+in+Stocks&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::How to Make Money in Stocks": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22How+to+Make+Money+in+Stocks%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Trade Like a Stock Market Wizard": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Trade+Like+a+Stock+Market+Wizard&limit=5",
+    "error": "",
+    "best": {
+      "title": "Trade Like a Stock Market Wizard",
+      "authors": [
+        "Mark Minervini"
+      ],
+      "first_publish_year": 2013,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL17513152W",
+      "url": "https://openlibrary.org/works/OL17513152W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Think and Trade Like a Champion": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Think+and+Trade+Like+a+Champion&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Think and Trade Like a Champion": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Think+and+Trade+Like+a+Champion%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::How I Made $2,000,000 in the Stock Market": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=How+I+Made+%242%2C000%2C000+in+the+Stock+Market&limit=5",
+    "error": "",
+    "best": {
+      "title": "How I Made $2,000,000 In The Stock Market",
+      "authors": [
+        "Nicolas Darvas"
+      ],
+      "first_publish_year": 1960,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL6662939W",
+      "url": "https://openlibrary.org/works/OL6662939W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Technical Analysis Using Multiple Timeframes": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Technical+Analysis+Using+Multiple+Timeframes&limit=5",
+    "error": "",
+    "best": {
+      "title": "Technical analysis using multiple timeframes",
+      "authors": [
+        "Brian Shannon"
+      ],
+      "first_publish_year": 2008,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL19905807W",
+      "url": "https://openlibrary.org/works/OL19905807W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Maximum Trading Gains with Anchored VWAP": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Maximum+Trading+Gains+with+Anchored+VWAP&limit=5",
+    "error": "",
+    "best": {
+      "title": "Maximum Trading Gains with Anchored VWAP",
+      "authors": [
+        "Brian Shannon"
+      ],
+      "first_publish_year": 2023,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL34054577W",
+      "url": "https://openlibrary.org/works/OL34054577W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Street Smarts": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Street+Smarts&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Street Smarts": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Street+Smarts%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Short Term Trading Strategies That Work": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Short+Term+Trading+Strategies+That+Work&limit=5",
+    "error": "",
+    "best": {
+      "title": "Short term trading strategies that work",
+      "authors": [
+        "Laurence A. Connors"
+      ],
+      "first_publish_year": 2009,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL19901979W",
+      "url": "https://openlibrary.org/works/OL19901979W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Technical Analysis for the Trading Professional": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Technical+Analysis+for+the+Trading+Professional&limit=5",
+    "error": "",
+    "best": {
+      "title": "Technical analysis for the trading professional",
+      "authors": [
+        "Constance M. Brown"
+      ],
+      "first_publish_year": 1999,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL1931266W",
+      "url": "https://openlibrary.org/works/OL1931266W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Rocket Science for Traders": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Rocket+Science+for+Traders&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Rocket Science for Traders": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Rocket+Science+for+Traders%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Cybernetic Analysis for Stocks and Futures": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Cybernetic+Analysis+for+Stocks+and+Futures&limit=5",
+    "error": "",
+    "best": {
+      "title": "Cybernetic Analysis for Stocks and Futures",
+      "authors": [
+        "John F. Ehlers"
+      ],
+      "first_publish_year": 2004,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL4117086W",
+      "url": "https://openlibrary.org/works/OL4117086W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Cybernetic Trading Strategies": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Cybernetic+Trading+Strategies&limit=5",
+    "error": "",
+    "best": {
+      "title": "Cybernetic trading strategies",
+      "authors": [
+        "Murray A. Ruggiero"
+      ],
+      "first_publish_year": 1997,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL3359067W",
+      "url": "https://openlibrary.org/works/OL3359067W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Design, Testing, and Optimization of Trading Systems": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Design%2C+Testing%2C+and+Optimization+of+Trading+Systems&limit=5",
+    "error": "",
+    "best": {
+      "title": "Design, Testing, and Optimization of Trading Systems",
+      "authors": [
+        "Robert Pardo"
+      ],
+      "first_publish_year": 2009,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL21513106W",
+      "url": "https://openlibrary.org/works/OL21513106W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Quantitative Trading Systems": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Quantitative+Trading+Systems&limit=5",
+    "error": "",
+    "best": {
+      "title": "Quantitative Trading Systems",
+      "authors": [
+        "Dr Howard B Bandy"
+      ],
+      "first_publish_year": 2011,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL20272151W",
+      "url": "https://openlibrary.org/works/OL20272151W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Modeling Trading System Performance": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Modeling+Trading+System+Performance&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Modeling Trading System Performance": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Modeling+Trading+System+Performance%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Trading Systems That Work": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Trading+Systems+That+Work&limit=5",
+    "error": "",
+    "best": {
+      "title": "Trading Systems That Work",
+      "authors": [
+        "Thomas Stridsman"
+      ],
+      "first_publish_year": 2000,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL282070W",
+      "url": "https://openlibrary.org/works/OL282070W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Trading Tactics": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Trading+Tactics&limit=5",
+    "error": "",
+    "best": {
+      "title": "Mico trading tactics",
+      "authors": [
+        "Oliver Velez"
+      ],
+      "first_publish_year": 2002,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL9915040W",
+      "url": "https://openlibrary.org/works/OL9915040W"
+    },
+    "score": 0.857
+  },
+  "crossref::Smoothing Data with Faster Moving Averages": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=Smoothing+Data+with+Faster+Moving+Averages&rows=5",
+    "error": "",
+    "best": {
+      "title": "Smoothing data trends by using moving averages",
+      "authors": [
+        "David N. Ammons",
+        "Dale J. Roenigk"
+      ],
+      "year": 2021,
+      "publisher": "Routledge",
+      "container_title": "Tools for Decision Making",
+      "doi": "10.4324/9781003129431-6",
+      "url": "https://doi.org/10.4324/9781003129431-6"
+    },
+    "score": 0.727
+  },
+  "crossref::Good TRIX": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=Good+TRIX&rows=5",
+    "error": "",
+    "best": {
+      "title": "Trix",
+      "authors": [
+        "Barbara Fisher"
+      ],
+      "year": 2024,
+      "publisher": "Open Book Publishers",
+      "container_title": "",
+      "doi": "10.11647/obp.0377",
+      "url": "https://doi.org/10.11647/obp.0377"
+    },
+    "score": 0.615
+  },
+  "openlibrary::The Investor's Guide to Fidelity Funds": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+Investor%27s+Guide+to+Fidelity+Funds&limit=5",
+    "error": "",
+    "best": {
+      "title": "The investor's guide to fidelity funds",
+      "authors": [
+        "Martin, Peter G."
+      ],
+      "first_publish_year": 1989,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL4775488W",
+      "url": "https://openlibrary.org/works/OL4775488W"
+    },
+    "score": 1.0
+  },
+  "crossref::The Vortex Indicator": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=The+Vortex+Indicator&rows=5",
+    "error": "",
+    "best": {
+      "title": "Vortex Retarder Allows Broadband Polarization Direction Indicator",
+      "authors": [
+        "Bei Zhang",
+        "Xinyun Zhu",
+        "Yiwei Dong"
+      ],
+      "year": 2024,
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "container_title": "IEEE Transactions on Instrumentation and Measurement",
+      "doi": "10.1109/tim.2024.3418095",
+      "url": "https://doi.org/10.1109/tim.2024.3418095"
+    },
+    "score": 0.376
+  },
+  "openlibrary::The Three Skills of Top Trading": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+Three+Skills+of+Top+Trading&limit=5",
+    "error": "",
+    "best": {
+      "title": "The Three Skills of Top Trading",
+      "authors": [
+        "Hank Pruden"
+      ],
+      "first_publish_year": 2007,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL9273040W",
+      "url": "https://openlibrary.org/works/OL9273040W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Trades About to Happen": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Trades+About+to+Happen&limit=5",
+    "error": "",
+    "best": {
+      "title": "Trades about to Happen",
+      "authors": [
+        "David H. Weis",
+        "Alexander Elder"
+      ],
+      "first_publish_year": 2013,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL21471768W",
+      "url": "https://openlibrary.org/works/OL21471768W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Master the Markets": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Master+the+Markets&limit=5",
+    "error": "",
+    "best": {
+      "title": "Master the Markets RESUMEN",
+      "authors": [
+        "Rubén Villahermosa"
+      ],
+      "first_publish_year": 2018,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL29632674W",
+      "url": "https://openlibrary.org/works/OL29632674W"
+    },
+    "score": 0.818
+  },
+  "openlibrary::How to Use the Three-Point Reversal Method of Point & Figure Stock Market Trading": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=How+to+Use+the+Three-Point+Reversal+Method+of+Point+%26+Figure+Stock+Market+Trading&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::How to Use the Three-Point Reversal Method of Point & Figure Stock Market Trading": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22How+to+Use+the+Three-Point+Reversal+Method+of+Point+%26+Figure+Stock+Market+Trading%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Point & Figure Charting": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Point+%26+Figure+Charting&limit=5",
+    "error": "",
+    "best": {
+      "title": "RTR point & figure charting",
+      "authors": [],
+      "first_publish_year": 1983,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL22846866W",
+      "url": "https://openlibrary.org/works/OL22846866W"
+    },
+    "score": 0.92
+  },
+  "openlibrary::The Definitive Guide to Point and Figure": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+Definitive+Guide+to+Point+and+Figure&limit=5",
+    "error": "",
+    "best": {
+      "title": "The Definitive Guide to Point and Figure",
+      "authors": [
+        "Jeremy Du Plessis"
+      ],
+      "first_publish_year": 2005,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL8916043W",
+      "url": "https://openlibrary.org/works/OL8916043W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::21st Century Point and Figure": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=21st+Century+Point+and+Figure&limit=5",
+    "error": "",
+    "best": {
+      "title": "21st Century Point and Figure",
+      "authors": [
+        "Jeremy du Plessis"
+      ],
+      "first_publish_year": 2015,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL27368249W",
+      "url": "https://openlibrary.org/works/OL27368249W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Markets and Market Logic": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Markets+and+Market+Logic&limit=5",
+    "error": "",
+    "best": {
+      "title": "Markets and market logic",
+      "authors": [
+        "J. Peter Steidlmayer"
+      ],
+      "first_publish_year": 1986,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL3367422W",
+      "url": "https://openlibrary.org/works/OL3367422W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Steidlmayer on Markets": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Steidlmayer+on+Markets&limit=5",
+    "error": "<urlopen error _ssl.c:989: The handshake operation timed out>",
+    "best": null
+  },
+  "google_books::Steidlmayer on Markets": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Steidlmayer+on+Markets%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Mind Over Markets": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Mind+Over+Markets&limit=5",
+    "error": "",
+    "best": {
+      "title": "Mind over markets",
+      "authors": [
+        "James F. Dalton"
+      ],
+      "first_publish_year": 1999,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL16956321W",
+      "url": "https://openlibrary.org/works/OL16956321W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Markets in Profile": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Markets+in+Profile&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Markets in Profile": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Markets+in+Profile%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::The Logical Trader": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+Logical+Trader&limit=5",
+    "error": "",
+    "best": {
+      "title": "The Logical Trader",
+      "authors": [
+        "Mark B. Fisher"
+      ],
+      "first_publish_year": 2002,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL8226709W",
+      "url": "https://openlibrary.org/works/OL8226709W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Day Trading with Short Term Price Patterns and Opening Range Breakout": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Day+Trading+with+Short+Term+Price+Patterns+and+Opening+Range+Breakout&limit=5",
+    "error": "",
+    "best": {
+      "title": "Day trading with short term price patterns and opening range breakout",
+      "authors": [
+        "Toby Crabel"
+      ],
+      "first_publish_year": 1990,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL4182598W",
+      "url": "https://openlibrary.org/works/OL4182598W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Trader Vic: Methods of a Wall Street Master": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Trader+Vic%3A+Methods+of+a+Wall+Street+Master&limit=5",
+    "error": "",
+    "best": {
+      "title": "Trader Vic-- methods of a Wall Street master",
+      "authors": [
+        "Victor Sperandeo",
+        "T. Sullivan Brown"
+      ],
+      "first_publish_year": 1993,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL18181019W",
+      "url": "https://openlibrary.org/works/OL18181019W"
+    },
+    "score": 0.966
+  },
+  "openlibrary::Dynamic Trading": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Dynamic+Trading&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Dynamic Trading": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Dynamic+Trading%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Fibonacci Trading": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Fibonacci+Trading&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Fibonacci Trading": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Fibonacci+Trading%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::DiNapoli Levels": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=DiNapoli+Levels&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::DiNapoli Levels": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22DiNapoli+Levels%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Filtered Waves: Basic Theory": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Filtered+Waves%3A+Basic+Theory&limit=5",
+    "error": "",
+    "best": null
+  },
+  "google_books::Filtered Waves: Basic Theory": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Filtered+Waves%3A+Basic+Theory%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Behavior of Prices on Wall Street": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Behavior+of+Prices+on+Wall+Street&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::Behavior of Prices on Wall Street": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Behavior+of+Prices+on+Wall+Street%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::Tape Reading and Market Tactics": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Tape+Reading+and+Market+Tactics&limit=5",
+    "error": "",
+    "best": {
+      "title": "Tape reading and market tactics",
+      "authors": [
+        "Humphrey Bancroft Neill"
+      ],
+      "first_publish_year": 1959,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL10344334W",
+      "url": "https://openlibrary.org/works/OL10344334W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::The Art of Contrary Thinking": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+Art+of+Contrary+Thinking&limit=5",
+    "error": "",
+    "best": {
+      "title": "The art of contrary thinking",
+      "authors": [
+        "Humphrey B. Neill"
+      ],
+      "first_publish_year": 1954,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL6356603W",
+      "url": "https://openlibrary.org/works/OL6356603W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Deemer on Technical Analysis": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Deemer+on+Technical+Analysis&limit=5",
+    "error": "",
+    "best": {
+      "title": "Deemer on technical analysis",
+      "authors": [
+        "Walter Deemer"
+      ],
+      "first_publish_year": 2012,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL16215782W",
+      "url": "https://openlibrary.org/works/OL16215782W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Being Right or Making Money": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Being+Right+or+Making+Money&limit=5",
+    "error": "<urlopen error _ssl.c:989: The handshake operation timed out>",
+    "best": null
+  },
+  "google_books::Being Right or Making Money": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22Being+Right+or+Making+Money%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "openlibrary::The Research Driven Investor": {
+    "ok": false,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+Research+Driven+Investor&limit=5",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>",
+    "best": null
+  },
+  "google_books::The Research Driven Investor": {
+    "ok": false,
+    "source": "google_books",
+    "query_url": "https://www.googleapis.com/books/v1/volumes?q=intitle%3A%22The+Research+Driven+Investor%22&maxResults=3",
+    "error": "HTTP Error 429: Too Many Requests",
+    "best": null
+  },
+  "crossref::Mutual Fund Cash Reserves, The Risk-Free Rate, and Stock Market Performance": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=Mutual+Fund+Cash+Reserves%2C+The+Risk-Free+Rate%2C+and+Stock+Market+Performance&rows=5",
+    "error": "",
+    "best": {
+      "title": "Mutual Fund Cash Flows and Stock Market Performance",
+      "authors": [
+        "Maury R. Randall",
+        "David Y. Suk",
+        "Stephen W. Tully"
+      ],
+      "year": 2003,
+      "publisher": "With Intelligence LLC",
+      "container_title": "The Journal of Investing",
+      "doi": "10.3905/joi.2003.319537",
+      "url": "https://doi.org/10.3905/joi.2003.319537"
+    },
+    "score": 0.746
+  },
+  "crossref::Price and Volume: Digging Deeper": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=Price+and+Volume%3A+Digging+Deeper&rows=5",
+    "error": "",
+    "best": {
+      "title": "Digging deeper",
+      "authors": [],
+      "year": 2010,
+      "publisher": "Springer Science and Business Media LLC",
+      "container_title": "Nature Geoscience",
+      "doi": "10.1038/ngeo747",
+      "url": "https://doi.org/10.1038/ngeo747"
+    },
+    "score": 0.609
+  },
+  "openlibrary::Investing with Volume Analysis": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Investing+with+Volume+Analysis&limit=5",
+    "error": "",
+    "best": {
+      "title": "Investing with volume analysis",
+      "authors": [
+        "Buff Dormeier"
+      ],
+      "first_publish_year": 2011,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL16011385W",
+      "url": "https://openlibrary.org/works/OL16011385W"
+    },
+    "score": 1.0
+  },
+  "crossref::Forecasting a Volatility Tsunami": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=Forecasting+a+Volatility+Tsunami&rows=5",
+    "error": "",
+    "best": {
+      "title": "Forecasting a Volatility Tsunami",
+      "authors": [
+        "Andrew Thrasher, CMT"
+      ],
+      "year": 2017,
+      "publisher": "Elsevier BV",
+      "container_title": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.2949847",
+      "url": "https://doi.org/10.2139/ssrn.2949847"
+    },
+    "score": 1.0
+  },
+  "crossref::The 5% Canary": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=The+5%25+Canary&rows=5",
+    "error": "",
+    "best": {
+      "title": "Canary",
+      "authors": [],
+      "year": 2012,
+      "publisher": "State University of New York Press",
+      "container_title": "Water Drops",
+      "doi": "10.2307/jj.18376987.71",
+      "url": "https://doi.org/10.2307/jj.18376987.71"
+    },
+    "score": 0.632
+  },
+  "crossref::MACD-V: Volatility Normalised Momentum": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=MACD-V%3A+Volatility+Normalised+Momentum&rows=5",
+    "error": "",
+    "best": {
+      "title": "MACD-V: Volatility Normalised Momentum",
+      "authors": [
+        "Alex Spiroglou"
+      ],
+      "year": 2022,
+      "publisher": "Elsevier BV",
+      "container_title": "SSRN Electronic Journal",
+      "doi": "10.2139/ssrn.4099617",
+      "url": "https://doi.org/10.2139/ssrn.4099617"
+    },
+    "score": 1.0
+  },
+  "openlibrary::The Mathematics of Money Management": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+Mathematics+of+Money+Management&limit=5",
+    "error": "",
+    "best": {
+      "title": "The mathematics of money management",
+      "authors": [
+        "Ralph Vince"
+      ],
+      "first_publish_year": 1992,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL3503409W",
+      "url": "https://openlibrary.org/works/OL3503409W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Dual Momentum Investing": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Dual+Momentum+Investing&limit=5",
+    "error": "",
+    "best": {
+      "title": "Dual momentum investing",
+      "authors": [
+        "Gary Antonacci"
+      ],
+      "first_publish_year": 2015,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL19764608W",
+      "url": "https://openlibrary.org/works/OL19764608W"
+    },
+    "score": 1.0
+  },
+  "crossref::A Century of Profitable Industry Trends": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=A+Century+of+Profitable+Industry+Trends&rows=5",
+    "error": "",
+    "best": {
+      "title": "A Century of Profitable Industry Trends",
+      "authors": [
+        "Carlo Zarattini",
+        "Gary Antonacci"
+      ],
+      "year": 2024,
+      "publisher": "Elsevier BV",
+      "container_title": "",
+      "doi": "10.2139/ssrn.4857230",
+      "url": "https://doi.org/10.2139/ssrn.4857230"
+    },
+    "score": 1.0
+  },
+  "crossref::Foundations of Technical Analysis": {
+    "ok": true,
+    "source": "crossref",
+    "query_url": "https://api.crossref.org/works?query.title=Foundations+of+Technical+Analysis&rows=5",
+    "error": "",
+    "best": {
+      "title": "Economic foundations of technical analysis",
+      "authors": [
+        "Wanying Wang"
+      ],
+      "year": null,
+      "publisher": "Nanyang Technological University",
+      "container_title": "",
+      "doi": "10.32657/10356/55293",
+      "url": "https://doi.org/10.32657/10356/55293"
+    },
+    "score": 0.88
+  },
+  "openlibrary::The Evolution of Technical Analysis": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=The+Evolution+of+Technical+Analysis&limit=5",
+    "error": "",
+    "best": {
+      "title": "The evolution of technical analysis",
+      "authors": [
+        "Andrew W. Lo"
+      ],
+      "first_publish_year": 2010,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL15617065W",
+      "url": "https://openlibrary.org/works/OL15617065W"
+    },
+    "score": 1.0
+  },
+  "openlibrary::Evidence-Based Technical Analysis": {
+    "ok": true,
+    "source": "openlibrary",
+    "query_url": "https://openlibrary.org/search.json?title=Evidence-Based+Technical+Analysis&limit=5",
+    "error": "",
+    "best": {
+      "title": "Evidence-Based Technical Analysis",
+      "authors": [
+        "David R Aronson"
+      ],
+      "first_publish_year": 2006,
+      "publisher": "",
+      "isbn13": "",
+      "openlibrary_key": "/works/OL8203825W",
+      "url": "https://openlibrary.org/works/OL8203825W"
+    },
+    "score": 1.0
+  }
+}

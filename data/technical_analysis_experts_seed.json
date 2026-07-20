@@ -1,0 +1,4782 @@
+{
+  "metadata": {
+    "created_on": "2026-06-21",
+    "selection_basis_zh": "綜合指標原創性、經典書籍/文獻、CMT/Charles H. Dow Award 研究、公開知名度、股票技術分析相關度。",
+    "record_count": 100
+  },
+  "concepts": {
+    "acd-method": [
+      "ACD 開盤區間法",
+      "ACD Method",
+      "breakout"
+    ],
+    "adaptive-moving-average": [
+      "自適應均線",
+      "Adaptive Moving Average",
+      "trend"
+    ],
+    "adx-dmi": [
+      "ADX / DMI",
+      "Average Directional Index / Directional Movement",
+      "trend"
+    ],
+    "andrew-pitchfork": [
+      "安德魯分叉線",
+      "Andrews' Pitchfork",
+      "support_resistance"
+    ],
+    "aroon": [
+      "Aroon 指標",
+      "Aroon",
+      "trend"
+    ],
+    "atr": [
+      "ATR 平均真實波幅",
+      "Average True Range",
+      "volatility"
+    ],
+    "backtesting": [
+      "回測與系統驗證",
+      "Backtesting",
+      "research"
+    ],
+    "bollinger-bands": [
+      "布林通道",
+      "Bollinger Bands",
+      "volatility"
+    ],
+    "breadth": [
+      "市場寬度",
+      "Market Breadth",
+      "breadth"
+    ],
+    "candlestick": [
+      "K 線 / 蠟燭圖",
+      "Candlestick Charting",
+      "charting"
+    ],
+    "can-slim": [
+      "CAN SLIM",
+      "CAN SLIM",
+      "stock_selection"
+    ],
+    "cci": [
+      "CCI 商品通道指標",
+      "Commodity Channel Index",
+      "momentum"
+    ],
+    "chaikin-money-flow": [
+      "Chaikin 資金流",
+      "Chaikin Money Flow",
+      "volume"
+    ],
+    "chart-patterns": [
+      "圖表型態",
+      "Chart Patterns",
+      "charting"
+    ],
+    "cmo": [
+      "Chande 動量震盪器",
+      "Chande Momentum Oscillator",
+      "momentum"
+    ],
+    "connors-rsi": [
+      "Connors RSI",
+      "ConnorsRSI",
+      "momentum"
+    ],
+    "coppock-curve": [
+      "Coppock 曲線",
+      "Coppock Curve",
+      "momentum"
+    ],
+    "cup-with-handle": [
+      "杯柄形態",
+      "Cup With Handle",
+      "charting"
+    ],
+    "cycle-analysis": [
+      "週期分析",
+      "Cycle Analysis",
+      "cycle"
+    ],
+    "demark-indicators": [
+      "DeMark 指標",
+      "DeMARK Indicators",
+      "market_timing"
+    ],
+    "donchian-channel": [
+      "唐奇安通道",
+      "Donchian Channel",
+      "trend"
+    ],
+    "dow-theory": [
+      "道氏理論",
+      "Dow Theory",
+      "foundation"
+    ],
+    "elder-ray": [
+      "Elder-Ray",
+      "Elder-Ray Index",
+      "momentum"
+    ],
+    "elliott-wave": [
+      "艾略特波浪",
+      "Elliott Wave",
+      "wave"
+    ],
+    "ehlers-filters": [
+      "Ehlers 濾波器",
+      "Ehlers Filters",
+      "cycle"
+    ],
+    "evidence-based-ta": [
+      "實證技術分析",
+      "Evidence-Based Technical Analysis",
+      "research"
+    ],
+    "fibonacci": [
+      "費波納契時間/價格",
+      "Fibonacci Time and Price",
+      "support_resistance"
+    ],
+    "force-index": [
+      "Force Index",
+      "Force Index",
+      "volume"
+    ],
+    "gann": [
+      "江恩理論",
+      "Gann Methods",
+      "cycle"
+    ],
+    "guppy-mma": [
+      "Guppy 多重移動平均",
+      "Guppy Multiple Moving Average",
+      "trend"
+    ],
+    "hull-ma": [
+      "Hull 移動平均",
+      "Hull Moving Average",
+      "trend"
+    ],
+    "ichimoku": [
+      "一目均衡表",
+      "Ichimoku Kinko Hyo",
+      "trend"
+    ],
+    "kama": [
+      "KAMA 考夫曼自適應均線",
+      "Kaufman Adaptive Moving Average",
+      "trend"
+    ],
+    "market-profile": [
+      "Market Profile",
+      "Market Profile",
+      "auction_market"
+    ],
+    "macd": [
+      "MACD",
+      "Moving Average Convergence/Divergence",
+      "momentum"
+    ],
+    "mcginley-dynamic": [
+      "McGinley Dynamic",
+      "McGinley Dynamic",
+      "trend"
+    ],
+    "mcclellan-oscillator": [
+      "McClellan Oscillator",
+      "McClellan Oscillator",
+      "breadth"
+    ],
+    "mfi": [
+      "MFI 資金流量指標",
+      "Money Flow Index",
+      "volume"
+    ],
+    "market_timing": [
+      "市場時機",
+      "Market Timing",
+      "market_timing"
+    ],
+    "momentum": [
+      "動量",
+      "Momentum",
+      "momentum"
+    ],
+    "moving-average": [
+      "移動平均",
+      "Moving Average",
+      "trend"
+    ],
+    "obv": [
+      "OBV 能量潮",
+      "On-Balance Volume",
+      "volume"
+    ],
+    "opening-range-breakout": [
+      "開盤區間突破",
+      "Opening Range Breakout",
+      "breakout"
+    ],
+    "parabolic-sar": [
+      "Parabolic SAR",
+      "Parabolic SAR",
+      "trend"
+    ],
+    "point-and-figure": [
+      "點數圖",
+      "Point and Figure",
+      "charting"
+    ],
+    "price-action": [
+      "價格行為",
+      "Price Action",
+      "charting"
+    ],
+    "relative-strength": [
+      "相對強弱 / 強勢股篩選",
+      "Relative Strength",
+      "stock_selection"
+    ],
+    "risk": [
+      "風險 / 回撤",
+      "Risk / Drawdown",
+      "risk"
+    ],
+    "rsi": [
+      "RSI 相對強弱指數",
+      "Relative Strength Index",
+      "momentum"
+    ],
+    "sentiment": [
+      "市場情緒",
+      "Sentiment",
+      "sentiment"
+    ],
+    "stage-analysis": [
+      "四階段分析",
+      "Stage Analysis",
+      "trend"
+    ],
+    "stochastic": [
+      "隨機指標",
+      "Stochastic Oscillator",
+      "momentum"
+    ],
+    "stochastic-rsi": [
+      "隨機 RSI",
+      "Stochastic RSI",
+      "momentum"
+    ],
+    "stock_selection": [
+      "股票選股",
+      "Stock Selection",
+      "stock_selection"
+    ],
+    "supertrend": [
+      "SuperTrend",
+      "SuperTrend",
+      "trend"
+    ],
+    "support-resistance": [
+      "支撐阻力",
+      "Support and Resistance",
+      "charting"
+    ],
+    "systems-trading": [
+      "交易系統",
+      "Trading Systems",
+      "systems"
+    ],
+    "tape-reading": [
+      "讀帶 / 盤口判讀",
+      "Tape Reading",
+      "charting"
+    ],
+    "tema-dema": [
+      "DEMA / TEMA",
+      "Double/Triple Exponential Moving Average",
+      "trend"
+    ],
+    "trend-following": [
+      "趨勢跟隨",
+      "Trend Following",
+      "trend"
+    ],
+    "trin-arms-index": [
+      "TRIN / Arms Index",
+      "Arms Index",
+      "breadth"
+    ],
+    "trix": [
+      "TRIX",
+      "Triple Exponential Average",
+      "momentum"
+    ],
+    "ulcer-index": [
+      "Ulcer Index",
+      "Ulcer Index",
+      "risk"
+    ],
+    "vcp": [
+      "VCP 波動收縮形態",
+      "Volatility Contraction Pattern",
+      "charting"
+    ],
+    "vidya": [
+      "VIDYA 動態平均",
+      "Variable Index Dynamic Average",
+      "trend"
+    ],
+    "volatility": [
+      "波動率",
+      "Volatility",
+      "volatility"
+    ],
+    "volume-analysis": [
+      "成交量分析",
+      "Volume Analysis",
+      "volume"
+    ],
+    "volume-spread-analysis": [
+      "VSA 量價差分析",
+      "Volume Spread Analysis",
+      "volume"
+    ],
+    "vortex-indicator": [
+      "Vortex 指標",
+      "Vortex Indicator",
+      "trend"
+    ],
+    "vwap": [
+      "VWAP / Anchored VWAP",
+      "VWAP / Anchored VWAP",
+      "volume"
+    ],
+    "williams-r": [
+      "Williams %R",
+      "Williams %R",
+      "momentum"
+    ],
+    "wyckoff-method": [
+      "威科夫方法",
+      "Wyckoff Method",
+      "volume"
+    ]
+  },
+  "experts": [
+    {
+      "rank": 1,
+      "name_en": "Charles H. Dow",
+      "name_zh": "查爾斯・道",
+      "country_region": "United States",
+      "years": "1851-1902",
+      "role": "金融記者、道氏理論奠基者",
+      "category": "foundation",
+      "concepts": [
+        {
+          "slug": "dow-theory",
+          "relation": "奠基者"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "早期趨勢概念"
+        }
+      ],
+      "works": [
+        {
+          "title": "Wall Street Journal editorials on market averages",
+          "year": 1899,
+          "type": "editorials",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "技術分析源流人物之一，道氏理論、趨勢確認與量價觀念皆由其市場評論發展而來。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 4,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.investopedia.com/terms/d/dowtheory.asp",
+        "https://www.investopedia.com/articles/financial-theory/10/pioneers-technical-analysis.asp"
+      ]
+    },
+    {
+      "rank": 2,
+      "name_en": "William Peter Hamilton",
+      "name_zh": "威廉・彼得・漢密爾頓",
+      "country_region": "United States",
+      "years": "1867-1929",
+      "role": "道氏理論實踐者、作家",
+      "category": "foundation",
+      "concepts": [
+        {
+          "slug": "dow-theory",
+          "relation": "主要詮釋者"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "趨勢判讀"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Stock Market Barometer",
+          "year": 1922,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "把道氏理論用於實際市場評論與投資判斷，是早期技術分析史的重要承接者。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 4,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=58690",
+        "https://archive.org/details/stockmarketbarom00hami",
+        "https://openlibrary.org/books/OL7031671M/The_stock_market_barometer"
+      ]
+    },
+    {
+      "rank": 3,
+      "name_en": "Robert Rhea",
+      "name_zh": "羅伯特・里亞",
+      "country_region": "United States",
+      "years": "1887-1939",
+      "role": "道氏理論作家、通訊作者",
+      "category": "foundation",
+      "concepts": [
+        {
+          "slug": "dow-theory",
+          "relation": "系統化整理者"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "趨勢確認"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Dow Theory",
+          "year": 1932,
+          "type": "book",
+          "url": "https://books.google.com/books/about/The_Dow_Theory.html?id=FO65ngEACAAJ",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "以《The Dow Theory》整理 Dow 與 Hamilton 的觀念，對後來技術分析教材影響很深。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 4,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://books.google.com/books/about/The_Dow_Theory.html?id=FO65ngEACAAJ",
+        "https://openlibrary.org/books/OL6279382M/The_Dow_theory"
+      ]
+    },
+    {
+      "rank": 4,
+      "name_en": "Richard D. Wyckoff",
+      "name_zh": "理查・威科夫",
+      "country_region": "United States",
+      "years": "1873-1934",
+      "role": "市場操作者、教育者、作家",
+      "category": "foundation",
+      "concepts": [
+        {
+          "slug": "wyckoff-method",
+          "relation": "創始者"
+        },
+        {
+          "slug": "volume-analysis",
+          "relation": "量價分析"
+        },
+        {
+          "slug": "tape-reading",
+          "relation": "讀帶"
+        }
+      ],
+      "works": [
+        {
+          "title": "Studies in Tape Reading",
+          "year": 1910,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "How I Trade and Invest in Stocks and Bonds",
+          "year": 1924,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "威科夫方法以供需、量價、累積/派發分析股票，是現代價格行為與量價交易的重要基礎。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 4,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://chartschool.stockcharts.com/table-of-contents/market-analysis/wyckoff-analysis-articles/the-wyckoff-method-a-tutorial"
+      ]
+    },
+    {
+      "rank": 5,
+      "name_en": "Jesse Livermore",
+      "name_zh": "傑西・李佛摩",
+      "country_region": "United States",
+      "years": "1877-1940",
+      "role": "股票與商品交易者",
+      "category": "practitioner",
+      "concepts": [
+        {
+          "slug": "tape-reading",
+          "relation": "代表性實踐者"
+        },
+        {
+          "slug": "price-action",
+          "relation": "價格行為"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "趨勢交易"
+        }
+      ],
+      "works": [
+        {
+          "title": "How to Trade in Stocks",
+          "year": 1940,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "以價格行為、關鍵價位與趨勢操作聞名，雖非學院派作者，但對後世交易方法影響巨大。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 2,
+        "public_fame": 5,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jesse_Livermore"
+      ]
+    },
+    {
+      "rank": 6,
+      "name_en": "W. D. Gann",
+      "name_zh": "威廉・江恩",
+      "country_region": "United States",
+      "years": "1878-1955",
+      "role": "交易者、作家",
+      "category": "foundation",
+      "concepts": [
+        {
+          "slug": "gann",
+          "relation": "創始者"
+        },
+        {
+          "slug": "cycle-analysis",
+          "relation": "週期分析"
+        },
+        {
+          "slug": "support-resistance",
+          "relation": "角度/價位"
+        }
+      ],
+      "works": [
+        {
+          "title": "Truth of the Stock Tape",
+          "year": 1923,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "45 Years in Wall Street",
+          "year": 1941,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "江恩角度、時間循環、價格幾何在技術分析史上具代表性，適合歸於週期與時間價格分析資料。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 2,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/William_Delbert_Gann"
+      ]
+    },
+    {
+      "rank": 7,
+      "name_en": "Ralph Nelson Elliott",
+      "name_zh": "拉爾夫・尼爾森・艾略特",
+      "country_region": "United States",
+      "years": "1871-1948",
+      "role": "會計師、波浪理論創始者",
+      "category": "foundation",
+      "concepts": [
+        {
+          "slug": "elliott-wave",
+          "relation": "創始者"
+        },
+        {
+          "slug": "cycle-analysis",
+          "relation": "市場循環"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Wave Principle",
+          "year": 1938,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "艾略特波浪是最知名的技術分析分支之一，常用於股票指數、外匯與商品的趨勢結構判讀。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ralph_Nelson_Elliott",
+        "https://www.investopedia.com/terms/e/elliottwavetheory.asp"
+      ]
+    },
+    {
+      "rank": 8,
+      "name_en": "Richard W. Schabacker",
+      "name_zh": "理查・沙巴克",
+      "country_region": "United States",
+      "years": "1899-1935",
+      "role": "金融編輯、技術分析作家",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "chart-patterns",
+          "relation": "早期系統化作者"
+        },
+        {
+          "slug": "support-resistance",
+          "relation": "型態與趨勢線"
+        }
+      ],
+      "works": [
+        {
+          "title": "Technical Analysis and Stock Market Profits",
+          "year": 1932,
+          "type": "book",
+          "url": "https://harriman-house.com/authors/richard-schabacker/technical-analysis-and-stock-market-profits/9780857199164",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "把圖表型態、趨勢、支撐阻力整理成完整技術分析體系，並影響 Edwards 與 Magee。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://harriman-house.com/authors/richard-schabacker/technical-analysis-and-stock-market-profits/9780857199164",
+        "https://chartschool.stockcharts.com/table-of-contents/chart-analysis/introduction-to-chart-patterns"
+      ]
+    },
+    {
+      "rank": 9,
+      "name_en": "Robert D. Edwards",
+      "name_zh": "羅伯特・愛德華茲",
+      "country_region": "United States",
+      "years": "1893-1964",
+      "role": "技術分析作家",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "chart-patterns",
+          "relation": "經典教材作者"
+        },
+        {
+          "slug": "support-resistance",
+          "relation": "型態分析"
+        }
+      ],
+      "works": [
+        {
+          "title": "Technical Analysis of Stock Trends",
+          "year": 1948,
+          "type": "book",
+          "url": "https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "與 John Magee 合著的《Technical Analysis of Stock Trends》是圖表型態領域最常被引用的經典之一。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X",
+        "https://www.investopedia.com/articles/personal-finance/090916/top-5-books-learn-technical-analysis.asp"
+      ]
+    },
+    {
+      "rank": 10,
+      "name_en": "John Magee",
+      "name_zh": "約翰・麥基",
+      "country_region": "United States",
+      "years": "1901-1987",
+      "role": "技術分析作家",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "chart-patterns",
+          "relation": "經典教材作者"
+        },
+        {
+          "slug": "support-resistance",
+          "relation": "型態分析"
+        }
+      ],
+      "works": [
+        {
+          "title": "Technical Analysis of Stock Trends",
+          "year": 1948,
+          "type": "book",
+          "url": "https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "與 Edwards 共同建立現代圖表型態教材框架，對股票技術分析教育影響深。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X",
+        "https://www.investopedia.com/articles/financial-theory/10/pioneers-technical-analysis.asp"
+      ]
+    },
+    {
+      "rank": 11,
+      "name_en": "John J. Murphy",
+      "name_zh": "約翰・墨菲",
+      "country_region": "United States",
+      "years": "1942-",
+      "role": "技術分析師、作家",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "moving-average",
+          "relation": "教材作者"
+        },
+        {
+          "slug": "chart-patterns",
+          "relation": "教材作者"
+        },
+        {
+          "slug": "breadth",
+          "relation": "市場分析"
+        }
+      ],
+      "works": [
+        {
+          "title": "Technical Analysis of the Financial Markets",
+          "year": 1999,
+          "type": "book",
+          "url": "https://www.amazon.com/Technical-Analysis-Financial-Markets-Comprehensive/dp/0735200661",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "綜合型技術分析教材代表作者，涵蓋趨勢、型態、指標、跨市場分析與期貨/股票應用。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 4,
+        "public_fame": 5,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.amazon.com/Technical-Analysis-Financial-Markets-Comprehensive/dp/0735200661",
+        "https://www.investopedia.com/articles/personal-finance/090916/top-5-books-learn-technical-analysis.asp"
+      ]
+    },
+    {
+      "rank": 12,
+      "name_en": "Martin J. Pring",
+      "name_zh": "馬丁・普林格",
+      "country_region": "United Kingdom / United States",
+      "years": "1943-",
+      "role": "技術分析師、作家",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "momentum",
+          "relation": "指標與教材作者"
+        },
+        {
+          "slug": "cycle-analysis",
+          "relation": "景氣/市場循環"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "趨勢判讀"
+        }
+      ],
+      "works": [
+        {
+          "title": "Technical Analysis Explained",
+          "year": 1980,
+          "type": "book",
+          "url": "https://www.amazon.com/Technical-Analysis-Explained-Successful-Investment/dp/1260466020",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "著作廣、教材地位高，特別適合整理動量、週期、趨勢與市場心理指標。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 4,
+        "public_fame": 5,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.amazon.com/Technical-Analysis-Explained-Successful-Investment/dp/1260466020",
+        "https://www.investopedia.com/articles/personal-finance/090916/top-5-books-learn-technical-analysis.asp"
+      ]
+    },
+    {
+      "rank": 13,
+      "name_en": "Jack D. Schwager",
+      "name_zh": "傑克・施瓦格",
+      "country_region": "United States",
+      "years": "1948-",
+      "role": "作家、基金與交易研究者",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "chart-patterns",
+          "relation": "教材作者"
+        },
+        {
+          "slug": "systems-trading",
+          "relation": "交易方法整理"
+        },
+        {
+          "slug": "price-action",
+          "relation": "交易者訪談"
+        }
+      ],
+      "works": [
+        {
+          "title": "Getting Started in Technical Analysis",
+          "year": 1999,
+          "type": "book",
+          "url": "https://www.amazon.com/Getting-Started-Technical-Analysis-Schwager/dp/0471295426",
+          "notes": ""
+        },
+        {
+          "title": "Market Wizards",
+          "year": 1989,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "技術分析入門書與 Market Wizards 訪談系列讓大量實戰交易方法被系統化保存。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 4
+      },
+      "sources": [
+        "https://www.amazon.com/Getting-Started-Technical-Analysis-Schwager/dp/0471295426",
+        "https://www.investopedia.com/articles/personal-finance/090916/top-5-books-learn-technical-analysis.asp"
+      ]
+    },
+    {
+      "rank": 14,
+      "name_en": "Charles D. Kirkpatrick II",
+      "name_zh": "查爾斯・柯克派翠克二世",
+      "country_region": "United States",
+      "years": "",
+      "role": "CMT、作家、研究者",
+      "category": "author_researcher",
+      "concepts": [
+        {
+          "slug": "relative-strength",
+          "relation": "研究者"
+        },
+        {
+          "slug": "dow-theory",
+          "relation": "Dow Award 研究"
+        },
+        {
+          "slug": "stock_selection",
+          "relation": "選股研究"
+        }
+      ],
+      "works": [
+        {
+          "title": "Technical Analysis: The Complete Resource for Financial Market Technicians",
+          "year": 2006,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "Stock Selection: A Test of Relative Stock Values Reported Over 17 1/2 Years",
+          "year": 2001,
+          "type": "paper",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "兼具 CMT 教材作者與 Charles H. Dow Award 研究紀錄，適合放入相對強弱與股票選股研究。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 5,
+        "public_fame": 4,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/"
+      ]
+    },
+    {
+      "rank": 15,
+      "name_en": "Julie R. Dahlquist",
+      "name_zh": "茱莉・達爾奎斯特",
+      "country_region": "United States",
+      "years": "",
+      "role": "學者、CMT、教材作者",
+      "category": "author_researcher",
+      "concepts": [
+        {
+          "slug": "chart-patterns",
+          "relation": "教材作者"
+        },
+        {
+          "slug": "backtesting",
+          "relation": "缺口策略研究"
+        },
+        {
+          "slug": "evidence-based-ta",
+          "relation": "研究者"
+        }
+      ],
+      "works": [
+        {
+          "title": "Technical Analysis: The Complete Resource for Financial Market Technicians",
+          "year": 2006,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "Analyzing Gaps for Profitable Trading Strategies",
+          "year": 2011,
+          "type": "paper",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "CMT 教材合著者與 Dow Award 得主，適合記錄缺口、教材與技術分析研究方法。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 5,
+        "public_fame": 4,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/"
+      ]
+    },
+    {
+      "rank": 16,
+      "name_en": "Steven B. Achelis",
+      "name_zh": "史蒂文・阿契利斯",
+      "country_region": "United States",
+      "years": "",
+      "role": "技術指標百科作者、MetaStock 相關作者",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "moving-average",
+          "relation": "百科作者"
+        },
+        {
+          "slug": "momentum",
+          "relation": "百科作者"
+        },
+        {
+          "slug": "volume-analysis",
+          "relation": "百科作者"
+        }
+      ],
+      "works": [
+        {
+          "title": "Technical Analysis from A to Z",
+          "year": 1995,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "以指標百科型著作著稱，對建立技術指標資料庫很有參考價值。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 2,
+        "public_fame": 4,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://guides.newman.baruch.cuny.edu/c.php?g=188442&p=1243542"
+      ]
+    },
+    {
+      "rank": 17,
+      "name_en": "Robert W. Colby",
+      "name_zh": "羅伯特・科爾比",
+      "country_region": "United States",
+      "years": "",
+      "role": "技術指標百科作者",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "moving-average",
+          "relation": "百科作者"
+        },
+        {
+          "slug": "momentum",
+          "relation": "百科作者"
+        },
+        {
+          "slug": "evidence-based-ta",
+          "relation": "指標彙整"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Encyclopedia of Technical Market Indicators",
+          "year": 1988,
+          "type": "book",
+          "url": "https://www.mheducation.com/highered/mhp/product/encyclopedia-technical-market-indicators-second-edition.html",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "《The Encyclopedia of Technical Market Indicators》彙整大量指標，是資料庫型研究的重要來源。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.mheducation.com/highered/mhp/product/encyclopedia-technical-market-indicators-second-edition.html",
+        "https://openlibrary.org/books/OL17060688M/The_encyclopedia_of_technical_market_indicators",
+        "https://books.google.com/books/about/The_Encyclopedia_Of_Technical_Market_Ind.html?id=f82LUFQVGOUC"
+      ]
+    },
+    {
+      "rank": 18,
+      "name_en": "Perry J. Kaufman",
+      "name_zh": "佩里・考夫曼",
+      "country_region": "United States",
+      "years": "",
+      "role": "量化交易系統作者",
+      "category": "system_developer",
+      "concepts": [
+        {
+          "slug": "kama",
+          "relation": "創始者"
+        },
+        {
+          "slug": "adaptive-moving-average",
+          "relation": "創始者"
+        },
+        {
+          "slug": "systems-trading",
+          "relation": "系統交易作者"
+        }
+      ],
+      "works": [
+        {
+          "title": "Trading Systems and Methods",
+          "year": 1978,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "Smarter Trading",
+          "year": 1995,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "在交易系統與自適應均線方面影響大，KAMA 是技術指標資料庫必收項。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 4,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://trendspider.com/learning-center/what-is-the-kaufman-adaptive-moving-average/"
+      ]
+    },
+    {
+      "rank": 19,
+      "name_en": "J. Welles Wilder Jr.",
+      "name_zh": "威爾斯・威爾德",
+      "country_region": "United States",
+      "years": "1935-2021",
+      "role": "指標創作者、作家",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "rsi",
+          "relation": "創始者"
+        },
+        {
+          "slug": "adx-dmi",
+          "relation": "創始者"
+        },
+        {
+          "slug": "atr",
+          "relation": "創始者"
+        },
+        {
+          "slug": "parabolic-sar",
+          "relation": "創始者"
+        }
+      ],
+      "works": [
+        {
+          "title": "New Concepts in Technical Trading Systems",
+          "year": 1978,
+          "type": "book",
+          "url": "https://books.google.com/books/about/New_Concepts_in_Technical_Trading_System.html?id=WesJAQAAMAAJ",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "RSI、ADX/DMI、ATR、Parabolic SAR 等多個核心指標皆出自其 1978 年著作。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 5,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://books.google.com/books/about/New_Concepts_in_Technical_Trading_System.html?id=WesJAQAAMAAJ",
+        "https://www.investopedia.com/terms/r/rsi.asp"
+      ]
+    },
+    {
+      "rank": 20,
+      "name_en": "Gerald Appel",
+      "name_zh": "傑拉德・阿佩爾",
+      "country_region": "United States",
+      "years": "1933-2020",
+      "role": "技術分析師、作家、指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "macd",
+          "relation": "創始者"
+        },
+        {
+          "slug": "moving-average",
+          "relation": "動量均線"
+        }
+      ],
+      "works": [
+        {
+          "title": "Technical Analysis: Power Tools for Active Investors",
+          "year": 2005,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "MACD 創作者，MACD 是全球交易平台中最普及的動量/趨勢指標之一。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 4,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://cmtassociation.org/presenter/gerald-appel/",
+        "https://traders.com/documentation/feedbk_docs/2003/09/Abstracts_new/Interview/interview.html",
+        "https://www.investopedia.com/trading/macd/"
+      ]
+    },
+    {
+      "rank": 21,
+      "name_en": "John Bollinger",
+      "name_zh": "約翰・布林格",
+      "country_region": "United States",
+      "years": "1950-",
+      "role": "CFA、CMT、指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "bollinger-bands",
+          "relation": "創始者"
+        },
+        {
+          "slug": "volatility",
+          "relation": "波動通道"
+        }
+      ],
+      "works": [
+        {
+          "title": "Bollinger on Bollinger Bands",
+          "year": 2001,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "布林通道創作者，對波動率自適應通道與相對高低位判讀具核心地位。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 4,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.bollingerbands.com/",
+        "https://www.bollingercapital.com/team"
+      ]
+    },
+    {
+      "rank": 22,
+      "name_en": "George C. Lane",
+      "name_zh": "喬治・藍恩",
+      "country_region": "United States",
+      "years": "1921-2004",
+      "role": "交易者、教育者、指標推廣者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "stochastic",
+          "relation": "創始/推廣者"
+        },
+        {
+          "slug": "momentum",
+          "relation": "動量先行觀念"
+        }
+      ],
+      "works": [
+        {
+          "title": "Lane's Stochastics",
+          "year": null,
+          "type": "indicator",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "隨機指標代表人物；Stochastic 與 RSI、MACD 同屬最普及動量指標。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.investopedia.com/terms/s/stochasticoscillator.asp",
+        "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/stochastic-oscillator-fast-slow-and-full"
+      ]
+    },
+    {
+      "rank": 23,
+      "name_en": "Richard Donchian",
+      "name_zh": "理查・唐奇安",
+      "country_region": "United States",
+      "years": "1905-1993",
+      "role": "趨勢跟隨先驅、基金經理",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "donchian-channel",
+          "relation": "創始者"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "趨勢跟隨先驅"
+        }
+      ],
+      "works": [
+        {
+          "title": "Commodity Trend Timing",
+          "year": 1960,
+          "type": "newsletter",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "被視為趨勢跟隨與管理期貨先驅，唐奇安通道是突破交易和 Turtle 系統的重要基礎。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.investopedia.com/donchian-channels-formula-8415235",
+        "https://en.wikipedia.org/wiki/Richard_Donchian"
+      ]
+    },
+    {
+      "rank": 24,
+      "name_en": "Tushar S. Chande",
+      "name_zh": "圖沙・昌德",
+      "country_region": "India / United States",
+      "years": "",
+      "role": "指標創作者、量化研究者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "aroon",
+          "relation": "創始者"
+        },
+        {
+          "slug": "cmo",
+          "relation": "創始者"
+        },
+        {
+          "slug": "vidya",
+          "relation": "創始者"
+        },
+        {
+          "slug": "stochastic-rsi",
+          "relation": "共同創始者"
+        }
+      ],
+      "works": [
+        {
+          "title": "The New Technical Trader",
+          "year": 1994,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Aroon、CMO、VIDYA、StochRSI 等多個指標與其相關，是技術指標資料庫的重點人物。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 5,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/aroon",
+        "https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/cmo",
+        "https://www.investopedia.com/terms/s/stochrsi.asp"
+      ]
+    },
+    {
+      "rank": 25,
+      "name_en": "Stanley Kroll",
+      "name_zh": "史丹利・克羅爾",
+      "country_region": "United States",
+      "years": "",
+      "role": "交易系統作者、指標共同作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "stochastic-rsi",
+          "relation": "共同創始者"
+        },
+        {
+          "slug": "vidya",
+          "relation": "共同作者"
+        },
+        {
+          "slug": "systems-trading",
+          "relation": "交易系統"
+        }
+      ],
+      "works": [
+        {
+          "title": "The New Technical Trader",
+          "year": 1994,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "與 Tushar Chande 合作提出 StochRSI 與相關動態指標方法。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 3,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 4
+      },
+      "sources": [
+        "https://www.investopedia.com/terms/s/stochrsi.asp",
+        "https://www.fxcorporate.com/help/MS/LOGOUT/i_Vidya.html"
+      ]
+    },
+    {
+      "rank": 26,
+      "name_en": "Donald R. Lambert",
+      "name_zh": "唐納德・蘭伯特",
+      "country_region": "United States",
+      "years": "",
+      "role": "指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "cci",
+          "relation": "創始者"
+        },
+        {
+          "slug": "cycle-analysis",
+          "relation": "商品週期"
+        }
+      ],
+      "works": [
+        {
+          "title": "Commodity Channel Index",
+          "year": 1980,
+          "type": "article",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "CCI 創作者；CCI 從商品週期工具延伸到股票、ETF、外匯等市場。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/commodity-channel-index-cci"
+      ]
+    },
+    {
+      "rank": 27,
+      "name_en": "Larry Williams",
+      "name_zh": "拉瑞・威廉斯",
+      "country_region": "United States",
+      "years": "1942-",
+      "role": "交易者、作家、指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "williams-r",
+          "relation": "創始者"
+        },
+        {
+          "slug": "momentum",
+          "relation": "短線動量"
+        },
+        {
+          "slug": "breadth",
+          "relation": "Dow Award 研究"
+        }
+      ],
+      "works": [
+        {
+          "title": "How I Made One Million Dollars Last Year Trading Commodities",
+          "year": 1979,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "The Ripple Effect of Daily New Lows",
+          "year": 2024,
+          "type": "paper",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Williams %R、Ultimate Oscillator 等工具與多本交易著作皆具影響力，亦為 2024 Dow Award 共同得主。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 4,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/williams-r",
+        "https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/"
+      ]
+    },
+    {
+      "rank": 28,
+      "name_en": "Marc Chaikin",
+      "name_zh": "馬克・柴金",
+      "country_region": "United States",
+      "years": "",
+      "role": "技術分析師、指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "chaikin-money-flow",
+          "relation": "創始者"
+        },
+        {
+          "slug": "volume-analysis",
+          "relation": "量價/資金流"
+        }
+      ],
+      "works": [
+        {
+          "title": "Chaikin Money Flow",
+          "year": null,
+          "type": "indicator",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Chaikin Money Flow 與 Chaikin 系列量價指標被廣泛內建於交易平台。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/cmf",
+        "https://chaikinanalytics.com/"
+      ]
+    },
+    {
+      "rank": 29,
+      "name_en": "Joseph Granville",
+      "name_zh": "約瑟夫・格蘭維爾",
+      "country_region": "United States",
+      "years": "1923-2013",
+      "role": "市場通訊作者、指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "obv",
+          "relation": "創始者"
+        },
+        {
+          "slug": "volume-analysis",
+          "relation": "量價分析"
+        }
+      ],
+      "works": [
+        {
+          "title": "Granville's New Key to Stock Market Profits",
+          "year": 1963,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "OBV 創作者，將成交量作為價格先行壓力的概念推廣到股票市場。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.investopedia.com/terms/o/onbalancevolume.asp",
+        "https://openlibrary.org/works/OL3510350W/New_key_to_stock_market_profits",
+        "https://books.google.com/books/about/New_Key_to_Stock_Market_Profits.html?id=Z8xl5AAACAAJ"
+      ]
+    },
+    {
+      "rank": 30,
+      "name_en": "Sherman McClellan",
+      "name_zh": "謝爾曼・麥克萊倫",
+      "country_region": "United States",
+      "years": "",
+      "role": "市場寬度指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "mcclellan-oscillator",
+          "relation": "共同創始者"
+        },
+        {
+          "slug": "breadth",
+          "relation": "市場寬度"
+        }
+      ],
+      "works": [
+        {
+          "title": "Patterns for Profit",
+          "year": null,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "與 Marian McClellan 共同開發 McClellan Oscillator 與 Summation Index。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.mcoscillator.com/learning_center/kb/mcclellan_oscillator/the_origin_story_of_the_mcclellan_oscillator/",
+        "https://www.investopedia.com/terms/m/mcclellanoscillator.asp"
+      ]
+    },
+    {
+      "rank": 31,
+      "name_en": "Marian McClellan",
+      "name_zh": "瑪麗安・麥克萊倫",
+      "country_region": "United States",
+      "years": "",
+      "role": "市場寬度指標共同創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "mcclellan-oscillator",
+          "relation": "共同創始者"
+        },
+        {
+          "slug": "breadth",
+          "relation": "市場寬度"
+        }
+      ],
+      "works": [
+        {
+          "title": "Patterns for Profit",
+          "year": null,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "McClellan Oscillator 共同創作者，對廣度動量與市場內部結構研究具代表性。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.mcoscillator.com/learning_center/kb/mcclellan_oscillator/the_origin_story_of_the_mcclellan_oscillator/",
+        "https://www.investopedia.com/terms/m/mcclellanoscillator.asp"
+      ]
+    },
+    {
+      "rank": 32,
+      "name_en": "Richard W. Arms Jr.",
+      "name_zh": "理查・阿姆斯",
+      "country_region": "United States",
+      "years": "1930-2018",
+      "role": "市場寬度指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "trin-arms-index",
+          "relation": "創始者"
+        },
+        {
+          "slug": "breadth",
+          "relation": "市場寬度"
+        },
+        {
+          "slug": "volume-analysis",
+          "relation": "成交量廣度"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Arms Index",
+          "year": 1967,
+          "type": "indicator",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "TRIN/Arms Index 將漲跌家數與成交量結合，是經典市場寬度與短線情緒工具。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://chartschool.stockcharts.com/table-of-contents/market-indicators/arms-index-trin",
+        "https://www.investopedia.com/terms/a/arms.asp"
+      ]
+    },
+    {
+      "rank": 33,
+      "name_en": "Edwin S. Coppock",
+      "name_zh": "艾德溫・科波克",
+      "country_region": "United States",
+      "years": "1918-1999",
+      "role": "經濟學家、指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "coppock-curve",
+          "relation": "創始者"
+        },
+        {
+          "slug": "momentum",
+          "relation": "長期動量"
+        }
+      ],
+      "works": [
+        {
+          "title": "Coppock Curve",
+          "year": 1962,
+          "type": "indicator",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Coppock Curve 是長期市場底部與月線動量判讀的經典工具。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Coppock_curve",
+        "https://www.investopedia.com/articles/active-trading/031814/using-coppock-curve-generate-stock-trade-signals.asp",
+        "https://www.incrediblecharts.com/indicators/coppock_indicator.php"
+      ]
+    },
+    {
+      "rank": 34,
+      "name_en": "Tom DeMark",
+      "name_zh": "湯姆・迪馬克",
+      "country_region": "United States",
+      "years": "",
+      "role": "指標創作者、機構顧問",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "demark-indicators",
+          "relation": "創始者"
+        },
+        {
+          "slug": "market_timing",
+          "relation": "市場時機"
+        }
+      ],
+      "works": [
+        {
+          "title": "The New Science of Technical Analysis",
+          "year": 1994,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "DeMARK Indicators",
+          "year": null,
+          "type": "indicator_library",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "DeMARK 指標系列在機構交易與市場時機判斷中知名度高，官方資料稱其為 DeMARK Indicators 創作者。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 4,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://demark.com/about/",
+        "https://demark.com/demark-indicators/"
+      ]
+    },
+    {
+      "rank": 35,
+      "name_en": "Alexander Elder",
+      "name_zh": "亞歷山大・艾爾德",
+      "country_region": "United States",
+      "years": "1950-",
+      "role": "交易者、心理醫師、作家",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "elder-ray",
+          "relation": "創始者"
+        },
+        {
+          "slug": "force-index",
+          "relation": "創始者"
+        },
+        {
+          "slug": "systems-trading",
+          "relation": "Triple Screen"
+        }
+      ],
+      "works": [
+        {
+          "title": "Trading for a Living",
+          "year": 1993,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Elder-Ray、Force Index 與 Triple Screen 系統將趨勢、動量、量能與交易心理結合。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 4,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.investopedia.com/articles/trading/03/022603.asp"
+      ]
+    },
+    {
+      "rank": 36,
+      "name_en": "Steve Nison",
+      "name_zh": "史蒂夫・尼森",
+      "country_region": "United States",
+      "years": "",
+      "role": "K 線技術分析作家",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "candlestick",
+          "relation": "西方推廣者"
+        },
+        {
+          "slug": "chart-patterns",
+          "relation": "K 線型態"
+        }
+      ],
+      "works": [
+        {
+          "title": "Japanese Candlestick Charting Techniques",
+          "year": 1991,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "被其官方網站稱為把日本蠟燭圖帶入西方世界的權威，對全球 K 線教材影響極大。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://candlecharts.com/about-steve-nison/",
+        "https://openlibrary.org/books/OL1864784M/Japanese_candlestick_charting_techniques",
+        "https://www.amazon.com/Japanese-Candlestick-Charting-Techniques-Second/dp/0735201811"
+      ]
+    },
+    {
+      "rank": 37,
+      "name_en": "Goichi Hosoda",
+      "name_zh": "細田悟一",
+      "country_region": "Japan",
+      "years": "1898-1982",
+      "role": "一目均衡表創始者、記者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "ichimoku",
+          "relation": "創始者"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "趨勢/支撐阻力"
+        }
+      ],
+      "works": [
+        {
+          "title": "Ichimoku Kinko Hyo",
+          "year": 1969,
+          "type": "book_series",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "一目均衡表創始者，將趨勢、動量、支撐阻力與時間概念整合為完整系統。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.investopedia.com/terms/i/ichimoku-cloud.asp",
+        "https://www.swissquote.com/en-ch/private/inspire/blog/technical-analysis/what-ichimoku-kinko-hyo-trading-method"
+      ]
+    },
+    {
+      "rank": 38,
+      "name_en": "Munehisa Homma",
+      "name_zh": "本間宗久",
+      "country_region": "Japan",
+      "years": "1724-1803",
+      "role": "米商、蠟燭圖傳統人物",
+      "category": "foundation",
+      "concepts": [
+        {
+          "slug": "candlestick",
+          "relation": "歷史源流"
+        },
+        {
+          "slug": "price-action",
+          "relation": "市場心理"
+        }
+      ],
+      "works": [
+        {
+          "title": "Sakata Rules",
+          "year": null,
+          "type": "historical_method",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "常被列為日本 K 線與市場心理分析源流人物；適合記錄在蠟燭圖歷史欄位。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 2,
+        "public_fame": 5,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 4
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Munehisa_Homma",
+        "https://www.hotcandlestick.com/candlesticks.htm",
+        "https://ftmo.com/en/blog/technical-analysis-history-of-candlestick-charts/"
+      ]
+    },
+    {
+      "rank": 39,
+      "name_en": "Thomas N. Bulkowski",
+      "name_zh": "湯瑪斯・布考斯基",
+      "country_region": "United States",
+      "years": "",
+      "role": "圖表型態統計作者",
+      "category": "author_researcher",
+      "concepts": [
+        {
+          "slug": "chart-patterns",
+          "relation": "統計研究者"
+        },
+        {
+          "slug": "candlestick",
+          "relation": "型態統計"
+        },
+        {
+          "slug": "backtesting",
+          "relation": "歷史樣本統計"
+        }
+      ],
+      "works": [
+        {
+          "title": "Encyclopedia of Chart Patterns",
+          "year": 2000,
+          "type": "book",
+          "url": "https://www.amazon.com/Encyclopedia-Chart-Patterns-Thomas-Bulkowski/dp/0471668265",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "以大量歷史樣本統計圖表型態與 K 線表現，是型態資料庫的重要參考人物。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 4,
+        "public_fame": 5,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://thepatternsite.com/",
+        "https://www.amazon.com/Encyclopedia-Chart-Patterns-Thomas-Bulkowski/dp/0471668265"
+      ]
+    },
+    {
+      "rank": 40,
+      "name_en": "Louise Yamada",
+      "name_zh": "路易絲・山田",
+      "country_region": "United States",
+      "years": "",
+      "role": "CMT、機構技術分析師",
+      "category": "practitioner",
+      "concepts": [
+        {
+          "slug": "relative-strength",
+          "relation": "機構技術研究"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "長期趨勢"
+        },
+        {
+          "slug": "support-resistance",
+          "relation": "長期底部/頂部"
+        }
+      ],
+      "works": [
+        {
+          "title": "Market Magic: Riding the Greatest Bull Market of the Century",
+          "year": 1998,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "前 Smith Barney/Citigroup 技術研究主管與 CMT Lifetime Achievement 得主，代表機構級技術分析。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://cmtassociation.org/presenter/louise-yamada/",
+        "https://www.lyadvisors.com/"
+      ]
+    },
+    {
+      "rank": 41,
+      "name_en": "Ralph Acampora",
+      "name_zh": "拉爾夫・阿坎波拉",
+      "country_region": "United States",
+      "years": "",
+      "role": "技術分析師、教育者",
+      "category": "practitioner",
+      "concepts": [
+        {
+          "slug": "trend-following",
+          "relation": "市場歷史"
+        },
+        {
+          "slug": "chart-patterns",
+          "relation": "教育者"
+        },
+        {
+          "slug": "dow-theory",
+          "relation": "市場技術史"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Fourth Mega-Market",
+          "year": 2000,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "被 NYIF 描述為華爾街受尊敬的技術分析師與市場歷史研究者，教育與業界影響力高。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.nyif.com/faculties/acampora-ralph"
+      ]
+    },
+    {
+      "rank": 42,
+      "name_en": "Robert Prechter",
+      "name_zh": "羅伯特・普萊切特",
+      "country_region": "United States",
+      "years": "1949-",
+      "role": "艾略特波浪分析師、作家",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "elliott-wave",
+          "relation": "推廣者/作者"
+        },
+        {
+          "slug": "sentiment",
+          "relation": "社會情緒與市場"
+        }
+      ],
+      "works": [
+        {
+          "title": "Elliott Wave Principle",
+          "year": 1978,
+          "type": "book",
+          "url": "https://www.amazon.com/Elliott-Wave-Principle-Key-Market/dp/1616041374",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "將艾略特波浪重新推廣成全球知名方法，與 A. J. Frost 合著經典教材。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 4,
+        "public_fame": 5,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Robert_Prechter",
+        "https://www.amazon.com/Elliott-Wave-Principle-Key-Market/dp/1616041374"
+      ]
+    },
+    {
+      "rank": 43,
+      "name_en": "A. J. Frost",
+      "name_zh": "A・J・佛羅斯特",
+      "country_region": "Canada",
+      "years": "1908-1999",
+      "role": "艾略特波浪作者",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "elliott-wave",
+          "relation": "經典教材共同作者"
+        }
+      ],
+      "works": [
+        {
+          "title": "Elliott Wave Principle",
+          "year": 1978,
+          "type": "book",
+          "url": "https://www.amazon.com/Elliott-Wave-Principle-Key-Market/dp/1616041374",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "與 Robert Prechter 合著《Elliott Wave Principle》，是波浪理論教材化的重要人物。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.amazon.com/Elliott-Wave-Principle-Key-Market/dp/1616041374",
+        "https://www.elliottwave.com/books/elliott-wave-principle/"
+      ]
+    },
+    {
+      "rank": 44,
+      "name_en": "Glenn Neely",
+      "name_zh": "格倫・尼利",
+      "country_region": "United States",
+      "years": "",
+      "role": "艾略特波浪分析師、作家",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "elliott-wave",
+          "relation": "規則化作者"
+        },
+        {
+          "slug": "systems-trading",
+          "relation": "波浪規則"
+        }
+      ],
+      "works": [
+        {
+          "title": "Mastering Elliott Wave",
+          "year": 1990,
+          "type": "book",
+          "url": "https://www.amazon.com/Mastering-Elliott-Wave-Glenn-Neely/dp/0930233441",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "嘗試把艾略特波浪規則化與更嚴格分類，適合記錄於波浪理論研究分支。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.amazon.com/Mastering-Elliott-Wave-Glenn-Neely/dp/0930233441",
+        "https://www.neowave.com/product-book.asp",
+        "https://glennneely.com/"
+      ]
+    },
+    {
+      "rank": 45,
+      "name_en": "Edson Gould",
+      "name_zh": "艾德森・古爾德",
+      "country_region": "United States",
+      "years": "1902-1987",
+      "role": "市場技術分析師",
+      "category": "foundation",
+      "concepts": [
+        {
+          "slug": "sentiment",
+          "relation": "情緒/心理指標"
+        },
+        {
+          "slug": "breadth",
+          "relation": "市場指標"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "長期市場判斷"
+        }
+      ],
+      "works": [
+        {
+          "title": "Findings & Forecasts",
+          "year": null,
+          "type": "newsletter",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Investopedia 將其列為技術分析先驅之一，以 Senti-Meter 等長期市場指標聞名。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.investopedia.com/articles/financial-theory/10/pioneers-technical-analysis.asp",
+        "https://chartschool.stockcharts.com/table-of-contents/chart-analysis/chart-annotation-tools/speed-resistance-lines",
+        "https://www.mcoscillator.com/learning_center/weekly_chart/edson_goulds_daily_point_index/"
+      ]
+    },
+    {
+      "rank": 46,
+      "name_en": "Paul Desmond",
+      "name_zh": "保羅・德斯蒙德",
+      "country_region": "United States",
+      "years": "",
+      "role": "市場技術研究者",
+      "category": "researcher",
+      "concepts": [
+        {
+          "slug": "breadth",
+          "relation": "熊市底部研究"
+        },
+        {
+          "slug": "sentiment",
+          "relation": "市場底部"
+        },
+        {
+          "slug": "dow-theory",
+          "relation": "Dow Award 得主"
+        }
+      ],
+      "works": [
+        {
+          "title": "Identifying Bear Market Bottoms and New Bull Markets",
+          "year": 2002,
+          "type": "paper",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "2002 Charles H. Dow Award 得主，研究熊市底部與新牛市確認，適合市場寬度/底部研究資料庫。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 5,
+        "public_fame": 4,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/"
+      ]
+    },
+    {
+      "rank": 47,
+      "name_en": "Richard Russell",
+      "name_zh": "理查・羅素",
+      "country_region": "United States",
+      "years": "1924-2015",
+      "role": "Dow Theory Letters 作者",
+      "category": "practitioner",
+      "concepts": [
+        {
+          "slug": "dow-theory",
+          "relation": "長期推廣者"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "市場趨勢"
+        }
+      ],
+      "works": [
+        {
+          "title": "Dow Theory Letters",
+          "year": 1958,
+          "type": "newsletter",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "長期撰寫 Dow Theory Letters，是道氏理論在現代市場評論中的代表人物。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 2,
+        "public_fame": 5,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Richard_Russell_(Dow_Theory)",
+        "https://www.fa-mag.com/news/richard-russell--publisher-of-dow-theory-letters--dies-at-91-23996.html?print=",
+        "https://www.trendfollowing.com/2013/03/16/ep-109-richard-russell-and-dow-theory-with-michael-covel-on-trend-following-radio/"
+      ]
+    },
+    {
+      "rank": 48,
+      "name_en": "Stan Weinstein",
+      "name_zh": "史坦・溫斯坦",
+      "country_region": "United States",
+      "years": "",
+      "role": "股票技術分析作家",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "stage-analysis",
+          "relation": "創始/推廣者"
+        },
+        {
+          "slug": "relative-strength",
+          "relation": "強勢股"
+        },
+        {
+          "slug": "volume-analysis",
+          "relation": "突破量能"
+        }
+      ],
+      "works": [
+        {
+          "title": "Secrets for Profiting in Bull and Bear Markets",
+          "year": 1988,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "四階段分析與相對強弱/成交量突破選股方法在股票技術分析中常被使用。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.investopedia.com/articles/investing/070715/trading-stage-analysis.asp",
+        "https://www.stageanalysis.net/"
+      ]
+    },
+    {
+      "rank": 49,
+      "name_en": "William J. O'Neil",
+      "name_zh": "威廉・歐尼爾",
+      "country_region": "United States",
+      "years": "1933-2023",
+      "role": "Investor's Business Daily 創辦人、作家",
+      "category": "author_practitioner",
+      "concepts": [
+        {
+          "slug": "can-slim",
+          "relation": "創始者"
+        },
+        {
+          "slug": "cup-with-handle",
+          "relation": "推廣/定義者"
+        },
+        {
+          "slug": "relative-strength",
+          "relation": "成長股選股"
+        }
+      ],
+      "works": [
+        {
+          "title": "How to Make Money in Stocks",
+          "year": 1988,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "CAN SLIM、杯柄形態與相對強弱選股方法在成長股股票交易者中極具影響力。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 4,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.investopedia.com/terms/c/canslim.asp",
+        "https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/cup-with-handle"
+      ]
+    },
+    {
+      "rank": 50,
+      "name_en": "Mark Minervini",
+      "name_zh": "馬克・米勒維尼",
+      "country_region": "United States",
+      "years": "",
+      "role": "股票交易者、作家",
+      "category": "practitioner_author",
+      "concepts": [
+        {
+          "slug": "vcp",
+          "relation": "創始/推廣者"
+        },
+        {
+          "slug": "relative-strength",
+          "relation": "SEPA 強勢股"
+        },
+        {
+          "slug": "cup-with-handle",
+          "relation": "成長股型態"
+        }
+      ],
+      "works": [
+        {
+          "title": "Trade Like a Stock Market Wizard",
+          "year": 2013,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "Think and Trade Like a Champion",
+          "year": 2017,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "以 SEPA 與 VCP 波動收縮形態聞名，是現代美股動能/成長股技術交易代表。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://trendspider.com/learning-center/volatility-contraction-pattern-vcp/"
+      ]
+    },
+    {
+      "rank": 51,
+      "name_en": "Nicolas Darvas",
+      "name_zh": "尼古拉斯・達瓦斯",
+      "country_region": "Hungary / United States",
+      "years": "1920-1977",
+      "role": "交易者、作家",
+      "category": "practitioner_author",
+      "concepts": [
+        {
+          "slug": "chart-patterns",
+          "relation": "箱型理論"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "突破交易"
+        },
+        {
+          "slug": "relative-strength",
+          "relation": "強勢股"
+        }
+      ],
+      "works": [
+        {
+          "title": "How I Made $2,000,000 in the Stock Market",
+          "year": 1960,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Darvas Box 是早期股票箱型突破交易的經典案例。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 2,
+        "public_fame": 5,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nicolas_Darvas"
+      ]
+    },
+    {
+      "rank": 52,
+      "name_en": "Brian Shannon",
+      "name_zh": "布萊恩・香農",
+      "country_region": "United States",
+      "years": "1967-",
+      "role": "CMT、交易者、作家",
+      "category": "author_practitioner",
+      "concepts": [
+        {
+          "slug": "vwap",
+          "relation": "Anchored VWAP 推廣者"
+        },
+        {
+          "slug": "price-action",
+          "relation": "多週期分析"
+        },
+        {
+          "slug": "support-resistance",
+          "relation": "市場結構"
+        }
+      ],
+      "works": [
+        {
+          "title": "Technical Analysis Using Multiple Timeframes",
+          "year": 2008,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "Maximum Trading Gains with Anchored VWAP",
+          "year": 2023,
+          "type": "book",
+          "url": "https://books.google.com/books/about/Maximum_Trading_Gains_With_Anchored_VWAP.html?id=p3aCzwEACAAJ",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "多週期技術分析與 Anchored VWAP 教學影響力高，適合放入 VWAP/價格結構分類。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 2,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://books.google.com/books/about/Maximum_Trading_Gains_With_Anchored_VWAP.html?id=p3aCzwEACAAJ"
+      ]
+    },
+    {
+      "rank": 53,
+      "name_en": "Linda Bradford Raschke",
+      "name_zh": "琳達・布拉德福德・拉什克",
+      "country_region": "United States",
+      "years": "1959-",
+      "role": "交易者、作家",
+      "category": "practitioner_author",
+      "concepts": [
+        {
+          "slug": "price-action",
+          "relation": "短線交易"
+        },
+        {
+          "slug": "opening-range-breakout",
+          "relation": "短線策略"
+        },
+        {
+          "slug": "systems-trading",
+          "relation": "高勝率策略"
+        }
+      ],
+      "works": [
+        {
+          "title": "Street Smarts",
+          "year": 1996,
+          "type": "book",
+          "url": "https://www.amazon.com/Street-Smarts-Probability-Short-Term-Strategies/dp/0965046109",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "《Street Smarts》共同作者與 Market Wizards 受訪者，代表短線價格行為與實戰交易。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.amazon.com/Street-Smarts-Probability-Short-Term-Strategies/dp/0965046109",
+        "https://lindaraschke.net/recommended-reading/"
+      ]
+    },
+    {
+      "rank": 54,
+      "name_en": "Laurence A. Connors",
+      "name_zh": "拉倫斯・康納斯",
+      "country_region": "United States",
+      "years": "",
+      "role": "短線策略研究者、作家",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "connors-rsi",
+          "relation": "創始者"
+        },
+        {
+          "slug": "rsi",
+          "relation": "短線改良"
+        },
+        {
+          "slug": "systems-trading",
+          "relation": "短線均值回歸"
+        }
+      ],
+      "works": [
+        {
+          "title": "Street Smarts",
+          "year": 1996,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "Short Term Trading Strategies That Work",
+          "year": 2008,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "ConnorsRSI",
+          "year": 2012,
+          "type": "indicator",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "ConnorsRSI 與短線 RSI2/均值回歸策略在量化與短線交易圈常被引用。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/connorsrsi",
+        "https://www.amazon.com/Street-Smarts-Probability-Short-Term-Strategies/dp/0965046109"
+      ]
+    },
+    {
+      "rank": 55,
+      "name_en": "Andrew Cardwell",
+      "name_zh": "安德魯・卡德威爾",
+      "country_region": "United States",
+      "years": "",
+      "role": "RSI 專家、交易教育者",
+      "category": "indicator_specialist",
+      "concepts": [
+        {
+          "slug": "rsi",
+          "relation": "進階詮釋者"
+        },
+        {
+          "slug": "momentum",
+          "relation": "正/負反轉與區間規則"
+        }
+      ],
+      "works": [
+        {
+          "title": "Cardwell RSI Positive/Negative Reversals",
+          "year": null,
+          "type": "method",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "以 RSI Range Rules 與 Positive/Negative Reversals 聞名，是 RSI 進階應用的重要專家。",
+      "scores": {
+        "books_literature": 2,
+        "papers_research": 2,
+        "public_fame": 3,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.linkedin.com/in/andrew-cardwell-b318099",
+        "https://www.investopedia.com/articles/active-trading/042114/overbought-or-oversold-use-relative-strength-index-find-out.asp"
+      ]
+    },
+    {
+      "rank": 56,
+      "name_en": "Constance Brown",
+      "name_zh": "康斯坦絲・布朗",
+      "country_region": "United States",
+      "years": "",
+      "role": "CMT、技術分析作家",
+      "category": "indicator_specialist",
+      "concepts": [
+        {
+          "slug": "rsi",
+          "relation": "進階詮釋者"
+        },
+        {
+          "slug": "momentum",
+          "relation": "Composite Index"
+        },
+        {
+          "slug": "evidence-based-ta",
+          "relation": "指標組合"
+        }
+      ],
+      "works": [
+        {
+          "title": "Technical Analysis for the Trading Professional",
+          "year": 1999,
+          "type": "book",
+          "url": "https://www.amazon.com/Technical-Analysis-Trading-Professional-Second/dp/007175914X",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "以 RSI 區間、Composite Index 與進階動量分析聞名，常被引用於 RSI 專題研究。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.amazon.com/Technical-Analysis-Trading-Professional-Second/dp/007175914X",
+        "https://www.barchart.com/education/technical-indicators/cmb-composite-index"
+      ]
+    },
+    {
+      "rank": 57,
+      "name_en": "John F. Ehlers",
+      "name_zh": "約翰・艾勒斯",
+      "country_region": "United States",
+      "years": "",
+      "role": "工程師、數位訊號處理指標作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "cycle-analysis",
+          "relation": "DSP 週期分析"
+        },
+        {
+          "slug": "ehlers-filters",
+          "relation": "濾波器"
+        },
+        {
+          "slug": "systems-trading",
+          "relation": "自適應指標"
+        }
+      ],
+      "works": [
+        {
+          "title": "Rocket Science for Traders",
+          "year": 2001,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "Cybernetic Analysis for Stocks and Futures",
+          "year": 2004,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "把數位訊號處理與週期濾波引入技術指標，是現代自適應與濾波指標的重要人物。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 5,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.mesasoftware.com/TechnicalArticles.htm"
+      ]
+    },
+    {
+      "rank": 58,
+      "name_en": "Murray A. Ruggiero Jr.",
+      "name_zh": "穆雷・魯傑羅",
+      "country_region": "United States",
+      "years": "",
+      "role": "交易系統開發者、作家",
+      "category": "system_developer",
+      "concepts": [
+        {
+          "slug": "systems-trading",
+          "relation": "交易系統"
+        },
+        {
+          "slug": "backtesting",
+          "relation": "策略測試"
+        },
+        {
+          "slug": "evidence-based-ta",
+          "relation": "量化規則"
+        }
+      ],
+      "works": [
+        {
+          "title": "Cybernetic Trading Strategies",
+          "year": 1997,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "專注交易系統、模糊邏輯、機器學習與技術規則，適合交易系統與回測分類。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 4,
+        "public_fame": 3,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 4
+      },
+      "sources": [
+        "https://guides.newman.baruch.cuny.edu/c.php?g=188442&p=1243542"
+      ]
+    },
+    {
+      "rank": 59,
+      "name_en": "Robert Pardo",
+      "name_zh": "羅伯特・帕多",
+      "country_region": "United States",
+      "years": "",
+      "role": "交易系統測試作者",
+      "category": "system_developer",
+      "concepts": [
+        {
+          "slug": "backtesting",
+          "relation": "系統測試"
+        },
+        {
+          "slug": "systems-trading",
+          "relation": "交易系統"
+        },
+        {
+          "slug": "evidence-based-ta",
+          "relation": "樣本外驗證"
+        }
+      ],
+      "works": [
+        {
+          "title": "Design, Testing, and Optimization of Trading Systems",
+          "year": 1992,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "其交易系統設計、測試與優化著作是量化技術分析與策略驗證常見參考。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 4,
+        "public_fame": 3,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 4
+      },
+      "sources": [
+        "https://guides.newman.baruch.cuny.edu/c.php?g=188442&p=1243542"
+      ]
+    },
+    {
+      "rank": 60,
+      "name_en": "Howard Bandy",
+      "name_zh": "霍華德・班迪",
+      "country_region": "United States",
+      "years": "",
+      "role": "量化交易系統作者",
+      "category": "system_developer",
+      "concepts": [
+        {
+          "slug": "systems-trading",
+          "relation": "交易系統"
+        },
+        {
+          "slug": "backtesting",
+          "relation": "策略驗證"
+        },
+        {
+          "slug": "evidence-based-ta",
+          "relation": "統計分析"
+        }
+      ],
+      "works": [
+        {
+          "title": "Quantitative Trading Systems",
+          "year": 2007,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "Modeling Trading System Performance",
+          "year": 2011,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "以交易系統建模、風險與回測流程著作聞名，適合本地資料庫後續加入策略驗證欄位。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 4,
+        "public_fame": 3,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 4
+      },
+      "sources": [
+        "https://guides.newman.baruch.cuny.edu/c.php?g=188442&p=1243542"
+      ]
+    },
+    {
+      "rank": 61,
+      "name_en": "Thomas Stridsman",
+      "name_zh": "湯瑪斯・史翠茲曼",
+      "country_region": "Sweden / United States",
+      "years": "",
+      "role": "系統交易作者",
+      "category": "system_developer",
+      "concepts": [
+        {
+          "slug": "systems-trading",
+          "relation": "交易系統"
+        },
+        {
+          "slug": "backtesting",
+          "relation": "策略測試"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "系統化趨勢"
+        }
+      ],
+      "works": [
+        {
+          "title": "Trading Systems That Work",
+          "year": 2000,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "交易系統設計與測試作者，對規則化技術分析與系統交易資料庫有參考價值。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 3,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 4
+      },
+      "sources": [
+        "https://guides.newman.baruch.cuny.edu/c.php?g=188442&p=1243542"
+      ]
+    },
+    {
+      "rank": 62,
+      "name_en": "Daryl Guppy",
+      "name_zh": "達利・古比",
+      "country_region": "Australia",
+      "years": "",
+      "role": "交易者、作家、指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "guppy-mma",
+          "relation": "創始者"
+        },
+        {
+          "slug": "moving-average",
+          "relation": "多均線趨勢"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "趨勢判讀"
+        }
+      ],
+      "works": [
+        {
+          "title": "Trading Tactics",
+          "year": 1997,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Guppy Multiple Moving Average 以兩組 EMA 判讀短長期交易者行為，常見於趨勢篩選。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.investopedia.com/terms/g/guppy-multiple-moving-average.asp"
+      ]
+    },
+    {
+      "rank": 63,
+      "name_en": "Alan Hull",
+      "name_zh": "艾倫・霍爾",
+      "country_region": "Australia",
+      "years": "",
+      "role": "指標創作者、交易教育者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "hull-ma",
+          "relation": "創始者"
+        },
+        {
+          "slug": "moving-average",
+          "relation": "低滯後均線"
+        }
+      ],
+      "works": [
+        {
+          "title": "Hull Moving Average",
+          "year": 2005,
+          "type": "indicator",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Hull Moving Average 以降低均線滯後聞名，是均線類指標的重要改良。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 2,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://alanhull.com/the-hull-moving-average/",
+        "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/hull-moving-average-hma"
+      ]
+    },
+    {
+      "rank": 64,
+      "name_en": "John R. McGinley",
+      "name_zh": "約翰・麥金利",
+      "country_region": "United States",
+      "years": "",
+      "role": "CMT、指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "mcginley-dynamic",
+          "relation": "創始者"
+        },
+        {
+          "slug": "moving-average",
+          "relation": "自適應平滑"
+        }
+      ],
+      "works": [
+        {
+          "title": "McGinley Dynamic",
+          "year": 1997,
+          "type": "indicator",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "McGinley Dynamic 嘗試解決傳統均線跟不上市場速度的問題，屬均線改良指標。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 3,
+        "public_fame": 3,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.earn2trade.com/blog/mcginley-dynamic-indicator/",
+        "https://www.investopedia.com/terms/m/mcginley-dynamic.asp",
+        "https://dotnet.stockindicators.dev/indicators/Dynamic/"
+      ]
+    },
+    {
+      "rank": 65,
+      "name_en": "Patrick G. Mulloy",
+      "name_zh": "派翠克・馬洛伊",
+      "country_region": "United States",
+      "years": "",
+      "role": "指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "tema-dema",
+          "relation": "創始者"
+        },
+        {
+          "slug": "moving-average",
+          "relation": "低滯後均線"
+        }
+      ],
+      "works": [
+        {
+          "title": "Smoothing Data with Faster Moving Averages",
+          "year": 1994,
+          "type": "article",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "DEMA/TEMA 改良均線滯後問題，在交易平台中常見。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 3,
+        "public_fame": 3,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/triple-exponential-moving-average-tema",
+        "https://www.investopedia.com/ask/answers/041315/why-triple-exponential-moving-average-tema-important-traders-and-analysts.asp"
+      ]
+    },
+    {
+      "rank": 66,
+      "name_en": "Jack K. Hutson",
+      "name_zh": "傑克・哈特森",
+      "country_region": "United States",
+      "years": "",
+      "role": "Technical Analysis of Stocks & Commodities 編輯、指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "trix",
+          "relation": "創始者"
+        },
+        {
+          "slug": "momentum",
+          "relation": "三重平滑動量"
+        }
+      ],
+      "works": [
+        {
+          "title": "Good TRIX",
+          "year": 1980,
+          "type": "article",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "TRIX 創作者，將三重 EMA 平滑後的變化率用於趨勢/動量訊號。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 3,
+        "public_fame": 3,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/trix"
+      ]
+    },
+    {
+      "rank": 67,
+      "name_en": "Gene Quong",
+      "name_zh": "金・匡",
+      "country_region": "United States",
+      "years": "",
+      "role": "指標共同創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "mfi",
+          "relation": "共同創始者"
+        },
+        {
+          "slug": "volume-analysis",
+          "relation": "量價動量"
+        }
+      ],
+      "works": [
+        {
+          "title": "Money Flow Index",
+          "year": 1989,
+          "type": "indicator",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Money Flow Index 共同創作者，將成交量整合進 RSI 類動量分析。",
+      "scores": {
+        "books_literature": 2,
+        "papers_research": 2,
+        "public_fame": 3,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.tradingview.com/support/solutions/43000502348-money-flow-mfi/",
+        "https://library.tradingtechnologies.com/trade/chrt-ti-money-flow-index.html",
+        "https://help.stockstrader.com/en/support/solutions/articles/33000210228-money-flow-index-mfi-"
+      ]
+    },
+    {
+      "rank": 68,
+      "name_en": "Avrum Soudack",
+      "name_zh": "阿夫魯姆・蘇達克",
+      "country_region": "United States",
+      "years": "",
+      "role": "指標共同創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "mfi",
+          "relation": "共同創始者"
+        },
+        {
+          "slug": "volume-analysis",
+          "relation": "量價動量"
+        }
+      ],
+      "works": [
+        {
+          "title": "Money Flow Index",
+          "year": 1989,
+          "type": "indicator",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Money Flow Index 共同創作者，MFI 也常被稱為加入成交量的 RSI。",
+      "scores": {
+        "books_literature": 2,
+        "papers_research": 2,
+        "public_fame": 3,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.tradingview.com/support/solutions/43000502348-money-flow-mfi/",
+        "https://library.tradingtechnologies.com/trade/chrt-ti-money-flow-index.html",
+        "https://help.stockstrader.com/en/support/solutions/articles/33000210228-money-flow-index-mfi-"
+      ]
+    },
+    {
+      "rank": 69,
+      "name_en": "Peter G. Martin",
+      "name_zh": "彼得・馬丁",
+      "country_region": "United States",
+      "years": "",
+      "role": "風險指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "ulcer-index",
+          "relation": "共同創始者"
+        },
+        {
+          "slug": "risk",
+          "relation": "下行風險"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Investor's Guide to Fidelity Funds",
+          "year": 1989,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Ulcer Index 共同創作者，用於衡量下行風險與回撤痛苦程度。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 3,
+        "public_fame": 3,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 4
+      },
+      "sources": [
+        "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/ulcer-index"
+      ]
+    },
+    {
+      "rank": 70,
+      "name_en": "Byron McCann",
+      "name_zh": "拜倫・麥肯",
+      "country_region": "United States",
+      "years": "",
+      "role": "風險指標共同創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "ulcer-index",
+          "relation": "共同創始者"
+        },
+        {
+          "slug": "risk",
+          "relation": "下行風險"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Investor's Guide to Fidelity Funds",
+          "year": 1989,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Ulcer Index 共同作者，適合放入技術分析風險/回撤指標分類。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 3,
+        "public_fame": 3,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 4
+      },
+      "sources": [
+        "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/ulcer-index"
+      ]
+    },
+    {
+      "rank": 71,
+      "name_en": "Etienne Botes",
+      "name_zh": "艾蒂安・博特斯",
+      "country_region": "South Africa",
+      "years": "",
+      "role": "指標共同創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "vortex-indicator",
+          "relation": "共同創始者"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "趨勢反轉"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Vortex Indicator",
+          "year": 2010,
+          "type": "article",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Vortex Indicator 共同創作者，該指標受 Wilder DMI 啟發，用於趨勢轉折與確認。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 4,
+        "public_fame": 3,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://traders.com/documentation/feedbk_docs/2010/01/Botes.html",
+        "https://www.investopedia.com/terms/v/vortex-indicator-vi.asp"
+      ]
+    },
+    {
+      "rank": 72,
+      "name_en": "Douglas Siepman",
+      "name_zh": "道格拉斯・西普曼",
+      "country_region": "South Africa",
+      "years": "",
+      "role": "指標共同創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "vortex-indicator",
+          "relation": "共同創始者"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "趨勢反轉"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Vortex Indicator",
+          "year": 2010,
+          "type": "article",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Vortex Indicator 共同創作者，適合歸檔於 DMI 類趨勢與方向變化指標。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 4,
+        "public_fame": 3,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://traders.com/documentation/feedbk_docs/2010/01/Botes.html",
+        "https://www.investopedia.com/terms/v/vortex-indicator-vi.asp"
+      ]
+    },
+    {
+      "rank": 73,
+      "name_en": "Olivier Seban",
+      "name_zh": "奧利維耶・塞班",
+      "country_region": "France",
+      "years": "",
+      "role": "交易者、指標創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "supertrend",
+          "relation": "創始者"
+        },
+        {
+          "slug": "atr",
+          "relation": "ATR 通道應用"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "趨勢跟隨"
+        }
+      ],
+      "works": [
+        {
+          "title": "SuperTrend",
+          "year": 2009,
+          "type": "indicator",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "SuperTrend 創作者，該指標以 ATR 與倍數形成趨勢方向線，在交易平台中非常常見。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 2,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.tradingview.com/support/solutions/43000634738-supertrend/",
+        "https://www.investopedia.com/supertrend-indicator-7976167"
+      ]
+    },
+    {
+      "rank": 74,
+      "name_en": "Hank Pruden",
+      "name_zh": "漢克・普魯登",
+      "country_region": "United States",
+      "years": "1936-2018",
+      "role": "學者、Wyckoff 教育者、CMT 社群人物",
+      "category": "educator",
+      "concepts": [
+        {
+          "slug": "wyckoff-method",
+          "relation": "教育者"
+        },
+        {
+          "slug": "volume-analysis",
+          "relation": "供需/量價"
+        },
+        {
+          "slug": "systems-trading",
+          "relation": "三大交易技能"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Three Skills of Top Trading",
+          "year": 2007,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "將 Wyckoff 方法帶入學術與 CMT 教育脈絡，適合威科夫方法專家分類。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 4,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.wyckoffanalytics.com/hank-pruden/",
+        "https://chartschool.stockcharts.com/table-of-contents/market-analysis/wyckoff-analysis-articles/the-wyckoff-method-a-tutorial"
+      ]
+    },
+    {
+      "rank": 75,
+      "name_en": "David Weis",
+      "name_zh": "大衛・韋斯",
+      "country_region": "United States",
+      "years": "1942-2020",
+      "role": "Wyckoff 交易者、作家",
+      "category": "educator",
+      "concepts": [
+        {
+          "slug": "wyckoff-method",
+          "relation": "現代改編者"
+        },
+        {
+          "slug": "volume-analysis",
+          "relation": "Weis Wave"
+        },
+        {
+          "slug": "price-action",
+          "relation": "價格量能"
+        }
+      ],
+      "works": [
+        {
+          "title": "Trades About to Happen",
+          "year": 2013,
+          "type": "book",
+          "url": "https://books.google.com/books/about/Trades_About_to_Happen.html?id=IPw1CgAAQBAJ",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "把 Wyckoff 原理改編為現代量價與 Weis Wave 工具，是威科夫實戰資料的重要人物。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.wyckoffanalytics.com/david-weis/",
+        "https://books.google.com/books/about/Trades_About_to_Happen.html?id=IPw1CgAAQBAJ"
+      ]
+    },
+    {
+      "rank": 76,
+      "name_en": "Tom Williams",
+      "name_zh": "湯姆・威廉斯",
+      "country_region": "United Kingdom",
+      "years": "1929-2016",
+      "role": "VSA 創始/推廣者、TradeGuider 創辦人",
+      "category": "indicator_specialist",
+      "concepts": [
+        {
+          "slug": "volume-spread-analysis",
+          "relation": "創始/推廣者"
+        },
+        {
+          "slug": "wyckoff-method",
+          "relation": "威科夫衍生"
+        },
+        {
+          "slug": "volume-analysis",
+          "relation": "量價差"
+        }
+      ],
+      "works": [
+        {
+          "title": "Master the Markets",
+          "year": 1993,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Volume Spread Analysis 代表人物，將 Wyckoff 供需觀念整理為 VSA 量價差分析。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 2,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.acmetrades.com/tom-williams",
+        "https://www.tradeguider.com/resource_center1.asp"
+      ]
+    },
+    {
+      "rank": 77,
+      "name_en": "A. W. Cohen",
+      "name_zh": "A・W・科恩",
+      "country_region": "United States",
+      "years": "",
+      "role": "點數圖作者、Chartcraft 創辦人",
+      "category": "charting_specialist",
+      "concepts": [
+        {
+          "slug": "point-and-figure",
+          "relation": "3-box reversal 推廣者"
+        },
+        {
+          "slug": "breadth",
+          "relation": "Bullish Percent"
+        }
+      ],
+      "works": [
+        {
+          "title": "How to Use the Three-Point Reversal Method of Point & Figure Stock Market Trading",
+          "year": 1947,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "被 StockCharts 介紹為經典 3-box reversal P&F 圖的代表人物之一。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 2,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://chartschool.stockcharts.com/table-of-contents/chart-analysis/point-and-figure-charts/point-and-figure-basics/introduction-to-point-and-figure-charts",
+        "https://books.google.com/books/about/How_to_Use_the_Three_point_Reversal_Meth.html?id=iMdEAAAAIAAJ",
+        "https://openlibrary.org/works/OL174845W/How_to_use_the_three-point_reversal_method_of_point_figure_stock_market_trading"
+      ]
+    },
+    {
+      "rank": 78,
+      "name_en": "Thomas J. Dorsey",
+      "name_zh": "湯瑪斯・多爾西",
+      "country_region": "United States",
+      "years": "",
+      "role": "點數圖作家、Dorsey Wright 創辦人",
+      "category": "charting_specialist",
+      "concepts": [
+        {
+          "slug": "point-and-figure",
+          "relation": "現代推廣者"
+        },
+        {
+          "slug": "relative-strength",
+          "relation": "P&F 相對強弱"
+        }
+      ],
+      "works": [
+        {
+          "title": "Point & Figure Charting",
+          "year": 1995,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "現代 Point & Figure 教育與相對強弱分析代表人物，Nasdaq Dorsey Wright 方法與其相關。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.investopedia.com/terms/p/pointandfigurechart.asp",
+        "https://oxlive.dorseywright.com/university/faq.html"
+      ]
+    },
+    {
+      "rank": 79,
+      "name_en": "Jeremy du Plessis",
+      "name_zh": "傑瑞米・杜普萊西斯",
+      "country_region": "South Africa / United Kingdom",
+      "years": "",
+      "role": "點數圖作家",
+      "category": "charting_specialist",
+      "concepts": [
+        {
+          "slug": "point-and-figure",
+          "relation": "現代教材作者"
+        },
+        {
+          "slug": "bollinger-bands",
+          "relation": "P&F 結合指標"
+        },
+        {
+          "slug": "rsi",
+          "relation": "P&F 結合指標"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Definitive Guide to Point and Figure",
+          "year": 2005,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "21st Century Point and Figure",
+          "year": 2015,
+          "type": "book",
+          "url": "https://harriman-house.com/authors/jeremy-du-plessis/21st-century-point-and-figure/9780857194428",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "點數圖現代教材代表作者，尤其適合 P&F 與其他技術指標整合分類。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://harriman-house.com/authors/jeremy-du-plessis/21st-century-point-and-figure/9780857194428"
+      ]
+    },
+    {
+      "rank": 80,
+      "name_en": "J. Peter Steidlmayer",
+      "name_zh": "彼得・史戴梅爾",
+      "country_region": "United States",
+      "years": "",
+      "role": "CBOT 交易員、Market Profile 創始者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "market-profile",
+          "relation": "創始者"
+        },
+        {
+          "slug": "volume-analysis",
+          "relation": "價格時間分佈"
+        },
+        {
+          "slug": "support-resistance",
+          "relation": "價值區"
+        }
+      ],
+      "works": [
+        {
+          "title": "Markets and Market Logic",
+          "year": 1986,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "Steidlmayer on Markets",
+          "year": 1989,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Market Profile 創始者，把拍賣市場、時間價格機會與價值區概念帶入交易分析。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 5,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.profiletrading.com/about/"
+      ]
+    },
+    {
+      "rank": 81,
+      "name_en": "James F. Dalton",
+      "name_zh": "詹姆斯・道爾頓",
+      "country_region": "United States",
+      "years": "",
+      "role": "Market Profile 作家、教育者",
+      "category": "author_practitioner",
+      "concepts": [
+        {
+          "slug": "market-profile",
+          "relation": "推廣者/作者"
+        },
+        {
+          "slug": "price-action",
+          "relation": "拍賣市場邏輯"
+        }
+      ],
+      "works": [
+        {
+          "title": "Mind Over Markets",
+          "year": 1990,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "Markets in Profile",
+          "year": 2007,
+          "type": "book",
+          "url": "https://jimdaltontrading.com/books/",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Market Profile 主要教材作者之一，讓拍賣市場與市場結構方法更容易被交易者使用。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://jimdaltontrading.com/books/"
+      ]
+    },
+    {
+      "rank": 82,
+      "name_en": "Mark B. Fisher",
+      "name_zh": "馬克・費雪",
+      "country_region": "United States",
+      "years": "",
+      "role": "交易所交易者、ACD 方法作者",
+      "category": "practitioner_author",
+      "concepts": [
+        {
+          "slug": "acd-method",
+          "relation": "創始者"
+        },
+        {
+          "slug": "opening-range-breakout",
+          "relation": "開盤區間"
+        },
+        {
+          "slug": "support-resistance",
+          "relation": "Pivot range"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Logical Trader",
+          "year": 2002,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "ACD 方法以開盤區間、A/C 點與 Pivot Range 判斷趨勢強弱，常見於短線/商品交易。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.investopedia.com/articles/technical/04/032404.asp",
+        "https://www.investopedia.com/articles/technical/04/040704.asp"
+      ]
+    },
+    {
+      "rank": 83,
+      "name_en": "Toby Crabel",
+      "name_zh": "托比・克拉貝爾",
+      "country_region": "United States",
+      "years": "",
+      "role": "交易者、開盤區間突破作者",
+      "category": "practitioner_author",
+      "concepts": [
+        {
+          "slug": "opening-range-breakout",
+          "relation": "代表作者"
+        },
+        {
+          "slug": "price-action",
+          "relation": "Narrow Range 型態"
+        },
+        {
+          "slug": "volatility",
+          "relation": "波動擴張"
+        }
+      ],
+      "works": [
+        {
+          "title": "Day Trading with Short Term Price Patterns and Opening Range Breakout",
+          "year": 1990,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "短線價格型態、Narrow Range 與 Opening Range Breakout 的重要作者。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://oxfordstrat.com/trading-strategies/toby-crabel-narrow-range-1/"
+      ]
+    },
+    {
+      "rank": 84,
+      "name_en": "Victor Sperandeo",
+      "name_zh": "維克多・斯佩蘭迪奧",
+      "country_region": "United States",
+      "years": "1945-",
+      "role": "交易者、作家",
+      "category": "practitioner_author",
+      "concepts": [
+        {
+          "slug": "price-action",
+          "relation": "2B 型態"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "1-2-3 反轉"
+        },
+        {
+          "slug": "support-resistance",
+          "relation": "趨勢線"
+        }
+      ],
+      "works": [
+        {
+          "title": "Trader Vic: Methods of a Wall Street Master",
+          "year": 1991,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Trader Vic 2B 與 1-2-3 反轉方法常被技術交易者引用，用於趨勢失敗與反轉判斷。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 2,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://thepatternsite.com/2B.html"
+      ]
+    },
+    {
+      "rank": 85,
+      "name_en": "Robert C. Miner",
+      "name_zh": "羅伯特・邁納",
+      "country_region": "United States",
+      "years": "",
+      "role": "技術分析軟體/教育者、作家",
+      "category": "author_practitioner",
+      "concepts": [
+        {
+          "slug": "elliott-wave",
+          "relation": "波浪/時間價格"
+        },
+        {
+          "slug": "fibonacci",
+          "relation": "時間價格"
+        },
+        {
+          "slug": "momentum",
+          "relation": "多週期動量"
+        }
+      ],
+      "works": [
+        {
+          "title": "Dynamic Trading",
+          "year": 1997,
+          "type": "book",
+          "url": "https://dynamictraders.com/dt-books/",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Dynamic Trading 結合時間、價格、型態與動量，常被波浪與 Fibonacci 交易者引用。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://dynamictraders.com/dt-books/",
+        "https://books.google.com/books/about/Dynamic_Trading.html?id=ymtaAAAAYAAJ",
+        "https://www.amazon.com/Dynamic-Trading-Practical-Strategies-Investors/dp/093438083X"
+      ]
+    },
+    {
+      "rank": 86,
+      "name_en": "Carolyn Boroden",
+      "name_zh": "卡洛琳・波羅登",
+      "country_region": "United States",
+      "years": "",
+      "role": "Fibonacci 技術分析師、作家",
+      "category": "indicator_specialist",
+      "concepts": [
+        {
+          "slug": "fibonacci",
+          "relation": "時間價格專家"
+        },
+        {
+          "slug": "support-resistance",
+          "relation": "價格叢集"
+        },
+        {
+          "slug": "elliott-wave",
+          "relation": "波浪/時間"
+        }
+      ],
+      "works": [
+        {
+          "title": "Fibonacci Trading",
+          "year": 2008,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "以 Fibonacci 時間與價格分析聞名，適合專屬歸檔於 Fibonacci 分析專家。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 2,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.moneyshow.com/expert/ote17731/carolyn-boroden/",
+        "https://www.elliottwavetrader.net/analyst/Carolyn-Boroden"
+      ]
+    },
+    {
+      "rank": 87,
+      "name_en": "Joe DiNapoli",
+      "name_zh": "喬・迪納波利",
+      "country_region": "United States",
+      "years": "",
+      "role": "Fibonacci 交易方法作者",
+      "category": "indicator_specialist",
+      "concepts": [
+        {
+          "slug": "fibonacci",
+          "relation": "DiNapoli Levels"
+        },
+        {
+          "slug": "support-resistance",
+          "relation": "價格叢集"
+        }
+      ],
+      "works": [
+        {
+          "title": "DiNapoli Levels",
+          "year": 1998,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "DiNapoli Levels 是 Fibonacci 回撤/擴展的實戰化方法，常用於關鍵支撐阻力。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 2,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.mql5.com/en/articles/3061",
+        "https://www.amazon.com/DiNapoli-Levels-Practical-Application-Investment/dp/1891159046",
+        "https://www.moneyshow.com/expert/2160spk/"
+      ]
+    },
+    {
+      "rank": 88,
+      "name_en": "Alan Andrews",
+      "name_zh": "艾倫・安德魯斯",
+      "country_region": "United States",
+      "years": "",
+      "role": "Median Line / Pitchfork 方法創作者",
+      "category": "indicator_creator",
+      "concepts": [
+        {
+          "slug": "andrew-pitchfork",
+          "relation": "創始者"
+        },
+        {
+          "slug": "support-resistance",
+          "relation": "中線/通道"
+        },
+        {
+          "slug": "price-action",
+          "relation": "擺動點"
+        }
+      ],
+      "works": [
+        {
+          "title": "Andrews' Pitchfork",
+          "year": null,
+          "type": "drawing_tool",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Andrews' Pitchfork 以三點繪製中線與平行通道，是支撐阻力和趨勢通道工具。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 2,
+        "public_fame": 4,
+        "indicator_specialist": 5,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.investopedia.com/articles/forex/05/andrewspitchfork.asp",
+        "https://www.optuma.com/blog/pitchforks-part-1"
+      ]
+    },
+    {
+      "rank": 89,
+      "name_en": "Arthur A. Merrill",
+      "name_zh": "亞瑟・梅里爾",
+      "country_region": "United States",
+      "years": "1906-2006",
+      "role": "技術分析作家、統計研究者",
+      "category": "author_researcher",
+      "concepts": [
+        {
+          "slug": "chart-patterns",
+          "relation": "M/W 型態"
+        },
+        {
+          "slug": "cycle-analysis",
+          "relation": "Filtered Waves"
+        },
+        {
+          "slug": "backtesting",
+          "relation": "型態統計"
+        }
+      ],
+      "works": [
+        {
+          "title": "Filtered Waves: Basic Theory",
+          "year": 1977,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "Behavior of Prices on Wall Street",
+          "year": 1966,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "以 M/W 型態與 Filtered Waves 著作聞名，是早期量化型圖表研究人物。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 3,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.amazon.com/Filtered-Waves-Basic-Theory-Analysis/dp/0911894365",
+        "https://books.google.com/books/about/Behavior_of_Prices_on_Wall_Street.html?id=wEsUAQAAMAAJ",
+        "https://openlibrary.org/books/OL5991950M/Behavior_of_prices_on_Wall_Street."
+      ]
+    },
+    {
+      "rank": 90,
+      "name_en": "Humphrey B. Neill",
+      "name_zh": "漢弗萊・尼爾",
+      "country_region": "United States",
+      "years": "1895-1977",
+      "role": "市場心理/讀帶作家",
+      "category": "author",
+      "concepts": [
+        {
+          "slug": "tape-reading",
+          "relation": "經典作者"
+        },
+        {
+          "slug": "sentiment",
+          "relation": "逆向思考"
+        },
+        {
+          "slug": "price-action",
+          "relation": "市場心理"
+        }
+      ],
+      "works": [
+        {
+          "title": "Tape Reading and Market Tactics",
+          "year": 1931,
+          "type": "book",
+          "url": "https://books.google.com/books/about/Tape_Reading_and_Market_Tactics.html?id=XuiREQAAQBAJ",
+          "notes": ""
+        },
+        {
+          "title": "The Art of Contrary Thinking",
+          "year": 1954,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "讀帶與逆向思考經典作者，適合情緒、盤口與早期技術分析文獻分類。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 2,
+        "public_fame": 4,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://books.google.com/books/about/Tape_Reading_and_Market_Tactics.html?id=XuiREQAAQBAJ"
+      ]
+    },
+    {
+      "rank": 91,
+      "name_en": "Walter Deemer",
+      "name_zh": "華特・迪默",
+      "country_region": "United States",
+      "years": "",
+      "role": "技術分析師、作家",
+      "category": "practitioner_author",
+      "concepts": [
+        {
+          "slug": "trend-following",
+          "relation": "市場時機"
+        },
+        {
+          "slug": "breadth",
+          "relation": "市場備忘錄"
+        },
+        {
+          "slug": "sentiment",
+          "relation": "市場心理"
+        }
+      ],
+      "works": [
+        {
+          "title": "Deemer on Technical Analysis",
+          "year": 2012,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "Market Memos",
+          "year": 1966,
+          "type": "archive",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "長期市場技術分析師，著作與 Market Memos 檔案適合作為近代市場評論文獻。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 3,
+        "public_fame": 4,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://www.walterdeemer.com/",
+        "https://deemermarketmemos.com/"
+      ]
+    },
+    {
+      "rank": 92,
+      "name_en": "Ned Davis",
+      "name_zh": "內德・戴維斯",
+      "country_region": "United States",
+      "years": "",
+      "role": "量化市場研究機構創辦人",
+      "category": "researcher",
+      "concepts": [
+        {
+          "slug": "breadth",
+          "relation": "市場指標"
+        },
+        {
+          "slug": "sentiment",
+          "relation": "情緒模型"
+        },
+        {
+          "slug": "evidence-based-ta",
+          "relation": "量化市場研究"
+        }
+      ],
+      "works": [
+        {
+          "title": "Being Right or Making Money",
+          "year": 1991,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "The Research Driven Investor",
+          "year": 2000,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "Ned Davis Research 長期以廣度、情緒、總體與技術模型做市場研究，適合指標集合與量化研究分類。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 4,
+        "public_fame": 4,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://info.ndr.com/ndr-signals/which-indicators-should-i-follow",
+        "https://www.amazon.com/Being-Right-Making-Money-Davis/dp/1118992067",
+        "https://books.google.com/books/about/Being_Right_or_Making_Money.html?id=wLhYBQAAQBAJ",
+        "https://info.ndr.com/ndr-signals"
+      ]
+    },
+    {
+      "rank": 93,
+      "name_en": "Jason Goepfert",
+      "name_zh": "傑森・戈普弗特",
+      "country_region": "United States",
+      "years": "",
+      "role": "SentimenTrader 創辦人、Dow Award 得主",
+      "category": "researcher",
+      "concepts": [
+        {
+          "slug": "sentiment",
+          "relation": "情緒指標"
+        },
+        {
+          "slug": "breadth",
+          "relation": "基金現金/市場指標"
+        },
+        {
+          "slug": "evidence-based-ta",
+          "relation": "歷史統計"
+        }
+      ],
+      "works": [
+        {
+          "title": "Mutual Fund Cash Reserves, The Risk-Free Rate, and Stock Market Performance",
+          "year": 2004,
+          "type": "paper",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "2004 Charles H. Dow Award 得主，長期研究投資人情緒與市場統計。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 5,
+        "public_fame": 4,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/"
+      ]
+    },
+    {
+      "rank": 94,
+      "name_en": "Buff Dormeier",
+      "name_zh": "巴夫・多米爾",
+      "country_region": "United States",
+      "years": "",
+      "role": "CMT、量價研究者、Dow Award 得主",
+      "category": "researcher_author",
+      "concepts": [
+        {
+          "slug": "volume-analysis",
+          "relation": "量價研究"
+        },
+        {
+          "slug": "breadth",
+          "relation": "成交量廣度"
+        },
+        {
+          "slug": "evidence-based-ta",
+          "relation": "Dow Award 研究"
+        }
+      ],
+      "works": [
+        {
+          "title": "Price and Volume: Digging Deeper",
+          "year": 2007,
+          "type": "paper",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "Investing with Volume Analysis",
+          "year": 2011,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "2007 Charles H. Dow Award 得主，量價與成交量分析著作具資料庫價值。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 5,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/"
+      ]
+    },
+    {
+      "rank": 95,
+      "name_en": "Andrew Thrasher",
+      "name_zh": "安德魯・思拉舍",
+      "country_region": "United States",
+      "years": "",
+      "role": "CMT、投資組合經理、Dow Award 得主",
+      "category": "researcher",
+      "concepts": [
+        {
+          "slug": "volatility",
+          "relation": "波動/風險"
+        },
+        {
+          "slug": "sentiment",
+          "relation": "市場警訊"
+        },
+        {
+          "slug": "breadth",
+          "relation": "市場健康"
+        }
+      ],
+      "works": [
+        {
+          "title": "Forecasting a Volatility Tsunami",
+          "year": 2017,
+          "type": "paper",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "The 5% Canary",
+          "year": 2023,
+          "type": "paper",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "兩度 Charles H. Dow Award 相關得主/研究者，波動率與市場風險研究值得收錄。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 5,
+        "public_fame": 4,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/"
+      ]
+    },
+    {
+      "rank": 96,
+      "name_en": "Alex Spiroglou",
+      "name_zh": "亞歷克斯・斯皮羅格魯",
+      "country_region": "Greece / United Kingdom",
+      "years": "",
+      "role": "CMT、CFTe、Dow Award 得主",
+      "category": "researcher",
+      "concepts": [
+        {
+          "slug": "macd",
+          "relation": "MACD-V"
+        },
+        {
+          "slug": "volatility",
+          "relation": "波動標準化動量"
+        },
+        {
+          "slug": "momentum",
+          "relation": "動量研究"
+        }
+      ],
+      "works": [
+        {
+          "title": "MACD-V: Volatility Normalised Momentum",
+          "year": 2022,
+          "type": "paper",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "2022 Charles H. Dow Award 得主，將 MACD 轉為波動標準化動量框架。",
+      "scores": {
+        "books_literature": 3,
+        "papers_research": 5,
+        "public_fame": 4,
+        "indicator_specialist": 4,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/"
+      ]
+    },
+    {
+      "rank": 97,
+      "name_en": "Ralph Vince",
+      "name_zh": "拉爾夫・文斯",
+      "country_region": "United States",
+      "years": "",
+      "role": "風險/資金管理作者、Dow Award 得主",
+      "category": "researcher_author",
+      "concepts": [
+        {
+          "slug": "breadth",
+          "relation": "新低數研究"
+        },
+        {
+          "slug": "systems-trading",
+          "relation": "資金管理"
+        },
+        {
+          "slug": "evidence-based-ta",
+          "relation": "統計研究"
+        }
+      ],
+      "works": [
+        {
+          "title": "The Mathematics of Money Management",
+          "year": 1992,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "The Ripple Effect of Daily New Lows",
+          "year": 2024,
+          "type": "paper",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "資金管理與風險數學作者，2024 Dow Award 研究把每日新低數作為市場廣度訊號。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 5,
+        "public_fame": 4,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/"
+      ]
+    },
+    {
+      "rank": 98,
+      "name_en": "Gary Antonacci",
+      "name_zh": "蓋瑞・安東納奇",
+      "country_region": "United States",
+      "years": "",
+      "role": "動量投資作者、Dow Award 得主",
+      "category": "researcher_author",
+      "concepts": [
+        {
+          "slug": "momentum",
+          "relation": "雙動量"
+        },
+        {
+          "slug": "trend-following",
+          "relation": "產業趨勢"
+        },
+        {
+          "slug": "relative-strength",
+          "relation": "相對/絕對動量"
+        }
+      ],
+      "works": [
+        {
+          "title": "Dual Momentum Investing",
+          "year": 2014,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        },
+        {
+          "title": "A Century of Profitable Industry Trends",
+          "year": 2025,
+          "type": "paper",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "動量投資作者，2025 Charles H. Dow Award 共同得主，適合動量與產業趨勢研究分類。",
+      "scores": {
+        "books_literature": 4,
+        "papers_research": 5,
+        "public_fame": 4,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 5
+      },
+      "sources": [
+        "https://cmtassociation.org/association/award-recognizing/charles-h-dow-award/"
+      ]
+    },
+    {
+      "rank": 99,
+      "name_en": "Andrew W. Lo",
+      "name_zh": "安德魯・羅",
+      "country_region": "United States",
+      "years": "1960-",
+      "role": "MIT 金融學者",
+      "category": "academic",
+      "concepts": [
+        {
+          "slug": "evidence-based-ta",
+          "relation": "學術研究"
+        },
+        {
+          "slug": "chart-patterns",
+          "relation": "計算型型態識別"
+        },
+        {
+          "slug": "backtesting",
+          "relation": "統計推論"
+        }
+      ],
+      "works": [
+        {
+          "title": "Foundations of Technical Analysis",
+          "year": 2000,
+          "type": "paper",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=228099",
+          "notes": ""
+        },
+        {
+          "title": "The Evolution of Technical Analysis",
+          "year": 2010,
+          "type": "book",
+          "url": "",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "將技術分析型態以計算演算法與統計推論研究，是學術文獻中的代表人物。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 5,
+        "public_fame": 5,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 4
+      },
+      "sources": [
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=228099",
+        "https://ideas.repec.org/p/nbr/nberwo/7613.html"
+      ]
+    },
+    {
+      "rank": 100,
+      "name_en": "David Aronson",
+      "name_zh": "大衛・阿隆森",
+      "country_region": "United States",
+      "years": "",
+      "role": "實證技術分析作者、系統研究者",
+      "category": "academic_practitioner",
+      "concepts": [
+        {
+          "slug": "evidence-based-ta",
+          "relation": "代表作者"
+        },
+        {
+          "slug": "backtesting",
+          "relation": "資料探勘校正"
+        },
+        {
+          "slug": "systems-trading",
+          "relation": "客觀規則"
+        }
+      ],
+      "works": [
+        {
+          "title": "Evidence-Based Technical Analysis",
+          "year": 2006,
+          "type": "book",
+          "url": "https://www.wiley.com/en-ca/Evidence-Based%2BTechnical%2BAnalysis%3A%2BApplying%2Bthe%2BScientific%2BMethod%2Band%2BStatistical%2BInference%2Bto%2BTrading%2BSignals-p-9780470008744",
+          "notes": ""
+        }
+      ],
+      "why_selected_zh": "主張用科學方法與統計檢定評估技術交易訊號，是建立資料庫時避免迷信指標的重要參考。",
+      "scores": {
+        "books_literature": 5,
+        "papers_research": 5,
+        "public_fame": 4,
+        "indicator_specialist": 3,
+        "stock_ta_focus": 4
+      },
+      "sources": [
+        "https://www.wiley.com/en-ca/Evidence-Based%2BTechnical%2BAnalysis%3A%2BApplying%2Bthe%2BScientific%2BMethod%2Band%2BStatistical%2BInference%2Bto%2BTrading%2BSignals-p-9780470008744",
+        "https://www.amazon.com/Evidence-Based-Technical-Analysis-Scientific-Statistical/dp/0470008741"
+      ]
+    }
+  ]
+}

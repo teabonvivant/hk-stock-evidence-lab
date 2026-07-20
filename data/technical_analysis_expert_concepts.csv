@@ -1,0 +1,262 @@
+﻿concept_slug,concept_zh,concept_en,family,expert_rank,expert_zh,expert_en,relation
+dow-theory,道氏理論,Dow Theory,foundation,1,查爾斯・道,Charles H. Dow,奠基者
+trend-following,趨勢跟隨,Trend Following,trend,1,查爾斯・道,Charles H. Dow,早期趨勢概念
+dow-theory,道氏理論,Dow Theory,foundation,2,威廉・彼得・漢密爾頓,William Peter Hamilton,主要詮釋者
+trend-following,趨勢跟隨,Trend Following,trend,2,威廉・彼得・漢密爾頓,William Peter Hamilton,趨勢判讀
+dow-theory,道氏理論,Dow Theory,foundation,3,羅伯特・里亞,Robert Rhea,系統化整理者
+trend-following,趨勢跟隨,Trend Following,trend,3,羅伯特・里亞,Robert Rhea,趨勢確認
+wyckoff-method,威科夫方法,Wyckoff Method,volume,4,理查・威科夫,Richard D. Wyckoff,創始者
+volume-analysis,成交量分析,Volume Analysis,volume,4,理查・威科夫,Richard D. Wyckoff,量價分析
+tape-reading,讀帶 / 盤口判讀,Tape Reading,charting,4,理查・威科夫,Richard D. Wyckoff,讀帶
+tape-reading,讀帶 / 盤口判讀,Tape Reading,charting,5,傑西・李佛摩,Jesse Livermore,代表性實踐者
+price-action,價格行為,Price Action,charting,5,傑西・李佛摩,Jesse Livermore,價格行為
+trend-following,趨勢跟隨,Trend Following,trend,5,傑西・李佛摩,Jesse Livermore,趨勢交易
+gann,江恩理論,Gann Methods,cycle,6,威廉・江恩,W. D. Gann,創始者
+cycle-analysis,週期分析,Cycle Analysis,cycle,6,威廉・江恩,W. D. Gann,週期分析
+support-resistance,支撐阻力,Support and Resistance,charting,6,威廉・江恩,W. D. Gann,角度/價位
+elliott-wave,艾略特波浪,Elliott Wave,wave,7,拉爾夫・尼爾森・艾略特,Ralph Nelson Elliott,創始者
+cycle-analysis,週期分析,Cycle Analysis,cycle,7,拉爾夫・尼爾森・艾略特,Ralph Nelson Elliott,市場循環
+chart-patterns,圖表型態,Chart Patterns,charting,8,理查・沙巴克,Richard W. Schabacker,早期系統化作者
+support-resistance,支撐阻力,Support and Resistance,charting,8,理查・沙巴克,Richard W. Schabacker,型態與趨勢線
+chart-patterns,圖表型態,Chart Patterns,charting,9,羅伯特・愛德華茲,Robert D. Edwards,經典教材作者
+support-resistance,支撐阻力,Support and Resistance,charting,9,羅伯特・愛德華茲,Robert D. Edwards,型態分析
+chart-patterns,圖表型態,Chart Patterns,charting,10,約翰・麥基,John Magee,經典教材作者
+support-resistance,支撐阻力,Support and Resistance,charting,10,約翰・麥基,John Magee,型態分析
+moving-average,移動平均,Moving Average,trend,11,約翰・墨菲,John J. Murphy,教材作者
+chart-patterns,圖表型態,Chart Patterns,charting,11,約翰・墨菲,John J. Murphy,教材作者
+breadth,市場寬度,Market Breadth,breadth,11,約翰・墨菲,John J. Murphy,市場分析
+momentum,動量,Momentum,momentum,12,馬丁・普林格,Martin J. Pring,指標與教材作者
+cycle-analysis,週期分析,Cycle Analysis,cycle,12,馬丁・普林格,Martin J. Pring,景氣/市場循環
+trend-following,趨勢跟隨,Trend Following,trend,12,馬丁・普林格,Martin J. Pring,趨勢判讀
+chart-patterns,圖表型態,Chart Patterns,charting,13,傑克・施瓦格,Jack D. Schwager,教材作者
+systems-trading,交易系統,Trading Systems,systems,13,傑克・施瓦格,Jack D. Schwager,交易方法整理
+price-action,價格行為,Price Action,charting,13,傑克・施瓦格,Jack D. Schwager,交易者訪談
+relative-strength,相對強弱 / 強勢股篩選,Relative Strength,stock_selection,14,查爾斯・柯克派翠克二世,Charles D. Kirkpatrick II,研究者
+dow-theory,道氏理論,Dow Theory,foundation,14,查爾斯・柯克派翠克二世,Charles D. Kirkpatrick II,Dow Award 研究
+stock_selection,股票選股,Stock Selection,stock_selection,14,查爾斯・柯克派翠克二世,Charles D. Kirkpatrick II,選股研究
+chart-patterns,圖表型態,Chart Patterns,charting,15,茱莉・達爾奎斯特,Julie R. Dahlquist,教材作者
+backtesting,回測與系統驗證,Backtesting,research,15,茱莉・達爾奎斯特,Julie R. Dahlquist,缺口策略研究
+evidence-based-ta,實證技術分析,Evidence-Based Technical Analysis,research,15,茱莉・達爾奎斯特,Julie R. Dahlquist,研究者
+moving-average,移動平均,Moving Average,trend,16,史蒂文・阿契利斯,Steven B. Achelis,百科作者
+momentum,動量,Momentum,momentum,16,史蒂文・阿契利斯,Steven B. Achelis,百科作者
+volume-analysis,成交量分析,Volume Analysis,volume,16,史蒂文・阿契利斯,Steven B. Achelis,百科作者
+moving-average,移動平均,Moving Average,trend,17,羅伯特・科爾比,Robert W. Colby,百科作者
+momentum,動量,Momentum,momentum,17,羅伯特・科爾比,Robert W. Colby,百科作者
+evidence-based-ta,實證技術分析,Evidence-Based Technical Analysis,research,17,羅伯特・科爾比,Robert W. Colby,指標彙整
+kama,KAMA 考夫曼自適應均線,Kaufman Adaptive Moving Average,trend,18,佩里・考夫曼,Perry J. Kaufman,創始者
+adaptive-moving-average,自適應均線,Adaptive Moving Average,trend,18,佩里・考夫曼,Perry J. Kaufman,創始者
+systems-trading,交易系統,Trading Systems,systems,18,佩里・考夫曼,Perry J. Kaufman,系統交易作者
+rsi,RSI 相對強弱指數,Relative Strength Index,momentum,19,威爾斯・威爾德,J. Welles Wilder Jr.,創始者
+adx-dmi,ADX / DMI,Average Directional Index / Directional Movement,trend,19,威爾斯・威爾德,J. Welles Wilder Jr.,創始者
+atr,ATR 平均真實波幅,Average True Range,volatility,19,威爾斯・威爾德,J. Welles Wilder Jr.,創始者
+parabolic-sar,Parabolic SAR,Parabolic SAR,trend,19,威爾斯・威爾德,J. Welles Wilder Jr.,創始者
+macd,MACD,Moving Average Convergence/Divergence,momentum,20,傑拉德・阿佩爾,Gerald Appel,創始者
+moving-average,移動平均,Moving Average,trend,20,傑拉德・阿佩爾,Gerald Appel,動量均線
+bollinger-bands,布林通道,Bollinger Bands,volatility,21,約翰・布林格,John Bollinger,創始者
+volatility,波動率,Volatility,volatility,21,約翰・布林格,John Bollinger,波動通道
+stochastic,隨機指標,Stochastic Oscillator,momentum,22,喬治・藍恩,George C. Lane,創始/推廣者
+momentum,動量,Momentum,momentum,22,喬治・藍恩,George C. Lane,動量先行觀念
+donchian-channel,唐奇安通道,Donchian Channel,trend,23,理查・唐奇安,Richard Donchian,創始者
+trend-following,趨勢跟隨,Trend Following,trend,23,理查・唐奇安,Richard Donchian,趨勢跟隨先驅
+aroon,Aroon 指標,Aroon,trend,24,圖沙・昌德,Tushar S. Chande,創始者
+cmo,Chande 動量震盪器,Chande Momentum Oscillator,momentum,24,圖沙・昌德,Tushar S. Chande,創始者
+vidya,VIDYA 動態平均,Variable Index Dynamic Average,trend,24,圖沙・昌德,Tushar S. Chande,創始者
+stochastic-rsi,隨機 RSI,Stochastic RSI,momentum,24,圖沙・昌德,Tushar S. Chande,共同創始者
+stochastic-rsi,隨機 RSI,Stochastic RSI,momentum,25,史丹利・克羅爾,Stanley Kroll,共同創始者
+vidya,VIDYA 動態平均,Variable Index Dynamic Average,trend,25,史丹利・克羅爾,Stanley Kroll,共同作者
+systems-trading,交易系統,Trading Systems,systems,25,史丹利・克羅爾,Stanley Kroll,交易系統
+cci,CCI 商品通道指標,Commodity Channel Index,momentum,26,唐納德・蘭伯特,Donald R. Lambert,創始者
+cycle-analysis,週期分析,Cycle Analysis,cycle,26,唐納德・蘭伯特,Donald R. Lambert,商品週期
+williams-r,Williams %R,Williams %R,momentum,27,拉瑞・威廉斯,Larry Williams,創始者
+momentum,動量,Momentum,momentum,27,拉瑞・威廉斯,Larry Williams,短線動量
+breadth,市場寬度,Market Breadth,breadth,27,拉瑞・威廉斯,Larry Williams,Dow Award 研究
+chaikin-money-flow,Chaikin 資金流,Chaikin Money Flow,volume,28,馬克・柴金,Marc Chaikin,創始者
+volume-analysis,成交量分析,Volume Analysis,volume,28,馬克・柴金,Marc Chaikin,量價/資金流
+obv,OBV 能量潮,On-Balance Volume,volume,29,約瑟夫・格蘭維爾,Joseph Granville,創始者
+volume-analysis,成交量分析,Volume Analysis,volume,29,約瑟夫・格蘭維爾,Joseph Granville,量價分析
+mcclellan-oscillator,McClellan Oscillator,McClellan Oscillator,breadth,30,謝爾曼・麥克萊倫,Sherman McClellan,共同創始者
+breadth,市場寬度,Market Breadth,breadth,30,謝爾曼・麥克萊倫,Sherman McClellan,市場寬度
+mcclellan-oscillator,McClellan Oscillator,McClellan Oscillator,breadth,31,瑪麗安・麥克萊倫,Marian McClellan,共同創始者
+breadth,市場寬度,Market Breadth,breadth,31,瑪麗安・麥克萊倫,Marian McClellan,市場寬度
+trin-arms-index,TRIN / Arms Index,Arms Index,breadth,32,理查・阿姆斯,Richard W. Arms Jr.,創始者
+breadth,市場寬度,Market Breadth,breadth,32,理查・阿姆斯,Richard W. Arms Jr.,市場寬度
+volume-analysis,成交量分析,Volume Analysis,volume,32,理查・阿姆斯,Richard W. Arms Jr.,成交量廣度
+coppock-curve,Coppock 曲線,Coppock Curve,momentum,33,艾德溫・科波克,Edwin S. Coppock,創始者
+momentum,動量,Momentum,momentum,33,艾德溫・科波克,Edwin S. Coppock,長期動量
+demark-indicators,DeMark 指標,DeMARK Indicators,market_timing,34,湯姆・迪馬克,Tom DeMark,創始者
+market_timing,市場時機,Market Timing,market_timing,34,湯姆・迪馬克,Tom DeMark,市場時機
+elder-ray,Elder-Ray,Elder-Ray Index,momentum,35,亞歷山大・艾爾德,Alexander Elder,創始者
+force-index,Force Index,Force Index,volume,35,亞歷山大・艾爾德,Alexander Elder,創始者
+systems-trading,交易系統,Trading Systems,systems,35,亞歷山大・艾爾德,Alexander Elder,Triple Screen
+candlestick,K 線 / 蠟燭圖,Candlestick Charting,charting,36,史蒂夫・尼森,Steve Nison,西方推廣者
+chart-patterns,圖表型態,Chart Patterns,charting,36,史蒂夫・尼森,Steve Nison,K 線型態
+ichimoku,一目均衡表,Ichimoku Kinko Hyo,trend,37,細田悟一,Goichi Hosoda,創始者
+trend-following,趨勢跟隨,Trend Following,trend,37,細田悟一,Goichi Hosoda,趨勢/支撐阻力
+candlestick,K 線 / 蠟燭圖,Candlestick Charting,charting,38,本間宗久,Munehisa Homma,歷史源流
+price-action,價格行為,Price Action,charting,38,本間宗久,Munehisa Homma,市場心理
+chart-patterns,圖表型態,Chart Patterns,charting,39,湯瑪斯・布考斯基,Thomas N. Bulkowski,統計研究者
+candlestick,K 線 / 蠟燭圖,Candlestick Charting,charting,39,湯瑪斯・布考斯基,Thomas N. Bulkowski,型態統計
+backtesting,回測與系統驗證,Backtesting,research,39,湯瑪斯・布考斯基,Thomas N. Bulkowski,歷史樣本統計
+relative-strength,相對強弱 / 強勢股篩選,Relative Strength,stock_selection,40,路易絲・山田,Louise Yamada,機構技術研究
+trend-following,趨勢跟隨,Trend Following,trend,40,路易絲・山田,Louise Yamada,長期趨勢
+support-resistance,支撐阻力,Support and Resistance,charting,40,路易絲・山田,Louise Yamada,長期底部/頂部
+trend-following,趨勢跟隨,Trend Following,trend,41,拉爾夫・阿坎波拉,Ralph Acampora,市場歷史
+chart-patterns,圖表型態,Chart Patterns,charting,41,拉爾夫・阿坎波拉,Ralph Acampora,教育者
+dow-theory,道氏理論,Dow Theory,foundation,41,拉爾夫・阿坎波拉,Ralph Acampora,市場技術史
+elliott-wave,艾略特波浪,Elliott Wave,wave,42,羅伯特・普萊切特,Robert Prechter,推廣者/作者
+sentiment,市場情緒,Sentiment,sentiment,42,羅伯特・普萊切特,Robert Prechter,社會情緒與市場
+elliott-wave,艾略特波浪,Elliott Wave,wave,43,A・J・佛羅斯特,A. J. Frost,經典教材共同作者
+elliott-wave,艾略特波浪,Elliott Wave,wave,44,格倫・尼利,Glenn Neely,規則化作者
+systems-trading,交易系統,Trading Systems,systems,44,格倫・尼利,Glenn Neely,波浪規則
+sentiment,市場情緒,Sentiment,sentiment,45,艾德森・古爾德,Edson Gould,情緒/心理指標
+breadth,市場寬度,Market Breadth,breadth,45,艾德森・古爾德,Edson Gould,市場指標
+trend-following,趨勢跟隨,Trend Following,trend,45,艾德森・古爾德,Edson Gould,長期市場判斷
+breadth,市場寬度,Market Breadth,breadth,46,保羅・德斯蒙德,Paul Desmond,熊市底部研究
+sentiment,市場情緒,Sentiment,sentiment,46,保羅・德斯蒙德,Paul Desmond,市場底部
+dow-theory,道氏理論,Dow Theory,foundation,46,保羅・德斯蒙德,Paul Desmond,Dow Award 得主
+dow-theory,道氏理論,Dow Theory,foundation,47,理查・羅素,Richard Russell,長期推廣者
+trend-following,趨勢跟隨,Trend Following,trend,47,理查・羅素,Richard Russell,市場趨勢
+stage-analysis,四階段分析,Stage Analysis,trend,48,史坦・溫斯坦,Stan Weinstein,創始/推廣者
+relative-strength,相對強弱 / 強勢股篩選,Relative Strength,stock_selection,48,史坦・溫斯坦,Stan Weinstein,強勢股
+volume-analysis,成交量分析,Volume Analysis,volume,48,史坦・溫斯坦,Stan Weinstein,突破量能
+can-slim,CAN SLIM,CAN SLIM,stock_selection,49,威廉・歐尼爾,William J. O'Neil,創始者
+cup-with-handle,杯柄形態,Cup With Handle,charting,49,威廉・歐尼爾,William J. O'Neil,推廣/定義者
+relative-strength,相對強弱 / 強勢股篩選,Relative Strength,stock_selection,49,威廉・歐尼爾,William J. O'Neil,成長股選股
+vcp,VCP 波動收縮形態,Volatility Contraction Pattern,charting,50,馬克・米勒維尼,Mark Minervini,創始/推廣者
+relative-strength,相對強弱 / 強勢股篩選,Relative Strength,stock_selection,50,馬克・米勒維尼,Mark Minervini,SEPA 強勢股
+cup-with-handle,杯柄形態,Cup With Handle,charting,50,馬克・米勒維尼,Mark Minervini,成長股型態
+chart-patterns,圖表型態,Chart Patterns,charting,51,尼古拉斯・達瓦斯,Nicolas Darvas,箱型理論
+trend-following,趨勢跟隨,Trend Following,trend,51,尼古拉斯・達瓦斯,Nicolas Darvas,突破交易
+relative-strength,相對強弱 / 強勢股篩選,Relative Strength,stock_selection,51,尼古拉斯・達瓦斯,Nicolas Darvas,強勢股
+vwap,VWAP / Anchored VWAP,VWAP / Anchored VWAP,volume,52,布萊恩・香農,Brian Shannon,Anchored VWAP 推廣者
+price-action,價格行為,Price Action,charting,52,布萊恩・香農,Brian Shannon,多週期分析
+support-resistance,支撐阻力,Support and Resistance,charting,52,布萊恩・香農,Brian Shannon,市場結構
+price-action,價格行為,Price Action,charting,53,琳達・布拉德福德・拉什克,Linda Bradford Raschke,短線交易
+opening-range-breakout,開盤區間突破,Opening Range Breakout,breakout,53,琳達・布拉德福德・拉什克,Linda Bradford Raschke,短線策略
+systems-trading,交易系統,Trading Systems,systems,53,琳達・布拉德福德・拉什克,Linda Bradford Raschke,高勝率策略
+connors-rsi,Connors RSI,ConnorsRSI,momentum,54,拉倫斯・康納斯,Laurence A. Connors,創始者
+rsi,RSI 相對強弱指數,Relative Strength Index,momentum,54,拉倫斯・康納斯,Laurence A. Connors,短線改良
+systems-trading,交易系統,Trading Systems,systems,54,拉倫斯・康納斯,Laurence A. Connors,短線均值回歸
+rsi,RSI 相對強弱指數,Relative Strength Index,momentum,55,安德魯・卡德威爾,Andrew Cardwell,進階詮釋者
+momentum,動量,Momentum,momentum,55,安德魯・卡德威爾,Andrew Cardwell,正/負反轉與區間規則
+rsi,RSI 相對強弱指數,Relative Strength Index,momentum,56,康斯坦絲・布朗,Constance Brown,進階詮釋者
+momentum,動量,Momentum,momentum,56,康斯坦絲・布朗,Constance Brown,Composite Index
+evidence-based-ta,實證技術分析,Evidence-Based Technical Analysis,research,56,康斯坦絲・布朗,Constance Brown,指標組合
+cycle-analysis,週期分析,Cycle Analysis,cycle,57,約翰・艾勒斯,John F. Ehlers,DSP 週期分析
+ehlers-filters,Ehlers 濾波器,Ehlers Filters,cycle,57,約翰・艾勒斯,John F. Ehlers,濾波器
+systems-trading,交易系統,Trading Systems,systems,57,約翰・艾勒斯,John F. Ehlers,自適應指標
+systems-trading,交易系統,Trading Systems,systems,58,穆雷・魯傑羅,Murray A. Ruggiero Jr.,交易系統
+backtesting,回測與系統驗證,Backtesting,research,58,穆雷・魯傑羅,Murray A. Ruggiero Jr.,策略測試
+evidence-based-ta,實證技術分析,Evidence-Based Technical Analysis,research,58,穆雷・魯傑羅,Murray A. Ruggiero Jr.,量化規則
+backtesting,回測與系統驗證,Backtesting,research,59,羅伯特・帕多,Robert Pardo,系統測試
+systems-trading,交易系統,Trading Systems,systems,59,羅伯特・帕多,Robert Pardo,交易系統
+evidence-based-ta,實證技術分析,Evidence-Based Technical Analysis,research,59,羅伯特・帕多,Robert Pardo,樣本外驗證
+systems-trading,交易系統,Trading Systems,systems,60,霍華德・班迪,Howard Bandy,交易系統
+backtesting,回測與系統驗證,Backtesting,research,60,霍華德・班迪,Howard Bandy,策略驗證
+evidence-based-ta,實證技術分析,Evidence-Based Technical Analysis,research,60,霍華德・班迪,Howard Bandy,統計分析
+systems-trading,交易系統,Trading Systems,systems,61,湯瑪斯・史翠茲曼,Thomas Stridsman,交易系統
+backtesting,回測與系統驗證,Backtesting,research,61,湯瑪斯・史翠茲曼,Thomas Stridsman,策略測試
+trend-following,趨勢跟隨,Trend Following,trend,61,湯瑪斯・史翠茲曼,Thomas Stridsman,系統化趨勢
+guppy-mma,Guppy 多重移動平均,Guppy Multiple Moving Average,trend,62,達利・古比,Daryl Guppy,創始者
+moving-average,移動平均,Moving Average,trend,62,達利・古比,Daryl Guppy,多均線趨勢
+trend-following,趨勢跟隨,Trend Following,trend,62,達利・古比,Daryl Guppy,趨勢判讀
+hull-ma,Hull 移動平均,Hull Moving Average,trend,63,艾倫・霍爾,Alan Hull,創始者
+moving-average,移動平均,Moving Average,trend,63,艾倫・霍爾,Alan Hull,低滯後均線
+mcginley-dynamic,McGinley Dynamic,McGinley Dynamic,trend,64,約翰・麥金利,John R. McGinley,創始者
+moving-average,移動平均,Moving Average,trend,64,約翰・麥金利,John R. McGinley,自適應平滑
+tema-dema,DEMA / TEMA,Double/Triple Exponential Moving Average,trend,65,派翠克・馬洛伊,Patrick G. Mulloy,創始者
+moving-average,移動平均,Moving Average,trend,65,派翠克・馬洛伊,Patrick G. Mulloy,低滯後均線
+trix,TRIX,Triple Exponential Average,momentum,66,傑克・哈特森,Jack K. Hutson,創始者
+momentum,動量,Momentum,momentum,66,傑克・哈特森,Jack K. Hutson,三重平滑動量
+mfi,MFI 資金流量指標,Money Flow Index,volume,67,金・匡,Gene Quong,共同創始者
+volume-analysis,成交量分析,Volume Analysis,volume,67,金・匡,Gene Quong,量價動量
+mfi,MFI 資金流量指標,Money Flow Index,volume,68,阿夫魯姆・蘇達克,Avrum Soudack,共同創始者
+volume-analysis,成交量分析,Volume Analysis,volume,68,阿夫魯姆・蘇達克,Avrum Soudack,量價動量
+ulcer-index,Ulcer Index,Ulcer Index,risk,69,彼得・馬丁,Peter G. Martin,共同創始者
+risk,風險 / 回撤,Risk / Drawdown,risk,69,彼得・馬丁,Peter G. Martin,下行風險
+ulcer-index,Ulcer Index,Ulcer Index,risk,70,拜倫・麥肯,Byron McCann,共同創始者
+risk,風險 / 回撤,Risk / Drawdown,risk,70,拜倫・麥肯,Byron McCann,下行風險
+vortex-indicator,Vortex 指標,Vortex Indicator,trend,71,艾蒂安・博特斯,Etienne Botes,共同創始者
+trend-following,趨勢跟隨,Trend Following,trend,71,艾蒂安・博特斯,Etienne Botes,趨勢反轉
+vortex-indicator,Vortex 指標,Vortex Indicator,trend,72,道格拉斯・西普曼,Douglas Siepman,共同創始者
+trend-following,趨勢跟隨,Trend Following,trend,72,道格拉斯・西普曼,Douglas Siepman,趨勢反轉
+supertrend,SuperTrend,SuperTrend,trend,73,奧利維耶・塞班,Olivier Seban,創始者
+atr,ATR 平均真實波幅,Average True Range,volatility,73,奧利維耶・塞班,Olivier Seban,ATR 通道應用
+trend-following,趨勢跟隨,Trend Following,trend,73,奧利維耶・塞班,Olivier Seban,趨勢跟隨
+wyckoff-method,威科夫方法,Wyckoff Method,volume,74,漢克・普魯登,Hank Pruden,教育者
+volume-analysis,成交量分析,Volume Analysis,volume,74,漢克・普魯登,Hank Pruden,供需/量價
+systems-trading,交易系統,Trading Systems,systems,74,漢克・普魯登,Hank Pruden,三大交易技能
+wyckoff-method,威科夫方法,Wyckoff Method,volume,75,大衛・韋斯,David Weis,現代改編者
+volume-analysis,成交量分析,Volume Analysis,volume,75,大衛・韋斯,David Weis,Weis Wave
+price-action,價格行為,Price Action,charting,75,大衛・韋斯,David Weis,價格量能
+volume-spread-analysis,VSA 量價差分析,Volume Spread Analysis,volume,76,湯姆・威廉斯,Tom Williams,創始/推廣者
+wyckoff-method,威科夫方法,Wyckoff Method,volume,76,湯姆・威廉斯,Tom Williams,威科夫衍生
+volume-analysis,成交量分析,Volume Analysis,volume,76,湯姆・威廉斯,Tom Williams,量價差
+point-and-figure,點數圖,Point and Figure,charting,77,A・W・科恩,A. W. Cohen,3-box reversal 推廣者
+breadth,市場寬度,Market Breadth,breadth,77,A・W・科恩,A. W. Cohen,Bullish Percent
+point-and-figure,點數圖,Point and Figure,charting,78,湯瑪斯・多爾西,Thomas J. Dorsey,現代推廣者
+relative-strength,相對強弱 / 強勢股篩選,Relative Strength,stock_selection,78,湯瑪斯・多爾西,Thomas J. Dorsey,P&F 相對強弱
+point-and-figure,點數圖,Point and Figure,charting,79,傑瑞米・杜普萊西斯,Jeremy du Plessis,現代教材作者
+bollinger-bands,布林通道,Bollinger Bands,volatility,79,傑瑞米・杜普萊西斯,Jeremy du Plessis,P&F 結合指標
+rsi,RSI 相對強弱指數,Relative Strength Index,momentum,79,傑瑞米・杜普萊西斯,Jeremy du Plessis,P&F 結合指標
+market-profile,Market Profile,Market Profile,auction_market,80,彼得・史戴梅爾,J. Peter Steidlmayer,創始者
+volume-analysis,成交量分析,Volume Analysis,volume,80,彼得・史戴梅爾,J. Peter Steidlmayer,價格時間分佈
+support-resistance,支撐阻力,Support and Resistance,charting,80,彼得・史戴梅爾,J. Peter Steidlmayer,價值區
+market-profile,Market Profile,Market Profile,auction_market,81,詹姆斯・道爾頓,James F. Dalton,推廣者/作者
+price-action,價格行為,Price Action,charting,81,詹姆斯・道爾頓,James F. Dalton,拍賣市場邏輯
+acd-method,ACD 開盤區間法,ACD Method,breakout,82,馬克・費雪,Mark B. Fisher,創始者
+opening-range-breakout,開盤區間突破,Opening Range Breakout,breakout,82,馬克・費雪,Mark B. Fisher,開盤區間
+support-resistance,支撐阻力,Support and Resistance,charting,82,馬克・費雪,Mark B. Fisher,Pivot range
+opening-range-breakout,開盤區間突破,Opening Range Breakout,breakout,83,托比・克拉貝爾,Toby Crabel,代表作者
+price-action,價格行為,Price Action,charting,83,托比・克拉貝爾,Toby Crabel,Narrow Range 型態
+volatility,波動率,Volatility,volatility,83,托比・克拉貝爾,Toby Crabel,波動擴張
+price-action,價格行為,Price Action,charting,84,維克多・斯佩蘭迪奧,Victor Sperandeo,2B 型態
+trend-following,趨勢跟隨,Trend Following,trend,84,維克多・斯佩蘭迪奧,Victor Sperandeo,1-2-3 反轉
+support-resistance,支撐阻力,Support and Resistance,charting,84,維克多・斯佩蘭迪奧,Victor Sperandeo,趨勢線
+elliott-wave,艾略特波浪,Elliott Wave,wave,85,羅伯特・邁納,Robert C. Miner,波浪/時間價格
+fibonacci,費波納契時間/價格,Fibonacci Time and Price,support_resistance,85,羅伯特・邁納,Robert C. Miner,時間價格
+momentum,動量,Momentum,momentum,85,羅伯特・邁納,Robert C. Miner,多週期動量
+fibonacci,費波納契時間/價格,Fibonacci Time and Price,support_resistance,86,卡洛琳・波羅登,Carolyn Boroden,時間價格專家
+support-resistance,支撐阻力,Support and Resistance,charting,86,卡洛琳・波羅登,Carolyn Boroden,價格叢集
+elliott-wave,艾略特波浪,Elliott Wave,wave,86,卡洛琳・波羅登,Carolyn Boroden,波浪/時間
+fibonacci,費波納契時間/價格,Fibonacci Time and Price,support_resistance,87,喬・迪納波利,Joe DiNapoli,DiNapoli Levels
+support-resistance,支撐阻力,Support and Resistance,charting,87,喬・迪納波利,Joe DiNapoli,價格叢集
+andrew-pitchfork,安德魯分叉線,Andrews' Pitchfork,support_resistance,88,艾倫・安德魯斯,Alan Andrews,創始者
+support-resistance,支撐阻力,Support and Resistance,charting,88,艾倫・安德魯斯,Alan Andrews,中線/通道
+price-action,價格行為,Price Action,charting,88,艾倫・安德魯斯,Alan Andrews,擺動點
+chart-patterns,圖表型態,Chart Patterns,charting,89,亞瑟・梅里爾,Arthur A. Merrill,M/W 型態
+cycle-analysis,週期分析,Cycle Analysis,cycle,89,亞瑟・梅里爾,Arthur A. Merrill,Filtered Waves
+backtesting,回測與系統驗證,Backtesting,research,89,亞瑟・梅里爾,Arthur A. Merrill,型態統計
+tape-reading,讀帶 / 盤口判讀,Tape Reading,charting,90,漢弗萊・尼爾,Humphrey B. Neill,經典作者
+sentiment,市場情緒,Sentiment,sentiment,90,漢弗萊・尼爾,Humphrey B. Neill,逆向思考
+price-action,價格行為,Price Action,charting,90,漢弗萊・尼爾,Humphrey B. Neill,市場心理
+trend-following,趨勢跟隨,Trend Following,trend,91,華特・迪默,Walter Deemer,市場時機
+breadth,市場寬度,Market Breadth,breadth,91,華特・迪默,Walter Deemer,市場備忘錄
+sentiment,市場情緒,Sentiment,sentiment,91,華特・迪默,Walter Deemer,市場心理
+breadth,市場寬度,Market Breadth,breadth,92,內德・戴維斯,Ned Davis,市場指標
+sentiment,市場情緒,Sentiment,sentiment,92,內德・戴維斯,Ned Davis,情緒模型
+evidence-based-ta,實證技術分析,Evidence-Based Technical Analysis,research,92,內德・戴維斯,Ned Davis,量化市場研究
+sentiment,市場情緒,Sentiment,sentiment,93,傑森・戈普弗特,Jason Goepfert,情緒指標
+breadth,市場寬度,Market Breadth,breadth,93,傑森・戈普弗特,Jason Goepfert,基金現金/市場指標
+evidence-based-ta,實證技術分析,Evidence-Based Technical Analysis,research,93,傑森・戈普弗特,Jason Goepfert,歷史統計
+volume-analysis,成交量分析,Volume Analysis,volume,94,巴夫・多米爾,Buff Dormeier,量價研究
+breadth,市場寬度,Market Breadth,breadth,94,巴夫・多米爾,Buff Dormeier,成交量廣度
+evidence-based-ta,實證技術分析,Evidence-Based Technical Analysis,research,94,巴夫・多米爾,Buff Dormeier,Dow Award 研究
+volatility,波動率,Volatility,volatility,95,安德魯・思拉舍,Andrew Thrasher,波動/風險
+sentiment,市場情緒,Sentiment,sentiment,95,安德魯・思拉舍,Andrew Thrasher,市場警訊
+breadth,市場寬度,Market Breadth,breadth,95,安德魯・思拉舍,Andrew Thrasher,市場健康
+macd,MACD,Moving Average Convergence/Divergence,momentum,96,亞歷克斯・斯皮羅格魯,Alex Spiroglou,MACD-V
+volatility,波動率,Volatility,volatility,96,亞歷克斯・斯皮羅格魯,Alex Spiroglou,波動標準化動量
+momentum,動量,Momentum,momentum,96,亞歷克斯・斯皮羅格魯,Alex Spiroglou,動量研究
+breadth,市場寬度,Market Breadth,breadth,97,拉爾夫・文斯,Ralph Vince,新低數研究
+systems-trading,交易系統,Trading Systems,systems,97,拉爾夫・文斯,Ralph Vince,資金管理
+evidence-based-ta,實證技術分析,Evidence-Based Technical Analysis,research,97,拉爾夫・文斯,Ralph Vince,統計研究
+momentum,動量,Momentum,momentum,98,蓋瑞・安東納奇,Gary Antonacci,雙動量
+trend-following,趨勢跟隨,Trend Following,trend,98,蓋瑞・安東納奇,Gary Antonacci,產業趨勢
+relative-strength,相對強弱 / 強勢股篩選,Relative Strength,stock_selection,98,蓋瑞・安東納奇,Gary Antonacci,相對/絕對動量
+evidence-based-ta,實證技術分析,Evidence-Based Technical Analysis,research,99,安德魯・羅,Andrew W. Lo,學術研究
+chart-patterns,圖表型態,Chart Patterns,charting,99,安德魯・羅,Andrew W. Lo,計算型型態識別
+backtesting,回測與系統驗證,Backtesting,research,99,安德魯・羅,Andrew W. Lo,統計推論
+evidence-based-ta,實證技術分析,Evidence-Based Technical Analysis,research,100,大衛・阿隆森,David Aronson,代表作者
+backtesting,回測與系統驗證,Backtesting,research,100,大衛・阿隆森,David Aronson,資料探勘校正
+systems-trading,交易系統,Trading Systems,systems,100,大衛・阿隆森,David Aronson,客觀規則

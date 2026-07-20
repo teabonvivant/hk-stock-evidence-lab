@@ -1,0 +1,31 @@
+# dependencies
+/node_modules/
+
+# framework output
+/.next/
+/.vinext/
+/dist/
+/out/
+
+# local tooling
+/.agents/
+/.omo/
+/.codegraph
+/.wrangler/
+/outputs/
+/work/
+*.tsbuildinfo
+.server-info.txt
+__pycache__/
+*.pyc
+
+# preserved local duplicate
+/next-site/
+
+# environment and logs
+.env*
+*.log
+
+# operating systems
+.DS_Store
+Thumbs.db

@@ -1,0 +1,58 @@
+{
+  "status": "pass",
+  "passed": 10,
+  "warnings": 0,
+  "errors": 0,
+  "checks": [
+    {
+      "name": "raw_leads_csv_exists",
+      "status": "pass",
+      "detail": "data\\site\\tradingview_strategy_raw_leads.csv"
+    },
+    {
+      "name": "first_batch_size",
+      "status": "pass",
+      "detail": "200 rows; first batch target 50"
+    },
+    {
+      "name": "raw_target_warning",
+      "status": "pass",
+      "detail": "200 rows; full raw target 200"
+    },
+    {
+      "name": "unique_source_urls",
+      "status": "pass",
+      "detail": "0 duplicate urls"
+    },
+    {
+      "name": "unique_script_ids",
+      "status": "pass",
+      "detail": "0 duplicate TradingView script ids"
+    },
+    {
+      "name": "unique_lead_ids",
+      "status": "pass",
+      "detail": "0 duplicate ids"
+    },
+    {
+      "name": "all_tradingview_urls",
+      "status": "pass",
+      "detail": "all source_url values point to TradingView script pages"
+    },
+    {
+      "name": "status_values",
+      "status": "pass",
+      "detail": "statuses: metadata_only, raw_lead, reject_candidate, support_only"
+    },
+    {
+      "name": "status_counts",
+      "status": "pass",
+      "detail": "metadata_only=14, raw_lead=132, reject_candidate=15, support_only=39"
+    },
+    {
+      "name": "required_fields",
+      "status": "pass",
+      "detail": "missing: none"
+    }
+  ]
+}
