@@ -130,6 +130,305 @@ code {
   font-weight: 700;
 }
 
+.learning-orientation {
+  display: grid;
+  align-content: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-soft);
+}
+
+.learning-orientation > div {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  align-items: start;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.learning-orientation > div + div {
+  border-top: 1px solid var(--line);
+}
+
+.learning-orientation p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.detail-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-top: 1px solid var(--line);
+  background: var(--surface-soft);
+  padding: 0.75rem 1.25rem;
+}
+
+.detail-nav a {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.detail-nav a:hover,
+.detail-nav a:focus-visible {
+  background: var(--surface);
+  color: var(--primary-strong);
+  outline: none;
+}
+
+.detail-nav a:focus-visible {
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.chart-shell {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.chart-scroll {
+  overflow-x: auto;
+  background: var(--surface);
+  outline: none;
+}
+
+.chart-scroll:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--primary);
+}
+
+.chart-viewport {
+  display: block;
+  width: 100%;
+  min-width: 760px;
+  height: auto;
+}
+
+.chart-axis-label,
+.chart-reference-label {
+  fill: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.chart-reference-label {
+  fill: var(--ink);
+  font-size: 10px;
+}
+
+.chart-data-requirement,
+.empty-state {
+  display: grid;
+  justify-items: start;
+  gap: 0.5rem;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  padding: 1rem;
+  color: var(--muted);
+}
+
+.chart-data-requirement strong,
+.empty-state strong {
+  color: var(--ink);
+}
+
+.chart-data-requirement p,
+.empty-state p {
+  margin: 0;
+}
+
+.formula-evidence-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  gap: 1rem;
+}
+
+.formula-panel,
+.flat-evidence-block {
+  border: 1px solid #cce5e1;
+  border-radius: 8px;
+  background: #f0fbf9;
+  padding: 1rem;
+}
+
+.formula {
+  margin-bottom: 0;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.evidence-list {
+  display: grid;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-soft);
+}
+
+.evidence-list > div {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+}
+
+.evidence-list > div + div {
+  border-top: 1px solid var(--line);
+}
+
+.evidence-list dt {
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.evidence-list dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.65;
+}
+
+.flat-evidence-block h3 {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.flat-evidence-block.is-info {
+  border-color: #c7d8ff;
+  background: #eaf1ff;
+}
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.scenario-block {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.scenario-block.is-good {
+  border-color: #b7dfd9;
+  background: #ecfdf9;
+}
+
+.scenario-block.is-warn {
+  border-color: #f3d7ad;
+  background: #fff7ed;
+}
+
+.scenario-block.is-bad {
+  border-color: #f2c6c6;
+  background: #fff5f5;
+}
+
+.scenario-block p {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.related-link,
+.source-link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  padding: 0.5rem 0.75rem;
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.related-link span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.related-link:hover,
+.source-link:hover {
+  border-color: var(--primary);
+  color: var(--primary-strong);
+}
+
+.research-source-row {
+  display: grid;
+  gap: 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  padding: 1rem;
+}
+
+.research-source-row p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.library-controls {
+  display: grid;
+  grid-template-columns: minmax(15rem, 1.5fr) repeat(3, minmax(9rem, 0.75fr));
+  gap: 0.75rem;
+}
+
+.library-field {
+  display: grid;
+  gap: 0.4rem;
+  min-width: 0;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.library-input {
+  width: 100%;
+  min-height: 2.75rem;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 0.6rem 0.75rem;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.library-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgb(15 118 110 / 0.14);
+  outline: none;
+}
+
 .code-panel {
   border: 1px solid #cce5e1;
   border-radius: 8px;
@@ -188,6 +487,22 @@ code {
   .data-table td {
     display: block;
     width: 100%;
+  }
+
+  .learning-orientation > div,
+  .evidence-list > div {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .formula-evidence-grid,
+  .scenario-grid,
+  .library-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-viewport {
+    min-width: 720px;
   }
 }
 

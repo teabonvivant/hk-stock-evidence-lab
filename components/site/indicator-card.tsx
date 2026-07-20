@@ -3,9 +3,9 @@ import { ArrowRight } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import type { Indicator } from "@/lib/site-data";
+import type { IndicatorSummary } from "@/lib/site-data";
 
-export function IndicatorCard({ item }: { readonly item: Indicator }) {
+export function IndicatorCard({ item }: { readonly item: IndicatorSummary }) {
   return (
     <Card className="pressable lift-hover h-full">
       <CardHeader>

@@ -106,18 +106,20 @@ export function HeroPanel({
 }
 
 export function Section({
+  id,
   title,
   body,
   children,
   className,
 }: {
+  readonly id?: string | undefined;
   readonly title: string;
   readonly body?: string | undefined;
   readonly children: ReactNode;
   readonly className?: string | undefined;
 }) {
   return (
-    <section className={cn("mt-5 rounded-[8px] border border-[var(--line)] bg-white/90 p-5 shadow-[0_10px_28px_rgba(15,35,55,0.05)]", className)}>
+    <section id={id} className={cn("mt-5 scroll-mt-24 rounded-[8px] border border-[var(--line)] bg-white/90 p-5 shadow-[0_10px_28px_rgba(15,35,55,0.05)]", className)}>
       <div className="mb-4 max-w-[68ch]">
         <h2 className="text-2xl font-bold text-[var(--ink)]">{title}</h2>
         {body ? <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{body}</p> : null}

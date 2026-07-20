@@ -2,6 +2,10 @@ import indicatorBundle from "@/data/site/technical_indicators_site_data.json";
 import strategyBundle from "@/data/site/tradingview_strategy_cases.json";
 
 export type Indicator = (typeof indicatorBundle.indicators)[number];
+export type IndicatorSummary = Pick<
+  Indicator,
+  "siteSlug" | "nameZh" | "nameEn" | "abbr" | "category" | "difficulty" | "summary" | "uses" | "core"
+>;
 export type StrategyCase = (typeof strategyBundle.cases)[number];
 export type Comparison = (typeof indicatorBundle.comparisons)[number];
 export type ComparisonRow = (typeof indicatorBundle.comparisons)[number]["rows"][number];
@@ -9,6 +13,17 @@ export type ComparisonRow = (typeof indicatorBundle.comparisons)[number]["rows"]
 export const siteData = indicatorBundle;
 export const tradingViewData = strategyBundle;
 export const indicators = indicatorBundle.indicators;
+export const indicatorSummaries: readonly IndicatorSummary[] = indicators.map((item) => ({
+  siteSlug: item.siteSlug,
+  nameZh: item.nameZh,
+  nameEn: item.nameEn,
+  abbr: item.abbr,
+  category: item.category,
+  difficulty: item.difficulty,
+  summary: item.summary,
+  uses: item.uses,
+  core: item.core,
+}));
 export const comparisons = indicatorBundle.comparisons;
 export const strategies = strategyBundle.cases;
 

@@ -40,4 +40,20 @@ test("server-renders a generated indicator route", async () => {
   const html = await response.text();
   assert.match(html, /指標庫/);
   assert.match(html, /技術指標研究室/);
+  assert.match(html, /搜尋名稱、縮寫或用途/);
+  assert.match(html, /只看核心 20 深度頁/);
+});
+
+test("server-renders a core indicator as a reproducible learning page", async () => {
+  const response = await render("/indicators/rsi");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /核心 20 深度頁/);
+  assert.match(html, /真實數據教學圖/);
+  assert.match(html, /WilderRMA/);
+  assert.match(html, /QQQ 2022 至 2023 修復段/);
+  assert.match(html, /典型失效例/);
+  assert.match(html, /代表材料/);
+  assert.doesNotMatch(html, /generated-pages\/indicator-detail\.png/);
 });

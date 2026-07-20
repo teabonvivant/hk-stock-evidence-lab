@@ -183,6 +183,29 @@ The implicit base unit is `4px`; most spacing resolves to multiples of `0.25rem`
 - **Mobile state**: the chart stays horizontally readable at a stable intrinsic width and exposes a clear `放大圖表` command. Expanded charts close with the same command or `Esc`.
 - **Accessibility**: SVG keeps an informative `role="img"` label; every chart source, status, and limitation is stated in adjacent text.
 
+### Indicator Learning Header
+
+- **Purpose**: replace the generic detail-page image with a compact orientation panel that states what the indicator measures, the market regime where it is most useful, and what it cannot prove.
+- **Structure**: one title column plus a flat three-row evidence summary; the section navigation sits beneath the summary and links to chart, calculation, usage, and sources.
+- **Variants**: core indicators carry a `核心 20 深度頁` status; non-core indicators carry a transparent `研究條目` status without implying that a dedicated chart has been validated.
+- **Responsive**: two columns above `960px`, one column below. Navigation wraps without horizontal scrolling.
+- **Accessibility**: section links use descriptive labels, visible focus states, and stable anchor targets.
+
+### Indicator Library Controls
+
+- **Purpose**: let learners narrow the 82-item library by query, category, difficulty, core status, and learning order.
+- **Structure**: labelled search input, native select menus, a core-only checkbox, result count, and a clear-filter command.
+- **States**: default, filtered, and no-results states. Filtering never hides the active result count or reset action.
+- **Responsive**: four controls become a single column on mobile; labels remain visible rather than relying on placeholders.
+- **Accessibility**: controls use native form semantics and a polite live result count.
+
+### Indicator Evidence Blocks
+
+- **Purpose**: make formulas reproducible and distinguish a signal from a complete trade decision.
+- **Structure**: formula type, inputs, smoothing or warm-up rule, worked example, valid regime, failure example, related indicators, and visible research materials.
+- **Surface**: use existing teal guidance, amber caution, and red risk tints. Evidence blocks inside a section remain flat and do not become nested cards.
+- **Accessibility**: equations use selectable text with natural wrapping; source material is visible in the page rather than hidden in tooltips.
+
 ## 6. Motion & Interaction
 
 ### Timing
