@@ -1,7 +1,13 @@
 import { Badge } from "@/components/ui/badge";
 import { IndicatorCard } from "@/components/site/indicator-card";
 import { HeroPanel, MetricTile, PrimaryLink, Section } from "@/components/site/page-shell";
-import { siteData, topIndicators, tradingViewData } from "@/lib/site-data";
+import { beginnerStarterLessons } from "@/lib/indicator-beginner-guide";
+import { findIndicator, siteData, tradingViewData } from "@/lib/site-data";
+
+const beginnerIndicators = beginnerStarterLessons.flatMap((lesson) => {
+  const indicator = findIndicator(lesson.slug);
+  return indicator ? [indicator] : [];
+});
 
 export function HomePage() {
   return (
@@ -37,9 +43,9 @@ export function HomePage() {
           <StatusBlock label="目標 accepted" value={tradingViewData.targetAcceptedCases} tone="bad" />
         </div>
       </Section>
-      <Section title="先由常用指標入手" body="先建立基本判讀框架，再去睇策略回測同腳本。指標唔係買賣指令，而係幫你問對問題。">
+      <Section title="新手先學這 5 個角色" body="順序是位置、量能、方向、力度、風險。每個角色先學一個代表工具，便足夠建立基本判讀流程。">
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {topIndicators(6).map((item) => (
+          {beginnerIndicators.map((item) => (
             <IndicatorCard key={item.siteSlug} item={item} />
           ))}
         </div>

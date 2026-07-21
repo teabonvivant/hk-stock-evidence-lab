@@ -98,7 +98,15 @@ export function HeroPanel({
           {actions ? <div className="flex flex-wrap gap-2">{actions}</div> : null}
         </div>
         <div className="relative min-h-64 w-full min-w-0 max-w-full overflow-hidden rounded-[8px] border border-[var(--line)] bg-[var(--surface-soft)]">
-          <Image src={visualMap[imageKey]} alt="" fill priority className="object-cover" sizes="(max-width: 1024px) 100vw, 520px" />
+          <Image
+            src={visualMap[imageKey]}
+            alt=""
+            fill
+            priority
+            unoptimized
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 520px"
+          />
         </div>
       </div>
     </section>
@@ -119,7 +127,7 @@ export function Section({
   readonly className?: string | undefined;
 }) {
   return (
-    <section id={id} className={cn("mt-5 scroll-mt-24 rounded-[8px] border border-[var(--line)] bg-white/90 p-5 shadow-[0_10px_28px_rgba(15,35,55,0.05)]", className)}>
+    <section id={id} className={cn("mt-5 scroll-mt-44 rounded-[8px] border border-[var(--line)] bg-white/90 p-5 shadow-[0_10px_28px_rgba(15,35,55,0.05)] md:scroll-mt-24", className)}>
       <div className="mb-4 max-w-[68ch]">
         <h2 className="text-2xl font-bold text-[var(--ink)]">{title}</h2>
         {body ? <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{body}</p> : null}

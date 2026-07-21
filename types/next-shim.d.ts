@@ -30,6 +30,7 @@ declare module "next/image" {
     readonly alt: string;
     readonly fill?: boolean;
     readonly priority?: boolean;
+    readonly unoptimized?: boolean;
     readonly className?: string;
     readonly sizes?: string;
     readonly width?: number;

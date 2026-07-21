@@ -206,6 +206,22 @@ The implicit base unit is `4px`; most spacing resolves to multiples of `0.25rem`
 - **Surface**: use existing teal guidance, amber caution, and red risk tints. Evidence blocks inside a section remain flat and do not become nested cards.
 - **Accessibility**: equations use selectable text with natural wrapping; source material is visible in the page rather than hidden in tooltips.
 
+### Beginner Indicator Sequence
+
+- **Purpose**: every indicator detail page must teach a repeatable order before showing formula or research depth: plain-language role, chart focus, simplest use, common misuse, market context, signal, confirmation, invalidation, and practice.
+- **Structure**: three orientation blocks followed by a four-step numbered flow. The same structure is shared by all 82 indicators, while category and core-indicator copy changes the actual lesson.
+- **Variants**: teal for the intended role, blue for where to look, amber for operating boundaries, and red for misuse or invalidation.
+- **Accessibility**: steps remain semantic ordered lists; headings and explanations stay visible without hover or tooltip interaction.
+- **Responsive**: three columns on wide screens, one column on mobile. CJK text wraps naturally inside `minmax(0, 1fr)` content columns.
+
+### Advanced Disclosure
+
+- **Purpose**: keep formula details and research comparisons available without placing advanced material before the beginner workflow.
+- **Structure**: native `details` and `summary` using `.advanced-disclosure`, `.advanced-disclosure-icon`, and `.advanced-disclosure-body`.
+- **States**: collapsed by default; opening rotates the chevron to communicate state and reveals the bordered body.
+- **Accessibility**: native keyboard and screen-reader semantics are preserved; the summary has a visible focus ring and descriptive helper text.
+- **Motion**: only the stateful chevron rotation uses the 150ms micro-interaction timing.
+
 ## 6. Motion & Interaction
 
 ### Timing
