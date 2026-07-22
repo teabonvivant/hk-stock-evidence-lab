@@ -1,24 +1,28 @@
-import { ArrowLeft, BookOpen, Calculator, ChartNoAxesCombined, ExternalLink, Link2, ShieldAlert } from "lucide-react";
+import { ArrowLeft, BookOpen, ChartNoAxesCombined, ExternalLink, Link2, ListChecks, ShieldAlert } from "lucide-react";
 import Link from "next/link";
 
+import { AdvancedDisclosure } from "@/components/site/advanced-disclosure";
 import { IndicatorTeachingChart } from "@/components/site/indicator-chart";
+import { IndicatorBeginnerGuide, IndicatorBeginnerPractice } from "@/components/site/indicator-beginner-guide";
 import { PrimaryLink, Section } from "@/components/site/page-shell";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { beginnerGuideFor } from "@/lib/indicator-beginner-guide";
 import { findCoreIndicatorLearning, formulaTypeLabel, parseMarketCaseKey } from "@/lib/indicator-learning";
 import { findIndicator } from "@/lib/site-data";
 import type { Indicator } from "@/lib/site-data";
 
 export function IndicatorDetail({ item }: { readonly item: Indicator }) {
   const learning = findCoreIndicatorLearning(item.siteSlug);
+  const beginnerGuide = beginnerGuideFor(item);
   const chartCase = learning ? parseMarketCaseKey(learning.caseKey) : undefined;
   const related = item.related.flatMap((slug) => {
     const target = findIndicator(slug);
     return target ? [target] : [];
   });
-  const measures = learning?.measures ?? item.uses.join("、");
-  const bestRegime = learning?.bestRegime ?? item.signals[0] ?? "須配合市場結構判斷。";
-  const boundary = learning?.doesNotMeasure ?? item.limitations[0] ?? "不能單獨作為交易決定。";
+  const measures = learning?.measures ?? beginnerGuide.measure;
+  const bestRegime = learning?.bestRegime ?? beginnerGuide.bestFor;
+  const boundary = learning?.doesNotMeasure ?? beginnerGuide.boundary;
 
   return (
     <div>
@@ -44,14 +48,16 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
           </div>
         </div>
         <nav className="detail-nav" aria-label="本頁章節">
-          <a href="#chart"><ChartNoAxesCombined className="size-4" aria-hidden="true" />圖表解讀</a>
-          <a href="#calculation"><Calculator className="size-4" aria-hidden="true" />計算方法</a>
-          <a href="#usage"><ShieldAlert className="size-4" aria-hidden="true" />用法與限制</a>
-          <a href="#sources"><BookOpen className="size-4" aria-hidden="true" />研究來源</a>
+          <a href="#beginner"><BookOpen className="size-4" aria-hidden="true" />先理解</a>
+          <a href="#usage"><ShieldAlert className="size-4" aria-hidden="true" />實際用法</a>
+          <a href="#chart"><ChartNoAxesCombined className="size-4" aria-hidden="true" />圖表判讀</a>
+          <a href="#practice"><ListChecks className="size-4" aria-hidden="true" />動手練習</a>
         </nav>
       </section>
 
-      <Section id="chart" title="以真實數據計算的教學圖表" body={learning ? "圖表按本站保存的歷史開市、最高、最低、收市及成交量（OHLCV）資料計算，不使用生成數據。" : "尚未取得符合計算要求的資料前，本站不會以一般股價圖代替指標結果。"}>
+      <IndicatorBeginnerGuide item={item} />
+
+      <Section id="chart" title="以真實數據練習圖表判讀" body={learning ? "按「先看市況、再看訊號、最後列明風險」的次序閱讀。圖表採用本站保存的歷史開市、最高、最低、收市及成交量（OHLCV）資料計算。" : "此指標需要專屬資料；資料未齊前，頁面不會以不相符的價格圖代替指標結果。"}>
         {learning && chartCase ? (
           <IndicatorTeachingChart slug={item.siteSlug} caseKey={chartCase} chartLead={learning.chartLead} />
         ) : (
@@ -62,7 +68,38 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
         )}
       </Section>
 
-      <Section id="calculation" title="公式與計算口徑" body={learning ? "比較不同平台的數值前，應先核對輸入資料、平滑方法及所需歷史期數。" : "目前只提供概念摘要，尚未整理成可直接重現的完整算法。"}>
+      <Section id="signals" title="讀到訊號後，應如何判斷" body="先分清可供參考的現象、常見誤用，以及哪些情況表示原來的判斷已經失效。">
+        {learning ? (
+          <div className="scenario-grid mb-5">
+            <Scenario label="訊號較可靠的情況" value={learning.validCase} tone="good" />
+            <Scenario label="常見失效情況" value={learning.failureCase} tone="bad" />
+            <Scenario label="使用限制" value={learning.signalBoundary} tone="warn" />
+          </div>
+        ) : null}
+        <div className="grid gap-5 lg:grid-cols-3">
+          <ListCard title="可參考訊號" rows={item.signals} tone="good" />
+          <ListCard title="常見誤解" rows={item.mistakes} tone="warn" />
+          <ListCard title="已知限制" rows={item.limitations} tone="bad" />
+        </div>
+      </Section>
+
+      <IndicatorBeginnerPractice item={item} />
+
+      <Section title="相關指標" body="比較不同指標的功能，避免把三個本質相近的指標誤作多重確認。">
+        <div className="flex flex-wrap gap-2">
+          {related.map((target) => (
+            <Link key={target.siteSlug} href={`/indicators/${target.siteSlug}`} className="related-link">
+              <Link2 className="size-4" aria-hidden="true" />{target.nameZh}<span>{target.category}</span>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
+      <AdvancedDisclosure
+        id="calculation"
+        title="進階：公式與計算口徑"
+        body={learning ? "掌握實際用法後，再查閱輸入資料、平滑方法、預熱期及例算。" : "此條目目前只提供概念公式，使用前仍須核對平台的計算方式。"}
+      >
         <div className="formula-evidence-grid">
           <div className="formula-panel">
             <div className="flex flex-wrap items-center justify-between gap-2">
@@ -91,34 +128,13 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
             </div>
           </div>
         ) : null}
-      </Section>
+      </AdvancedDisclosure>
 
-      <Section id="usage" title="如何由訊號走到交易判斷" body="訊號只描述市場狀態。完整的交易計劃仍須列明入市條件、止蝕、目標及倉位。">
-        {learning ? (
-          <div className="scenario-grid mb-5">
-            <Scenario label="訊號較可靠的情況" value={learning.validCase} tone="good" />
-            <Scenario label="常見失效情況" value={learning.failureCase} tone="bad" />
-            <Scenario label="使用限制" value={learning.signalBoundary} tone="warn" />
-          </div>
-        ) : null}
-        <div className="grid gap-5 lg:grid-cols-3">
-          <ListCard title="可參考訊號" rows={item.signals} tone="good" />
-          <ListCard title="常見誤解" rows={item.mistakes} tone="warn" />
-          <ListCard title="已知限制" rows={item.limitations} tone="bad" />
-        </div>
-      </Section>
-
-      <Section title="相關指標" body="比較不同指標的功能，避免把三個本質相近的指標誤作多重確認。">
-        <div className="flex flex-wrap gap-2">
-          {related.map((target) => (
-            <Link key={target.siteSlug} href={`/indicators/${target.siteSlug}`} className="related-link">
-              <Link2 className="size-4" aria-hidden="true" />{target.nameZh}<span>{target.category}</span>
-            </Link>
-          ))}
-        </div>
-      </Section>
-
-      <Section id="sources" title="來源與研究對照" body="原始文獻、現代解說及同類概念分開列出。核心來源只表示研究地位較高，並不代表所有平台必須採用相同版本。">
+      <AdvancedDisclosure
+        id="sources"
+        title="進階：來源與研究對照"
+        body="如要追查概念源流或比較不同專家的觀點，可展開查閱；權威來源並不等於唯一正確版本。"
+      >
         {learning ? (
           <div className="mb-5 flex flex-wrap gap-2">
             {learning.sources.map((source) => (
@@ -147,7 +163,7 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
             </article>
           ))}
         </div>
-      </Section>
+      </AdvancedDisclosure>
     </div>
   );
 }

@@ -4,18 +4,18 @@ import { useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { StrategyCard } from "@/components/site/strategy-card";
-import type { StrategyCase } from "@/lib/site-data";
+import type { StrategyCardItem } from "@/components/site/strategy-card";
 
-type Filter = "all" | "support-only" | "rejected" | "code";
+type Filter = "all" | "pending" | "excluded" | "code";
 
 const filters: readonly { readonly value: Filter; readonly label: string }[] = [
   { value: "all", label: "全部" },
-  { value: "support-only", label: "待完成核對" },
-  { value: "rejected", label: "不採用" },
+  { value: "pending", label: "待完成核對" },
+  { value: "excluded", label: "不採用" },
   { value: "code", label: "有教學範本" },
 ];
 
-export function StrategyFilter({ items }: { readonly items: readonly StrategyCase[] }) {
+export function StrategyFilter({ items }: { readonly items: readonly StrategyCardItem[] }) {
   const [filter, setFilter] = useState<Filter>("all");
   const visible = useMemo(() => items.filter((item) => matchesFilter(item, filter)), [filter, items]);
 
@@ -44,15 +44,15 @@ export function StrategyFilter({ items }: { readonly items: readonly StrategyCas
   );
 }
 
-function matchesFilter(item: StrategyCase, filter: Filter): boolean {
+function matchesFilter(item: StrategyCardItem, filter: Filter): boolean {
   switch (filter) {
     case "all":
       return true;
-    case "support-only":
-      return item.includeStatus === "support-only";
-    case "rejected":
-      return item.includeStatus === "rejected";
+    case "pending":
+      return item.isPending;
+    case "excluded":
+      return item.isExcluded;
     case "code":
-      return Boolean(item.pineScript.code);
+      return item.hasCode;
   }
 }

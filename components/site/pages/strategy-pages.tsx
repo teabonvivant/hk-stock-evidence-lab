@@ -4,11 +4,13 @@ import { HeroPanel, MetricTile, PrimaryLink, Section } from "@/components/site/p
 import { StrategyFilter } from "@/components/site/strategy-filter";
 import { findStrategy, strategies, strategyStatusCounts, tradingViewData } from "@/lib/site-data";
 import {
+  evidenceStatusLabel,
   parameterRoleLabel,
   parameterStatusLabel,
   parameterNoteLabel,
   rubricLabel,
   rubricValueLabel,
+  sourceCodeStatusLabel,
   strategyDisplayValue,
   strategyCaveat,
   strategyStatusLabel,
@@ -36,7 +38,25 @@ export function StrategyCasesPage() {
         </div>
       </Section>
       <Section title="本站策略案例" body="篩選功能只會切換本站案例，不會跳轉至外部網頁。來源網址只供內部審核，不在公開頁顯示。">
-        <StrategyFilter items={strategies} />
+        <StrategyFilter items={strategies.map((item) => ({
+          slug: item.slug,
+          title: item.shortTitle || item.title,
+          market: item.market,
+          symbol: item.symbol,
+          timeframe: item.timeframe,
+          statusLabel: strategyStatusLabel(item.includeStatus),
+          statusTone: strategyStatusTone(item.includeStatus),
+          hasCode: Boolean(item.pineScript.code),
+          pf: strategyDisplayValue(item.pfNumeric),
+          winRate: strategyDisplayValue(item.winRate),
+          trades: strategyDisplayValue(item.trades),
+          completeness: `${item.settingsAudit.completenessPercent ?? 0}%`,
+          caveat: strategyCaveat(item.slug, item.displayCaveat),
+          evidenceLabel: evidenceStatusLabel(item.evidenceStatus),
+          sourceCodeLabel: sourceCodeStatusLabel(item.scriptAccess.sourceCodeStatus),
+          isPending: item.includeStatus === "support-only",
+          isExcluded: item.includeStatus === "rejected",
+        }))} />
       </Section>
     </div>
   );

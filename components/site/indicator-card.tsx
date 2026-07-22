@@ -26,7 +26,7 @@ export function IndicatorCard({ item }: { readonly item: IndicatorSummary }) {
           ))}
         </div>
         <Link href={`/indicators/${item.siteSlug}`} className="inline-flex items-center gap-2 text-sm font-bold text-[var(--primary-strong)]">
-          查看公式、用途及失效條件
+          查看用法、公式及失效條件
           <ArrowRight className="size-4" aria-hidden="true" />
         </Link>
       </CardContent>

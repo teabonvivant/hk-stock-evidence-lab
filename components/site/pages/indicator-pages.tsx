@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { IndicatorDetail } from "@/components/site/indicator-detail";
 import { IndicatorLibrary } from "@/components/site/indicator-library";
 import { HeroPanel, PrimaryLink, Section } from "@/components/site/page-shell";
+import { beginnerStarterLessons } from "@/lib/indicator-beginner-guide";
 import { categoryCounts, findIndicator, indicatorSummaries } from "@/lib/site-data";
 
 export function IndicatorsPage() {
@@ -9,22 +10,32 @@ export function IndicatorsPage() {
     <div>
       <HeroPanel
         eyebrow="82 個教學指標"
-        title="先看用途，再判讀訊號"
-        body="每個條目列出公式、常用參數、適用市況及失效條件。閱讀的重點不在背誦名稱，而在弄清楚指標能回答甚麼問題，又有哪些問題無法回答。"
+        title="不必一次學齊 82 個：先掌握 5 種角色"
+        body="由價格位置、成交確認、趨勢方向、動能強弱及風險幅度入手。每種角色先掌握一個代表指標，便可建立第一套完整判讀流程。"
         imageKey="indicators"
-        actions={<PrimaryLink href="/compare">比較指標用途</PrimaryLink>}
+        actions={
+          <>
+            <PrimaryLink href="/indicators/support-resistance">由第一步開始</PrimaryLink>
+            <PrimaryLink href="/compare" variant="secondary">比較指標用途</PrimaryLink>
+          </>
+        }
       />
-      <Section title="分類分佈" body="分類有助先確定所需資料：價格、成交量、波幅、市場廣度，或市場情緒。">
-        <div className="metric-grid">
-          {categoryCounts().map((item) => (
-            <div key={item.name} className="metric-tile">
-              <Badge variant="info">{item.name}</Badge>
-              <strong className="mt-3 block text-3xl font-black">{item.count}</strong>
-            </div>
-          ))}
-        </div>
+      <Section title="新手建議路線" body="完成以下五步，便能有條理地判斷價格位置、成交支持、趨勢方向、動能強弱，以及可承受的風險幅度。">
+        <ol className="grid gap-3 md:grid-cols-2 xl:grid-cols-5">
+          {beginnerStarterLessons.map((lesson) => {
+            const indicator = findIndicator(lesson.slug);
+            return indicator ? (
+              <li key={lesson.slug} className="flat-evidence-block flex min-w-0 flex-col items-start">
+                <Badge variant="good">第 {lesson.step} 步 · {lesson.role}</Badge>
+                <h3 className="mt-3 font-bold text-[var(--ink)]">{lesson.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-6 text-[var(--muted)]">{lesson.body}</p>
+                <PrimaryLink href={`/indicators/${lesson.slug}`} variant="ghost">學習 {indicator.abbr}</PrimaryLink>
+              </li>
+            ) : null;
+          })}
+        </ol>
       </Section>
-      <Section title="完整指標庫" body="先以 20 個核心指標建立框架，再按用途及難度逐步延伸。搜尋範圍包括中英文名稱、縮寫及用途。">
+      <Section title="按實際問題選擇指標" body="掌握五種基本角色後，再按用途及難度逐步延伸。搜尋範圍包括中英文名稱、縮寫及用途。">
         <IndicatorLibrary items={indicatorSummaries} categories={categoryCounts().map((item) => item.name)} />
       </Section>
     </div>

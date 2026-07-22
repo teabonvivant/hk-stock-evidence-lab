@@ -46,6 +46,8 @@ for (const indicator of siteData.indicators) {
 }
 
 for (const item of coreLearning.items) localizeLearningItem(item);
+localizeDeep(siteData);
+localizeDeep(publicCopy);
 
 const siteJson = `${JSON.stringify(siteData, null, 2)}\n`;
 const publicJson = `${JSON.stringify(publicCopy, null, 2)}\n`;
@@ -56,12 +58,30 @@ await writeFile(siteWrapperPath, `window.__TI_DATA__ = ${siteJson.trimEnd()};\n`
 await writeFile(publicCopyPath, publicJson, "utf8");
 await writeFile(publicWrapperPath, `window.__PUBLIC_COPY__ = ${publicJson.trimEnd()};\n`, "utf8");
 await writeFile(coreLearningPath, coreLearningJson, "utf8");
-await writeFile(legacyAppPath, legacyApp.replaceAll("量能", "成交量"), "utf8");
+await writeFile(legacyAppPath, localizeVolumeTerm(legacyApp), "utf8");
 
 console.log(`Applied ${siteSlugs.length} Hong Kong Chinese editorial judgments.`);
 
 function localizeVolumeTerm(value) {
-  return value.replaceAll("量能", "成交量");
+  return value
+    .replaceAll("價格量能", "價量配合")
+    .replaceAll("突破量能", "突破時的成交量")
+    .replaceAll("量能", "成交量");
+}
+
+function localizeDeep(value) {
+  if (Array.isArray(value)) {
+    for (let index = 0; index < value.length; index += 1) {
+      value[index] = typeof value[index] === "string" ? localizeVolumeTerm(value[index]) : value[index];
+      localizeDeep(value[index]);
+    }
+    return;
+  }
+  if (!value || typeof value !== "object") return;
+  for (const [key, entry] of Object.entries(value)) {
+    value[key] = typeof entry === "string" ? localizeVolumeTerm(entry) : entry;
+    localizeDeep(value[key]);
+  }
 }
 
 function localizeLearningItem(item) {
