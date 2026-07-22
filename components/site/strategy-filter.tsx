@@ -10,9 +10,9 @@ type Filter = "all" | "support-only" | "rejected" | "code";
 
 const filters: readonly { readonly value: Filter; readonly label: string }[] = [
   { value: "all", label: "全部" },
-  { value: "support-only", label: "研究用" },
-  { value: "rejected", label: "已排除" },
-  { value: "code", label: "有 Pine 範本" },
+  { value: "support-only", label: "待完成核對" },
+  { value: "rejected", label: "不採用" },
+  { value: "code", label: "有教學範本" },
 ];
 
 export function StrategyFilter({ items }: { readonly items: readonly StrategyCase[] }) {

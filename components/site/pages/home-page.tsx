@@ -4,40 +4,43 @@ import { HeroPanel, MetricTile, PrimaryLink, Section } from "@/components/site/p
 import { siteData, topIndicators, tradingViewData } from "@/lib/site-data";
 
 export function HomePage() {
+  const completedStrategyCount = tradingViewData.stats.acceptedCases;
+  const formalCaseTarget = tradingViewData.targetAcceptedCases;
+
   return (
     <div>
       <HeroPanel
-        eyebrow="技術指標 · 回測資料 · Pine Script"
-        title="技術分析，先變成檢查流程"
-        body="唔急住追訊號。先睇資料是否可靠，再分清指標用途、策略設定同風險位，入場前有一套可以覆核的流程。"
+        eyebrow="技術指標 · 回測審核 · Pine Script"
+        title="把技術分析變成一套可覆核的流程"
+        body="研究指標，不應只看何時出現訊號。資料是否可靠、訊號在哪種市況才成立，以及失效時如何處理，同樣需要逐項覆核。本站把這些問題整理成一套交易前檢查流程。"
         imageKey="home"
         actions={
           <>
-            <PrimaryLink href="/strategy-cases">睇策略案例</PrimaryLink>
+            <PrimaryLink href="/strategy-cases">查看策略案例</PrimaryLink>
             <PrimaryLink href="/indicators" variant="secondary">
-              查指標庫
+              瀏覽指標庫
             </PrimaryLink>
           </>
         }
       />
-      <Section title="目前資料包" body="以下數字來自本地 JSON/CSV。頁面會照讀資料包內容，不會即時拉外部網站資料。">
+      <Section title="資料庫概況" body="以下統計來自本站整理的本地 JSON 及 CSV 檔案。頁面不會即時讀取外部網站或行情資料。">
         <div className="metric-grid">
-          <MetricTile label="教學指標" value={siteData.stats.siteIndicators} tone="good" />
+          <MetricTile label="已整理指標" value={siteData.stats.siteIndicators} tone="good" />
           <MetricTile label="研究概念" value={siteData.stats.researchConcepts} tone="info" />
           <MetricTile label="專家資料" value={siteData.stats.experts} tone="info" />
           <MetricTile label="研究材料" value={siteData.stats.researchMaterials} tone="warn" />
-          <MetricTile label="TradingView leads" value={tradingViewData.stats.rawLeadsCollected} tone="info" />
-          <MetricTile label="已完整驗證策略" value={tradingViewData.stats.acceptedCases} tone="bad" />
+          <MetricTile label="TradingView 原始線索" value={tradingViewData.stats.rawLeadsCollected} tone="info" />
+          <MetricTile label="已完成核對的策略" value={completedStrategyCount} tone="bad" />
         </div>
       </Section>
-      <Section title="TradingView 策略進度" body={tradingViewData.metricFramingZh}>
+      <Section title="TradingView 策略審核進度" body={tradingViewData.metricFramingZh}>
         <div className="grid gap-3 md:grid-cols-3">
-          <StatusBlock label="本地 Pine 範本" value={tradingViewData.stats.localTemplateCases} tone="warn" />
-          <StatusBlock label="代碼不展示" value={tradingViewData.stats.blockedCodeCases} tone="info" />
-          <StatusBlock label="目標 accepted" value={tradingViewData.targetAcceptedCases} tone="bad" />
+          <StatusBlock label="本站 Pine 教學範本" value={tradingViewData.stats.localTemplateCases} tone="warn" />
+          <StatusBlock label="原始碼不公開" value={tradingViewData.stats.blockedCodeCases} tone="info" />
+          <StatusBlock label="正式案例目標" value={formalCaseTarget} tone="bad" />
         </div>
       </Section>
-      <Section title="先由常用指標入手" body="先建立基本判讀框架，再去睇策略回測同腳本。指標唔係買賣指令，而係幫你問對問題。">
+      <Section title="從常用指標建立判讀框架" body="先掌握每個指標量度甚麼、忽略甚麼，再閱讀策略回測及程式。技術指標只能提供證據，不能代替買賣決定。">
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {topIndicators(6).map((item) => (
             <IndicatorCard key={item.siteSlug} item={item} />

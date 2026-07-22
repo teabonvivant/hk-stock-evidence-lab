@@ -36,21 +36,21 @@ export function SimplePage({ slug }: { readonly slug: SimpleRouteSlug }) {
 }
 
 function LearningPage() {
-  return <GenericPage imageKey="home" eyebrow="學習路線" title="由大市到入場" body="先判斷市況，再睇成交、動能、波幅同風險。每一步都要有條件可以覆核。" rows={["大市方向：移動平均、ADX、市場寬度", "訊號確認：RSI、MACD、成交量同突破質素", "交易前檢查：止蝕、R 值、倉位、退出條件"]} />;
+  return <GenericPage imageKey="home" eyebrow="學習路線" title="由判斷大市到制定入市條件" body="先判斷市況，再檢查成交量、動能、波幅及風險。每一步都應有可覆核的條件，避免事後遷就結果。" rows={["大市方向：移動平均線、ADX 及市場廣度", "訊號確認：RSI、MACD、成交量及突破質素", "交易前檢查：止蝕、R 值、倉位及出市條件"]} />;
 }
 
 function ToolkitPage() {
-  return <GenericPage imageKey="playground" eyebrow="工具箱" title="將模糊想法寫成檢查表" body="工具頁整理 R 值、回撤、PF、勝率同倉位概念。入場前先問清楚風險，而不是憑感覺落注。" rows={["R 值：先定止蝕，再計合理目標", "PF：要連同交易次數同回撤一齊睇", "倉位：用可承受風險額決定大小"]} />;
+  return <GenericPage imageKey="playground" eyebrow="工具箱" title="把模糊想法寫成檢查表" body="工具頁整理 R 值、回撤、盈利因子（PF）、勝率及倉位等概念。入市前先計清風險，不應只憑感覺下注。" rows={["R 值：先定止蝕，再計算合理目標", "盈利因子：須連同交易次數及回撤一併閱讀", "倉位：按每筆交易可承受的風險金額決定"]} />;
 }
 
 function CandlestickPage() {
-  return <GenericPage imageKey="detail" eyebrow="陰陽燭" title="形態要放回市況先有意思" body="單支 K 線不是訊號。要放回趨勢、成交量、支撐阻力同風險回報一齊判斷。" rows={["反轉形態要等確認，不是見到鎚頭就買", "裂口要分消息、成交同後續承接", "長上影可能是派發，也可能只是波幅擴大"]} />;
+  return <GenericPage imageKey="detail" eyebrow="陰陽燭" title="離開市況，形態便失去意義" body="單一陰陽燭不足以構成交易訊號。判讀時要同時考慮趨勢、成交量、支持阻力及風險回報。" rows={["反轉形態須等待確認，不能看見錘頭便立即買入", "裂口要分辨消息影響、成交量及其後承接", "長上影可能反映派發，也可能只是波幅擴大"]} />;
 }
 
 function ComparePage() {
   return (
     <div>
-      <HeroPanel eyebrow="專家比較" title="不要重複看同一個訊號" body="比較頁把指標角色、核心權威同補充專家放在一起，幫你避免 RSI、隨機指標同 MACD 全部講同一件事，卻當成三重確認。" imageKey="compare" />
+      <HeroPanel eyebrow="專家比較" title="不要把相近訊號當成多重確認" body="比較頁把指標功能、核心來源及補充研究並列，方便看清 RSI、隨機指標與 MACD 之間的重疊，避免把同類證據誤當成三重確認。" imageKey="compare" />
       <Section title="研究庫比較摘要">
         <div className="grid gap-3">
           {topComparisonRows(8).map((item) => (
@@ -73,18 +73,18 @@ function ComparePage() {
 }
 
 function PlaygroundPage() {
-  return <GenericPage imageKey="playground" eyebrow="練習場" title="用情境練習，不是背答案" body="用上升、橫行、反轉、裂口等情境測試同一個指標，睇清楚它何時有效、何時會誤導。" rows={["趨勢市：滯後指標可以接受，但止蝕要跟得上", "橫行市：突破訊號容易變成假突破", "消息裂口：成交同後續承接比第一口價更重要"]} />;
+  return <GenericPage imageKey="playground" eyebrow="練習場" title="用市場情境練習，不靠背誦答案" body="把同一個指標放進上升、橫行、反轉及裂口等情境，便能看清它在甚麼時候較有參考價值，又在甚麼時候容易誤導。" rows={["趨勢市：可以接受指標滯後，但止蝕必須跟上", "橫行市：突破訊號較容易演變成假突破", "消息裂口：成交量及其後承接往往比開市第一口價更重要"]} />;
 }
 
 function CasebookPage() {
   const cases = Object.keys(siteData.marketCases);
-  return <GenericPage imageKey="journal" eyebrow="市場案例" title="用真實 OHLCV 練風險判讀" body={`本地資料包有 ${cases.length} 個 Yahoo 案例。圖表只作教學素材，不等於逐個指標都已被驗證。`} rows={cases} />;
+  return <GenericPage imageKey="journal" eyebrow="市場案例" title="用真實 OHLCV 資料練習風險判讀" body={`本站資料庫收錄 ${cases.length} 個 Yahoo Finance 歷史案例。圖表只作教學用途，不代表每個指標都已在這些案例中完成驗證。`} rows={cases} />;
 }
 
 function GlossaryPage() {
   return (
     <div>
-      <HeroPanel eyebrow="詞彙表" title="先講同一套語言" body="止蝕、成交量、裂口、倉位、R 值同 OOS 這些字要講得準，策略討論先不會失焦。" imageKey="glossary" />
+      <HeroPanel eyebrow="詞彙表" title="先把常用術語說清楚" body="止蝕、成交量、裂口、倉位、R 值及樣本外測試（OOS）都有特定含義。用詞準確，策略討論才不會失焦。" imageKey="glossary" />
       <Section title="常用詞彙">
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           {indicators.slice(0, 18).map((item) => (
@@ -103,28 +103,28 @@ function GlossaryPage() {
 }
 
 function SubscribePage() {
-  return <GenericPage imageKey="subscribe" eyebrow="訂閱" title="追蹤資料修訂，不追即市訊號" body="訂閱只適合接收新案例、資料修正、策略審核結果同 Pine 範本更新。不會推送買賣建議。" rows={["策略 accepted 狀態更新", "新增專家或研究材料", "Pine Script 教學範本修訂"]} />;
+  return <GenericPage imageKey="subscribe" eyebrow="訂閱" title="追蹤資料修訂，而非即市訊號" body="訂閱內容只包括新案例、資料修正、策略審核結果及 Pine Script 範本更新，不會推送買賣建議。" rows={["策略審核狀態更新", "新增專家資料或研究材料", "Pine Script 教學範本修訂"]} />;
 }
 
 function JournalPage() {
-  return <GenericPage imageKey="journal" eyebrow="交易日誌" title="把錯誤寫得具體一點" body="日誌不是記心情，而是記入場理由、失效條件、止蝕、退出，同事後有沒有違反流程。" rows={["入場前：寫下不交易的條件", "持倉中：只更新事實，不重寫故事", "出場後：分清錯誤、運氣同策略缺陷"]} />;
+  return <GenericPage imageKey="journal" eyebrow="交易日誌" title="把判斷和錯誤寫得具體" body="交易日誌除了記錄感受，更要寫下入市理由、失效條件、止蝕、出市安排，以及事後有否偏離原定流程。" rows={["入市前：寫下哪些情況出現時不會交易", "持倉期間：只按新事實更新判斷，不任意改寫理由", "出市後：分清執行錯誤、運氣成分及策略缺陷"]} />;
 }
 
 function ComboPage() {
-  return <GenericPage imageKey="combo" eyebrow="組合策略" title="少即是多" body="組合指標不是堆疊確認，而是分工：一個判斷市況，一個確認訊號，一個管理風險。" rows={["市況濾網：MA 或 ADX", "訊號觸發：RSI、MACD 或突破", "風險管理：ATR、結構止蝕同 R 值"]} />;
+  return <GenericPage imageKey="combo" eyebrow="指標組合" title="指標不必多，分工必須清楚" body="組合指標的目的不是堆疊確認，而是分工：一個判斷市況，一個確認訊號，另一個管理風險。" rows={["市況篩選：移動平均線或 ADX", "訊號觸發：RSI、MACD 或價格突破", "風險管理：ATR、結構止蝕及 R 值"]} />;
 }
 
 function ScriptPage() {
   const rows = strategyCodeCases().map((item) => `${item.shortTitle || item.title}: ${item.pineScript.status}`);
-  return <GenericPage imageKey="tv" eyebrow="Pine Script" title="先做教學範本，再談自動化" body="本站目前展示的是本地教學重建範本。原作者 TradingView 源碼只會在授權同署名確認後收錄。" rows={rows} actionHref="/strategy-cases" actionLabel="查看策略代碼" />;
+  return <GenericPage imageKey="tv" eyebrow="Pine Script" title="先建立教學範本，再討論自動化" body="本站展示的是自行重建的教學範本。只有在授權、署名及來源均完成核對後，才會收錄原作者的 TradingView 程式碼。" rows={rows} actionHref="/strategy-cases" actionLabel="查看策略程式" />;
 }
 
 function ScriptDemoPage() {
-  return <GenericPage imageKey="playground" eyebrow="腳本示範" title="將檢查條件放到圖表旁" body="示範頁把市況、訊號、風險同退出條件拆開，不把腳本寫成單一買賣命令。" rows={["市況通過才看訊號", "訊號成熟才計止蝕", "止蝕距離決定倉位"]} />;
+  return <GenericPage imageKey="playground" eyebrow="程式示範" title="把檢查條件放在圖表旁" body="示範頁把市況、訊號、風險及出市條件分開處理，不會把整套判斷濃縮成單一買賣命令。" rows={["市況符合要求後才查看訊號", "訊號成立後才計算止蝕", "按止蝕距離決定倉位"]} />;
 }
 
 function TrialPage() {
-  return <GenericPage imageKey="subscribe" eyebrow="試用流程" title="先審核用途，再開放腳本" body="試用流程保留教育用途同授權邊界。任何 invite-only script 都不承諾績效，只用來減少漏判和強化檢查。" rows={["留下 TradingView 用戶名", "確認用途是教學或研究", "收到授權後自行回測"]} />;
+  return <GenericPage imageKey="subscribe" eyebrow="試用流程" title="先確認用途，再處理腳本權限" body="試用安排只限教育及研究用途，並須遵守程式碼授權。任何受邀腳本（invite-only script）都不代表績效承諾，使用者仍須自行回測及評估風險。" rows={["提供 TradingView 用戶名稱", "確認用途為教學或研究", "取得授權後自行進行回測"]} />;
 }
 
 function GenericPage({
@@ -147,7 +147,7 @@ function GenericPage({
   return (
     <div>
       <HeroPanel eyebrow={eyebrow} title={title} body={body} imageKey={imageKey} actions={actionHref && actionLabel ? <PrimaryLink href={actionHref}>{actionLabel}</PrimaryLink> : undefined} />
-      <Section title="重點">
+      <Section title="閱讀重點">
         <div className="grid gap-3 md:grid-cols-3">
           {rows.map((row) => (
             <Card key={row}>

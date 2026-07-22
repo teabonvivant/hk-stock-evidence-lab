@@ -63,8 +63,8 @@ export function PageShell({ children }: { readonly children: ReactNode }) {
       </main>
       <footer className="page-wrap pb-8 pt-3 text-sm text-[var(--muted)]">
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[var(--line)] pt-5">
-          <span>只作教育研究，不構成投資建議。</span>
-          <span>資料版本：2026-07-05，本地策略設定同 Pine 範本已整理。</span>
+          <span>本站內容只作教育及研究用途，不構成投資建議。</span>
+          <span>資料版本：2026-07-05；本地策略設定及 Pine Script 範本已整理。</span>
         </div>
       </footer>
     </div>

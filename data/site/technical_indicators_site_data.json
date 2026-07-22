@@ -51,12 +51,12 @@
       "category": "成交量",
       "difficulty": "中階",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "追蹤強弱"
       ],
       "params": "累積計算",
       "formula": "A/D = 前值 + 資金流量乘數 x 成交量",
-      "summary": "A/D 線透過收盤價在高低區間的位置判斷量能是偏向累積還是派發。",
+      "summary": "A/D 線根據收市價在當日高低區間的位置，判斷成交量較偏向累積還是派發。",
       "signals": [
         "A/D 線上升但價格橫行，代表可能有隱性吸納。",
         "價格創高但 A/D 未確認，代表量價背離。"
@@ -84,7 +84,7 @@
         "runnerUpEn": "Joseph Granville / Buff Dormeier",
         "expertCount": 13,
         "materialCount": 0,
-        "judgmentZh": "理查・威科夫優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約瑟夫・格蘭維爾、巴夫・多米爾。",
+        "judgmentZh": "研究累積派發線時，可先讀理查・威科夫的量價與供求框架；約瑟夫・格蘭維爾及巴夫・多米爾則分別補足累積成交量和較現代的量價研究。",
         "judgmentEn": "Richard D. Wyckoff wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Joseph Granville / Buff Dormeier.",
         "topMaterials": [],
         "comparisonRows": [
@@ -289,7 +289,7 @@
       "category": "市場寬度",
       "difficulty": "中階",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "看趨勢"
       ],
       "params": "上升家數 - 下跌家數累積",
@@ -322,7 +322,7 @@
         "runnerUpEn": "Larry Williams / Ralph Vince",
         "expertCount": 14,
         "materialCount": 0,
-        "judgmentZh": "內德・戴維斯優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為拉瑞・威廉斯、拉爾夫・文斯。",
+        "judgmentZh": "漲跌家數線屬市場廣度工具，內德・戴維斯的市場指標研究最切題；拉瑞・威廉斯及拉爾夫・文斯可補充獎項研究和新低數方法。",
         "judgmentEn": "Ned Davis wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Larry Williams / Ralph Vince.",
         "topMaterials": [],
         "comparisonRows": [
@@ -562,7 +562,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "威爾斯・威爾德是目前資料庫中唯一對應「ADX / DMI」的核心專家。",
+        "judgmentZh": "ADX 與 DMI 都應由威爾斯・威爾德的原始方法讀起。本站暫未收錄同樣直接的第二位核心作者，因此公式及平滑口徑宜以原著為準。",
         "judgmentEn": "J. Welles Wilder Jr. is the only expert currently mapped to Average Directional Index / Directional Movement in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -625,7 +625,7 @@
       ],
       "params": "25 期",
       "formula": "Aroon Up/Down = 距離近期高低點的時間比例",
-      "summary": "Aroon 透過近期高低點出現時間判斷趨勢是否活躍，適合觀察新高新低節奏。",
+      "summary": "Aroon 根據近期高位和低位相隔的時間判斷趨勢是否活躍，重點在新高與新低出現的節奏。",
       "signals": [
         "Aroon Up 接近 100 且 Down 低，代表上升趨勢活躍。",
         "兩線交叉可提示趨勢主導權改變。"
@@ -653,7 +653,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "圖沙・昌德是目前資料庫中唯一對應「Aroon 指標」的核心專家。",
+        "judgmentZh": "圖沙・昌德是本站 Aroon 研究的直接來源。現有資料未有同等貼近的補充作者，閱讀時應先核對其原始定義，再比較平台實作。",
         "judgmentEn": "Tushar S. Chande is the only expert currently mapped to Aroon in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -748,7 +748,7 @@
         "runnerUpEn": "Olivier Seban",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "威爾斯・威爾德優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為奧利維耶・塞班。",
+        "judgmentZh": "ATR 的公式、真實波幅定義及平滑方法以威爾斯・威爾德為主要依據；奧利維耶・塞班的資料較適合延伸至 ATR 通道和趨勢應用。",
         "judgmentEn": "J. Welles Wilder Jr. wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Olivier Seban.",
         "topMaterials": [],
         "comparisonRows": [
@@ -875,7 +875,7 @@
         "runnerUpEn": "Robert W. Colby / Martin J. Pring",
         "expertCount": 12,
         "materialCount": 0,
-        "judgmentZh": "拉瑞・威廉斯優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為羅伯特・科爾比、馬丁・普林格。",
+        "judgmentZh": "本站現有比較只涵蓋短線動量及指標教材，拉瑞・威廉斯、羅伯特・科爾比和馬丁・普林格可作背景閱讀，但不足以代替 Awesome Oscillator 的指標專屬源流考證。",
         "judgmentEn": "Larry Williams wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Robert W. Colby / Martin J. Pring.",
         "topMaterials": [],
         "comparisonRows": [
@@ -1113,7 +1113,7 @@
         "runnerUpEn": "Joint core experts; no separate runner-up assigned",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "彼得・馬丁、拜倫・麥肯並列優勝；此指標/方法屬共同創作或共同權威，應並讀其資料。",
+        "judgmentZh": "現有專家配對集中於下行風險研究，不能直接證明 Beta 的統計學源流。彼得・馬丁及拜倫・麥肯適合用來比較風險觀念，Beta 本身仍需另補專屬來源。",
         "judgmentEn": "Peter G. Martin / Byron McCann are joint winners; this indicator/method is best treated as a shared authority.",
         "topMaterials": [],
         "comparisonRows": [
@@ -1247,7 +1247,7 @@
         "runnerUpEn": "Jeremy du Plessis",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "約翰・布林格優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為傑瑞米・杜普萊西斯。",
+        "judgmentZh": "布林帶應先讀約翰・布林格對平均線、標準差及帶寬的原始說明；傑瑞米・杜普萊西斯的角色是補充點數圖與指標結合的應用。",
         "judgmentEn": "John Bollinger wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Jeremy du Plessis.",
         "topMaterials": [],
         "comparisonRows": [
@@ -1376,7 +1376,7 @@
         "runnerUpEn": "Jeremy du Plessis",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "約翰・布林格優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為傑瑞米・杜普萊西斯。",
+        "judgmentZh": "布林帶寬度直接承接約翰・布林格的波幅框架，原作者資料最適合核對定義；傑瑞米・杜普萊西斯可作跨圖表方法的補充閱讀。",
         "judgmentEn": "John Bollinger wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Jeremy du Plessis.",
         "topMaterials": [],
         "comparisonRows": [
@@ -1503,7 +1503,7 @@
         "runnerUpEn": "Larry Williams / Ralph Vince",
         "expertCount": 14,
         "materialCount": 0,
-        "judgmentZh": "內德・戴維斯優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為拉瑞・威廉斯、拉爾夫・文斯。",
+        "judgmentZh": "看漲百分比指數屬市場內部強弱研究。內德・戴維斯的市場指標資料可作主要背景，拉瑞・威廉斯及拉爾夫・文斯則提供廣度與新低數的旁證。",
         "judgmentEn": "Ned Davis wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Larry Williams / Ralph Vince.",
         "topMaterials": [],
         "comparisonRows": [
@@ -1741,7 +1741,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "唐納德・蘭伯特是目前資料庫中唯一對應「CCI 商品通道指標」的核心專家。",
+        "judgmentZh": "CCI 的常數、典型價格及平均偏差定義，應以唐納德・蘭伯特的原始資料為準。本站暫未有同等直接的補充作者。",
         "judgmentEn": "Donald R. Lambert is the only expert currently mapped to Commodity Channel Index in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -1800,7 +1800,7 @@
       "category": "成交量",
       "difficulty": "中階",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "追蹤強弱"
       ],
       "params": "20 或 21 期",
@@ -1833,7 +1833,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "馬克・柴金是目前資料庫中唯一對應「Chaikin 資金流」的核心專家。",
+        "judgmentZh": "蔡金資金流量與馬克・柴金的指標設計直接相關，公式及解讀應先核對其原始說明；一般量價理論只宜作背景，不能取代指標定義。",
         "judgmentEn": "Marc Chaikin is the only expert currently mapped to Chaikin Money Flow in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -1892,7 +1892,7 @@
       "category": "成交量",
       "difficulty": "進階",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "找轉折"
       ],
       "params": "A/D 線 3 日 EMA 與 10 日 EMA",
@@ -1926,7 +1926,7 @@
         "runnerUpEn": "Joseph Granville / Buff Dormeier",
         "expertCount": 13,
         "materialCount": 0,
-        "judgmentZh": "理查・威科夫優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約瑟夫・格蘭維爾、巴夫・多米爾。",
+        "judgmentZh": "現有比較可用威科夫、格蘭維爾及多米爾理解量價背景，卻未直接覆蓋 Chaikin Oscillator 的創始資料；此條目的來源仍需補強。",
         "judgmentEn": "Richard D. Wyckoff wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Joseph Granville / Buff Dormeier.",
         "topMaterials": [],
         "comparisonRows": [
@@ -2166,7 +2166,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "圖沙・昌德是目前資料庫中唯一對應「Chande 動量震盪器」的核心專家。",
+        "judgmentZh": "錢德動量震盪器應先讀圖沙・昌德的原始設計，尤其要核對升跌動量加總及正負 100 的縮放方法；本站暫未有同等直接的第二來源。",
         "judgmentEn": "Tushar S. Chande is the only expert currently mapped to Chande Momentum Oscillator in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -2259,7 +2259,7 @@
         "runnerUpEn": "Olivier Seban",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "威爾斯・威爾德優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為奧利維耶・塞班。",
+        "judgmentZh": "威爾斯・威爾德可解釋 ATR 基礎，奧利維耶・塞班可補充 ATR 通道應用；兩者都未足以單獨證明吊燈止蝕的完整源流，原始出市規則仍須另行核對。",
         "judgmentEn": "J. Welles Wilder Jr. wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Olivier Seban.",
         "topMaterials": [],
         "comparisonRows": [
@@ -2389,7 +2389,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "艾德溫・科波克是目前資料庫中唯一對應「Coppock 曲線」的核心專家。",
+        "judgmentZh": "科波克曲線的長週期動量設計應以艾德溫・科波克的資料為起點。現有資料未有同樣直接的補充作者，不宜把一般 ROC 教材當成原始定義。",
         "judgmentEn": "Edwin S. Coppock is the only expert currently mapped to Coppock Curve in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -2481,7 +2481,7 @@
         "runnerUpEn": "Joint core experts; no separate runner-up assigned",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "彼得・馬丁、拜倫・麥肯並列優勝；此指標/方法屬共同創作或共同權威，應並讀其資料。",
+        "judgmentZh": "本站現有配對來自下行風險研究，只能協助解釋資產共同下跌時的組合問題；相關係數的統計定義及估算方法仍需另以統計學來源核對。",
         "judgmentEn": "Peter G. Martin / Byron McCann are joint winners; this indicator/method is best treated as a shared authority.",
         "topMaterials": [],
         "comparisonRows": [
@@ -2584,7 +2584,7 @@
       ],
       "params": "14 期",
       "formula": "比較當前高低價與前期高低價變化",
-      "summary": "DeMarker 透過高低價變化衡量需求壓力，常用於尋找潛在超買超賣區。",
+      "summary": "DeMarker 比較相鄰時段的高低價變化，量度買賣壓力，常用來觀察潛在超買或超賣區。",
       "signals": [
         "高於 0.7 代表偏熱，低於 0.3 代表偏冷。",
         "背離可提示趨勢動能變化。"
@@ -2612,7 +2612,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "湯姆・迪馬克是目前資料庫中唯一對應「DeMark 指標」的核心專家。",
+        "judgmentZh": "DeMarker 指標與湯姆・迪馬克的研究直接相關，參數及高低價比較規則應先看原作者資料；其他超買超賣指標只能作功能比較。",
         "judgmentEn": "Tom DeMark is the only expert currently mapped to DeMARK Indicators in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -2703,7 +2703,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "威爾斯・威爾德是目前資料庫中唯一對應「ADX / DMI」的核心專家。",
+        "judgmentZh": "DMI 的 +DI、-DI、TR 及平滑次序均源自威爾斯・威爾德的方法。沒有原著口徑作基準，平台之間的數值差異很難正確解釋。",
         "judgmentEn": "J. Welles Wilder Jr. is the only expert currently mapped to Average Directional Index / Directional Movement in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -2776,7 +2776,7 @@
         "在震盪市追逐每次通道突破。"
       ],
       "limitations": [
-        "不衡量突破後動能，需要量能或趨勢濾網。"
+        "不衡量突破後動能，需要成交量或趨勢濾網。"
       ],
       "related": [
         "aroon",
@@ -2795,7 +2795,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "理查・唐奇安是目前資料庫中唯一對應「唐奇安通道」的核心專家。",
+        "judgmentZh": "唐奇安通道應以理查・唐奇安的趨勢跟隨研究為主線，先理解 N 期高低位突破，再討論其他通道變體。",
         "judgmentEn": "Richard Donchian is the only expert currently mapped to Donchian Channel in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -2888,7 +2888,7 @@
         "runnerUpEn": "W. D. Gann / Ralph Nelson Elliott",
         "expertCount": 6,
         "materialCount": 0,
-        "judgmentZh": "約翰・艾勒斯優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為威廉・江恩、拉爾夫・尼爾森・艾略特。",
+        "judgmentZh": "去趨勢價格震盪器在本站被放進週期分析家族。約翰・艾勒斯、江恩及艾略特的資料可解釋週期觀念，但不能直接代替 DPO 的指標專屬來源。",
         "judgmentEn": "John F. Ehlers wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: W. D. Gann / Ralph Nelson Elliott.",
         "topMaterials": [],
         "comparisonRows": [
@@ -3093,12 +3093,12 @@
       "category": "成交量",
       "difficulty": "進階",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "追蹤強弱"
       ],
       "params": "14 期",
       "formula": "EOM 結合價格中點移動、成交量與高低差",
-      "summary": "EOM 衡量價格移動是否需要大量成交量，協助觀察升跌是否輕鬆。",
+      "summary": "EOM 同時考慮價格變動與成交量，可看出價格推進是否需要較大的成交支持。",
       "signals": [
         "EOM 上升代表價格上行相對順暢。",
         "EOM 接近零代表價格推進效率低。"
@@ -3126,7 +3126,7 @@
         "runnerUpEn": "Joseph Granville / Buff Dormeier",
         "expertCount": 13,
         "materialCount": 0,
-        "judgmentZh": "理查・威科夫優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約瑟夫・格蘭維爾、巴夫・多米爾。",
+        "judgmentZh": "威科夫、格蘭維爾及多米爾可提供量價與供求背景，但現有比較沒有直接處理 Ease of Movement 的原始公式；此處只可視為概念參考。",
         "judgmentEn": "Richard D. Wyckoff wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Joseph Granville / Buff Dormeier.",
         "topMaterials": [],
         "comparisonRows": [
@@ -3364,7 +3364,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "亞歷山大・艾爾德是目前資料庫中唯一對應「Elder-Ray」的核心專家。",
+        "judgmentZh": "艾達透視指標應先讀亞歷山大・艾爾德的原始說明，重點是 Bull Power、Bear Power 與 EMA 的關係；一般動能教材不應取代這個定義。",
         "judgmentEn": "Alexander Elder is the only expert currently mapped to Elder-Ray Index in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -3459,7 +3459,7 @@
         "runnerUpEn": "John J. Murphy / Robert W. Colby",
         "expertCount": 8,
         "materialCount": 0,
-        "judgmentZh": "傑拉德・阿佩爾優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約翰・墨菲、羅伯特・科爾比。",
+        "judgmentZh": "傑拉德・阿佩爾的資料有助理解 EMA 在動量均線及 MACD 中的應用，約翰・墨菲和羅伯特・科爾比則適合查閱通用解說；這個排序不等於 EMA 源流結論。",
         "judgmentEn": "Gerald Appel wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: John J. Murphy / Robert W. Colby.",
         "topMaterials": [],
         "comparisonRows": [
@@ -3697,7 +3697,7 @@
         "runnerUpEn": "Carolyn Boroden / Robert C. Miner",
         "expertCount": 3,
         "materialCount": 0,
-        "judgmentZh": "喬・迪納波利優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為卡洛琳・波羅登、羅伯特・邁納。",
+        "judgmentZh": "喬・迪納波利的資料最適合研究比例位如何落到實際交易框架；卡洛琳・波羅登及羅伯特・邁納可補充時間與價格的匯聚分析。",
         "judgmentEn": "Joe DiNapoli wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Carolyn Boroden / Robert C. Miner.",
         "topMaterials": [],
         "comparisonRows": [
@@ -3862,7 +3862,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "約翰・艾勒斯是目前資料庫中唯一對應「Ehlers 濾波器」的核心專家。",
+        "judgmentZh": "費雪轉換的交易指標版本應先核對約翰・艾勒斯的濾波及轉換方法，尤其要分清統計轉換、價格正規化和訊號線三個步驟。",
         "judgmentEn": "John F. Ehlers is the only expert currently mapped to Ehlers Filters in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -3924,7 +3924,7 @@
       "category": "成交量",
       "difficulty": "中階",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "找轉折"
       ],
       "params": "13 期 EMA",
@@ -3957,7 +3957,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "亞歷山大・艾爾德是目前資料庫中唯一對應「Force Index」的核心專家。",
+        "judgmentZh": "強力指數與亞歷山大・艾爾德的量價研究直接相關。原作者資料最適合核對價格變化乘以成交量的設計及平滑方式。",
         "judgmentEn": "Alexander Elder is the only expert currently mapped to Force Index in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -4049,7 +4049,7 @@
         "runnerUpEn": "Thomas N. Bulkowski / Munehisa Homma",
         "expertCount": 3,
         "materialCount": 0,
-        "judgmentZh": "史蒂夫・尼森優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為湯瑪斯・布考斯基、本間宗久。",
+        "judgmentZh": "史蒂夫・尼森、本間宗久及湯瑪斯・布考斯基的資料可補充陰陽燭歷史與形態統計，但未直接解決平均 K 線的計算源流；公式仍需指標專屬來源。",
         "judgmentEn": "Steve Nison wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Thomas N. Bulkowski / Munehisa Homma.",
         "topMaterials": [],
         "comparisonRows": [
@@ -4213,7 +4213,7 @@
         "runnerUpEn": "Andrew Thrasher / Alex Spiroglou",
         "expertCount": 4,
         "materialCount": 0,
-        "judgmentZh": "約翰・布林格優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為安德魯・思拉舍、亞歷克斯・斯皮羅格魯。",
+        "judgmentZh": "約翰・布林格、安德魯・思拉舍及亞歷克斯・斯皮羅格魯可說明波幅在交易上的應用；歷史波動率的收益率口徑和年化方法仍應另以統計來源核對。",
         "judgmentEn": "John Bollinger wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Andrew Thrasher / Alex Spiroglou.",
         "topMaterials": [],
         "comparisonRows": [
@@ -4385,7 +4385,7 @@
       ],
       "params": "16、21、55 期",
       "formula": "HMA = WMA(2 x WMA(N/2) - WMA(N), sqrt(N))",
-      "summary": "HMA 透過加權與平方根週期降低延遲，常被用來觀察較平滑但反應較快的趨勢變化。",
+      "summary": "HMA 結合加權平均及週期平方根，以減少均線延遲；線條較平滑，對價格轉變的反應亦較快。",
       "signals": [
         "HMA 由下彎轉上彎，代表短線節奏可能改善。",
         "價格沿 HMA 推進時，可用來追蹤趨勢節奏。"
@@ -4413,7 +4413,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "艾倫・霍爾是目前資料庫中唯一對應「Hull 移動平均」的核心專家。",
+        "judgmentZh": "赫爾移動平均線應以艾倫・霍爾的原始設計為準，特別要核對加權平均、半週期及平方根週期的運算次序。",
         "judgmentEn": "Alan Hull is the only expert currently mapped to Hull Moving Average in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -4505,7 +4505,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "細田悟一是目前資料庫中唯一對應「一目均衡表」的核心專家。",
+        "judgmentZh": "一目均衡表的五條線、時間位移及原始參數，應先讀細田悟一的完整方法。只抽取雲層或交叉訊號，會失去整套系統的時間結構。",
         "judgmentEn": "Goichi Hosoda is the only expert currently mapped to Ichimoku Kinko Hyo in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -4597,7 +4597,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "佩里・考夫曼是目前資料庫中唯一對應「KAMA 考夫曼自適應均線」的核心專家。",
+        "judgmentZh": "考夫曼自適應均線應由佩里・考夫曼的效率比率及平滑常數讀起；平台若省略種子值或預熱期，數值未必可以直接比較。",
         "judgmentEn": "Perry J. Kaufman is the only expert currently mapped to Kaufman Adaptive Moving Average in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -4688,7 +4688,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "喬治・藍恩是目前資料庫中唯一對應「隨機指標」的核心專家。",
+        "judgmentZh": "喬治・藍恩的資料可作隨機指標基礎，但 KDJ 多出的 J 線屬後續變體。本站現有來源未充分交代這項延伸，兩者不應混作同一原始版本。",
         "judgmentEn": "George C. Lane is the only expert currently mapped to Stochastic Oscillator in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -4782,7 +4782,7 @@
         "runnerUpEn": "Andrew Thrasher / Alex Spiroglou",
         "expertCount": 4,
         "materialCount": 0,
-        "judgmentZh": "約翰・布林格優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為安德魯・思拉舍、亞歷克斯・斯皮羅格魯。",
+        "judgmentZh": "本站現有波幅比較偏重布林帶及標準化動量，未直接覆蓋肯特納通道的原始設計。約翰・布林格等人的資料只宜用來比較通道功能。",
         "judgmentEn": "John Bollinger wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Andrew Thrasher / Alex Spiroglou.",
         "topMaterials": [],
         "comparisonRows": [
@@ -4985,7 +4985,7 @@
         "runnerUpEn": "Robert W. Colby / Martin J. Pring",
         "expertCount": 12,
         "materialCount": 0,
-        "judgmentZh": "拉瑞・威廉斯優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為羅伯特・科爾比、馬丁・普林格。",
+        "judgmentZh": "現有排序把短線動量研究放在前面，但 KST 應優先核對馬丁・普林格的指標專屬材料；拉瑞・威廉斯及羅伯特・科爾比只適合作動量背景。",
         "judgmentEn": "Larry Williams wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Robert W. Colby / Martin J. Pring.",
         "topMaterials": [],
         "comparisonRows": [
@@ -5225,7 +5225,7 @@
         "runnerUpEn": "William Peter Hamilton / Daryl Guppy",
         "expertCount": 20,
         "materialCount": 0,
-        "judgmentZh": "理查・唐奇安優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為威廉・彼得・漢密爾頓、達利・古比。",
+        "judgmentZh": "唐奇安、漢密爾頓及古比的資料有助理解趨勢判讀，卻不能代替線性回歸的統計定義。斜率估算、時間單位及異常值處理仍需專屬來源。",
         "judgmentEn": "Richard Donchian wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: William Peter Hamilton / Daryl Guppy.",
         "topMaterials": [],
         "comparisonRows": [
@@ -5464,7 +5464,7 @@
         "runnerUpEn": "John J. Murphy / Robert W. Colby",
         "expertCount": 8,
         "materialCount": 0,
-        "judgmentZh": "傑拉德・阿佩爾優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約翰・墨菲、羅伯特・科爾比。",
+        "judgmentZh": "均線帶屬多週期均線的應用框架。傑拉德・阿佩爾可提供動量均線背景，約翰・墨菲及羅伯特・科爾比適合補充通用判讀，但不應被寫成單一創始來源。",
         "judgmentEn": "Gerald Appel wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: John J. Murphy / Robert W. Colby.",
         "topMaterials": [],
         "comparisonRows": [
@@ -5674,7 +5674,7 @@
       ],
       "params": "12、26、9",
       "formula": "MACD = EMA12 - EMA26；Signal = MACD 的 9 期 EMA",
-      "summary": "MACD 結合趨勢與動能，透過快慢 EMA 差值觀察趨勢強弱、金叉死叉與背離。",
+      "summary": "MACD 結合趨勢與動能，以快、慢 EMA 的差距觀察趨勢強弱、交叉訊號及背離。",
       "signals": [
         "MACD 線上穿 Signal 線，代表短期動能改善。",
         "柱狀體由負轉正，通常表示多方動能開始佔優。",
@@ -5706,7 +5706,7 @@
         "runnerUpEn": "Alex Spiroglou",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "傑拉德・阿佩爾優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為亞歷克斯・斯皮羅格魯。",
+        "judgmentZh": "MACD 的快慢 EMA、訊號線及柱狀圖應先讀傑拉德・阿佩爾的原始方法；亞歷克斯・斯皮羅格魯的 MACD-V 適合用來比較波幅標準化變體。",
         "judgmentEn": "Gerald Appel wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Alex Spiroglou.",
         "topMaterials": [],
         "comparisonRows": [
@@ -5833,7 +5833,7 @@
         "runnerUpEn": "Andrew Thrasher / Alex Spiroglou",
         "expertCount": 4,
         "materialCount": 0,
-        "judgmentZh": "約翰・布林格優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為安德魯・思拉舍、亞歷克斯・斯皮羅格魯。",
+        "judgmentZh": "本站現有比較來自波幅通道家族，未直接處理 Mass Index 的創始資料。布林格、思拉舍及斯皮羅格魯只能提供波幅背景，不能代替原始公式考證。",
         "judgmentEn": "John Bollinger wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Andrew Thrasher / Alex Spiroglou.",
         "topMaterials": [],
         "comparisonRows": [
@@ -6037,7 +6037,7 @@
         "runnerUpEn": "Joint core experts; no separate runner-up assigned",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "謝爾曼・麥克萊倫、瑪麗安・麥克萊倫並列優勝；此指標/方法屬共同創作或共同權威，應並讀其資料。",
+        "judgmentZh": "麥克連震盪器由謝爾曼・麥克萊倫與瑪麗安・麥克萊倫共同建立，兩人的資料應並讀；漲跌家數差及兩組 EMA 參數都要按原始口徑核對。",
         "judgmentEn": "Sherman McClellan / Marian McClellan are joint winners; this indicator/method is best treated as a shared authority.",
         "topMaterials": [],
         "comparisonRows": [
@@ -6132,7 +6132,7 @@
       "category": "成交量",
       "difficulty": "中階",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "找轉折"
       ],
       "params": "14 期，常看 20 / 80",
@@ -6165,7 +6165,7 @@
         "runnerUpEn": "Joint core experts; no separate runner-up assigned",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "金・匡、阿夫魯姆・蘇達克並列優勝；此指標/方法屬共同創作或共同權威，應並讀其資料。",
+        "judgmentZh": "資金流量指標的共同創始資料來自金・匡與阿夫魯姆・蘇達克，兩者應一併查閱；典型價格、正負資金流和成交量缺一不可。",
         "judgmentEn": "Gene Quong / Avrum Soudack are joint winners; this indicator/method is best treated as a shared authority.",
         "topMaterials": [],
         "comparisonRows": [
@@ -6292,7 +6292,7 @@
         "runnerUpEn": "Robert W. Colby / Martin J. Pring",
         "expertCount": 12,
         "materialCount": 0,
-        "judgmentZh": "拉瑞・威廉斯優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為羅伯特・科爾比、馬丁・普林格。",
+        "judgmentZh": "拉瑞・威廉斯可提供短線動量的實務角度，馬丁・普林格及羅伯特・科爾比則較適合整理週期與通用定義；三者屬互補閱讀，並非單一創始結論。",
         "judgmentEn": "Larry Williams wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Robert W. Colby / Martin J. Pring.",
         "topMaterials": [],
         "comparisonRows": [
@@ -6529,7 +6529,7 @@
         "runnerUpEn": "John J. Murphy / Robert W. Colby",
         "expertCount": 8,
         "materialCount": 0,
-        "judgmentZh": "傑拉德・阿佩爾優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約翰・墨菲、羅伯特・科爾比。",
+        "judgmentZh": "移動平均包絡線屬均線應用，而非單一固定算法。阿佩爾、墨菲及科爾比可提供判讀框架，百分比、均線類型及週期仍要由使用者明確列出。",
         "judgmentEn": "Gerald Appel wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: John J. Murphy / Robert W. Colby.",
         "topMaterials": [],
         "comparisonRows": [
@@ -6768,7 +6768,7 @@
         "runnerUpEn": "Olivier Seban",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "威爾斯・威爾德優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為奧利維耶・塞班。",
+        "judgmentZh": "NATR 先要以威爾斯・威爾德的 ATR 定義為基礎，再核對百分比化分母；奧利維耶・塞班的資料較適合補充波幅通道應用。",
         "judgmentEn": "J. Welles Wilder Jr. wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Olivier Seban.",
         "topMaterials": [],
         "comparisonRows": [
@@ -6863,7 +6863,7 @@
       "difficulty": "中階",
       "uses": [
         "看趨勢",
-        "確認量能"
+        "確認成交量"
       ],
       "params": "52 週新高與新低",
       "formula": "NH-NL = 新高家數 - 新低家數",
@@ -6894,7 +6894,7 @@
         "runnerUpEn": "Larry Williams / Ralph Vince",
         "expertCount": 14,
         "materialCount": 0,
-        "judgmentZh": "內德・戴維斯優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為拉瑞・威廉斯、拉爾夫・文斯。",
+        "judgmentZh": "新高新低數應放在市場廣度框架內閱讀。內德・戴維斯提供整體市場指標背景，拉瑞・威廉斯及拉爾夫・文斯則補充獎項研究與新低數方法。",
         "judgmentEn": "Ned Davis wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Larry Williams / Ralph Vince.",
         "topMaterials": [],
         "comparisonRows": [
@@ -7098,7 +7098,7 @@
       "category": "成交量",
       "difficulty": "進階",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "追蹤強弱"
       ],
       "params": "只在成交量低於前日時計算",
@@ -7132,7 +7132,7 @@
         "runnerUpEn": "Joseph Granville / Buff Dormeier",
         "expertCount": 13,
         "materialCount": 0,
-        "judgmentZh": "理查・威科夫優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約瑟夫・格蘭維爾、巴夫・多米爾。",
+        "judgmentZh": "NVI 可借用威科夫、格蘭維爾及多米爾的量價框架理解低成交日，但現有比較未直接證明其原始來源；累積規則及起始值仍需專屬資料。",
         "judgmentEn": "Richard D. Wyckoff wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Joseph Granville / Buff Dormeier.",
         "topMaterials": [],
         "comparisonRows": [
@@ -7338,14 +7338,14 @@
       "category": "成交量",
       "difficulty": "入門",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "追蹤強弱"
       ],
       "params": "累積成交量",
       "formula": "上漲日加成交量，下跌日減成交量",
       "summary": "OBV 把成交量按漲跌方向累加，用來觀察資金流向是否支持價格趨勢。",
       "signals": [
-        "價格創高且 OBV 同步創高，代表量能確認較完整。",
+        "價格創高且 OBV 同步創高，代表成交量確認較完整。",
         "價格上升但 OBV 未跟上，可能代表推升力量不足。",
         "OBV 領先突破可提示資金先行變化。"
       ],
@@ -7374,7 +7374,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "約瑟夫・格蘭維爾是目前資料庫中唯一對應「OBV 能量潮」的核心專家。",
+        "judgmentZh": "OBV 應以約瑟夫・格蘭維爾的原始量價方法為主要來源。研究時要重視累積方向及背離，不能跨資產比較絕對數值。",
         "judgmentEn": "Joseph Granville is the only expert currently mapped to On-Balance Volume in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -7467,7 +7467,7 @@
         "runnerUpEn": "Jeremy du Plessis",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "約翰・布林格優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為傑瑞米・杜普萊西斯。",
+        "judgmentZh": "布林百分比直接來自約翰・布林格的帶內位置框架，原作者資料最適合核對 0、0.5 及 1 的含義；其他圖表方法只作延伸。",
         "judgmentEn": "John Bollinger wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Jeremy du Plessis.",
         "topMaterials": [],
         "comparisonRows": [
@@ -7573,7 +7573,7 @@
         "R1/R2 可作為上方壓力參考，S1/S2 可作為下方支撐參考。"
       ],
       "mistakes": [
-        "把樞軸線當成必然反轉點，忽略趨勢與量能。"
+        "把樞軸線當成必然反轉點，忽略趨勢與成交量。"
       ],
       "limitations": [
         "更適合短線，不宜直接套用長線投資決策。"
@@ -7595,7 +7595,7 @@
         "runnerUpEn": "W. D. Gann / J. Peter Steidlmayer",
         "expertCount": 12,
         "materialCount": 0,
-        "judgmentZh": "羅伯特・愛德華茲、約翰・麥基並列優勝；此指標/方法屬共同創作或共同權威，應並讀其資料。",
+        "judgmentZh": "愛德華茲、麥基、江恩及史戴梅爾可補充價格水平與市場結構，但現有資料未直接交代樞軸點公式的歷史來源；交易時段口徑尤其要另行核對。",
         "judgmentEn": "Robert D. Edwards / John Magee are joint winners; this indicator/method is best treated as a shared authority.",
         "topMaterials": [],
         "comparisonRows": [
@@ -7834,7 +7834,7 @@
         "runnerUpEn": "Alex Spiroglou",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "傑拉德・阿佩爾優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為亞歷克斯・斯皮羅格魯。",
+        "judgmentZh": "PPO 延續傑拉德・阿佩爾的 MACD 思路，差別在於把快慢 EMA 差距百分比化；亞歷克斯・斯皮羅格魯的資料可用來比較其他標準化方法。",
         "judgmentEn": "Gerald Appel wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Alex Spiroglou.",
         "topMaterials": [],
         "comparisonRows": [
@@ -7965,7 +7965,7 @@
         "runnerUpEn": "William Peter Hamilton / Daryl Guppy",
         "expertCount": 20,
         "materialCount": 0,
-        "judgmentZh": "理查・唐奇安優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為威廉・彼得・漢密爾頓、達利・古比。",
+        "judgmentZh": "價格通道的趨勢跟隨脈絡以理查・唐奇安最具直接參考價值；漢密爾頓及古比可補充趨勢結構，但通道週期仍須明確定義。",
         "judgmentEn": "Richard Donchian wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: William Peter Hamilton / Daryl Guppy.",
         "topMaterials": [],
         "comparisonRows": [
@@ -8203,7 +8203,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "威爾斯・威爾德是目前資料庫中唯一對應「Parabolic SAR」的核心專家。",
+        "judgmentZh": "拋物線轉向指標應先讀威爾斯・威爾德的遞迴算法，特別是極值、加速因子及反轉重設規則；只看圖上圓點不足以重現計算。",
         "judgmentEn": "J. Welles Wilder Jr. is the only expert currently mapped to Parabolic SAR in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -8295,7 +8295,7 @@
         "runnerUpEn": "Ned Davis / Edson Gould",
         "expertCount": 8,
         "materialCount": 0,
-        "judgmentZh": "傑森・戈普弗特優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為內德・戴維斯、艾德森・古爾德。",
+        "judgmentZh": "傑森・戈普弗特、內德・戴維斯及艾德森・古爾德可提供情緒指標的現代判讀框架；這組資料適合研究應用，並不構成比率源流的單一結論。",
         "judgmentEn": "Jason Goepfert wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Ned Davis / Edson Gould.",
         "topMaterials": [],
         "comparisonRows": [
@@ -8497,7 +8497,7 @@
       "category": "成交量",
       "difficulty": "進階",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "追蹤強弱"
       ],
       "params": "只在成交量高於前日時計算",
@@ -8531,7 +8531,7 @@
         "runnerUpEn": "Joseph Granville / Buff Dormeier",
         "expertCount": 13,
         "materialCount": 0,
-        "judgmentZh": "理查・威科夫優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約瑟夫・格蘭維爾、巴夫・多米爾。",
+        "judgmentZh": "本站現有資料以威科夫、格蘭維爾及多米爾的量價研究為背景，未直接覆蓋 PVI 的原始累積規則；高成交日定義及起始基準仍需補證。",
         "judgmentEn": "Richard D. Wyckoff wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Joseph Granville / Buff Dormeier.",
         "topMaterials": [],
         "comparisonRows": [
@@ -8736,7 +8736,7 @@
       "category": "成交量",
       "difficulty": "中階",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "追蹤強弱"
       ],
       "params": "累積計算",
@@ -8744,7 +8744,7 @@
       "summary": "PVT 把成交量按價格變化百分比加權累積，比 OBV 更重視漲跌幅大小。",
       "signals": [
         "PVT 上升代表量價趨勢偏向累積。",
-        "價格創高但 PVT 未確認，可能代表量能不足。",
+        "價格創高但 PVT 未確認，可能代表成交量不足。",
         "PVT 率先轉強可作為資金流改善提示。"
       ],
       "mistakes": [
@@ -8770,7 +8770,7 @@
         "runnerUpEn": "Joseph Granville / Buff Dormeier",
         "expertCount": 13,
         "materialCount": 0,
-        "judgmentZh": "理查・威科夫優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約瑟夫・格蘭維爾、巴夫・多米爾。",
+        "judgmentZh": "價量趨勢指標可放在威科夫、格蘭維爾及多米爾的量價框架中比較，但價格變化百分比的加權公式仍需要指標專屬來源支持。",
         "judgmentEn": "Richard D. Wyckoff wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Joseph Granville / Buff Dormeier.",
         "topMaterials": [],
         "comparisonRows": [
@@ -8981,7 +8981,7 @@
       ],
       "params": "個股價格 / 基準指數",
       "formula": "RSC = 個股價格 / 比較基準價格",
-      "summary": "RSC 用個股與指數或同業比較，找出相對強勢或弱勢標的。",
+      "summary": "RSC 比較個股與大市指數或同業的表現，用來找出相對強勢或弱勢的資產。",
       "signals": [
         "RSC 上升代表個股跑贏比較基準。",
         "價格橫行但 RSC 上升，可能代表相對承接較佳。"
@@ -9009,7 +9009,7 @@
         "runnerUpEn": "Charles D. Kirkpatrick II / Gary Antonacci",
         "expertCount": 8,
         "materialCount": 0,
-        "judgmentZh": "威廉・歐尼爾優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為查爾斯・柯克派翠克二世、蓋瑞・安東納奇。",
+        "judgmentZh": "威廉・歐尼爾的資料適合研究強勢股篩選；查爾斯・柯克派翠克二世和蓋瑞・安東納奇則補充研究方法與相對動量。三者應按用途分開閱讀。",
         "judgmentEn": "William J. O'Neil wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Charles D. Kirkpatrick II / Gary Antonacci.",
         "topMaterials": [],
         "comparisonRows": [
@@ -9245,7 +9245,7 @@
         "runnerUpEn": "Robert W. Colby / Martin J. Pring",
         "expertCount": 12,
         "materialCount": 0,
-        "judgmentZh": "拉瑞・威廉斯優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為羅伯特・科爾比、馬丁・普林格。",
+        "judgmentZh": "現有資料只提供一般短線動量及教材背景，未直接覆蓋 RVI 的原始設計。拉瑞・威廉斯、科爾比及普林格不應被寫成此指標的創始來源。",
         "judgmentEn": "Larry Williams wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Robert W. Colby / Martin J. Pring.",
         "topMaterials": [],
         "comparisonRows": [
@@ -9484,7 +9484,7 @@
         "runnerUpEn": "Julie R. Dahlquist / Robert D. Edwards",
         "expertCount": 12,
         "materialCount": 0,
-        "judgmentZh": "湯瑪斯・布考斯基優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為茱莉・達爾奎斯特、羅伯特・愛德華茲。",
+        "judgmentZh": "湯瑪斯・布考斯基的統計研究可用來檢視形態表現，茱莉・達爾奎斯特及愛德華茲提供教材與經典脈絡；磚形圖的歷史源流仍宜另作考證。",
         "judgmentEn": "Thomas N. Bulkowski wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Julie R. Dahlquist / Robert D. Edwards.",
         "topMaterials": [],
         "comparisonRows": [
@@ -9722,7 +9722,7 @@
         "runnerUpEn": "Robert W. Colby / Martin J. Pring",
         "expertCount": 12,
         "materialCount": 0,
-        "judgmentZh": "拉瑞・威廉斯優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為羅伯特・科爾比、馬丁・普林格。",
+        "judgmentZh": "ROC 是基礎動量量度。拉瑞・威廉斯提供短線應用，馬丁・普林格較着重週期與動量理論，羅伯特・科爾比則適合查閱通用定義。",
         "judgmentEn": "Larry Williams wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Robert W. Colby / Martin J. Pring.",
         "topMaterials": [],
         "comparisonRows": [
@@ -9963,7 +9963,7 @@
         "runnerUpEn": "Laurence A. Connors / Constance Brown",
         "expertCount": 5,
         "materialCount": 0,
-        "judgmentZh": "威爾斯・威爾德優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為拉倫斯・康納斯、康斯坦絲・布朗。",
+        "judgmentZh": "RSI 的升跌幅拆分、Wilder 平滑及 0 至 100 轉換，應以威爾斯・威爾德為準；拉倫斯・康納斯和康斯坦絲・布朗可補充短線變體與進階區間解讀。",
         "judgmentEn": "J. Welles Wilder Jr. wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Laurence A. Connors / Constance Brown.",
         "topMaterials": [],
         "comparisonRows": [
@@ -10202,7 +10202,7 @@
         "runnerUpEn": "John J. Murphy / Robert W. Colby",
         "expertCount": 8,
         "materialCount": 0,
-        "judgmentZh": "傑拉德・阿佩爾優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約翰・墨菲、羅伯特・科爾比。",
+        "judgmentZh": "簡單移動平均線沒有必要硬套單一創始者。阿佩爾可補充動量均線應用，墨菲及科爾比則提供通用教材；計算仍以固定期數等權平均為準。",
         "judgmentEn": "Gerald Appel wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: John J. Murphy / Robert W. Colby.",
         "topMaterials": [],
         "comparisonRows": [
@@ -10439,7 +10439,7 @@
         "runnerUpEn": "Andrew Thrasher / Alex Spiroglou",
         "expertCount": 4,
         "materialCount": 0,
-        "judgmentZh": "約翰・布林格優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為安德魯・思拉舍、亞歷克斯・斯皮羅格魯。",
+        "judgmentZh": "布林格、思拉舍及斯皮羅格魯可說明標準差在波幅工具中的用途，但樣本或母體分母等統計口徑，仍須由統計學來源確認。",
         "judgmentEn": "John Bollinger wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Andrew Thrasher / Alex Spiroglou.",
         "topMaterials": [],
         "comparisonRows": [
@@ -10643,7 +10643,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "喬治・藍恩是目前資料庫中唯一對應「隨機指標」的核心專家。",
+        "judgmentZh": "隨機指標應先讀喬治・藍恩的原始方法，分清 Fast、Slow 及 Full 版本；高於 80 或低於 20 只表示區間位置，不等於必然反轉。",
         "judgmentEn": "George C. Lane is the only expert currently mapped to Stochastic Oscillator in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -10734,7 +10734,7 @@
         "runnerUpEn": "Stanley Kroll",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "圖沙・昌德優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為史丹利・克羅爾。",
+        "judgmentZh": "隨機 RSI 應並讀圖沙・昌德及史丹利・克羅爾的共同創始資料。先計 RSI、再套隨機公式的兩層運算不可混為一次平滑。",
         "judgmentEn": "Tushar S. Chande wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Stanley Kroll.",
         "topMaterials": [],
         "comparisonRows": [
@@ -10864,7 +10864,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "奧利維耶・塞班是目前資料庫中唯一對應「SuperTrend」的核心專家。",
+        "judgmentZh": "本站把奧利維耶・塞班列作 Supertrend 的直接來源。研究時要核對 ATR 方法及最終上下軌的遞迴規則，不能只用 HL2 加減倍數代替。",
         "judgmentEn": "Olivier Seban is the only expert currently mapped to SuperTrend in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -10958,7 +10958,7 @@
         "runnerUpEn": "W. D. Gann / J. Peter Steidlmayer",
         "expertCount": 12,
         "materialCount": 0,
-        "judgmentZh": "羅伯特・愛德華茲、約翰・麥基並列優勝；此指標/方法屬共同創作或共同權威，應並讀其資料。",
+        "judgmentZh": "支撐與阻力屬經典價格結構。愛德華茲與麥基的型態分析宜並讀，江恩及史戴梅爾則補充價位與市場結構；重點是區域反應，不是精確單線。",
         "judgmentEn": "Robert D. Edwards / John Magee are joint winners; this indicator/method is best treated as a shared authority.",
         "topMaterials": [],
         "comparisonRows": [
@@ -11195,7 +11195,7 @@
         "runnerUpEn": "W. D. Gann / J. Peter Steidlmayer",
         "expertCount": 12,
         "materialCount": 0,
-        "judgmentZh": "羅伯特・愛德華茲、約翰・麥基並列優勝；此指標/方法屬共同創作或共同權威，應並讀其資料。",
+        "judgmentZh": "趨勢線宜先以愛德華茲與麥基的經典型態框架理解，江恩和史戴梅爾可補充角度及市場結構。錨點與失效規則必須事前固定。",
         "judgmentEn": "Robert D. Edwards / John Magee are joint winners; this indicator/method is best treated as a shared authority.",
         "topMaterials": [],
         "comparisonRows": [
@@ -11400,7 +11400,7 @@
       "category": "市場寬度",
       "difficulty": "進階",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "看趨勢"
       ],
       "params": "上升/下跌家數與成交量比率",
@@ -11434,7 +11434,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "理查・阿姆斯是目前資料庫中唯一對應「TRIN / Arms Index」的核心專家。",
+        "judgmentZh": "TRIN 與理查・阿姆斯的市場廣度研究直接相關，公式中的漲跌家數及成交量比率應以原作者資料核對；不同市場的成份口徑不可混用。",
         "judgmentEn": "Richard W. Arms Jr. is the only expert currently mapped to Arms Index in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -11498,7 +11498,7 @@
       ],
       "params": "15 期、9 期訊號線",
       "formula": "TRIX = 三重 EMA 的一日變化率",
-      "summary": "TRIX 透過三重平滑降低雜訊，適合觀察較乾淨的中期動能轉向。",
+      "summary": "TRIX 經三重指數平滑減少雜訊，適合觀察中期動能是否轉向。",
       "signals": [
         "TRIX 上穿訊號線，代表平滑後動能改善。",
         "TRIX 遠離零軸，代表趨勢動能較明確。"
@@ -11526,7 +11526,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "傑克・哈特森是目前資料庫中唯一對應「TRIX」的核心專家。",
+        "judgmentZh": "TRIX 的三重指數平滑及變動率設計應以傑克・哈特森的資料為起點。預熱期不足時，早段數值很容易受種子值影響。",
         "judgmentEn": "Jack K. Hutson is the only expert currently mapped to Triple Exponential Average in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -11617,7 +11617,7 @@
         "runnerUpEn": "Robert W. Colby / Martin J. Pring",
         "expertCount": 12,
         "materialCount": 0,
-        "judgmentZh": "拉瑞・威廉斯優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為羅伯特・科爾比、馬丁・普林格。",
+        "judgmentZh": "就 TSI 而言，本站目前只有一般短線動量和教材資料，未直接交代雙重平滑的來源；拉瑞・威廉斯、科爾比及普林格只可作背景閱讀。",
         "judgmentEn": "Larry Williams wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Robert W. Colby / Martin J. Pring.",
         "topMaterials": [],
         "comparisonRows": [
@@ -11856,7 +11856,7 @@
         "runnerUpEn": "Joint core experts; no separate runner-up assigned",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "彼得・馬丁、拜倫・麥肯並列優勝；此指標/方法屬共同創作或共同權威，應並讀其資料。",
+        "judgmentZh": "潰瘍指數由彼得・馬丁與拜倫・麥肯共同建立，兩人的資料應一併閱讀。這個指標專注下行回撤，不應與對稱波動率混為一談。",
         "judgmentEn": "Peter G. Martin / Byron McCann are joint winners; this indicator/method is best treated as a shared authority.",
         "topMaterials": [],
         "comparisonRows": [
@@ -11984,7 +11984,7 @@
         "runnerUpEn": "Robert W. Colby / Martin J. Pring",
         "expertCount": 12,
         "materialCount": 0,
-        "judgmentZh": "拉瑞・威廉斯優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為羅伯特・科爾比、馬丁・普林格。",
+        "judgmentZh": "終極震盪指標應以拉瑞・威廉斯的多週期設計為主要來源，先核對買壓、真實波幅及三組權重，再研究背離訊號。",
         "judgmentEn": "Larry Williams wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Robert W. Colby / Martin J. Pring.",
         "topMaterials": [],
         "comparisonRows": [
@@ -12224,7 +12224,7 @@
         "runnerUpEn": "Andrew Thrasher / Alex Spiroglou",
         "expertCount": 4,
         "materialCount": 0,
-        "judgmentZh": "約翰・布林格優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為安德魯・思拉舍、亞歷克斯・斯皮羅格魯。",
+        "judgmentZh": "研究波動止蝕時，可用布林格、思拉舍及斯皮羅格魯的資料補充波幅和風險背景；現有比較未能證明單一創始來源，週期、倍數及移動規則必須逐項列明。",
         "judgmentEn": "John Bollinger wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Andrew Thrasher / Alex Spiroglou.",
         "topMaterials": [],
         "comparisonRows": [
@@ -12393,7 +12393,7 @@
       "category": "成交量",
       "difficulty": "入門",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "看趨勢"
       ],
       "params": "日成交量、成交額、量比",
@@ -12408,7 +12408,7 @@
         "只看成交股數，不看成交額和流通性。"
       ],
       "limitations": [
-        "港股半日市、停牌復牌與特殊事件會影響量能比較。"
+        "港股半日市、停牌復牌與特殊事件會影響成交量比較。"
       ],
       "related": [
         "volume-ma",
@@ -12428,7 +12428,7 @@
         "runnerUpEn": "Joseph Granville / Buff Dormeier",
         "expertCount": 13,
         "materialCount": 0,
-        "judgmentZh": "理查・威科夫優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約瑟夫・格蘭維爾、巴夫・多米爾。",
+        "judgmentZh": "成交量研究可由威科夫的供求框架入手，再以格蘭維爾的累積成交量方法及多米爾的現代量價研究交叉核對。三者着眼點不同，不宜排成單一勝負。",
         "judgmentEn": "Richard D. Wyckoff wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Joseph Granville / Buff Dormeier.",
         "topMaterials": [],
         "comparisonRows": [
@@ -12633,7 +12633,7 @@
       "category": "成交量",
       "difficulty": "入門",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "篩選股票"
       ],
       "params": "20、50 期",
@@ -12641,7 +12641,7 @@
       "summary": "成交量均線把當日成交量與近期平均比較，幫助判斷放量或縮量是否明顯。",
       "signals": [
         "成交量高於 20 日均量，代表參與度高於近期水平。",
-        "突破時量能同步高於均量，訊號較完整。"
+        "突破時成交量同步高於均量，訊號較完整。"
       ],
       "mistakes": [
         "忽略財報、配股、除權等事件造成的異常量。"
@@ -12666,7 +12666,7 @@
         "runnerUpEn": "Joseph Granville / Buff Dormeier",
         "expertCount": 13,
         "materialCount": 0,
-        "judgmentZh": "理查・威科夫優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約瑟夫・格蘭維爾、巴夫・多米爾。",
+        "judgmentZh": "成交量均線是量價分析的實用基準。威科夫、格蘭維爾及多米爾可提供解讀脈絡，但均線週期和異常成交處理仍須由使用者清楚交代。",
         "judgmentEn": "Richard D. Wyckoff wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Joseph Granville / Buff Dormeier.",
         "topMaterials": [],
         "comparisonRows": [
@@ -12871,19 +12871,19 @@
       "category": "成交量",
       "difficulty": "中階",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "觀察波動"
       ],
       "params": "短期量均線與長期量均線",
       "formula": "VO = 短期成交量均線 - 長期成交量均線",
-      "summary": "Volume Oscillator 比較短長期成交量均線，幫助辨識量能是否正在擴張。",
+      "summary": "Volume Oscillator 比較短期與長期成交量均線，用來判斷成交活動正在擴張還是收縮。",
       "signals": [
         "VO 高於零代表短期成交量高於長期平均。",
-        "VO 上升代表量能擴張。",
+        "VO 上升代表成交量擴張。",
         "突破時 VO 同步轉正，訊號較完整。"
       ],
       "mistakes": [
-        "只看量能擴張，不看價格突破是否有效。"
+        "只看成交量擴張，不看價格突破是否有效。"
       ],
       "limitations": [
         "成交量放大可能來自好消息，也可能來自恐慌賣出。"
@@ -12905,7 +12905,7 @@
         "runnerUpEn": "Joseph Granville / Buff Dormeier",
         "expertCount": 13,
         "materialCount": 0,
-        "judgmentZh": "理查・威科夫優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約瑟夫・格蘭維爾、巴夫・多米爾。",
+        "judgmentZh": "成交量震盪器可借用威科夫、格蘭維爾及多米爾的量價框架理解，但快慢成交量均線的專屬參數及源流仍需另行核對。",
         "judgmentEn": "Richard D. Wyckoff wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Joseph Granville / Buff Dormeier.",
         "topMaterials": [],
         "comparisonRows": [
@@ -13111,7 +13111,7 @@
       "difficulty": "進階",
       "uses": [
         "支撐阻力",
-        "確認量能"
+        "確認成交量"
       ],
       "params": "可見範圍、固定區間",
       "formula": "按價格區間累計成交量",
@@ -13143,7 +13143,7 @@
         "runnerUpEn": "James F. Dalton",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "彼得・史戴梅爾優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為詹姆斯・道爾頓。",
+        "judgmentZh": "成交量分佈應先讀彼得・史戴梅爾的市場輪廓與價格時間分佈框架；詹姆斯・道爾頓的著作適合補充拍賣市場及價值區的實務判讀。",
         "judgmentEn": "J. Peter Steidlmayer wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: James F. Dalton.",
         "topMaterials": [],
         "comparisonRows": [
@@ -13275,7 +13275,7 @@
         "runnerUpEn": "Joint core experts; no separate runner-up assigned",
         "expertCount": 2,
         "materialCount": 0,
-        "judgmentZh": "艾蒂安・博特斯、道格拉斯・西普曼並列優勝；此指標/方法屬共同創作或共同權威，應並讀其資料。",
+        "judgmentZh": "漩渦指標由艾蒂安・博特斯與道格拉斯・西普曼共同建立，兩人的資料應並列為原始來源；正負移動距離及 TR 加總口徑要一併核對。",
         "judgmentEn": "Etienne Botes / Douglas Siepman are joint winners; this indicator/method is best treated as a shared authority.",
         "topMaterials": [],
         "comparisonRows": [
@@ -13370,7 +13370,7 @@
       "category": "成交量",
       "difficulty": "中階",
       "uses": [
-        "確認量能",
+        "確認成交量",
         "支撐阻力"
       ],
       "params": "日內 VWAP、錨定 VWAP",
@@ -13404,7 +13404,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "布萊恩・香農是目前資料庫中唯一對應「VWAP / Anchored VWAP」的核心專家。",
+        "judgmentZh": "布萊恩・香農的資料最適合研究錨定 VWAP 的實務用法，但這不等於一般日內 VWAP 的創始考證；交易時段、重設點及典型價格仍須分開說明。",
         "judgmentEn": "Brian Shannon is the only expert currently mapped to VWAP / Anchored VWAP in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -13495,7 +13495,7 @@
         "runnerUpEn": "No direct runner-up; current database maps one core expert only",
         "expertCount": 1,
         "materialCount": 0,
-        "judgmentZh": "拉瑞・威廉斯是目前資料庫中唯一對應「Williams %R」的核心專家。",
+        "judgmentZh": "Williams %R 應先讀拉瑞・威廉斯的原始設計。它與隨機指標位置相近但刻度方向不同，不能只改符號便忽略平台口徑。",
         "judgmentEn": "Larry Williams is the only expert currently mapped to Williams %R in this database.",
         "topMaterials": [],
         "comparisonRows": [
@@ -13586,7 +13586,7 @@
         "runnerUpEn": "John J. Murphy / Robert W. Colby",
         "expertCount": 8,
         "materialCount": 0,
-        "judgmentZh": "傑拉德・阿佩爾優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為約翰・墨菲、羅伯特・科爾比。",
+        "judgmentZh": "加權移動平均線屬通用平滑方法。阿佩爾可補充動量均線應用，墨菲及科爾比提供教材整理；真正需要核對的是權重序列及正規化方式。",
         "judgmentEn": "Gerald Appel wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: John J. Murphy / Robert W. Colby.",
         "topMaterials": [],
         "comparisonRows": [
@@ -13824,7 +13824,7 @@
         "runnerUpEn": "Alan Andrews / Jack D. Schwager",
         "expertCount": 11,
         "materialCount": 0,
-        "judgmentZh": "本間宗久優勝，因其在原創性、專屬性與資料覆蓋上最強；主要對照者為艾倫・安德魯斯、傑克・施瓦格。",
+        "judgmentZh": "本間宗久、艾倫・安德魯斯及傑克・施瓦格可補充市場心理、擺動點與交易經驗，但現有資料未直接覆蓋 Zig Zag 的算法源流；轉向百分比仍需專屬來源。",
         "judgmentEn": "Munehisa Homma wins because of the strongest mix of originality, specificity, and evidence coverage; main comparison: Alan Andrews / Jack D. Schwager.",
         "topMaterials": [],
         "comparisonRows": [

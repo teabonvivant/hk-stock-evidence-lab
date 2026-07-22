@@ -6,7 +6,7 @@
   "targetAcceptedCases": 100,
   "rawLeadTarget": 200,
   "rawLeadsCollected": 200,
-  "metricFramingZh": "PF、勝率、回撤和回報只代表指定歷史資料、測試期間、成本、滑價和參數設定下的回測結果，不構成投資或交易建議。",
+  "metricFramingZh": "盈利因子（PF）、勝率、回撤及回報，只反映指定歷史資料、測試期間、交易成本、滑價及參數設定下的回測結果，不構成投資或交易建議。",
   "sources": {
     "sourcePolicy": ".omo/teams/team-tradingview-20260703/artifacts/A-source-feasibility.md",
     "candidateSchema": ".omo/teams/team-tradingview-20260703/artifacts/B-candidate-schema.csv",

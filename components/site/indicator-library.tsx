@@ -86,10 +86,10 @@ export function IndicatorLibrary({
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
         <label className="inline-flex min-h-11 cursor-pointer items-center gap-3 rounded-[8px] border border-[var(--line)] bg-[var(--surface-soft)] px-4 text-sm font-semibold text-[var(--ink)]">
           <input type="checkbox" checked={coreOnly} onChange={(event) => setCoreOnly(event.target.checked)} className="size-4 accent-[var(--primary)]" />
-          只看核心 20 深度頁
+          只顯示 20 個核心指標
         </label>
         <div className="flex items-center gap-3">
-          <p className="text-sm font-semibold text-[var(--muted)]" aria-live="polite">顯示 {filtered.length} / {items.length} 個指標</p>
+          <p className="text-sm font-semibold text-[var(--muted)]" aria-live="polite">共 {items.length} 個指標，現顯示 {filtered.length} 個</p>
           {hasFilters ? <Button type="button" variant="ghost" size="sm" onClick={reset}><RotateCcw className="size-4" aria-hidden="true" />清除篩選</Button> : null}
         </div>
       </div>
@@ -100,7 +100,7 @@ export function IndicatorLibrary({
       ) : (
         <div className="empty-state mt-5">
           <strong>找不到相符指標</strong>
-          <p>可縮短關鍵字，或清除分類及難度條件。</p>
+          <p>請嘗試縮短關鍵字，或清除分類及難度條件。</p>
           <Button type="button" variant="secondary" onClick={reset}><RotateCcw className="size-4" aria-hidden="true" />重設指標庫</Button>
         </div>
       )}

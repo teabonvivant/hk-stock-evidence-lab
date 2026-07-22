@@ -6,9 +6,18 @@ const publicCopyFallback = Object.freeze({
   terms: Object.freeze({}),
   strategy: Object.freeze({
     statuses: Object.freeze({
-      accepted: Object.freeze({ label: "已完成全部核對", shortLabel: "已核對" }),
-      "support-only": Object.freeze({ label: "待完成核對", shortLabel: "待核對" }),
-      rejected: Object.freeze({ label: "不採用", shortLabel: "不採用" }),
+      accepted: Object.freeze({
+        label: "已完成全部核對",
+        shortLabel: "已核對",
+      }),
+      "support-only": Object.freeze({
+        label: "待完成核對",
+        shortLabel: "待核對",
+      }),
+      rejected: Object.freeze({
+        label: "不採用",
+        shortLabel: "不採用",
+      }),
     }),
     disclosurePhrases: Object.freeze({}),
   }),
@@ -629,7 +638,7 @@ const indicatorInput = [
       "通道寬度擴大代表波動或趨勢空間增加。",
     ],
     mistakes: ["在震盪市追逐每次通道突破。"],
-    limitations: ["不衡量突破後動能，需要量能或趨勢濾網。"],
+    limitations: ["不衡量突破後動能，需要成交量或趨勢濾網。"],
     related: ["aroon", "atr", "price-channel"],
   },
   {
@@ -703,14 +712,14 @@ const indicatorInput = [
     en: "On Balance Volume",
     abbr: "OBV",
     category: "成交量",
-    uses: ["確認量能", "追蹤強弱"],
+    uses: ["確認成交量", "追蹤強弱"],
     difficulty: "入門",
     params: "累積成交量",
     formula: "上漲日加成交量，下跌日減成交量",
     summary:
       "OBV 把成交量按漲跌方向累加，用來觀察資金流向是否支持價格趨勢。",
     signals: [
-      "價格創高且 OBV 同步創高，代表量能確認較完整。",
+      "價格創高且 OBV 同步創高，代表成交量確認較完整。",
       "價格上升但 OBV 未跟上，可能代表推升力量不足。",
       "OBV 領先突破可提示資金先行變化。",
     ],
@@ -728,7 +737,7 @@ const indicatorInput = [
     en: "Volume",
     abbr: "Volume",
     category: "成交量",
-    uses: ["確認量能", "看趨勢"],
+    uses: ["確認成交量", "看趨勢"],
     difficulty: "入門",
     params: "日成交量、成交額、量比",
     formula: "成交量 = 指定期間內成交股數或成交合約數",
@@ -740,7 +749,7 @@ const indicatorInput = [
       "高位爆量後滯漲，需要留意派發風險。",
     ],
     mistakes: ["只看成交股數，不看成交額和流通性。"],
-    limitations: ["港股半日市、停牌復牌與特殊事件會影響量能比較。"],
+    limitations: ["港股半日市、停牌復牌與特殊事件會影響成交量比較。"],
     related: ["volume-ma", "obv", "vwap", "mfi"],
     core: true,
   },
@@ -750,7 +759,7 @@ const indicatorInput = [
     en: "Volume Moving Average",
     abbr: "Vol MA",
     category: "成交量",
-    uses: ["確認量能", "篩選股票"],
+    uses: ["確認成交量", "篩選股票"],
     difficulty: "入門",
     params: "20、50 期",
     formula: "Volume MA = N 期成交量平均",
@@ -758,7 +767,7 @@ const indicatorInput = [
       "成交量均線把當日成交量與近期平均比較，幫助判斷放量或縮量是否明顯。",
     signals: [
       "成交量高於 20 日均量，代表參與度高於近期水平。",
-      "突破時量能同步高於均量，訊號較完整。",
+      "突破時成交量同步高於均量，訊號較完整。",
     ],
     mistakes: ["忽略財報、配股、除權等事件造成的異常量。"],
     limitations: ["只反映相對近期，不能直接比較不同股票。"],
@@ -770,7 +779,7 @@ const indicatorInput = [
     en: "Volume Weighted Average Price",
     abbr: "VWAP",
     category: "成交量",
-    uses: ["確認量能", "支撐阻力"],
+    uses: ["確認成交量", "支撐阻力"],
     difficulty: "中階",
     params: "日內 VWAP、錨定 VWAP",
     formula: "VWAP = 成交額總和 / 成交量總和",
@@ -792,7 +801,7 @@ const indicatorInput = [
     en: "Money Flow Index",
     abbr: "MFI",
     category: "成交量",
-    uses: ["確認量能", "找轉折"],
+    uses: ["確認成交量", "找轉折"],
     difficulty: "中階",
     params: "14 期，常看 20 / 80",
     formula: "MFI = 100 - 100 / (1 + 正資金流 / 負資金流)",
@@ -813,7 +822,7 @@ const indicatorInput = [
     en: "Chaikin Money Flow",
     abbr: "CMF",
     category: "成交量",
-    uses: ["確認量能", "追蹤強弱"],
+    uses: ["確認成交量", "追蹤強弱"],
     difficulty: "中階",
     params: "20 或 21 期",
     formula: "CMF = 資金流量成交量總和 / 成交量總和",
@@ -833,12 +842,12 @@ const indicatorInput = [
     en: "Accumulation Distribution Line",
     abbr: "A/D",
     category: "成交量",
-    uses: ["確認量能", "追蹤強弱"],
+    uses: ["確認成交量", "追蹤強弱"],
     difficulty: "中階",
     params: "累積計算",
     formula: "A/D = 前值 + 資金流量乘數 x 成交量",
     summary:
-      "A/D 線透過收盤價在高低區間的位置判斷量能是偏向累積還是派發。",
+      "A/D 線透過收盤價在高低區間的位置判斷成交量是偏向累積還是派發。",
     signals: [
       "A/D 線上升但價格橫行，代表可能有隱性吸納。",
       "價格創高但 A/D 未確認，代表量價背離。",
@@ -853,7 +862,7 @@ const indicatorInput = [
     en: "Force Index",
     abbr: "FI",
     category: "成交量",
-    uses: ["確認量能", "找轉折"],
+    uses: ["確認成交量", "找轉折"],
     difficulty: "中階",
     params: "13 期 EMA",
     formula: "Force Index = (今日收盤 - 昨日收盤) x 成交量",
@@ -873,7 +882,7 @@ const indicatorInput = [
     en: "Ease of Movement",
     abbr: "EOM",
     category: "成交量",
-    uses: ["確認量能", "追蹤強弱"],
+    uses: ["確認成交量", "追蹤強弱"],
     difficulty: "進階",
     params: "14 期",
     formula: "EOM 結合價格中點移動、成交量與高低差",
@@ -903,7 +912,7 @@ const indicatorInput = [
       "價格站上 Pivot，代表日內偏強。",
       "R1/R2 可作為上方壓力參考，S1/S2 可作為下方支撐參考。",
     ],
-    mistakes: ["把樞軸線當成必然反轉點，忽略趨勢與量能。"],
+    mistakes: ["把樞軸線當成必然反轉點，忽略趨勢與成交量。"],
     limitations: ["更適合短線，不宜直接套用長線投資決策。"],
     related: ["support-resistance", "vwap", "fibonacci-retracement"],
     core: true,
@@ -1101,7 +1110,7 @@ const indicatorInput = [
     en: "Advance Decline Line",
     abbr: "A/D Line",
     category: "市場寬度",
-    uses: ["確認量能", "看趨勢"],
+    uses: ["確認成交量", "看趨勢"],
     difficulty: "中階",
     params: "上升家數 - 下跌家數累積",
     formula: "A/D Line = 前值 + 上升家數 - 下跌家數",
@@ -1121,7 +1130,7 @@ const indicatorInput = [
     en: "New High New Low",
     abbr: "NH-NL",
     category: "市場寬度",
-    uses: ["看趨勢", "確認量能"],
+    uses: ["看趨勢", "確認成交量"],
     difficulty: "中階",
     params: "52 週新高與新低",
     formula: "NH-NL = 新高家數 - 新低家數",
@@ -1241,7 +1250,7 @@ const indicatorInput = [
     en: "Volume Profile",
     abbr: "VP",
     category: "成交量",
-    uses: ["支撐阻力", "確認量能"],
+    uses: ["支撐阻力", "確認成交量"],
     difficulty: "進階",
     params: "可見範圍、固定區間",
     formula: "按價格區間累計成交量",
@@ -1614,7 +1623,7 @@ const indicatorInput = [
     en: "Price Volume Trend",
     abbr: "PVT",
     category: "成交量",
-    uses: ["確認量能", "追蹤強弱"],
+    uses: ["確認成交量", "追蹤強弱"],
     difficulty: "中階",
     params: "累積計算",
     formula: "PVT = 前值 + 成交量 x 價格變化率",
@@ -1622,7 +1631,7 @@ const indicatorInput = [
       "PVT 把成交量按價格變化百分比加權累積，比 OBV 更重視漲跌幅大小。",
     signals: [
       "PVT 上升代表量價趨勢偏向累積。",
-      "價格創高但 PVT 未確認，可能代表量能不足。",
+      "價格創高但 PVT 未確認，可能代表成交量不足。",
       "PVT 率先轉強可作為資金流改善提示。",
     ],
     mistakes: ["忽略低流動性股票的成交量可能失真。"],
@@ -1635,7 +1644,7 @@ const indicatorInput = [
     en: "Negative Volume Index",
     abbr: "NVI",
     category: "成交量",
-    uses: ["確認量能", "追蹤強弱"],
+    uses: ["確認成交量", "追蹤強弱"],
     difficulty: "進階",
     params: "只在成交量低於前日時計算",
     formula: "成交量下降日按價格變化率更新 NVI",
@@ -1656,7 +1665,7 @@ const indicatorInput = [
     en: "Positive Volume Index",
     abbr: "PVI",
     category: "成交量",
-    uses: ["確認量能", "追蹤強弱"],
+    uses: ["確認成交量", "追蹤強弱"],
     difficulty: "進階",
     params: "只在成交量高於前日時計算",
     formula: "成交量上升日按價格變化率更新 PVI",
@@ -1677,7 +1686,7 @@ const indicatorInput = [
     en: "Chaikin Oscillator",
     abbr: "Chaikin Osc",
     category: "成交量",
-    uses: ["確認量能", "找轉折"],
+    uses: ["確認成交量", "找轉折"],
     difficulty: "進階",
     params: "A/D 線 3 日 EMA 與 10 日 EMA",
     formula: "Chaikin Oscillator = EMA3(A/D) - EMA10(A/D)",
@@ -1698,18 +1707,18 @@ const indicatorInput = [
     en: "Volume Oscillator",
     abbr: "VO",
     category: "成交量",
-    uses: ["確認量能", "觀察波動"],
+    uses: ["確認成交量", "觀察波動"],
     difficulty: "中階",
     params: "短期量均線與長期量均線",
     formula: "VO = 短期成交量均線 - 長期成交量均線",
     summary:
-      "Volume Oscillator 比較短長期成交量均線，幫助辨識量能是否正在擴張。",
+      "Volume Oscillator 比較短長期成交量均線，幫助辨識成交量是否正在擴張。",
     signals: [
       "VO 高於零代表短期成交量高於長期平均。",
-      "VO 上升代表量能擴張。",
+      "VO 上升代表成交量擴張。",
       "突破時 VO 同步轉正，訊號較完整。",
     ],
-    mistakes: ["只看量能擴張，不看價格突破是否有效。"],
+    mistakes: ["只看成交量擴張，不看價格突破是否有效。"],
     limitations: ["成交量放大可能來自好消息，也可能來自恐慌賣出。"],
     related: ["volume-ma", "volume", "obv"],
   },
@@ -1719,7 +1728,7 @@ const indicatorInput = [
     en: "Arms Index",
     abbr: "TRIN",
     category: "市場寬度",
-    uses: ["確認量能", "看趨勢"],
+    uses: ["確認成交量", "看趨勢"],
     difficulty: "進階",
     params: "上升/下跌家數與成交量比率",
     formula: "TRIN = (上升家數 / 下跌家數) / (上升成交量 / 下跌成交量)",
@@ -1984,7 +1993,7 @@ function renderIndicatorFormula(item) {
 const defaultFaq = [
   {
     q: "這個指標可以單獨用來買賣嗎？",
-    a: "不建議。技術指標適合用來描述趨勢、動能、量能或風險，實際判斷仍需要結合價格結構、成交量、市況和風險管理。",
+    a: "不建議。技術指標適合用來描述趨勢、動能、成交量或風險，實際判斷仍需要結合價格結構、成交量、市況和風險管理。",
   },
   {
     q: "參數是否必須跟教材範例一樣？",
@@ -2048,7 +2057,7 @@ const humanSummaryBySlug = {
   volume: "成交量是市場是否願意認同該價格的證據。無量突破可以觀察，但不要急於重倉追價。",
   "volume-ma": "成交量均線只是基準線。真正要看的是今天的量，跟平常相比到底算不算異常。",
   vwap: "VWAP 像日內平均成交成本。價格站在它上方還是下方，不是魔法線，而是提醒你市場成本在哪裡。",
-  mfi: "MFI 可以看成加入成交量的 RSI。它比純價格震盪器多一層量能，但仍要回到趨勢背景。",
+  mfi: "MFI 可以看成加入成交量的 RSI。它比純價格震盪器多一層成交量，但仍要回到趨勢背景。",
   "chaikin-money-flow": "CMF 把收盤位置和成交量合在一起，看資金偏向累積還是派發。短期讀數不要過度放大。",
   "accumulation-distribution": "A/D 線看收盤落在日內區間哪裡，再配成交量。它適合觀察暗中吸納或派發的跡象。",
   "force-index": "Force Index 把價格變化和成交量乘在一起。它問的是這一下推動，到底有沒有力度。",
@@ -2155,13 +2164,13 @@ const comparisons = [
     left: "bollinger-bands",
     right: "keltner-channel",
     bestFor: "布林帶重標準差波動，Keltner Channel 重 ATR 波幅。",
-    caution: "通道突破不等於必然追入，需要量能和趨勢確認。",
+    caution: "通道突破不等於必然追入，需要成交量和趨勢確認。",
   },
   {
     title: "OBV vs MFI",
     left: "obv",
     right: "mfi",
-    bestFor: "OBV 看累積量能方向，MFI 把價格位置和成交量合併成震盪指標。",
+    bestFor: "OBV 看累積成交量方向，MFI 把價格位置和成交量合併成震盪指標。",
     caution: "成交量異常日會同時影響兩者。",
   },
   {
@@ -2251,7 +2260,7 @@ const masterLearningPath = [
     step: "02",
     title: "再分配指標角色",
     body: "每個組合只需要一個主指標回答主要問題，其他工具只做確認，避免多個相似指標重複投票。",
-    action: "用趨勢工具定方向、動能工具看力度、量能工具看參與、ATR/R 值控風險。",
+    action: "用趨勢工具定方向、動能工具看力度、成交量工具看參與、ATR/R 值控風險。",
   },
   {
     step: "03",
@@ -2279,7 +2288,7 @@ const masterTransmissionBlueprint = [
     step: "02",
     title: "把指標分配角色",
     pages: "指標庫、分類、用途篩選",
-    lesson: "每個指標只回答一類問題：方向、力度、量能、波動、位置或寬度。相同角色的指標不能重複計票。",
+    lesson: "每個指標只回答一類問題：方向、力度、成交量、波動、位置或寬度。相同角色的指標不能重複計票。",
     habit: "一個主指標配兩個不同證據來源；若三個工具都回答同一件事，刪到只剩最清楚的一個。",
   },
   {
@@ -2309,7 +2318,7 @@ const pageTeachingMap = [
   ["首頁", "建立學習次序與交易世界觀：指標只是證據，不是答案。"],
   ["指標庫", "用分類、用途和難度，從交易問題倒推應學哪類工具。"],
   ["指標詳情", "把單一指標拆成原理、公式、權威、實戰、失效、風險和日誌問題。"],
-  ["陰陽燭", "從開高低收看多空攻防，再把形態放回位置與量能。"],
+  ["陰陽燭", "從開高低收看多空攻防，再把形態放回位置與成交量。"],
   ["比較頁", "處理同一指標或同類工具的分工，避免把所有訊號混成一票。"],
   ["練習室", "把看圖衝動改成流程：市況、觸發、止蝕、目標、R 值和取消條件。"],
   ["案例庫", "用真實市場片段示範何時有效、何時失效，看清指標的邊界。"],
@@ -2364,7 +2373,7 @@ const beginnerStarterPath = [
   {
     minute: "6-9",
     title: "加入成交量",
-    body: "價格突破但沒有量，可信度會降低；價格急跌但量能異常，風險也不同。量能是新手最容易忽略的證據。",
+    body: "價格突破但沒有量，可信度會降低；價格急跌但成交量異常，風險也不同。成交量是新手最容易忽略的證據。",
     action: "看成交量",
     href: "#/indicators/volume",
   },
@@ -2402,7 +2411,7 @@ const marketRegimeGuides = [
   {
     regime: "壓縮突破",
     signal: "波幅收窄，成交變淡，價格貼近前高/前低或三角收斂。",
-    use: "等收盤突破和量能確認，止蝕放在突破失敗點。",
+    use: "等收盤突破和成交量確認，止蝕放在突破失敗點。",
     tools: "布林帶、Keltner、成交量、ATR",
     avoid: "不要在未突破前猜方向；低波動不是低風險。",
   },
@@ -2428,8 +2437,8 @@ const practiceMissions = [
   },
   {
     title: "指標重複計票任務",
-    task: "任選 4 個指標，分辨它們分別回答方向、力度、量能還是風險。",
-    pass: "如果兩個指標回答同一問題，刪掉其中一個，換成風險或量能工具。",
+    task: "任選 4 個指標，分辨它們分別回答方向、力度、成交量還是風險。",
+    pass: "如果兩個指標回答同一問題，刪掉其中一個，換成風險或成交量工具。",
   },
   {
     title: "交易後復盤任務",
@@ -2786,7 +2795,7 @@ function siteDataStatusLabel(status = currentSiteReviewStatus()) {
 function renderSiteDataStatusPanel() {
   if (!siteData.loaded) return "";
   const stats = [
-    ["網站指標", siteDataCount("siteIndicators", indicators.length), "前端教學頁正在使用的指標數"],
+    ["網站指標", siteDataCount("siteIndicators", indicators.length), "網站目前使用的指標數"],
     ["研究概念", siteDataCount("researchConcepts"), "研究庫標準概念數量"],
     ["專家", siteDataCount("experts"), "已整理的技術分析作者與專家"],
     ["研究材料", siteDataCount("researchMaterials"), "書籍、論文、平台文章與參考來源"],
@@ -2794,7 +2803,7 @@ function renderSiteDataStatusPanel() {
   const warningCount = Number(siteData.evidenceReview.flagCount) || 0;
   const marketCaseCount = siteData.marketCases.length || siteDataCount("marketCaseCount");
   const sourceReview = siteReadiness.loaded ? siteReadiness.sourceReview : siteData.evidenceReview;
-  const taxonomyReview = siteReadiness.taxonomyReview;
+  const classificationReview = siteReadiness.taxonomyReview;
   const runnerUpPolicy = siteReadiness.runnerUpPolicy;
   const relationCounts = safeRecord(
     siteData.taxonomy.relationCounts || siteData.stats.taxonomyRelationCounts,
@@ -2826,7 +2835,7 @@ function renderSiteDataStatusPanel() {
         <li><strong>資料版本</strong><span>${escapeHtml(siteData.version)}｜生成<span class="no-break">日期</span> ${escapeHtml(siteDataGeneratedDate())}</span></li>
         <li><strong>概念對應</strong><span>${formatCount(siteDataCount("siteIndicators", indicators.length))} 個前端指標已對應到研究概念；精準 ${formatCount(relationCounts.exact)}、別名 ${formatCount(relationCounts.alias)}、合併 ${formatCount(relationCounts.merge)}、拆分 ${formatCount(relationCounts.split)}。</span></li>
         <li><strong>來源覆核</strong><span>現有 ${formatCount(warningCount)} 項來源覆核標記；其中 ${formatCount(sourceReview.lowReviewRows)} 項低信任或待重分類來源只作輔助參考。</span></li>
-        <li><strong>分類覆核</strong><span>${formatCount(taxonomyReview.reviewMarkerCount)} 個合併、拆分或中信心對應已保留為待覆核狀態，不會當成完全對應。</span></li>
+        <li><strong>分類覆核</strong><span>${formatCount(classificationReview.reviewMarkerCount)} 個合併、拆分或中信心對應已保留為待覆核狀態，不會當成完全對應。</span></li>
         <li><strong>專家補充</strong><span>仍有 ${formatCount(runnerUpPolicy.siteMissingRows)} 個項目待補充第二觀點或寫明只有一位核心專家。</span></li>
         <li><strong>市場案例</strong><span>${escapeHtml(siteReadinessMarketSummary(marketCaseCount))}</span></li>
       </ul>
@@ -3203,11 +3212,11 @@ const categoryTeachingProfiles = {
     caseMarket:
       "價格突破前高或跌穿支撐時，投資者想知道背後是否有足夠市場參與，而不是少量成交造成的短暫波動。",
     calculation:
-      "成交量類指標依賴成交股數、成交額、高低收位置或累積量能；不同市場資料口徑可能不同，港股尤其要留意停牌、半日市與大型配售事件。",
+      "成交量類指標依賴成交股數、成交額、高低收位置或累積成交量；不同市場資料口徑可能不同，港股尤其要留意停牌、半日市與大型配售事件。",
     advanced:
-      "用量價關係做確認層：價格訊號先出現，再用量能判斷市場是否接受該方向；若價升量弱或價跌量縮，解讀要回到支撐阻力和大市背景。",
+      "用量價關係做確認層：價格訊號先出現，再用成交量判斷市場是否接受該方向；若價升量弱或價跌量縮，解讀要回到支撐阻力和大市背景。",
     review:
-      "成交量不是獨立訊號，而是價格訊號的可信度檢查。分析時要同時看量能是否異常、是否可持續，以及是否與趨勢方向一致。",
+      "成交量不是獨立訊號，而是價格訊號的可信度檢查。分析時要同時看成交量是否異常、是否可持續，以及是否與趨勢方向一致。",
   },
   支撐阻力: {
     caseMarket:
@@ -3217,7 +3226,7 @@ const categoryTeachingProfiles = {
     advanced:
       "把支撐阻力視為區域，並尋找多重證據重疊，例如前高、VWAP、斐波那契比例和成交量節點同時接近，訊號才值得提高權重。",
     review:
-      "支撐阻力是市場記憶與交易行為的視覺化，不是保證反轉的位置。有效突破通常需要收盤、量能和回踩確認。",
+      "支撐阻力是市場記憶與交易行為的視覺化，不是保證反轉的位置。有效突破通常需要收盤、成交量和回踩確認。",
   },
   "通道/型態": {
     caseMarket:
@@ -3332,7 +3341,7 @@ const categoryDeepDiveProfiles = {
     intro:
       "成交量指標的深層用法，是判斷市場是否接受價格變化；它不是獨立預測方向，而是價格訊號的可信度檢查。",
     framework: [
-      "先有價格事件，再看量能確認：突破、跌穿、回踩、反彈都要先在價格上出現。",
+      "先有價格事件，再看成交量確認：突破、跌穿、回踩、反彈都要先在價格上出現。",
       "把成交量分成普通、縮量、放量和異常巨量；不同狀態代表不同市場參與度。",
       "同樣是放量，出現在低位止跌、高位滯漲或突破前高，解讀完全不同。",
     ],
@@ -3343,13 +3352,13 @@ const categoryDeepDiveProfiles = {
     ],
     calibration: [
       "不要只與昨天比較成交量，應與近 20 日或 50 日平均比較，才知道是否真的異常。",
-      "港股要留意半日市、停牌復牌、配售、供股和大手成交，這些事件會扭曲量能指標。",
+      "港股要留意半日市、停牌復牌、配售、供股和大手成交，這些事件會扭曲成交量指標。",
       "成交額有時比成交股數更有意義，尤其跨不同股價水平比較時。",
     ],
     review: [
-      "復盤時標記每筆交易的量能狀態：放量突破、縮量回踩、無量反彈或高位爆量。",
-      "檢查自己是否在無量突破中追入；若這類交易勝率低，應把量能確認列為必要條件。",
-      "把成交量與價格結果分開記錄，避免只在事後把成功突破都說成量能配合。",
+      "復盤時標記每筆交易的成交量狀態：放量突破、縮量回踩、無量反彈或高位爆量。",
+      "檢查自己是否在無量突破中追入；若這類交易勝率低，應把成交量確認列為必要條件。",
+      "把成交量與價格結果分開記錄，避免只在事後把成功突破都說成成交量配合。",
     ],
   },
   支撐阻力: {
@@ -3362,7 +3371,7 @@ const categoryDeepDiveProfiles = {
       "支撐阻力要配合趨勢背景：上升趨勢中的回踩支撐，和下跌趨勢中的碰支撐，交易意義不同。",
     ],
     execution: [
-      "接近支撐不等於買，必須等待止跌 K 線、收盤收回、量能改善或小平台突破。",
+      "接近支撐不等於買，必須等待止跌 K 線、收盤收回、成交量改善或小平台突破。",
       "突破阻力後若回踩不跌破，原阻力才可能轉為支撐；盤中刺穿不能單獨算確認。",
       "止蝕要放在區域之外，並留出合理波幅；貼著支撐線下方很容易被普通波動掃走。",
     ],
@@ -3384,7 +3393,7 @@ const categoryDeepDiveProfiles = {
     framework: [
       "先確認型態至少有兩次以上有效觸碰或清晰邊界；沒有邊界，就不要勉強套用形態名稱。",
       "分清延續型態和反轉型態；同一個三角收斂，在不同趨勢背景下可能有完全不同意義。",
-      "型態只描述結構，方向仍要等突破、跌穿、量能或回踩確認。",
+      "型態只描述結構，方向仍要等突破、跌穿、成交量或回踩確認。",
     ],
     execution: [
       "通道交易不要在中間追，應在邊界附近等待反應或突破後等待確認。",
@@ -3437,7 +3446,7 @@ const categoryDeepDiveProfiles = {
       "寬度訊號通常比價格慢或早一步，不應要求它每次都精準預測轉折。",
     ],
     execution: [
-      "當寬度改善，回到個股頁尋找價格突破和量能確認，而不是直接買入指數或個股。",
+      "當寬度改善，回到個股頁尋找價格突破和成交量確認，而不是直接買入指數或個股。",
       "當寬度惡化，減少槓桿、降低倉位和縮短持倉，不必等到指數跌穿才防守。",
       "如果寬度與個股訊號矛盾，以風險控制優先；大市背景差時，好股票也更容易失敗。",
     ],
@@ -3560,7 +3569,7 @@ const indicatorDeepDiveOverrides = {
     intro:
       "成交量深層用法是判斷市場參與度和接受程度；價格先給事件，成交量再回答這個事件是否可信。",
     framework: [
-      "突破看量能是否高於近期平均，回踩看是否縮量，轉強時看是否再度放量。",
+      "突破看成交量是否高於近期平均，回踩看是否縮量，轉強時看是否再度放量。",
       "高位爆量要問價格是否還能上升；不能上升的巨量，往往比普通放量更值得警惕。",
       "低位放量要問是否有止跌結構；只有恐慌成交而未止跌，仍可能繼續下跌。",
     ],
@@ -3575,9 +3584,9 @@ const indicatorDeepDiveOverrides = {
       "低流動性股票要提高成交量門檻，因為少量資金也能製造假突破。",
     ],
     review: [
-      "復盤每次突破是否有量能確認，並統計無量突破的失敗率。",
+      "復盤每次突破是否有成交量確認，並統計無量突破的失敗率。",
       "標記高位放量後 5 至 10 日價格是否續強，若不續強，未來同類情境要更保守。",
-      "把量能角色寫清楚：確認、警告、異常事件，三者不要混用。",
+      "把成交量角色寫清楚：確認、警告、異常事件，三者不要混用。",
     ],
   },
   atr: {
@@ -3626,7 +3635,7 @@ const indicatorDeepDiveOverrides = {
     ],
     review: [
       "復盤碰上軌後的交易，分清是趨勢沿軌還是震盪回歸。",
-      "統計壓縮突破後是否有量能和帶寬擴張跟進，沒有跟進的突破要降低信心。",
+      "統計壓縮突破後是否有成交量和帶寬擴張跟進，沒有跟進的突破要降低信心。",
       "檢查自己是否把布林帶當成反向工具；這是最常見也最昂貴的誤讀。",
     ],
   },
@@ -3665,7 +3674,7 @@ const indicatorDeepDiveOverrides = {
       "突破、回踩和假突破是三種不同劇本，入場與止蝕不能混用。",
     ],
     execution: [
-      "突破劇本：等收盤突破，回踩不跌破原阻力，再用量能或 K 線確認。",
+      "突破劇本：等收盤突破，回踩不跌破原阻力，再用成交量或 K 線確認。",
       "反彈劇本：等支撐附近止跌，出現更高低點或小平台突破，再考慮入場。",
       "失效劇本：跌穿支撐或突破失敗後，不要把短線交易改口成長線投資。",
     ],
@@ -3755,7 +3764,7 @@ const categoryTradeProfiles = {
     setup:
       "先找到價格訊號，例如突破、回踩或跌穿；成交量用來判斷市場是否接受這個方向。",
     trigger:
-      "突破時量能高於近期平均，或回踩時縮量、再轉強時放量，訊號才較值得跟進。",
+      "突破時成交量高於近期平均，或回踩時縮量、再轉強時放量，訊號才較值得跟進。",
     stop: "止蝕放在突破失敗點或放量 K 線低位；若放量後滯漲，要快速降低信心。",
     target: "目標看成交密集區、前高或 2R；若上方壓力區成交很重，先分批處理。",
     anti:
@@ -3848,7 +3857,7 @@ const categoryAuthorityNotes = {
       "成交量工具強在確認市場是否接受價格，而不是單獨預測方向。",
     material: "《讀帶研究》、OBV、Chaikin Money Flow 與 Anchored VWAP 研究",
     use:
-      "先有價格事件，再用量能判斷可信度；異常成交日要標記，不應機械套用。",
+      "先有價格事件，再用成交量判斷可信度；異常成交日要標記，不應機械套用。",
   },
   支撐阻力: {
     winner: "羅伯特・愛德華茲、約翰・麥基 / Robert D. Edwards / John Magee",
@@ -3866,7 +3875,7 @@ const categoryAuthorityNotes = {
       "型態類工具主觀性高；代表性作者通常能把形態規則、統計觀察和交易情境分開處理。",
     material: "《圖表型態百科全書》與《日本蠟燭圖技術》",
     use:
-      "形態只作情境語言，必須回到位置、量能、確認與失效條件。",
+      "形態只作情境語言，必須回到位置、成交量、確認與失效條件。",
   },
   市場寬度: {
     winner: "內德・戴維斯 / Ned Davis、謝爾曼・麥克萊倫、瑪麗安・麥克萊倫 / Sherman / Marian McClellan",
@@ -4058,7 +4067,7 @@ const indicatorAuthorityNotes = {
       "布林通道的代表人物是 John Bollinger；其核心不是碰上軌賣、碰下軌買，而是理解波動率與價格位置。",
     material: "《布林格談布林通道》",
     use:
-      "看壓縮、擴張與相對位置；方向要由價格突破、量能和市況確認。",
+      "看壓縮、擴張與相對位置；方向要由價格突破、成交量和市況確認。",
   },
   "donchian-channel": {
     winner: "理查・唐奇安 / Richard Donchian",
@@ -4082,7 +4091,7 @@ const indicatorAuthorityNotes = {
     winner: "約瑟夫・格蘭維爾 / Joseph Granville",
     runnerUp: "理查・威科夫 / Richard D. Wyckoff",
     judgment:
-      "OBV 的代表人物是格蘭維爾；它適合看累積量能是否支持價格，但異常成交會留下長期影響。",
+      "OBV 的代表人物是格蘭維爾；它適合看累積成交量是否支持價格，但異常成交會留下長期影響。",
     material: "《格蘭維爾股市獲利新鑰》",
     use:
       "用於確認突破或背離；不要單靠 OBV 上升就買入。",
@@ -4094,7 +4103,7 @@ const indicatorAuthorityNotes = {
       "成交量分析以威科夫較具代表性，因其把量價關係放回供求、吸籌與派發框架。",
     material: "《讀帶研究》；《我如何交易與投資股票和債券》",
     use:
-      "先看價格事件，再看量能是否確認；高位爆量可能是買盤，也可能是派發。",
+      "先看價格事件，再看成交量是否確認；高位爆量可能是買盤，也可能是派發。",
   },
   "volume-ma": {
     winner: "理查・威科夫 / Richard D. Wyckoff",
@@ -4290,7 +4299,7 @@ const categoryMasterOperatorProfiles = {
     ],
     gradeA: "價格在關鍵位、動能轉向、價格完成突破/跌破確認，且風險回報合格。",
     gradeB: "動能改善但價格仍未突破結構，只能列入觀察名單。",
-    cancel: "價格未確認、量能不支持，或動能與大方向逆向時，訊號降級。",
+    cancel: "價格未確認、成交量不支持，或動能與大方向逆向時，訊號降級。",
     execution: [
       "逆勢反轉一定比指標晚一步入場，先等價格收盤確認。",
       "順勢回調則等動能回落後重新轉強，同時價格守住關鍵支撐。",
@@ -4326,13 +4335,13 @@ const categoryMasterOperatorProfiles = {
   成交量: {
     coreQuestion: "看成交量時，先問市場是否接受這個價格，而不是看到放量就興奮。",
     marketRead: [
-      "先有價格事件，再讀成交量；沒有突破、跌穿、回踩或反彈，量能很難單獨解讀。",
+      "先有價格事件，再讀成交量；沒有突破、跌穿、回踩或反彈，成交量很難單獨解讀。",
       "同樣放量，低位止跌、高位滯漲和突破前高的意思完全不同。",
       "成交量要和近期平均比較，也要排除配售、停牌復牌、財報和指數換馬等異常事件。",
     ],
     gradeA: "突破或回踩發生在關鍵位，成交量高於近期平均，後續價格仍能接受新區域。",
-    gradeB: "量能改善但價格沒有完成確認，只能提高觀察權重。",
-    cancel: "放量後價格不升反跌、突破後沒有跟進量，或量能來自一次性事件，訊號降級。",
+    gradeB: "成交量改善但價格沒有完成確認，只能提高觀察權重。",
+    cancel: "放量後價格不升反跌、突破後沒有跟進量，或成交量來自一次性事件，訊號降級。",
     execution: [
       "放量突破後等收盤或回踩，避免盤中假突破。",
       "縮量回踩後再放量轉強，是比單日爆量更成熟的節奏。",
@@ -4349,7 +4358,7 @@ const categoryMasterOperatorProfiles = {
     marketRead: [
       "用區域取代單線，並把大週期區域和小週期觸發分開。",
       "判斷價格是在區域邊緣還是中間，區域中間通常風險回報最差。",
-      "支撐阻力必須搭配收盤、量能或 K 線反應，不是碰到就買賣。",
+      "支撐阻力必須搭配收盤、成交量或 K 線反應，不是碰到就買賣。",
     ],
     gradeA: "價格到達高價值區域、出現確認反應、止蝕在區域外且目標到下一區域至少 2R。",
     gradeB: "區域重要但尚未確認，只能等待下一支或回踩。",
@@ -4372,7 +4381,7 @@ const categoryMasterOperatorProfiles = {
       "分清延續、反轉、壓縮和假突破，不同劇本不能混用同一入場。",
       "若工具會重畫，只能用作結構整理，不當成即時決策核心。",
     ],
-    gradeA: "型態邊界清楚、突破/跌破已收盤確認、量能或波動配合，止蝕與目標明確。",
+    gradeA: "型態邊界清楚、突破/跌破已收盤確認、成交量或波動配合，止蝕與目標明確。",
     gradeB: "型態正在成熟但未突破，只適合預備計劃，不先下注。",
     cancel: "突破後收回型態內、邊界需要反覆重畫，或目標不足 2R，降級或取消。",
     execution: [
@@ -4397,7 +4406,7 @@ const categoryMasterOperatorProfiles = {
     gradeB: "相對表現好但價格未確認，只列入候選名單。",
     cancel: "大市風險轉差、個股跌穿結構，或組合集中在同一風險來源，降級。",
     execution: [
-      "先用綜合指標篩出候選，再用趨勢、量能和 R 值決定是否交易。",
+      "先用綜合指標篩出候選，再用趨勢、成交量和 R 值決定是否交易。",
       "組合內同類股票不要同時重倉，避免看似分散其實同源風險。",
       "相對強轉弱時先停止加倉，再看價格是否觸發離場。",
     ],
@@ -4456,7 +4465,7 @@ function masterOperatorFor(item, related) {
     sizing: profile.sizing,
     journal: [
       `日誌第一欄寫「市況」：這次 ${item.abbr} 是用於${item.uses.join("、")}，還是被拿來支持既有偏見？`,
-      "第二欄寫「觸發」：價格、指標、量能和 R 值哪一項未完成？未完成就標為觀察，不標為交易。",
+      "第二欄寫「觸發」：價格、指標、成交量和 R 值哪一項未完成？未完成就標為觀察，不標為交易。",
       "第三欄寫「結果」：盈利、虧損或放棄交易都要記錄，放棄交易也是訓練樣本。",
       `第四欄寫「修正」：下次遇到同類 ${item.abbr} 訊號，要提高、降低還是維持權重。`,
     ],
@@ -4525,7 +4534,7 @@ function lessonFor(item, related) {
     ],
     checklist: [
       `我是否已先定義觀察週期，而不是看見訊號後才改參數？`,
-      `這個訊號是否得到價格結構、量能或相關指標支持？`,
+      `這個訊號是否得到價格結構、成交量或相關指標支持？`,
       `若判斷錯誤，哪個價格區域或指標條件會證明原分析失效？`,
       `進場前是否已寫下入場價、止蝕價、第一目標和每股風險？`,
       `若只做到 1R 目標，我是否已有保護利潤或減倉計劃？`,
@@ -4789,7 +4798,7 @@ function renderResearchEvidencePanel(title = "資料從哪裡來") {
     ["資料範圍", `${researchDatabaseStats.experts} 位專家、${researchDatabaseStats.indicatorMethods} 個指標/方法、${researchDatabaseStats.methodFamilies} 個方法家族、${researchDatabaseStats.sources} 個來源。`],
     ["整理方式", "專家名稱、指標名稱和材料摘要保留中英文對照；頁面用繁體中文講清楚，英文原名留給想追資料的人查證。"],
     ["先讀誰", "先看原創者和最有代表性的用法，再看後來的改良版本；不是誰名氣大就一定放第一。"],
-    ["使用界線", "權威來源只代表值得先讀，不代表永遠最準；交易仍要回到市況、價格、量能和風險回報。"],
+    ["使用界線", "權威來源只代表值得先讀，不代表永遠最準；交易仍要回到市況、價格、成交量和風險回報。"],
   ];
   return `
     <section class="content-grid">
@@ -4942,7 +4951,7 @@ function renderCandlestickAuthorityPanel() {
     ["歷史源流", "本間宗久 / Munehisa Homma 代表早期日本米市價格行為思想，適合理解陰陽燭背後的供求與情緒。"],
     ["現代教學", "史蒂夫・尼森 / Steve Nison 把日本蠟燭圖系統化介紹到西方市場，是本站陰陽燭教學的優先參考。"],
     ["統計對照", "湯瑪斯・布考斯基 / Thomas N. Bulkowski 以圖表型態統計作補充，用來提醒形態不是保證。"],
-    ["本站結論", "陰陽燭不是單獨策略；最佳用途是把位置、收盤、量能、確認和失效點整理成交易前證據。"],
+    ["本站結論", "陰陽燭不是單獨策略；最佳用途是把位置、收盤、成交量、確認和失效點整理成交易前證據。"],
   ];
   return `
     <section class="content-grid">
@@ -4977,7 +4986,7 @@ function renderCandlestickAuthorityPanel() {
 
 function renderComparisonExpertFramework() {
   const rows = [
-    ["先判斷問題", "方向、力度、量能、波動、寬度、風險，每次只選一個主問題。"],
+    ["先判斷問題", "方向、力度、成交量、波動、寬度、風險，每次只選一個主問題。"],
     ["再看原創權威", "例如 RSI 先讀 Wilder，MACD 先讀 Appel，布林帶先讀 Bollinger，ATR 先讀 Wilder。"],
     ["再看現代改良", "ConnorsRSI、MACD-V、Anchored VWAP 等可作改良對照，但不能取代原始概念。"],
     ["最後看失效", "如果兩個指標都回答同一問題，刪掉其中一個；若兩者衝突，先回到價格結構和市況。"],
@@ -4987,7 +4996,7 @@ function renderComparisonExpertFramework() {
       <article class="review-panel">
         <span class="lesson-label">專家比較</span>
         <h2>先問問題，再選指標</h2>
-        <p class="small">比較頁不是替你找「永遠最準」的指標，而是幫你看清楚：現在缺的是方向、力度、量能，還是風險尺。</p>
+        <p class="small">比較頁不是替你找「永遠最準」的指標，而是幫你看清楚：現在缺的是方向、力度、成交量，還是風險尺。</p>
         <table class="score-table">
           <tbody>
             ${rows.map(([label, text]) => `<tr><th>${escapeHtml(label)}</th><td>${escapeHtml(text)}</td></tr>`).join("")}
@@ -5142,7 +5151,7 @@ function renderJournalQualityStandard() {
 function renderComboRoleModel() {
   const rows = [
     ["主指標", "回答最重要問題，例如趨勢是否成立或動能是否改善。"],
-    ["確認指標", "回答不同類型證據，例如量能是否配合或市場寬度是否支持。"],
+    ["確認指標", "回答不同類型證據，例如成交量是否配合或市場寬度是否支持。"],
     ["風險工具", "用 ATR、R 值、支撐阻力或通道決定止蝕和倉位。"],
     ["否決條件", "寫下何時全部訊號都失效；沒有否決條件，組合只是心理安慰。"],
   ];
@@ -5279,15 +5288,15 @@ function practiceMissionsFor(item) {
       ...practiceMissions.slice(2),
     ];
   }
-  if (item.category === "成交量" || item.uses.includes("確認量能")) {
+  if (item.category === "成交量" || item.uses.includes("確認成交量")) {
     return [
       {
-        title: `${item.abbr} 量能確認任務`,
+        title: `${item.abbr} 成交量確認任務`,
         task: `找一段突破走勢，判斷 ${item.abbr} 是否支持市場接受新價格。`,
         pass: "能分辨有量突破、無量突破和放量失敗，不把每次放量都當好事。",
       },
       {
-        title: "假突破量能任務",
+        title: "假突破成交量任務",
         task: "找一段突破後收回區間的走勢，寫出成交量是否支持或否定突破。",
         pass: "能說出哪一支 K 線令突破失效，並知道不應追價。",
       },
@@ -5928,7 +5937,7 @@ const candlestickPatterns = [
     name: "內包 / 外包 K 線",
     signal: "內包代表波幅收縮，外包代表波幅擴張；兩者核心是波幅狀態，不是方向預言。",
     use: "內包可等突破，外包可檢查是否假突破或主導權轉換。",
-    avoid: "沒有位置和量能時，內包突破很容易變成假突破。",
+    avoid: "沒有位置和成交量時，內包突破很容易變成假突破。",
   },
   {
     slug: "spinning-top",
@@ -6062,7 +6071,7 @@ const candlestickPatterns = [
     type: "五支",
     name: "Ladder Bottom",
     signal: "連跌後出現逐步減弱，再由較強陽燭打破下降節奏。",
-    use: "適合配合超跌、支撐和量能作底部觀察。",
+    use: "適合配合超跌、支撐和成交量作底部觀察。",
     avoid: "沒有強陽確認前，只是跌勢放慢，不是見底。",
   },
   {
@@ -6123,7 +6132,7 @@ const candlestickContextCards = [
   },
   {
     title: "成交量是旁證",
-    body: "放量突破、縮量回踩、放量跌穿，各自含義不同。量能不是必須每天放大，但關鍵燭沒有量能，可信度要打折。",
+    body: "放量突破、縮量回踩、放量跌穿，各自含義不同。成交量不是必須每天放大，但關鍵燭沒有成交量，可信度要打折。",
   },
   {
     title: "大週期定方向",
@@ -6184,7 +6193,7 @@ function renderCandlestickHeroSvg() {
         ${renderCandleGlyph(440, 76, 58, 46, 116, 40)}
         <rect x="515" y="72" width="148" height="224" rx="10" fill="#ffffff" stroke="#dce4ea"/>
         <text x="540" y="106" fill="#0f766e" font-size="17" font-weight="800">判讀次序</text>
-        ${["位置", "收盤", "量能", "確認", "R 值"].map((text, i) => `
+        ${["位置", "收盤", "成交量", "確認", "R 值"].map((text, i) => `
           <g transform="translate(538 ${134 + i * 32})">
             <rect width="16" height="16" rx="3" fill="${i < 3 ? "#dff4ef" : "#fff7ed"}" stroke="${i < 3 ? "#0f766e" : "#d97706"}"/>
             <line x1="27" x2="94" y1="8" y2="8" stroke="#647282" stroke-width="3" stroke-linecap="round"/>
@@ -6379,7 +6388,7 @@ function candlestickReaderResult(values) {
   if (values.location === "support" || values.location === "resistance" || values.location === "breakout") score += 2;
   else notes.push("位置不夠清楚，先不要把形態當成交易訊號。");
   if (values.volume === "rising") score += 1;
-  else if (values.volume === "low") notes.push("量能偏弱，形態可信度下降。");
+  else if (values.volume === "low") notes.push("成交量偏弱，形態可信度下降。");
   if (values.confirmation === "follow") score += 2;
   else if (values.confirmation === "fail") notes.push("下一支已經否定形態，應放棄原來劇本。");
   if (
@@ -6421,7 +6430,7 @@ function renderCandlestickReader() {
     <article class="trade-card candle-reader" data-candlestick-reader>
       <span class="lesson-label">判讀助手</span>
       <h2>陰陽燭判讀器</h2>
-      <p class="small">這不是買賣建議，而是幫你把「形態、位置、量能、確認」排成可檢查流程。</p>
+      <p class="small">這不是買賣建議，而是幫你把「形態、位置、成交量、確認」排成可檢查流程。</p>
       <div class="candle-reader-grid">
         <label>大方向
           <select class="select" data-candle-field="trend">
@@ -6839,7 +6848,7 @@ function renderIndicatorLevelSections(items) {
 function renderIndicatorLibraryDecisionGuide() {
   const rows = [
     ["第一個問題", "現在是趨勢、震盪、突破、回調，還是高波動恐慌？", "先決定市況，再決定指標。"],
-    ["第二個問題", "我缺的是方向、力度、量能、波動，還是風險距離？", "每類只選一個主工具，避免重複計票。"],
+    ["第二個問題", "我缺的是方向、力度、成交量、波動，還是風險距離？", "每類只選一個主工具，避免重複計票。"],
     ["第三個問題", "如果訊號錯了，哪個價位或條件會否定它？", "沒有失效條件的指標，不應用來入場。"],
     ["第四個問題", "這個工具在當前週期是否太慢或太敏感？", "調參數前先問市場節奏，不要只追求貼價。"],
   ];
@@ -6888,7 +6897,7 @@ function renderIndicatorLibraryStarter() {
     },
     {
       step: "02",
-      title: "再看量能",
+      title: "再看成交量",
       slug: "volume",
       body: "突破是否有市場認同。",
     },
@@ -7503,7 +7512,7 @@ function renderComparisonDecisionMatrix() {
   const rows = [
     ["方向", "SMA / EMA", "先看大方向。"],
     ["力度", "RSI / MACD", "確認動能。"],
-    ["量能", "Volume / OBV", "檢查真假突破。"],
+    ["成交量", "Volume / OBV", "檢查真假突破。"],
     ["風險", "ATR / Bollinger", "估算止蝕距離。"],
   ];
   return `
@@ -7763,7 +7772,7 @@ function renderCompareLab() {
 
 function renderComparisonOutputGuide() {
   const rows = [
-    ["互補", "兩個指標回答不同問題，例如趨勢配量能、動能配波幅。", "可以保留，但要指定誰是主訊號，誰只負責確認。"],
+    ["互補", "兩個指標回答不同問題，例如趨勢配成交量、動能配波幅。", "可以保留，但要指定誰是主訊號，誰只負責確認。"],
     ["重複", "兩個指標來自相近計算，例如 RSI、KD、Stoch RSI 同時出現。", "只保留最熟悉的一個，把另一個位置留給風險或成交量。"],
     ["衝突", "趨勢指標看多，但動能背離或成交量不支持。", "不要急著交易，先等價格結構或成交量給出下一步。"],
     ["缺口", "有方向和入場，但沒有止蝕、波幅或倉位工具。", "補 ATR、結構止蝕或 R 值計算，再談入場。"],
@@ -7994,7 +8003,7 @@ function playgroundNotes() {
   if (ma) notes.push("MA 開啟時，先觀察斜率，再看價格是否反覆站上或跌破。");
   if (bands) notes.push("布林帶開啟時，留意帶寬變化，碰軌不等於立即反轉。");
   if (rsi) notes.push("RSI 開啟時，留意 30/70 區間與背離，而不是只看單次穿越。");
-  if (volume) notes.push("成交量開啟時，觀察突破是否有量能確認。");
+  if (volume) notes.push("成交量開啟時，觀察突破是否有成交量確認。");
   notes.push("把圖表轉成交易計劃前，必須先寫下入場、止蝕、第一目標和每筆最大虧損。");
   notes.push("若你需要把止蝕移遠才覺得舒服，通常代表入場太急或倉位太大。");
   return notes;
@@ -8035,12 +8044,12 @@ function playgroundQuiz() {
     breakout: {
       question: "波動壓縮後突破，最應該檢查甚麼？",
       answers: [
-        ["volume", "收盤是否確認、量能是否配合、上方阻力和 R 值是否合格。"],
+        ["volume", "收盤是否確認、成交量是否配合、上方阻力和 R 值是否合格。"],
         ["allin", "突破一出現就重倉追入，避免錯過。"],
         ["parameter", "把參數調到剛好支持突破。"],
       ],
       correct: "volume",
-      explain: "突破要看確認、量能、阻力和風險回報，不是單看一支 K 線。"
+      explain: "突破要看確認、成交量、阻力和風險回報，不是單看一支 K 線。"
     },
   };
   const quiz = quizzes[state.playground.caseName] || quizzes.uptrend;
@@ -9108,9 +9117,9 @@ function tvStrategyPfText(item) {
 
 function tvStrategyStatusLabel(status) {
   const labels = {
-    accepted: "已通過",
-    "support-only": "只作輔助研究",
-    rejected: "不納入案例庫",
+    accepted: "已完成全部核對",
+    "support-only": "待完成核對",
+    rejected: "不採用",
   };
   return labels[status] || "待審";
 }
@@ -9148,29 +9157,29 @@ function renderTradingViewStrategyDatasetPanel() {
       </section>
     `;
   }
-  const accepted = tvStrategyDataCount("acceptedCases");
+  const completedCount = tvStrategyDataCount("acceptedCases");
   const target = tvStrategyData.targetAcceptedCases;
   const rawLeadsCollected = tvStrategyData.rawLeadsCollected || tvStrategyDataCount("rawLeadsCollected");
-  const supportOnly = tvStrategyDataCount("supportOnlyCases");
-  const rejected = tvStrategyDataCount("rejectedCases");
+  const pendingCount = tvStrategyDataCount("supportOnlyCases");
+  const excludedCount = tvStrategyDataCount("rejectedCases");
   return `
     <section class="site-data-panel">
       <div class="section-head">
         <div>
           <h2>TradingView 策略案例審核進度</h2>
-          <p>只把通過授權、來源、回測和參數門檻的<span class="no-break">合資格策略</span>列為<span class="no-break">正式案例</span>；未通過者列為<span class="no-break">支援研究</span>或<span class="no-break">拒收</span>。</p>
+          <p>案例須通過授權、來源、回測及參數核對，才會列作正式案例；資料未齊者保留為待核對，證據不合格者則不採用。</p>
         </div>
-        <span class="site-data-status ${accepted >= target ? "is-good" : "is-warn"}">${accepted >= target ? "目標達成" : "審核中"}</span>
+        <span class="site-data-status ${completedCount >= target ? "is-good" : "is-warn"}">${completedCount >= target ? "目標達成" : "審核中"}</span>
       </div>
       <div class="site-data-grid">
         <div class="site-data-metric"><span class="site-data-kpi">${formatCount(rawLeadsCollected)}</span><span class="site-data-label">已收集候選策略 / 目標 ${formatCount(tvStrategyData.rawLeadTarget)}</span></div>
-        <div class="site-data-metric"><span class="site-data-kpi">${formatCount(accepted)}</span><span class="site-data-label">已通過案例 / 目標 ${formatCount(target)}</span></div>
-        <div class="site-data-metric"><span class="site-data-kpi">${formatCount(supportOnly)}</span><span class="site-data-label">只作輔助研究，不計入正式案例</span></div>
-        <div class="site-data-metric"><span class="site-data-kpi">${formatCount(rejected)}</span><span class="site-data-label">不納入案例庫</span></div>
+        <div class="site-data-metric"><span class="site-data-kpi">${formatCount(completedCount)}</span><span class="site-data-label">已完成核對 / 目標 ${formatCount(target)}</span></div>
+        <div class="site-data-metric"><span class="site-data-kpi">${formatCount(pendingCount)}</span><span class="site-data-label">待完成核對，不計入正式案例</span></div>
+        <div class="site-data-metric"><span class="site-data-kpi">${formatCount(excludedCount)}</span><span class="site-data-label">不採用</span></div>
       </div>
       <ul class="site-data-list">
         <li><strong>資料版本</strong><span>${escapeHtml(tvStrategyData.version)}｜${escapeHtml(tvStrategyData.generatedAt.slice(0, 10) || "未標示")}</span></li>
-        <li><strong>收集方式</strong><span>先收集 ${formatCount(tvStrategyData.rawLeadTarget)} 個候選策略，再按來源、參數、回測與風險門檻分為已通過、只作輔助研究或不納入案例庫。</span></li>
+        <li><strong>收集方式</strong><span>先收集 ${formatCount(tvStrategyData.rawLeadTarget)} 個候選策略，再按來源、參數、回測及風險門檻分為已完成核對、待完成核對或不採用。</span></li>
         <li><strong>前台規則</strong><span>來源網址只保留在內部審核資料；策略頁不提供外部連結、iframe 或 TradingView widget。</span></li>
       </ul>
       <p class="site-data-note">${escapeHtml(tvStrategyData.metricFramingZh)}</p>
@@ -9214,37 +9223,38 @@ function tvStrategyAuditStatusLabel(status) {
 
 function tvStrategyScriptStatusLabel(status) {
   const labels = {
-    local_template: "本地骨架",
-    not_available: "不收錄原碼",
+    local_template: "本站教學範本",
+    not_available: "不收錄原始碼",
     not_applicable: "不適用",
-    "verified-open-source": "已核對公開原碼",
+    "verified-open-source": "已核對公開原始碼",
   };
   return labels[status] || "待核";
 }
 
 function tvStrategySourceCodeStatusLabel(status) {
   const labels = {
-    local_template_only: "只顯示本地教學骨架",
-    blocked_invite_only: "限受邀腳本，禁止收錄原碼",
-    blocked_protected: "受保護腳本，禁止收錄原碼",
+    local_template_only: "只顯示本站教學範本",
+    blocked_invite_only: "受邀腳本，不收錄原始碼",
+    blocked_protected: "受保護腳本，不收錄原始碼",
     excluded_unverified: "來源未核實，暫不收錄",
     not_applicable: "不適用",
-    included_original_open_source: "已收錄獲准公開原碼",
-    permissioned_original_source: "已獲授權原碼",
+    included_original_open_source: "已收錄獲准公開的原始碼",
+    permissioned_original_source: "已獲原始碼授權",
   };
   return labels[status] || "待核";
 }
 
 function renderTradingViewStrategyLibrary() {
   const visibleCases = tradingViewStrategyVisibleCases();
-  const rejectedCases = tvStrategyData.cases.filter((item) => item.includeStatus === "rejected");
+  const excludedCases = tvStrategyData.cases.filter((item) => item.includeStatus === "rejected");
+  const completedLibraryCount = tvStrategyDataCount("acceptedCases");
   app.innerHTML = `
     <section class="page-band visual-band">
       <div class="visual-copy">
         <div class="page-title">
           <span class="eyebrow">TradingView 策略案例庫</span>
           <h1 class="tv-strategy-title">策略案例研究庫</h1>
-          <p>以下案例用來示範研究步驟，不是推薦名單。現時只有 ${formatCount(tvStrategyDataCount("acceptedCases"))} 個案例的來源、設定、回測和風險欄位較完整；其餘樣本只作研究示範。</p>
+          <p>以下案例用來示範研究步驟，不是推薦名單。目前有 ${formatCount(completedLibraryCount)} 個案例完成來源、設定、回測及風險核對；其餘樣本只作研究示範。</p>
         </div>
         <div class="card-actions">
           <a class="button" href="#/tv-strategies">看審核方法</a>
@@ -9271,13 +9281,13 @@ function renderTradingViewStrategyLibrary() {
     </section>
 
     ${renderLessonFold(
-      "拒收樣本",
-      "展開拒收原因",
-      "拒收案例保留作資料質素教材，不在公開案例數中計算。",
+      "不採用樣本",
+      "展開不採用原因",
+      "這些案例只保留作資料質素教材，不計入正式案例。",
       `
         <section>
           <div class="card-grid">
-            ${rejectedCases.map(renderTradingViewStrategyCard).join("")}
+            ${excludedCases.map(renderTradingViewStrategyCard).join("")}
           </div>
         </section>
       `,
@@ -9348,15 +9358,15 @@ function renderTradingViewStrategyProperties(item) {
   const properties = safeRecord(item.strategyProperties);
   const gaps = safeArray(settings.gaps);
   const propertyLabels = {
-    initialCapital: "Initial capital",
-    baseCurrency: "Base currency",
-    orderSize: "Order size",
-    pyramiding: "Pyramiding",
-    commission: "Commission",
-    slippage: "Slippage",
-    fillAssumptions: "Fill / bar magnifier",
-    margin: "Margin",
-    recalculation: "Recalculation",
+    initialCapital: "初始資金",
+    baseCurrency: "基礎貨幣",
+    orderSize: "下單數量",
+    pyramiding: "加倉設定",
+    commission: "手續費",
+    slippage: "滑價",
+    fillAssumptions: "成交假設／Bar Magnifier",
+    margin: "保證金設定",
+    recalculation: "重新計算設定",
   };
   const rows = Object.entries(propertyLabels)
     .map(([key, label]) => ({ key, label, value: properties[key] }))
@@ -9367,7 +9377,7 @@ function renderTradingViewStrategyProperties(item) {
   return `
     <div class="tv-audit-summary">
       <span class="site-data-status is-warn">${escapeHtml(tvStrategyAuditStatusLabel(safeText(settings.status, "partial")))}</span>
-      <p>${escapeHtml(safeText(settings.basis, "正式 accepted 前需要核實 Strategy Tester Properties、Inputs 和 Strategy Report。"))}</p>
+      <p>${escapeHtml(safeText(settings.basis, "列作正式案例前，須核對策略屬性（Properties）、輸入參數（Inputs）及策略測試報告（Strategy Report）。"))}</p>
     </div>
     <table class="comparison-table tv-settings-table">
       <tbody>
@@ -9731,7 +9741,7 @@ function renderStrategyCaseDetailCompact(slug) {
 function renderScriptSignalModules() {
   const modules = [
     ["市況濾網", "先判斷趨勢、震盪、突破或高波動環境，避免把同一套訊號套用到所有市況。"],
-    ["多指標共振", "把均線、動能、量能和波動分工處理，只在不同證據方向一致時提高訊號級別。"],
+    ["多指標共振", "把均線、動能、成交量和波動分工處理，只在不同證據方向一致時提高訊號級別。"],
     ["假突破降級", "突破後若成交量不足、價格收回關鍵位或風險回報變差，訊號會由交易候選降為觀察。"],
     ["ATR 風險距離", "用波動率估算止蝕距離和倉位壓力，避免每隻股票都用同一個固定百分比。"],
     ["Alert 提醒", "把條件變成 TradingView alert，等訊號成熟，而不是長時間盯圖追價。"],
@@ -9793,7 +9803,7 @@ function renderScriptPineBlueprint() {
     ["市場模式", "趨勢、區間、突破、高波動", "決定哪些訊號可升級，哪些只能觀察。"],
     ["趨勢濾網", "EMA / SMA / Ichimoku", "先排除逆勢追入和無結構交易。"],
     ["動能條件", "RSI / MACD / KDJ", "只看力度是否改善，不把超買超賣當命令。"],
-    ["量能確認", "Volume / OBV / VWAP", "判斷突破或回踩是否得到市場接受。"],
+    ["成交量確認", "Volume / OBV / VWAP", "判斷突破或回踩是否得到市場接受。"],
     ["風險距離", "ATR / 前高前低 / 結構位", "輸出止蝕、2R 目標和倉位壓力。"],
   ];
   return `
@@ -9826,8 +9836,8 @@ function renderScriptAlertChecklist() {
       <span class="lesson-label">警報條件</span>
       <h2>Alert 只提醒成熟條件，不提醒情緒</h2>
       <ul class="plain-list">
-        <li>候選訊號：市況、位置、動能、量能和 R 值同時合格，才發出主要提醒。</li>
-        <li>降級訊號：突破後跌回區間、量能不足、止蝕距離過大，提醒改為觀察。</li>
+        <li>候選訊號：市況、位置、動能、成交量和 R 值同時合格，才發出主要提醒。</li>
+        <li>降級訊號：突破後跌回區間、成交量不足、止蝕距離過大，提醒改為觀察。</li>
         <li>取消訊號：跌穿失效位、重新收回關鍵位、風險回報低於門檻，提醒放棄原劇本。</li>
         <li>復盤訊號：交易後記錄觸發條件、執行價格、滑價和是否照規則離場。</li>
       </ul>
@@ -10596,7 +10606,7 @@ function analyzeCombo(slugs) {
     lines.push("缺少風險工具：建議加入 ATR、布林帶或其他管理風險工具。");
   }
   if (!hasVolume) {
-    lines.push("缺少量能確認：若交易突破或反轉，可加入 OBV、MFI 或成交量。");
+    lines.push("缺少成交量確認：若交易突破或反轉，可加入 OBV、MFI 或成交量。");
   }
   if (!hasStructure) lines.push("缺少價格結構：即使指標組合合格，也要人工標出支撐、阻力、前高前低或通道。");
   if (hasMarket) lines.push("已有大市/相對背景工具，適合先判斷是否進攻，再回到個股找觸發。");
@@ -10608,7 +10618,7 @@ function analyzeCombo(slugs) {
     : repeated.length
       ? "組合有重複訊號，先精簡"
       : !hasVolume
-        ? "組合可用，但仍欠量能確認"
+        ? "組合可用，但仍欠成交量確認"
         : "組合角色清楚，可再做市況檢查";
   return {
     tone,
@@ -10677,7 +10687,7 @@ function renderComboChecker() {
           "組合輸出標準",
           "組合檢查後，要決定保留、刪除或補充",
           [
-            ["保留", "如果每個指標負責不同問題，例如方向、量能、風險，就保留並指定主次角色。"],
+            ["保留", "如果每個指標負責不同問題，例如方向、成交量、風險，就保留並指定主次角色。"],
             ["刪除", "如果兩個指標回答同一個問題，例如多個動能工具同時看轉折，就刪掉較不熟悉的一個。"],
             ["補充", "如果組合只有入場訊號，沒有止蝕、波幅或倉位工具，就先補風險工具。"],
           ],
@@ -10910,7 +10920,7 @@ function renderCandlestickOverview() {
       ${compactActionList([
         { label: "1", title: "先懂結構", body: "開高低收。", href: "#/candlesticks/anatomy" },
         { label: "2", title: "再看形態", body: "只在關鍵位置讀。", href: "#/candlesticks/patterns" },
-        { label: "3", title: "加入情境", body: "配合趨勢和量能。", href: "#/candlesticks/context" },
+        { label: "3", title: "加入情境", body: "配合趨勢和成交量。", href: "#/candlesticks/context" },
         { label: "4", title: "寫劇本", body: "先定失效位。", href: "#/candlesticks/playbook" },
       ])}
     </section>
@@ -11099,7 +11109,7 @@ function renderCandlestickPlaybook() {
         <article class="info-card">
           <span class="lesson-label">交易模板</span>
           <h2>把陰陽燭寫成交易計劃</h2>
-          <div class="formula">如果「位置 + 形態 + 量能 + 確認」同時成立，才考慮交易；如果跌穿/升穿失效位，立即放棄原劇本。</div>
+          <div class="formula">如果「位置 + 形態 + 成交量 + 確認」同時成立，才考慮交易；如果跌穿/升穿失效位，立即放棄原劇本。</div>
           <p class="small">你可以把這句放進交易日誌：我不是因為某個形態入場，而是因為形態在關鍵位置出現，並且風險回報合格。</p>
         </article>
         <article class="notice">
@@ -11162,7 +11172,7 @@ function renderCandlestickSectionBrief(section) {
     ],
     context: [
       { step: "1", title: "先看位置", body: "支撐阻力比名稱重要。" },
-      { step: "2", title: "再看量能", body: "突破要有人參與。" },
+      { step: "2", title: "再看成交量", body: "突破要有人參與。" },
       { step: "3", title: "最後看風險", body: "R 值不夠就放棄。" },
     ],
     playbook: [
@@ -11320,7 +11330,7 @@ const hongKongEditorialReplacements = [
   ["自研腳本", "自家開發腳本"],
   ["Strategy Tester", "策略測試器"],
   ["Alert", "提示"],
-  ["量能", "成交量"],
+  ["成交量", "成交量"],
   ["回踩", "回試"],
   ["金叉", "黃金交叉"],
   ["死叉", "死亡交叉"],
@@ -11484,7 +11494,7 @@ const marketCaseProfiles = {
     symbol: "0700.HK",
     name: "Tencent Holdings",
     period: "壓縮突破/消息波動",
-    label: "突破與量能案例",
+    label: "突破與成交量案例",
     source: "Yahoo Finance chart API 本地快照",
   },
 };

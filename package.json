@@ -11,7 +11,9 @@
     "build": "vinext build",
     "start": "vinext start",
     "test": "node --test tests/rendered-html.test.mjs",
-    "check": "tsc --noEmit && npm run build && npm test"
+    "test:copy": "node --test scripts/test_copy_integrity.mjs",
+    "sync:hk-copy": "node scripts/apply_hk_editorial_copy.mjs",
+    "check": "tsc --noEmit && npm run build && npm test && npm run test:copy"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",

@@ -7,6 +7,7 @@ import test from 'node:test';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DATA_DIR = path.join(ROOT, 'data', 'site');
 const CURRENT_INDICATORS_PATH = path.join(DATA_DIR, 'technical_indicators_site_data.json');
+const EDITORIAL_JUDGMENTS_PATH = path.join(DATA_DIR, 'indicator_editorial_judgments_hk.json');
 
 export async function readCatalog(root = ROOT) {
   const catalogPath = path.join(root, 'data', 'site', 'public_copy.json');
@@ -98,6 +99,20 @@ test('catalog contains exactly 82 indicator records', async () => {
   const records = indicatorRecords(catalog);
   // Then every public indicator has exactly one catalog record
   assert.equal(records.length, 82);
+});
+
+test('Hong Kong editorial judgments cover and match every indicator', async () => {
+  const records = await currentIndicatorRecords();
+  const editorialJudgments = JSON.parse(await readFile(EDITORIAL_JUDGMENTS_PATH, 'utf8'));
+  assert.equal(Object.keys(editorialJudgments).length, records.length);
+
+  for (const record of records) {
+    assert.equal(
+      record.research.judgmentZh,
+      editorialJudgments[record.siteSlug],
+      `editorial judgment mismatch: ${record.siteSlug}`,
+    );
+  }
 });
 
 test('current indicator JSON has no legacy judgment templates', async () => {
