@@ -1,4 +1,6 @@
 import { indicators, strategies } from "@/lib/site-data";
+import { isTrustRoute, trustRoutePaths } from "@/lib/trust-content";
+import type { TrustRoutePath } from "@/lib/trust-content";
 
 export type SiteRoute =
   | { readonly kind: "home" }
@@ -7,6 +9,7 @@ export type SiteRoute =
   | { readonly kind: "strategyCases" }
   | { readonly kind: "strategyCase"; readonly slug: string }
   | { readonly kind: "tvStrategies" }
+  | { readonly kind: "trust"; readonly path: TrustRoutePath }
   | { readonly kind: "simple"; readonly slug: SimpleRouteSlug };
 
 export type SimpleRouteSlug =
@@ -49,6 +52,8 @@ export function parseRoute(parts: readonly string[]): SiteRoute {
   if (first === "strategy-cases" && second) return { kind: "strategyCase", slug: second };
   if (first === "strategy-cases") return { kind: "strategyCases" };
   if (first === "tv-strategies") return { kind: "tvStrategies" };
+  const joined = parts.join("/");
+  if (isTrustRoute(joined)) return { kind: "trust", path: joined };
   if (isSimpleRoute(first)) return { kind: "simple", slug: first };
   return { kind: "simple", slug: "learn" };
 }
@@ -60,6 +65,7 @@ export function staticRouteParams(): readonly { readonly slug: readonly string[]
     { slug: ["strategy-cases"] },
     { slug: ["tv-strategies"] },
     ...simpleRoutes.map((slug) => ({ slug: [slug] })),
+    ...trustRoutePaths.map((path) => ({ slug: path.split("/") })),
   ];
   const indicatorRoutes = indicators.map((item) => ({ slug: ["indicators", item.siteSlug] }));
   const strategyRoutes = strategies.map((item) => ({ slug: ["strategy-cases", item.slug] }));

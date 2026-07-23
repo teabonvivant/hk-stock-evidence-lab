@@ -5,6 +5,7 @@ import { AdvancedDisclosure } from "@/components/site/advanced-disclosure";
 import { IndicatorTeachingChart } from "@/components/site/indicator-chart";
 import { IndicatorBeginnerGuide, IndicatorBeginnerPractice } from "@/components/site/indicator-beginner-guide";
 import { PrimaryLink, Section } from "@/components/site/page-shell";
+import { ResearchStatusBanner } from "@/components/site/research-status-banner";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { beginnerGuideFor } from "@/lib/indicator-beginner-guide";
@@ -36,7 +37,9 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
               <Badge>{item.difficulty}</Badge>
             </div>
             <div className="space-y-3">
-              <h1 className="hero-title max-w-[13ch] text-4xl font-black leading-[1.05] text-[var(--ink)] md:text-5xl">{item.nameZh}</h1>
+              <h1 className="hero-title max-w-[13ch] text-4xl font-black leading-[1.05] text-[var(--ink)] md:text-5xl">
+                {item.nameZh === "指數平滑異同移動平均線" ? <>指數平滑<span className="whitespace-nowrap">異同</span>移動平均線</> : item.nameZh}
+              </h1>
               <p className="text-sm font-semibold text-[var(--primary-strong)]">{item.nameEn} · {item.abbr}</p>
               <p className="hero-copy max-w-[64ch] leading-7 text-[var(--muted)]">{item.summary}</p>
             </div>
@@ -55,6 +58,8 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
           <a href="#practice"><ListChecks className="size-4" aria-hidden="true" />動手練習</a>
         </nav>
       </section>
+
+      <ResearchStatusBanner status="research" methodVersion="指標方法 v1.0" />
 
       <IndicatorBeginnerGuide item={item} />
 

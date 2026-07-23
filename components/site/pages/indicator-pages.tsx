@@ -9,9 +9,9 @@ export function IndicatorsPage() {
   return (
     <div>
       <HeroPanel
-        eyebrow="82 個教學指標"
-        title="82 個指標，不必逐一背誦"
-        body="由五個常見問題入手：價格位置、成交確認、趨勢方向、動能強弱和風險幅度。每個問題先選一個代表指標，較容易建立清楚框架。"
+        eyebrow="82 個技術指標 · 按用途學習"
+        title="先決定要回答甚麼，再選指標"
+        body="由價格位置、成交確認、趨勢方向、動能強弱和風險幅度五個問題入手。每個問題先用一個工具回答，較容易分清訊號、限制與失效條件。"
         imageKey="indicators"
         actions={
           <>
@@ -35,7 +35,7 @@ export function IndicatorsPage() {
           })}
         </ol>
       </Section>
-      <Section title="有需要才向外延伸" body="知道要回答甚麼問題，才按用途、難度或名稱搜尋。指標多，並不代表判斷更可靠。">
+      <Section title="按問題搜尋完整指標百科" body="知道要回答甚麼問題，才按用途、難度或名稱搜尋。指標多，並不代表判斷更可靠。">
         <IndicatorLibrary items={indicatorSummaries} categories={categoryCounts().map((item) => item.name)} />
       </Section>
     </div>

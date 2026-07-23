@@ -30,19 +30,19 @@ const publicCopyBySlug = new Map(publicCopy.indicators.map((item) => [item.siteS
 for (const indicator of siteData.indicators) {
   const judgment = judgments[indicator.siteSlug];
   indicator.research.judgmentZh = judgment;
-  indicator.summary = localizeVolumeTerm(indicator.summary);
-  indicator.uses = indicator.uses.map(localizeVolumeTerm);
-  indicator.signals = indicator.signals.map(localizeVolumeTerm);
-  indicator.mistakes = indicator.mistakes.map(localizeVolumeTerm);
-  indicator.limitations = indicator.limitations.map(localizeVolumeTerm);
+  indicator.summary = localizeHongKongTerms(indicator.summary);
+  indicator.uses = indicator.uses.map(localizeHongKongTerms);
+  indicator.signals = indicator.signals.map(localizeHongKongTerms);
+  indicator.mistakes = indicator.mistakes.map(localizeHongKongTerms);
+  indicator.limitations = indicator.limitations.map(localizeHongKongTerms);
 
   const publicIndicator = publicCopyBySlug.get(indicator.siteSlug);
   if (!publicIndicator) throw new Error(`Public-copy indicator missing: ${indicator.siteSlug}`);
   publicIndicator.judgmentZh = judgment;
-  publicIndicator.summary = localizeVolumeTerm(publicIndicator.summary);
-  publicIndicator.signals = publicIndicator.signals.map(localizeVolumeTerm);
-  publicIndicator.mistakes = publicIndicator.mistakes.map(localizeVolumeTerm);
-  publicIndicator.limitations = publicIndicator.limitations.map(localizeVolumeTerm);
+  publicIndicator.summary = localizeHongKongTerms(publicIndicator.summary);
+  publicIndicator.signals = publicIndicator.signals.map(localizeHongKongTerms);
+  publicIndicator.mistakes = publicIndicator.mistakes.map(localizeHongKongTerms);
+  publicIndicator.limitations = publicIndicator.limitations.map(localizeHongKongTerms);
 }
 
 for (const item of coreLearning.items) localizeLearningItem(item);
@@ -58,36 +58,44 @@ await writeFile(siteWrapperPath, `window.__TI_DATA__ = ${siteJson.trimEnd()};\n`
 await writeFile(publicCopyPath, publicJson, "utf8");
 await writeFile(publicWrapperPath, `window.__PUBLIC_COPY__ = ${publicJson.trimEnd()};\n`, "utf8");
 await writeFile(coreLearningPath, coreLearningJson, "utf8");
-await writeFile(legacyAppPath, localizeVolumeTerm(legacyApp), "utf8");
+await writeFile(legacyAppPath, localizeHongKongTerms(legacyApp), "utf8");
 
 console.log(`Applied ${siteSlugs.length} Hong Kong Chinese editorial judgments.`);
 
-function localizeVolumeTerm(value) {
+function localizeHongKongTerms(value) {
   return value
     .replaceAll("價格量能", "價量配合")
     .replaceAll("突破量能", "突破時的成交量")
-    .replaceAll("量能", "成交量");
+    .replaceAll("量能", "成交量")
+    .replaceAll("收盤價", "收市價")
+    .replaceAll("跳空", "裂口")
+    .replaceAll("上穿", "升穿")
+    .replaceAll("下穿", "跌穿")
+    .replaceAll("止損", "止蝕")
+    .replaceAll("止盈", "止賺")
+    .replaceAll("當沖", "即市")
+    .replaceAll("大盤", "大市");
 }
 
 function localizeDeep(value) {
   if (Array.isArray(value)) {
     for (let index = 0; index < value.length; index += 1) {
-      value[index] = typeof value[index] === "string" ? localizeVolumeTerm(value[index]) : value[index];
+      value[index] = typeof value[index] === "string" ? localizeHongKongTerms(value[index]) : value[index];
       localizeDeep(value[index]);
     }
     return;
   }
   if (!value || typeof value !== "object") return;
   for (const [key, entry] of Object.entries(value)) {
-    value[key] = typeof entry === "string" ? localizeVolumeTerm(entry) : entry;
+    value[key] = typeof entry === "string" ? localizeHongKongTerms(entry) : entry;
     localizeDeep(value[key]);
   }
 }
 
 function localizeLearningItem(item) {
   for (const [key, value] of Object.entries(item)) {
-    if (typeof value === "string") item[key] = localizeVolumeTerm(value);
-    if (Array.isArray(value) && value.every((entry) => typeof entry === "string")) item[key] = value.map(localizeVolumeTerm);
+    if (typeof value === "string") item[key] = localizeHongKongTerms(value);
+    if (Array.isArray(value) && value.every((entry) => typeof entry === "string")) item[key] = value.map(localizeHongKongTerms);
   }
 }
 

@@ -1,8 +1,9 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { HeroPanel, MetricTile, PrimaryLink, Section } from "@/components/site/page-shell";
+import { HeroPanel, PrimaryLink, Section } from "@/components/site/page-shell";
+import { ResearchStatusBanner } from "@/components/site/research-status-banner";
 import { StrategyFilter } from "@/components/site/strategy-filter";
-import { findStrategy, strategies, strategyStatusCounts, tradingViewData } from "@/lib/site-data";
+import { findStrategy, strategies, tradingViewData } from "@/lib/site-data";
 import {
   evidenceStatusLabel,
   parameterRoleLabel,
@@ -22,22 +23,20 @@ export function StrategyCasesPage() {
   return (
     <div>
       <HeroPanel
-        eyebrow="TradingView 策略案例庫"
-        title="數字只是起點，證據才是判斷基礎"
-        body="盈利因子（PF）、勝率和回撤只屬指定測試的結果。沒有完整參數、交易成本、樣本期和原始碼資料，漂亮數字也不能直接比較。"
+        eyebrow="回測研究庫"
+        title="來源聲稱，不等於本站結論"
+        body="外部頁面的盈利因子、勝率或回撤，在本站獨立重現前只會標示為來源聲稱。每張研究卡先列證據缺口，再交代參數、成本、樣本期與原始碼狀態。"
         imageKey="tv"
         actions={<PrimaryLink href="/tv-strategies">了解回測審核方法</PrimaryLink>}
       />
-      <Section title="案例審核狀態" body={tradingViewData.metricFramingZh}>
-        <div className="metric-grid">
-          {strategyStatusCounts().map((item) => (
-            <MetricTile key={item.name} label={strategyStatusLabel(item.name)} value={item.count} tone={strategyStatusTone(item.name)} />
-          ))}
-          <MetricTile label="本站 Pine 教學範本" value={tradingViewData.stats.localTemplateCases} tone="warn" />
-          <MetricTile label="原始碼不公開" value={tradingViewData.stats.blockedCodeCases} tone="info" />
+      <Section title="研究發布狀態" body="完整發布閘門包括可重現資料、完整設定、保守成本、失效測試、樣本外測試與具名覆核。">
+        <div className="empty-state">
+          <strong>目前沒有研究通過完整發布閘門</strong>
+          <p>以下項目保留作方法與風險教材；狀態並不代表本站認可其績效或適合實盤。</p>
+          <PrimaryLink href="/methodology/backtesting" variant="secondary">查看回測發布閘門</PrimaryLink>
         </div>
       </Section>
-      <Section title="本站策略案例" body="每宗案例只按現有證據分級。來源及授權未核對的內容會清楚標示，不會當作正式結論。">
+      <Section title="待核對研究條目" body="篩選只按證據狀態與程式碼可見度分類，不按績效數字排名。">
         <StrategyFilter items={strategies.map((item) => ({
           slug: item.slug,
           title: item.shortTitle || item.title,
@@ -47,10 +46,6 @@ export function StrategyCasesPage() {
           statusLabel: strategyStatusLabel(item.includeStatus),
           statusTone: strategyStatusTone(item.includeStatus),
           hasCode: Boolean(item.pineScript.code),
-          pf: strategyDisplayValue(item.pfNumeric),
-          winRate: strategyDisplayValue(item.winRate),
-          trades: strategyDisplayValue(item.trades),
-          completeness: `${item.settingsAudit.completenessPercent ?? 0}%`,
           caveat: strategyCaveat(item.slug, item.displayCaveat),
           evidenceLabel: evidenceStatusLabel(item.evidenceStatus),
           sourceCodeLabel: sourceCodeStatusLabel(item.scriptAccess.sourceCodeStatus),
@@ -129,13 +124,19 @@ export function StrategyDetailPage({ slug }: { readonly slug: string }) {
         imageKey="tv"
         actions={<PrimaryLink href="/strategy-cases" variant="secondary">返回案例庫</PrimaryLink>}
       />
-      <Section title="回測摘要">
-        <div className="metric-grid">
-          <MetricTile label="盈利因子（PF）" value={strategyDisplayValue(item.pfNumeric)} tone={item.pfNumeric ? "warn" : "info"} />
-          <MetricTile label="勝率" value={strategyDisplayValue(item.winRate)} tone="info" />
-          <MetricTile label="交易次數" value={strategyDisplayValue(item.trades)} tone="bad" />
-          <MetricTile label="設定資料完整度" value={`${item.settingsAudit.completenessPercent ?? 0}%`} tone="warn" />
-        </div>
+      <ResearchStatusBanner
+        status={item.includeStatus === "rejected" ? "rejected" : "source-claim"}
+        methodVersion="回測方法 v1.0"
+      />
+      <Section title="來源資料摘要" body="下列數字只用來辨認原始聲稱與待核對缺口，不是本站績效排名。">
+        <table className="data-table">
+          <tbody>
+            <Row label="來源列出的盈利因子" value={item.pfNumeric} />
+            <Row label="來源列出的勝率" value={item.winRate} />
+            <Row label="來源列出的交易次數" value={item.trades} />
+            <Row label="設定資料完整度" value={`${item.settingsAudit.completenessPercent ?? 0}%`} />
+          </tbody>
+        </table>
       </Section>
       <Section title="策略屬性設定（Properties）">
         <table className="data-table">

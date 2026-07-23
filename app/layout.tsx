@@ -2,17 +2,24 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import type { ReactNode } from "react";
 
+import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
 const enableReactDevTools = process.env.NODE_ENV === "development"
   && process.env["NEXT_PUBLIC_DISABLE_REACT_DEVTOOLS"] !== "1";
 
 export const metadata: Metadata = {
-  title: "技術指標研究室",
-  description: "從香港投資者角度整理技術指標、TradingView 策略審核、Pine Script 教學範本及回測檢查。",
+  metadataBase: new URL(siteConfig.url),
+  title: siteConfig.name,
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
   openGraph: {
-    title: "技術指標研究室",
-    description: "查閱 82 個技術指標、策略案例、研究來源及交易前風險檢查。",
+    title: `${siteConfig.name}｜${siteConfig.englishName}`,
+    description: siteConfig.description,
+    type: "website",
+    locale: siteConfig.locale,
+    siteName: siteConfig.name,
+    url: siteConfig.url,
   },
 };
 

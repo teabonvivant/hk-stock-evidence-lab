@@ -11,6 +11,11 @@ const TOP = 28;
 const PRICE_HEIGHT = 226;
 const INDICATOR_TOP = 294;
 const INDICATOR_HEIGHT = 132;
+const hongKongMonthFormatter = new Intl.DateTimeFormat("zh-HK", {
+  year: "numeric",
+  month: "short",
+  timeZone: "UTC",
+});
 
 export function IndicatorTeachingChart({
   slug,
@@ -215,5 +220,5 @@ function formatNumber(value: number): string {
 
 function formatDate(value: string): string {
   const date = new Date(`${value}T00:00:00Z`);
-  return Number.isNaN(date.valueOf()) ? value : new Intl.DateTimeFormat("zh-HK", { year: "numeric", month: "short", timeZone: "UTC" }).format(date);
+  return Number.isNaN(date.valueOf()) ? value : hongKongMonthFormatter.format(date);
 }

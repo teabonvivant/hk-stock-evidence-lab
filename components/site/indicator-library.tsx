@@ -94,7 +94,7 @@ export function IndicatorLibrary({
           <span>搜尋名稱、縮寫或用途</span>
           <span className="relative block">
             <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[var(--muted)]" aria-hidden="true" />
-            <input value={query} onChange={(event) => dispatch({ kind: "query", value: event.target.value })} placeholder="例如 RSI、波動、止蝕" className="library-input pl-10" />
+            <input value={query} onChange={(event) => dispatch({ kind: "query", value: event.target.value })} placeholder="搜尋 RSI、保力加通道、成交量、英文縮寫或用途" className="library-input pl-10" />
           </span>
         </label>
         <label className="library-field">
