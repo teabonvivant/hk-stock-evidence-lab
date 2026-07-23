@@ -12,13 +12,13 @@ export function IndicatorBeginnerGuide({ item }: { readonly item: Indicator }) {
     <>
       <Section
         id="beginner"
-        title={`先用三分鐘掌握 ${item.abbr}`}
-        body="不必先背公式。先弄清楚指標能回答甚麼問題、圖表應從何處開始閱讀，以及最常見的誤用。"
+        title={`${item.abbr} 的判讀重點`}
+        body="公式可以稍後再看。這裏先分清指標量度甚麼、圖上要看哪一部分，以及哪些情況最容易誤判。"
       >
         <div className="grid gap-3 lg:grid-cols-3">
-          <QuickPoint step="1" title="用一句話理解" body={guide.plain} tone="good" />
-          <QuickPoint step="2" title="圖表閱讀重點" body={guide.look} tone="info" />
-          <QuickPoint step="3" title="最簡單的定位" body={guide.simple} tone="warn" />
+          <QuickPoint step="1" title="一句話理解" body={guide.plain} tone="good" />
+          <QuickPoint step="2" title="圖上看甚麼" body={guide.look} tone="info" />
+          <QuickPoint step="3" title="放進判讀流程" body={guide.simple} tone="warn" />
         </div>
         <div className="scenario-block is-bad mt-4">
           <Badge variant="bad">新手最容易錯</Badge>
@@ -47,8 +47,8 @@ export function IndicatorBeginnerPractice({ item }: { readonly item: Indicator }
   return (
     <Section
       id="practice"
-      title="新手練習"
-      body={`先以歷史圖表練習 ${item.abbr}；尚未掌握判讀方法前，不宜使用實際資金驗證。`}
+      title="用歷史圖表驗證理解"
+      body={`練習 ${item.abbr} 時，只記錄訊號、價格確認和失效條件；尚未掌握判讀方法，不宜以實際資金測試。`}
     >
       <ol className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
         {guide.practice.map((task, index) => (

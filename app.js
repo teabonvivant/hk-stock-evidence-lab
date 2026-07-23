@@ -2012,7 +2012,7 @@ const indicatorLevels = [
     value: "中階",
     label: "中級",
     title: "有基礎後再加進來",
-    desc: "這一層不是為了堆指標，而是學會分工：誰看方向、誰看力度、誰只負責提醒你小心。",
+    desc: "這一層不是為了堆指標，而是分清各自工作：誰看方向、誰看力度、哪一個只負責提示風險。",
   },
   {
     value: "進階",
@@ -2056,7 +2056,7 @@ const humanSummaryBySlug = {
   obv: "OBV 把成交量按升跌方向累加。它想回答的是：股價上去時，究竟有沒有資金肯跟。",
   volume: "成交量是市場是否願意認同該價格的證據。無量突破可以觀察，但不要急於重倉追價。",
   "volume-ma": "成交量均線只是基準線。真正要看的是今天的量，跟平常相比到底算不算異常。",
-  vwap: "VWAP 像日內平均成交成本。價格站在它上方還是下方，不是魔法線，而是提醒你市場成本在哪裡。",
+  vwap: "VWAP 可視為日內平均成交成本。價格在其上方還是下方，反映市場成本位置，不是一條魔法線。",
   mfi: "MFI 可以看成加入成交量的 RSI。它比純價格震盪器多一層成交量，但仍要回到趨勢背景。",
   "chaikin-money-flow": "CMF 把收盤位置和成交量合在一起，看資金偏向累積還是派發。短期讀數不要過度放大。",
   "accumulation-distribution": "A/D 線看收盤落在日內區間哪裡，再配成交量。它適合觀察暗中吸納或派發的跡象。",
@@ -2271,7 +2271,7 @@ const masterLearningPath = [
   {
     step: "04",
     title: "用日誌修正自己",
-    body: "盈利能力不是靠背更多形態，而是靠長期記錄哪些規則保護了你、哪些衝動讓你虧損。",
+    body: "盈利能力不靠背誦更多形態，而在於長期記錄哪些規則有效控制風險，以及哪些衝動導致虧損。",
     action: "每次交易後標記錯誤：追高、未等確認、移走止蝕、重複計票或過度交易。",
   },
 ];
@@ -3389,7 +3389,7 @@ const categoryDeepDiveProfiles = {
   "通道/型態": {
     title: "通道與型態深層用法",
     intro:
-      "通道與型態的深層用法，是把價格結構標準化；它幫你觀察節奏，但主觀性較高，必須先定義規則。",
+      "通道與型態的進階用法，是把價格結構標準化。它可用來觀察節奏，但主觀性較高，規則必須預先定義。",
     framework: [
       "先確認型態至少有兩次以上有效觸碰或清晰邊界；沒有邊界，就不要勉強套用形態名稱。",
       "分清延續型態和反轉型態；同一個三角收斂，在不同趨勢背景下可能有完全不同意義。",
@@ -3611,7 +3611,7 @@ const indicatorDeepDiveOverrides = {
     review: [
       "復盤每筆交易是否因止蝕太近被普通波動掃出，這是 ATR 最能修正的錯誤。",
       "記錄入場當刻的 ATR 百分比，檢查高波動時是否仍然用平常倉位。",
-      "把虧損分成方向錯和風險距離錯；ATR 主要幫你改善後者。",
+      "虧損可以分為方向判斷錯誤和風險距離錯誤；ATR 主要處理後者。",
     ],
   },
   "bollinger-bands": {
@@ -4541,7 +4541,7 @@ function lessonFor(item, related) {
     ],
     review: [
       profile.review,
-      `判讀結論：${item.abbr} 只能幫你建立交易假設，不能單獨變成買賣建議。用它的目的，是先把止蝕和風險回報寫清楚，少一點臨場衝動。`,
+      `判讀結論：${item.abbr} 只能用來建立交易假設，不能單獨構成買賣建議。用途是預先寫清止蝕和風險回報，減少臨場衝動。`,
       `請把 ${item.abbr} 當成輔助工具，不要把它包裝成萬能答案；所有訊號都要配合風險管理和獨立判斷。`,
     ],
   };
@@ -4550,11 +4550,11 @@ function lessonFor(item, related) {
 const beginnerPlainLanguageBySlug = {
   rsi: {
     plain:
-      "RSI 可以當成價格力度的溫度計：最近升得太急、跌得太急，或者力度開始變弱，它會先提醒你慢一點看清楚。",
+      "RSI 可以視為價格力度的溫度計：近期升得太急、跌得太急，或力度開始轉弱，讀數都會有所反映。",
     look:
       "先看價格在支撐、阻力還是趨勢中段，再看 RSI 是否接近 30/70，或價格創新高但 RSI 沒有跟上。",
     simple:
-      "新手先學一件事：RSI 不是買賣指令，它只提醒你市場可能過熱、過弱，或需要等待價格確認。",
+      "RSI 不是買賣指令。它只反映市場可能過熱、過弱，實際轉向仍要等待價格確認。",
     avoid:
       "不要看到 RSI 低於 30 就買，也不要看到高於 70 就做空；強勢股可以長時間高位，弱勢股也可以長時間低位。",
   },
@@ -4570,7 +4570,7 @@ const beginnerPlainLanguageBySlug = {
   },
   sma: {
     plain:
-      "SMA 是把一段時間的價格平均起來，幫你把圖表雜訊抹平，看市場大概往哪邊走。",
+      "SMA 計算一段時間的平均價格，減少圖表雜訊，較容易看出市場大致方向。",
     look:
       "先看價格在均線上方還是下方，再看均線是向上、向下還是平坦。",
     simple:
@@ -4610,7 +4610,7 @@ const beginnerPlainLanguageBySlug = {
   },
   "bollinger-bands": {
     plain:
-      "布林帶像價格的彈性範圍，幫你看價格是在正常波動內，還是正在擴張、壓縮或走到邊緣。",
+      "布林帶像價格的彈性範圍，可分辨波動屬於常態、正在擴張或收窄，還是已到區間邊緣。",
     look:
       "先看帶寬是收窄還是擴大，再看價格貼近上軌、下軌時是否有其他證據配合。",
     simple:
@@ -4643,7 +4643,7 @@ const beginnerPlainLanguageBySlug = {
 const beginnerPlainLanguageByCategory = {
   趨勢: {
     plain:
-      "這類指標幫你看市場大方向，是向上、向下，還是根本沒有方向。",
+      "這類指標用來判斷市場大方向：向上、向下，還是沒有明確方向。",
     look:
       "先看價格高低點是否同方向移動，再看指標線是否有斜率。",
     simple:
@@ -4653,7 +4653,7 @@ const beginnerPlainLanguageByCategory = {
   },
   動能: {
     plain:
-      "這類指標幫你看升跌力度有沒有加強或減弱，像在看市場速度。",
+      "這類指標反映升跌力度正在加強還是減弱，作用近似觀察市場速度。",
     look:
       "先看價格在關鍵位置，再看動能是否配合、背離或回到正常區。",
     simple:
@@ -4663,7 +4663,7 @@ const beginnerPlainLanguageByCategory = {
   },
   波動率: {
     plain:
-      "這類指標幫你看價格跳動幅度大不大，主要用途是管理止蝕和倉位。",
+      "這類指標量度價格跳動幅度，主要用於管理止蝕和倉位。",
     look:
       "先看波幅是擴大還是收窄，再決定止蝕是否要放寬、倉位是否要縮小。",
     simple:
@@ -4673,7 +4673,7 @@ const beginnerPlainLanguageByCategory = {
   },
   "通道/型態": {
     plain:
-      "這類工具幫你看價格在某個範圍、形態或邊界內怎樣移動。",
+      "這類工具顯示價格在特定範圍、形態或邊界內如何移動。",
     look:
       "先看價格是在範圍內、邊緣位，還是真的收盤突破。",
     simple:
@@ -4683,7 +4683,7 @@ const beginnerPlainLanguageByCategory = {
   },
   成交量: {
     plain:
-      "這類指標幫你看價格變化背後有沒有足夠參與度。",
+      "這類指標用來核對價格變化背後是否有足夠市場參與。",
     look:
       "先看突破、跌破、反彈或急跌時，量是否明顯和平常不同。",
     simple:
@@ -4693,7 +4693,7 @@ const beginnerPlainLanguageByCategory = {
   },
   支撐阻力: {
     plain:
-      "這類工具幫你找價格容易停下、反彈或受壓的位置。",
+      "這類工具用來找出價格較容易停下、反彈或受壓的位置。",
     look:
       "先找前高前低、反覆反應區和突破失敗的位置。",
     simple:
@@ -4703,7 +4703,7 @@ const beginnerPlainLanguageByCategory = {
   },
   綜合: {
     plain:
-      "這類工具通常把幾種資訊合在一起，幫你整理圖表，但也比較容易讓新手誤以為有標準答案。",
+      "這類工具通常綜合幾種資料來整理圖表，但新手亦較容易誤以為結果就是標準答案。",
     look:
       "先拆開看：它到底在說方向、力度、波動，還是位置。",
     simple:
@@ -4898,8 +4898,8 @@ function renderMasterStandardScorecard() {
     <section data-section="master-scorecard">
       <div class="section-head">
         <div>
-          <h2>好內容要幫你少犯錯</h2>
-          <p>頁面長不代表有用。真正有用的內容，應該幫你判斷市況、控制風險、寫下失效點，並在錯的時候及早認錯。</p>
+          <h2>好內容應該減少判斷錯誤</h2>
+          <p>篇幅長不代表有用。內容要能協助判斷市況、控制風險、寫下失效點，並在判斷錯誤時及早修正。</p>
         </div>
       </div>
       <div class="audit-grid">
@@ -4933,12 +4933,12 @@ function renderMasterStandardScorecard() {
         <aside class="stack">
           <article class="notice">
             <strong>你可以怎樣使用</strong>
-            <p class="small">不要把這裡當成指標百科。更值得看的，是每頁怎樣提醒你何時不用、何時降低信心、怎樣保護本金，以及怎樣把錯誤留在日誌裡。</p>
+            <p class="small">這裏不是指標百科。每頁更重要的是交代何時不適用、何時要降低信心、如何保護本金，以及如何在日誌記下錯誤。</p>
           </article>
           <article class="info-card">
             <span class="lesson-label">下一步</span>
             <h3>把知識放回圖表</h3>
-            <p class="small">看完指標後，可以到策略案例、練習場或交易日誌，把判斷寫成自己的交易劇本。只會背公式，不會幫你避開差交易。</p>
+            <p class="small">看完指標後，可以到策略案例、練習場或交易日誌，把判斷寫成自己的交易劇本。只背公式，仍然避不開欠缺理據的交易。</p>
           </article>
         </aside>
       </div>
@@ -4996,7 +4996,7 @@ function renderComparisonExpertFramework() {
       <article class="review-panel">
         <span class="lesson-label">專家比較</span>
         <h2>先問問題，再選指標</h2>
-        <p class="small">比較頁不是替你找「永遠最準」的指標，而是幫你看清楚：現在缺的是方向、力度、成交量，還是風險尺。</p>
+        <p class="small">比較頁不會選出「永遠最準」的指標。它要分清目前欠缺的是方向、力度、成交量，還是風險尺度。</p>
         <table class="score-table">
           <tbody>
             ${rows.map(([label, text]) => `<tr><th>${escapeHtml(label)}</th><td>${escapeHtml(text)}</td></tr>`).join("")}
@@ -5089,7 +5089,7 @@ function renderGlossaryUseGuide() {
       <article class="review-panel">
         <span class="lesson-label">術語方法</span>
         <h2>術語使用方法</h2>
-        <p class="small">術語表不是字典遊戲。每個詞都應該幫你把市場現象、交易行動或復盤錯誤講清楚。</p>
+        <p class="small">術語表不是字典遊戲。每個詞都要準確描述市場現象、交易行動或復盤錯誤。</p>
         <table class="score-table">
           <tbody>
             ${groups.map(([label, text]) => `<tr><th>${escapeHtml(label)}</th><td>${escapeHtml(text)}</td></tr>`).join("")}
@@ -5945,7 +5945,7 @@ const candlestickPatterns = [
     type: "單支",
     name: "紡錘線",
     signal: "實體短、上下影線都有，代表當日多空都有試探但沒有明顯勝方。",
-    use: "適合提醒你降低追價衝動，尤其出現在急升急跌後。",
+    use: "適合用作降低追價衝動的警號，尤其在急升急跌後。",
     avoid: "不要把每一支紡錘線都當反轉；它多數只是市場暫停。",
   },
   {
@@ -6430,7 +6430,7 @@ function renderCandlestickReader() {
     <article class="trade-card candle-reader" data-candlestick-reader>
       <span class="lesson-label">判讀助手</span>
       <h2>陰陽燭判讀器</h2>
-      <p class="small">這不是買賣建議，而是幫你把「形態、位置、成交量、確認」排成可檢查流程。</p>
+      <p class="small">這不是買賣建議；「形態、位置、成交量、確認」會按可核對的次序排列。</p>
       <div class="candle-reader-grid">
         <label>大方向
           <select class="select" data-candle-field="trend">
@@ -7782,7 +7782,7 @@ function renderComparisonOutputGuide() {
       <div class="section-head">
         <div>
           <h2>比較結果怎樣解讀</h2>
-          <p>比較頁的輸出不是排名，而是幫你判斷這兩個工具應該互補、刪減、等待，還是補風險工具。</p>
+          <p>比較頁的輸出不是排名，而是判斷兩個工具應該互補、刪減、暫停使用，還是補上風險工具。</p>
         </div>
       </div>
       <table class="comparison-table">
@@ -8960,7 +8960,7 @@ function renderStrategyTradingViewBuild(profile) {
   return `
     <article class="info-card">
       <span class="lesson-label">圖表設定</span>
-      <h2>腳本要幫你檢查甚麼</h2>
+      <h2>腳本要檢查甚麼</h2>
       ${renderStrategyBullets(profile.tvImplementation)}
     </article>
   `;
@@ -9888,7 +9888,7 @@ function renderTrialExpectationGuide() {
       <h2>試用期要驗證三件事</h2>
       <ul class="plain-list">
         <li>你是否真的減少追價，而不是多了一個追價理由。</li>
-        <li>Alert 是否讓你更有紀律地等待條件成熟，而不是令你更頻密交易。</li>
+        <li>Alert 是否有助按紀律等待條件成熟，而非令交易變得更頻密。</li>
         <li>每次訊號取消時，你是否能接受放棄，不再臨場改規則。</li>
       </ul>
       <p class="small">試用成功的標準不是一兩筆交易賺錢，而是交易流程變得更穩定、更少衝動、更清楚知道何時不用。</p>
@@ -9919,7 +9919,7 @@ function renderTrialReadinessGuide() {
         <article class="danger-card">
           <span class="lesson-label">準備三</span>
           <h3>先定停用條件</h3>
-          <p class="small">若你發現自己更頻密交易、更依賴訊號、更少寫計劃，就代表試用方向錯了，要先停下來復盤。好的工具應該讓你少做差交易，而不是讓你更快衝進市場。</p>
+          <p class="small">若交易變得更頻密、過度依賴訊號，連計劃也少寫，便代表試用方向有誤，應暫停並復盤。好的工具應該減少欠缺理據的交易，而非加快入市。</p>
         </article>
       </div>
     </section>
@@ -10750,7 +10750,7 @@ function renderSavedDeskQualityGuide() {
           .join("")}
       </ul>
       <div class="formula">每週整理流程：刪掉不用的收藏，補齊每個指標的停用條件，匯出一次備份，再把一個錯誤測驗寫成交易規則。</div>
-      <p class="small">這頁的價值不是保存很多資料，而是讓你的學習痕跡能反過來修正交易行為。收藏、備註、測驗、日誌和備份要形成一個閉環：收藏決定學甚麼，備註決定怎樣用，測驗找出盲點，日誌修正行為，備份保留進度。</p>
+      <p class="small">這頁的價值不在於保存大量資料，而在於用學習紀錄修正交易行為。收藏決定學甚麼，備註記下用法，測驗找出盲點，日誌修正行為，備份則保留進度。</p>
     </article>
   `;
 }

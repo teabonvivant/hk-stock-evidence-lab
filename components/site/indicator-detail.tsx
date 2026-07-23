@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { beginnerGuideFor } from "@/lib/indicator-beginner-guide";
 import { findCoreIndicatorLearning, formulaTypeLabel, parseMarketCaseKey } from "@/lib/indicator-learning";
+import { comparisonResearchFocus, comparisonVerdictLabel, comparisonVerdictTone } from "@/lib/research-copy";
 import { findIndicator } from "@/lib/site-data";
 import type { Indicator } from "@/lib/site-data";
 
@@ -57,7 +58,7 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
 
       <IndicatorBeginnerGuide item={item} />
 
-      <Section id="chart" title="以真實數據練習圖表判讀" body={learning ? "按「先看市況、再看訊號、最後列明風險」的次序閱讀。圖表採用本站保存的歷史開市、最高、最低、收市及成交量（OHLCV）資料計算。" : "此指標需要專屬資料；資料未齊前，頁面不會以不相符的價格圖代替指標結果。"}>
+      <Section id="chart" title="以真實數據練習圖表判讀" body={learning ? "閱讀次序是市況、訊號和風險。圖表採用本站保存的歷史開市、最高、最低、收市及成交量（OHLCV）資料計算。" : "此指標需要專屬資料；資料未齊前，頁面不會以不相符的價格圖代替指標結果。"}>
         {learning && chartCase ? (
           <IndicatorTeachingChart slug={item.siteSlug} caseKey={chartCase} chartLead={learning.chartLead} />
         ) : (
@@ -68,7 +69,7 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
         )}
       </Section>
 
-      <Section id="signals" title="讀到訊號後，應如何判斷" body="先分清可供參考的現象、常見誤用，以及哪些情況表示原來的判斷已經失效。">
+      <Section id="signals" title="讀到訊號後，應如何判斷" body="以下分開列出可供參考的現象、常見誤用，以及令原來判斷失效的情況。">
         {learning ? (
           <div className="scenario-grid mb-5">
             <Scenario label="訊號較可靠的情況" value={learning.validCase} tone="good" />
@@ -153,11 +154,11 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
           {item.research.comparisonRows.slice(0, 3).map((row) => (
             <article key={`${row.expert_id}-${row.comparison_rank}`} className="research-source-row">
               <div className="flex flex-wrap items-center gap-2">
-                <Badge variant={row.verdict_zh === "優勝" ? "good" : "info"}>{row.verdict_zh}</Badge>
+                <Badge variant={comparisonVerdictTone(row.verdict_zh)}>{comparisonVerdictLabel(row.verdict_zh)}</Badge>
                 <h3 className="font-bold text-[var(--ink)]">{row.name_zh}</h3>
                 <span className="text-xs text-[var(--muted)]">{row.relation_zh}</span>
               </div>
-              <p>{row.difference_zh}</p>
+              <p><strong>研究重點：</strong>{comparisonResearchFocus(row)}</p>
               <p><strong>參考材料：</strong>{row.representative_materials_zh}</p>
               <p className="text-xs">{row.evidence_profile_zh}</p>
             </article>

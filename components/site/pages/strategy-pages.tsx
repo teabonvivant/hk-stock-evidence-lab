@@ -23,8 +23,8 @@ export function StrategyCasesPage() {
     <div>
       <HeroPanel
         eyebrow="TradingView 策略案例庫"
-        title="先核對證據，再閱讀程式"
-        body="案例均保存於本站資料庫。盈利因子（PF）、勝率及回撤只反映指定歷史測試；解讀時還要核對參數、交易成本、樣本期及原始碼授權。"
+        title="數字只是起點，證據才是判斷基礎"
+        body="盈利因子（PF）、勝率和回撤只屬指定測試的結果。沒有完整參數、交易成本、樣本期和原始碼資料，漂亮數字也不能直接比較。"
         imageKey="tv"
         actions={<PrimaryLink href="/tv-strategies">了解回測審核方法</PrimaryLink>}
       />
@@ -37,7 +37,7 @@ export function StrategyCasesPage() {
           <MetricTile label="原始碼不公開" value={tradingViewData.stats.blockedCodeCases} tone="info" />
         </div>
       </Section>
-      <Section title="本站策略案例" body="篩選功能只會切換本站案例，不會跳轉至外部網頁。來源網址只供內部審核，不在公開頁顯示。">
+      <Section title="本站策略案例" body="每宗案例只按現有證據分級。來源及授權未核對的內容會清楚標示，不會當作正式結論。">
         <StrategyFilter items={strategies.map((item) => ({
           slug: item.slug,
           title: item.shortTitle || item.title,

@@ -17,8 +17,8 @@ export function HomePage() {
     <div>
       <HeroPanel
         eyebrow="技術指標 · 回測審核 · Pine Script"
-        title="把技術分析變成一套可覆核的流程"
-        body="研究指標，不應只看何時出現訊號。資料是否可靠、訊號在哪種市況才成立，以及失效時如何處理，同樣需要逐項覆核。本站把這些問題整理成一套交易前檢查流程。"
+        title="技術分析，先看證據是否站得住"
+        body="一個訊號是否值得參考，要看資料、市況和失效條件。本站把公式、圖表例子、回測設定和研究來源放在一起，方便逐項核對。"
         imageKey="home"
         actions={
           <>
@@ -29,7 +29,7 @@ export function HomePage() {
           </>
         }
       />
-      <Section title="資料庫概況" body="以下統計來自本站整理的本地 JSON 及 CSV 檔案。頁面不會即時讀取外部網站或行情資料。">
+      <Section title="資料庫概況" body="數字來自本站整理的 JSON 及 CSV 檔案，並非即時行情。">
         <div className="metric-grid">
           <MetricTile label="已整理指標" value={siteData.stats.siteIndicators} tone="good" />
           <MetricTile label="研究概念" value={siteData.stats.researchConcepts} tone="info" />
@@ -46,7 +46,7 @@ export function HomePage() {
           <StatusBlock label="正式案例目標" value={formalCaseTarget} tone="bad" />
         </div>
       </Section>
-      <Section title="先以 5 種角色建立判讀框架" body="由價格位置、成交確認、趨勢方向、動能強弱到風險幅度，每種角色先掌握一個代表指標，便可建立基本判讀流程。技術指標只能提供證據，不能代替買賣決定。">
+      <Section title="初學者先回答五個問題" body="價格在哪裏？成交是否配合？趨勢朝哪個方向？力度有沒有轉弱？風險距離多大？每個問題先用一個指標回答，已足夠建立基本框架。技術指標提供證據，不會代替買賣決定。">
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {beginnerIndicators.map((item) => (
             <IndicatorCard key={item.siteSlug} item={item} />

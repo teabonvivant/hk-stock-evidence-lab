@@ -51,6 +51,9 @@ const forbidden = [
   "值得一提的是",
   "總括而言",
   "讓我們一起探索",
+  "讓你",
+  "幫你",
+  "提醒你",
 ];
 
 const workerUrl = pathToFileURL(path.join(root, "dist", "server", "index.js"));

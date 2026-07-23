@@ -141,13 +141,17 @@ test('rendered public copy excludes banned internal and Taiwan-style wording', a
     path.join(ROOT, 'components', 'site', 'pages', 'home-page.tsx'),
     path.join(ROOT, 'components', 'site', 'pages', 'simple-pages.tsx'),
     path.join(ROOT, 'components', 'site', 'pages', 'strategy-pages.tsx'),
+    path.join(ROOT, 'components', 'site', 'indicator-beginner-guide.tsx'),
+    path.join(ROOT, 'lib', 'indicator-beginner-market-guides.ts'),
+    path.join(ROOT, 'lib', 'indicator-beginner-context-guides.ts'),
+    path.join(ROOT, 'lib', 'indicator-beginner-specific-guides.ts'),
   ]);
   const renderedContexts = renderedSource
     .split(/\r?\n/)
     .filter((line) => /<[^>]+|title=|body=|label=|rows=|eyebrow=|description|judgmentZh|\b(?:title|body|label|summary|uses|limitations|mistakes|caution|lesson|action)\s*:/.test(line))
     .join('\n');
   // When banned public terms are checked only in known rendered-copy contexts
-  const banned = ['accepted', 'support-only', 'rejected', 'raw leads', 'runner-up', 'explicit status', 'taxonomy', '前端教學頁', '量能'];
+  const banned = ['accepted', 'support-only', 'rejected', 'raw leads', 'runner-up', 'explicit status', 'taxonomy', '前端教學頁', '量能', '讓你', '幫你', '提醒你'];
   // Then internal enum comparisons remain allowed but public labels do not leak them
   for (const phrase of banned) assert.equal(renderedContexts.toLowerCase().includes(phrase.toLowerCase()), false, `banned public string found: ${phrase}`);
 });

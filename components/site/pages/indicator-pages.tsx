@@ -10,17 +10,17 @@ export function IndicatorsPage() {
     <div>
       <HeroPanel
         eyebrow="82 個教學指標"
-        title="不必一次學齊 82 個：先掌握 5 種角色"
-        body="由價格位置、成交確認、趨勢方向、動能強弱及風險幅度入手。每種角色先掌握一個代表指標，便可建立第一套完整判讀流程。"
+        title="82 個指標，不必逐一背誦"
+        body="由五個常見問題入手：價格位置、成交確認、趨勢方向、動能強弱和風險幅度。每個問題先選一個代表指標，較容易建立清楚框架。"
         imageKey="indicators"
         actions={
           <>
-            <PrimaryLink href="/indicators/support-resistance">由第一步開始</PrimaryLink>
+            <PrimaryLink href="/indicators/support-resistance">從價格位置開始</PrimaryLink>
             <PrimaryLink href="/compare" variant="secondary">比較指標用途</PrimaryLink>
           </>
         }
       />
-      <Section title="新手建議路線" body="完成以下五步，便能有條理地判斷價格位置、成交支持、趨勢方向、動能強弱，以及可承受的風險幅度。">
+      <Section title="從五個問題開始" body="以下五個指標各負責一項工作。完成後，再按自己的分析需要延伸。">
         <ol className="grid gap-3 md:grid-cols-2 xl:grid-cols-5">
           {beginnerStarterLessons.map((lesson) => {
             const indicator = findIndicator(lesson.slug);
@@ -35,7 +35,7 @@ export function IndicatorsPage() {
           })}
         </ol>
       </Section>
-      <Section title="按實際問題選擇指標" body="掌握五種基本角色後，再按用途及難度逐步延伸。搜尋範圍包括中英文名稱、縮寫及用途。">
+      <Section title="有需要才向外延伸" body="知道要回答甚麼問題，才按用途、難度或名稱搜尋。指標多，並不代表判斷更可靠。">
         <IndicatorLibrary items={indicatorSummaries} categories={categoryCounts().map((item) => item.name)} />
       </Section>
     </div>
