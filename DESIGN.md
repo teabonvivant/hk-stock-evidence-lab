@@ -1,8 +1,10 @@
-# Technical Indicators Research Lab Design System
+# 港股證據研究室 Design System
 
 ## 1. Atmosphere & Identity
 
-This site is a calm trading-education workspace: practical, evidence-led, and protective against overconfident decisions. The signature is a light research desk built from teal guidance, amber cautions, red risk warnings, compact evidence tables, and soft paper-like panels rather than decorative spectacle.
+This site is a Hong Kong stock-market evidence laboratory: restrained, precise, openly versioned, and explicit about what remains unverified. The signature moment is a six-stage evidence ledger that traces raw data through formula, market regime, failure testing, out-of-sample review, and named responsibility. It replaces trading-desk photography, fake charts, profit arrows, and promotional performance tiles.
+
+The public brand is **港股證據研究室｜HK Stock Evidence Lab**. The core promise is **不只看訊號，更要核對證據**.
 
 ## 2. Color
 
@@ -10,20 +12,20 @@ This site is a calm trading-education workspace: practical, evidence-led, and pr
 
 | Role | Token | Value | Usage |
 |------|-------|-------|-------|
-| Background/base | `--bg` | `#f5f7fb` | Page background |
-| Background/wash | `--bg-strong` | `#eaf2f4` | Soft teal-blue wash |
+| Background/base | `--bg` | `#f7f8fa` | Paper-like page background |
+| Background/wash | `--bg-strong` | `#e9eef3` | Slate research wash |
 | Surface/default | `--surface` | `#ffffff` | Cards, controls, panels |
-| Surface/soft | `--surface-soft` | `#f9fbfd` | Subtle tile and input backgrounds |
-| Text/primary | `--ink` | `#17202a` | Headings and important body copy |
-| Text/muted | `--muted` | `#647282` | Descriptions, helper copy, metadata |
-| Border/default | `--line` | `#dce4ea` | Cards, tables, dividers, controls |
+| Surface/soft | `--surface-soft` | `#f7f8fa` | Subtle tile and input backgrounds |
+| Text/primary | `--ink` | `#0b1f33` | Navy headings and important body copy |
+| Text/muted | `--muted` | `#334155` | Descriptions, helper copy, metadata |
+| Border/default | `--line` | `#e9eef3` | Cards, tables, dividers, controls |
 | Accent/primary | `--primary` | `#0f766e` | Primary buttons, labels, focus border |
 | Accent/strong | `--primary-strong` | `#115e59` | Active nav, key numbers, emphasis |
-| Accent/warning | `--accent` | `#d97706` | Amber warnings and selected utilities |
+| Accent/warning | `--accent` | `#b45309` | Research-in-progress and caution states |
 | Accent/info | `--blue` | `#2563eb` | Informational badges |
-| Status/danger | `--danger` | `#dc2626` | Error and risk surfaces |
-| Status/success | `--success` | `#15803d` | Positive validation |
-| Elevation/default | `--shadow` | `0 18px 45px rgba(15, 35, 55, 0.09)` | Page bands and elevated sections |
+| Status/danger | `--danger` | `#b42318` | Error, rejected method, and risk surfaces |
+| Status/success | `--success` | `#18794e` | Human-reviewed status only |
+| Elevation/default | `--shadow` | `0 18px 44px rgba(11, 31, 51, 0.08)` | Page bands and elevated sections |
 
 ### Supporting Tints Already In Use
 
@@ -57,8 +59,8 @@ This site is a calm trading-education workspace: practical, evidence-led, and pr
 
 ### Font Stack
 
-- Primary: `Inter, "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", Arial, sans-serif`
-- Mono: no project-wide mono stack is defined.
+- Primary: `"Noto Sans HK", "PingFang HK", "Microsoft JhengHei", system-ui, sans-serif`
+- Mono: `"SFMono-Regular", Consolas, "Liberation Mono", monospace`
 
 ### Rules
 
@@ -74,8 +76,8 @@ The implicit base unit is `4px`; most spacing resolves to multiples of `0.25rem`
 
 | Token/Pattern | Value | Usage |
 |---------------|-------|-------|
-| `--radius` | `8px` | Cards, buttons, inputs, panels |
-| `--max` | `1180px` | Main content width |
+| `--radius` | `12px` | Cards, buttons, inputs, panels |
+| `--max` | `1240px` | Main content width |
 | Compact gap | `0.35rem` to `0.55rem` | Badges, labels, dense rows |
 | Standard gap | `0.65rem` to `0.85rem` | Cards, stacks, form grids |
 | Panel padding | `0.75rem` to `1rem` | Tiles, cards, result panels |
@@ -86,8 +88,8 @@ The implicit base unit is `4px`; most spacing resolves to multiples of `0.25rem`
 - Main shell: `width: min(var(--max), calc(100% - 2rem))`.
 - Primary content grid: `minmax(0, 1.35fr) minmax(18rem, 0.65fr)`.
 - Visual bands: `minmax(0, 1.15fr) minmax(17rem, 0.85fr)`.
-- Card grids: three columns by default, two columns below `960px`, one column below `640px`.
-- Breakpoints currently used: `960px` and `640px`.
+- Card grids follow the content: the five-question homepage uses a deliberate `2 + 3` composition, trust entries use three columns, and research cards use two columns where evidence is dense.
+- Breakpoints: desktop `1280px`, tablet `768px`, compact mobile `640px`, and narrow-mobile QA at `360px`.
 
 ### Rules
 
@@ -99,10 +101,44 @@ The implicit base unit is `4px`; most spacing resolves to multiples of `0.25rem`
 
 ### Site Header
 
-- **Structure**: `.site-header` with `.brand`, `.brand-mark`, and `.nav-links`.
-- **States**: nav links use hover/active teal fill; app shell has visible focus outline.
+- **Structure**: desktop brand plus seven task-based links: 學習、指標百科、比較、港股實例、回測研究、工具、信任中心. Mobile uses a fixed five-item task bar.
+- **States**: current links use `aria-current="page"` plus navy/teal emphasis; hover, active, and focus-visible states are distinct.
 - **Accessibility**: preserve skip link, `aria-label` on brand/nav, and sticky header scroll offset.
 - **Motion**: no decorative motion.
+
+### Research Status Banner
+
+- **Purpose**: state whether a page is 已核對、部分核對、研究中、不採用, or 已封存 before any claim.
+- **Structure**: status label, plain-language meaning, method version, last review date, named responsibility or an explicit unresolved-person warning, and a report-error link.
+- **Rules**: green is reserved for genuinely human-reviewed content. Missing named reviewers forces `研究中` and `noindex,follow`.
+- **Accessibility**: status is always written in text; colour never carries the state alone.
+
+### Direct Answer And Key Takeaways
+
+- **Purpose**: answer the page's primary question in the first two screens.
+- **Structure**: one 40–70 Chinese-character direct answer followed by no more than three takeaways.
+- **Responsive**: answer precedes decorative or supporting visuals on mobile.
+
+### Evidence Pipeline
+
+- **Purpose**: replace fake-market hero photography with a transparent six-stage method diagram.
+- **Structure**: raw data, formula and parameters, market regime, normal/failure pair, out-of-sample and costs, named review.
+- **Surface**: deep navy field, paper ledger modules, restrained teal connectors, and subtle harbour-grid geometry made with CSS.
+- **Accessibility**: semantic ordered list with a concise visible explanation; no canvas-only or image-only information.
+- **Motion**: none.
+
+### Accountability Footer
+
+- **Purpose**: make responsibility and correction routes available on every page.
+- **Structure**: trust-centre, editorial policy, data method, backtest method, AI disclosure, conflicts, corrections, risk disclosure, and report-error links.
+- **Rules**: never invent a person, qualification, organisation, review date, or legal approval. Missing information is shown as missing.
+
+### Policy Page
+
+- **Purpose**: publish compact, versioned trust and method policies without decorative hero imagery.
+- **Structure**: breadcrumb, status, H1, direct answer, version/effective-date row, table of contents, question-led sections, related policies, report-error link.
+- **Responsive**: article width is `760px`; table of contents becomes a compact disclosure below `768px`.
+- **Legal state**: privacy, terms, and risk language remain labelled as drafts and `noindex` until reviewed by a qualified Hong Kong professional.
 
 ### Page Band
 

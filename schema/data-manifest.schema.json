@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://technical-indicators-hk.teabonvivant.chatgpt.site/schema/data-manifest.schema.json",
+  "title": "港股證據研究室數據清單",
+  "description": "每張圖表或指標計算所需的來源、版本、覆核及校驗欄位。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "symbol",
+    "exchange",
+    "timezone",
+    "timeframe",
+    "start",
+    "end",
+    "price_adjustment",
+    "corporate_actions",
+    "data_provider",
+    "retrieved_at",
+    "indicator",
+    "parameters",
+    "formula_version",
+    "chart_version",
+    "reviewer",
+    "checksum"
+  ],
+  "properties": {
+    "symbol": {
+      "type": "string",
+      "minLength": 1,
+      "description": "供應商使用的完整證券代號。"
+    },
+    "exchange": {
+      "type": "string",
+      "minLength": 1,
+      "description": "交易所名稱或 MIC。"
+    },
+    "timezone": {
+      "const": "Asia/Hong_Kong"
+    },
+    "timeframe": {
+      "type": "string",
+      "minLength": 1,
+      "description": "例如 1d、4h 或 15m。"
+    },
+    "start": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "end": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "price_adjustment": {
+      "type": "string",
+      "enum": ["none", "split-adjusted", "total-return-adjusted", "provider-adjusted"]
+    },
+    "corporate_actions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["policy", "events_in_range"],
+      "properties": {
+        "policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "events_in_range": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "data_provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "source_url"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "license_note": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "retrieved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "indicator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "formula_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "chart_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewer": {
+      "oneOf": [
+        {
+          "type": "null",
+          "description": "未有具名覆核時必須為 null，相關頁面維持研究中。"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "role", "reviewed_at"],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "role": {
+              "type": "string",
+              "enum": ["data", "technical", "editorial"]
+            },
+            "reviewed_at": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      ]
+    },
+    "checksum": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    }
+  }
+}
