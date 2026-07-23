@@ -79,7 +79,7 @@ export function HeroPanel({
   actions,
 }: {
   readonly eyebrow: string;
-  readonly title: string;
+  readonly title: ReactNode;
   readonly body: string;
   readonly imageKey: keyof typeof visualMap;
   readonly actions?: ReactNode | undefined;

@@ -125,6 +125,14 @@ test("research comparisons read like edited notes, not database templates", asyn
   assert.doesNotMatch(html, /的角色是「/);
 });
 
+test("glossary heading keeps its key phrase together on narrow screens", async () => {
+  const response = await render("/glossary");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /術語不清，<span class="whitespace-nowrap">策略也說不清<\/span>/);
+});
+
 test("strategy index leads with evidence instead of interface narration", async () => {
   const response = await render("/strategy-cases");
   assert.equal(response.status, 200);

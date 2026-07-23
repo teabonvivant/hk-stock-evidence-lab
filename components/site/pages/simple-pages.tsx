@@ -88,7 +88,16 @@ function CasebookPage() {
 function GlossaryPage() {
   return (
     <div>
-      <HeroPanel eyebrow="詞彙表" title="術語不清，策略也說不清" body="止蝕、成交量、裂口、倉位、R 值和樣本外測試（OOS）都有特定含義。用詞一致，才可以核對策略條件。" imageKey="glossary" />
+      <HeroPanel
+        eyebrow="詞彙表"
+        title={
+          <>
+            術語不清，<span className="whitespace-nowrap">策略也說不清</span>
+          </>
+        }
+        body="止蝕、成交量、裂口、倉位、R 值和樣本外測試（OOS）都有特定含義。用詞一致，才可以核對策略條件。"
+        imageKey="glossary"
+      />
       <Section title="常用詞彙">
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           {indicators.slice(0, 18).map((item) => (
