@@ -49,7 +49,7 @@ export function rsi(closes: NumericSeries, period: number): NumericSeries {
   return averageGains.map((gain, index) => {
     const loss = averageLosses[index];
     if (gain === null || loss === undefined || loss === null) return null;
-    if (loss === 0) return 100;
+    if (loss === 0) return gain === 0 ? null : 100;
     const strength = gain / loss;
     return 100 - 100 / (1 + strength);
   });
@@ -79,7 +79,7 @@ export function bollinger(closes: NumericSeries, period: number, multiplier: num
   return { middle, upper: addNullable(middle, distance), lower: subtract(middle, distance) };
 }
 
-export function stochastic(bars: readonly PriceBar[], period: number, smooth: number): BandResult {
+export function stochastic(bars: readonly PriceBar[], period: number, smooth: number, smoothK = 3): BandResult {
   const highs = bars.map((bar) => bar.high);
   const lows = bars.map((bar) => bar.low);
   const closes = bars.map((bar) => bar.close);
@@ -87,7 +87,7 @@ export function stochastic(bars: readonly PriceBar[], period: number, smooth: nu
   const lowest = rollingLow(lows, period);
   const numerator = subtract(closes, lowest);
   const denominator = subtract(highest, lowest);
-  const percentK = multiply(divide(numerator, denominator), 100);
+  const percentK = sma(multiply(divide(numerator, denominator), 100), smoothK);
   return { middle: percentK, upper: sma(percentK, smooth), lower: percentK.map(() => null) };
 }
 
@@ -119,10 +119,10 @@ export function mfi(bars: readonly PriceBar[], period: number): NumericSeries {
   }
   return bars.map((_, index) => {
     const start = index - period + 1;
-    if (start < 0) return null;
+    if (start < 1) return null;
     const positiveFlow = positive.slice(start, index + 1).reduce((total, value) => total + value, 0);
     const negativeFlow = negative.slice(start, index + 1).reduce((total, value) => total + value, 0);
-    if (negativeFlow === 0) return 100;
+    if (negativeFlow === 0) return positiveFlow === 0 ? null : 100;
     return 100 - 100 / (1 + positiveFlow / negativeFlow);
   });
 }

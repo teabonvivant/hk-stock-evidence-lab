@@ -1,297 +1,223 @@
-# 港股證據研究室 Design System
+---
+name: 港股證據研究室
+description: Calm, evidence-led Hong Kong technical-analysis reading and learning.
+colors:
+  primary: "#0f766e"
+  primary-strong: "#115e59"
+  ink: "#0b1f33"
+  bg: "#f7f8fa"
+  bg-strong: "#e9eef3"
+  surface: "#ffffff"
+  surface-soft: "#f7f8fa"
+  muted: "#334155"
+  line: "#e9eef3"
+  accent: "#b45309"
+typography:
+  headline:
+    fontSize: "clamp(2rem, 4vw, 3.25rem)"
+    fontWeight: 700
+    lineHeight: 1.4
+    letterSpacing: "0"
+  article-title:
+    fontSize: "1.4rem"
+    fontWeight: 700
+    lineHeight: 1.65
+  article-section:
+    fontSize: "1.65rem"
+    fontWeight: 700
+    lineHeight: 1.65
+  body:
+    fontFamily: '"Noto Sans HK", "PingFang HK", "Microsoft JhengHei", system-ui, sans-serif'
+    fontSize: "1.125rem"
+    lineHeight: 2
+  label:
+    fontSize: "0.9375rem"
+    fontWeight: 600
+  caption:
+    fontSize: "0.875rem"
+    lineHeight: 1.85
+rounded:
+  field: "5px"
+  action: "6px"
+  card: "8px"
+  navigation: "10px"
+  panel: "12px"
+spacing:
+  compact: "0.75rem"
+  standard: "1rem"
+  panel: "1.5rem"
+  section: "2rem"
+  column: "3rem"
+components:
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.surface}"
+    rounded: "{rounded.card}"
+    padding: "0.5rem 1rem"
+    height: "44px"
+  button-secondary:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.card}"
+    padding: "0.5rem 1rem"
+    height: "44px"
+  button-warning:
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.surface}"
+    rounded: "{rounded.card}"
+    padding: "0.5rem 1rem"
+    height: "44px"
+  button-ghost:
+    textColor: "{colors.muted}"
+    rounded: "{rounded.card}"
+    padding: "0.5rem 1rem"
+    height: "44px"
+  reading-input:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.field}"
+    padding: "0.7rem 0.85rem"
+  navigation-link:
+    textColor: "{colors.muted}"
+    rounded: "{rounded.navigation}"
+    padding: "0.7rem 0.6rem"
+  topic-link:
+    textColor: "{colors.ink}"
+    rounded: "{rounded.action}"
+    padding: "0.6rem 0.9rem"
+  section-card:
+    backgroundColor: "rgb(255 255 255 / 0.9)"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.card}"
+    padding: "1.25rem"
+  evidence-figure:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.surface}"
+    rounded: "{rounded.panel}"
+    padding: "1.5rem"
+---
 
-## 1. Atmosphere & Identity
+# Design System: 港股證據研究室
 
-This site is a Hong Kong stock-market evidence laboratory: restrained, precise, openly versioned, and explicit about what remains unverified. The signature moment is a six-stage evidence ledger that traces raw data through formula, market regime, failure testing, out-of-sample review, and named responsibility. It replaces trading-desk photography, fake charts, profit arrows, and promotional performance tiles.
+## Overview
 
-The public brand is **港股證據研究室｜HK Stock Evidence Lab**. The core promise is **不只看訊號，更要核對證據**.
+**Creative North Star: "港股證據研究室"**
 
-## 2. Color
+A calm, evidence-led Hong Kong technical-analysis reading library. Navy ink, teal guidance, pale paper and restrained line geometry connect the established research tools with the expanded article collection. The voice is practical, measured Hong Kong Chinese, with literary reading headings and direct learning actions.
 
-### Palette
+The visual system makes explanations, examples, source material and operating limits easy to find. Historical observations and teaching examples remain distinguishable. Financial education carries meaningful risk and source context; professional presentation does not imply verified performance or named human review.
 
-| Role | Token | Value | Usage |
-|------|-------|-------|-------|
-| Background/base | `--bg` | `#f7f8fa` | Paper-like page background |
-| Background/wash | `--bg-strong` | `#e9eef3` | Slate research wash |
-| Surface/default | `--surface` | `#ffffff` | Cards, controls, panels |
-| Surface/soft | `--surface-soft` | `#f7f8fa` | Subtle tile and input backgrounds |
-| Text/primary | `--ink` | `#0b1f33` | Navy headings and important body copy |
-| Text/muted | `--muted` | `#334155` | Descriptions, helper copy, metadata |
-| Border/default | `--line` | `#e9eef3` | Cards, tables, dividers, controls |
-| Accent/primary | `--primary` | `#0f766e` | Primary buttons, labels, focus border |
-| Accent/strong | `--primary-strong` | `#115e59` | Active nav, key numbers, emphasis |
-| Accent/warning | `--accent` | `#b45309` | Research-in-progress and caution states |
-| Accent/info | `--blue` | `#2563eb` | Informational badges |
-| Status/danger | `--danger` | `#b42318` | Error, rejected method, and risk surfaces |
-| Status/success | `--success` | `#18794e` | Human-reviewed status only |
-| Elevation/default | `--shadow` | `0 18px 44px rgba(11, 31, 51, 0.08)` | Page bands and elevated sections |
+**Key Characteristics:**
+- Navy and teal on pale paper.
+- Serif reading headings with readable sans-serif body text.
+- Flat article rows, clear diagrams and functional controls.
+- Explicit sources and limitations without repeated production notices.
 
-### Supporting Tints Already In Use
+## Colors
 
-| Purpose | Values | Usage |
-|---------|--------|-------|
-| Teal research surfaces | `#f0fbf9`, `#ecfdf9`, `#edfdfa`, `#eefbf8`, `#cce5e1`, `#b7dfd9` | Review panels, trade panels, beginner cards |
-| Amber caution surfaces | `#fffaf2`, `#fff7ed`, `#f3d7ad`, `#f59e0b`, `#9a3412`, `#7c3f00` | Notices, warnings, active utility states |
-| Red risk surfaces | `#fff5f5`, `#f2c6c6`, `#991b1b` | Danger cards and invalid result states |
-| Blue info surfaces | `#eaf1ff`, `#1e40af` | Informational badges |
-| Neutral content text | `#334155`, `#2d3a45`, `#23424a` | Table body, nav links, dense list copy |
+The established palette uses deep navy for reading structure, teal for guidance and quiet neutral surfaces.
 
-### Rules
+### Primary
+- **Teal** (`primary`): primary actions, links and focus feedback.
+- **Deep teal** (`primary-strong`): selected navigation, filters and stronger link emphasis.
 
-- Teal means guidance or research quality; amber means caution or review needed; red means risk or invalid state; blue is reserved for factual info.
-- New UI should use the existing custom properties first. When a tint is needed, reuse a supporting tint already documented above.
-- Status color is never the only signal. Pair it with clear text such as "ready", "warning", or "missing".
+### Secondary
+- **Amber** (`accent`): caution and the existing warning-button variant. Risk and information components retain their established red and blue tints; their text must explain the meaning.
 
-## 3. Typography
+### Neutral
+- **Navy ink** (`ink`): headings, primary text, evidence figures and the footer.
+- **Paper** (`bg`, `surface-soft`): page and quiet utility backgrounds.
+- **Slate wash** (`bg-strong`, `line`): restrained grouping and existing default borders.
+- **White** (`surface`): inputs, article figures and raised navigation.
+- **Muted ink** (`muted`): descriptions and supporting text.
 
-### Scale
+**The Meaningful Color Rule.** Color supports a written label or explanation; it never establishes review, source quality or risk on its own.
 
-| Level | Size | Weight | Line Height | Tracking | Usage |
-|-------|------|--------|-------------|----------|-------|
-| Page H1 | `clamp(1.65rem, 4.5vw, 3.4rem)` | inherited bold | `1.05` | `0` | Hero/page titles |
-| Detail H1 | `clamp(1.85rem, 4vw, 2.75rem)` | inherited bold | `1.05` | `0` | Indicator detail headers |
-| H2 | `clamp(1.2rem, 2.2vw, 1.65rem)` | inherited bold | normal | `0` | Section and panel headings |
-| H3 | `1rem` | inherited bold | normal | `0` | Card headings |
-| Body | browser default | normal | `1.72` | `0` | Paragraph copy |
-| Small body | `0.86rem` | normal | context-specific | `0` | Dense cards, helper copy, result text |
-| Caption/label | `0.72rem` to `0.78rem` | `800` to `900` | normal | `0.08em` for labels | Eyebrows, lesson labels, tile labels |
+## Typography
 
-### Font Stack
+Reading headings declare Noto Serif HK, Noto Serif TC and Source Han Serif TC as their preferred family sequence. Body text uses the existing sans-serif stack. These are CSS family preferences, not a claim that font files are bundled or that every device renders the same face. Legacy display fallbacks are not a reusable design choice.
 
-- Primary: `"Noto Sans HK", "PingFang HK", "Microsoft JhengHei", system-ui, sans-serif`
-- Mono: `"SFMono-Regular", Consolas, "Liberation Mono", monospace`
+The article headline, list title, section heading, body and caption roles are recorded above. Reading headings use a confident bold weight and natural Chinese wrapping. Article introductions are slightly larger serif text (1.25rem, line height 2). Standard explanatory copy varies with context; the larger article body is deliberately separate from compact controls.
 
-### Rules
+At compact widths (620px and below), article headlines become 2rem, body copy becomes 1.0625rem with a 1.95 line height, and article section headings become 1.45rem. Do not apply this reading scale indiscriminately to the existing comparison tables and research tools.
 
-- Body copy remains at readable browser-default size or `0.86rem` minimum for dense supporting content.
-- Display text must not use negative letter spacing; the existing system keeps `letter-spacing: 0` except uppercase labels.
-- Traditional Chinese content should be allowed to wrap naturally. Avoid fixed-width text boxes that create one-character or orphaned semantic fragments.
+**The Reading Hierarchy Rule.** Use title, introduction, section heading, body and caption to establish hierarchy; repeated decorative category labels do not add another level.
 
-## 4. Spacing & Layout
+## Layout
 
-### Base Unit
+The shared shell remains capped at 1240px with one-rem outer clearance on each side. Below 760px, the total horizontal clearance becomes one rem. Grid tracks use `minmax(0, 1fr)` or an equivalent shrinkable content track so Traditional Chinese can wrap naturally.
 
-The implicit base unit is `4px`; most spacing resolves to multiples of `0.25rem`, `0.35rem`, `0.55rem`, `0.65rem`, `0.75rem`, `0.85rem`, `1rem`, `1.35rem`, and `1.5rem`.
+Article pages use a 220px contents column beside a reading column capped at 760px, separated by a three-rem gap. At 950px and below, the contents move above the article and stop sticking. Article lists use two columns, becoming one at 620px. Figures stay within the reading measure and open a larger original through an explicitly labelled link.
 
-| Token/Pattern | Value | Usage |
-|---------------|-------|-------|
-| `--radius` | `12px` | Cards, buttons, inputs, panels |
-| `--max` | `1240px` | Main content width |
-| Compact gap | `0.35rem` to `0.55rem` | Badges, labels, dense rows |
-| Standard gap | `0.65rem` to `0.85rem` | Cards, stacks, form grids |
-| Panel padding | `0.75rem` to `1rem` | Tiles, cards, result panels |
-| Page band padding | `clamp(1rem, 2.5vw, 1.5rem)` | Major page sections |
+The home page places direct article and learning actions beside an explanatory figure, then offers a five-topic navigation band. This is a home-page composition, not a required layout for every surface. The band becomes two columns below 950px with its final topic spanning the row.
 
-### Grid
+The desktop header shows six primary links and a grouped all-pages menu. At 900px and below, the primary links give way to a fixed five-tab mobile bar with safe-area padding; the all-pages menu remains available. The grouped menu changes from four columns to two below 950px.
 
-- Main shell: `width: min(var(--max), calc(100% - 2rem))`.
-- Primary content grid: `minmax(0, 1.35fr) minmax(18rem, 0.65fr)`.
-- Visual bands: `minmax(0, 1.15fr) minmax(17rem, 0.85fr)`.
-- Card grids follow the content: the five-question homepage uses a deliberate `2 + 3` composition, trust entries use three columns, and research cards use two columns where evidence is dense.
-- Breakpoints: desktop `1280px`, tablet `768px`, compact mobile `640px`, and narrow-mobile QA at `360px`.
+**The Content Measure Rule.** Give long articles a bounded reading measure; let research grids and comparison tools use the wider shell when the task needs it.
 
-### Rules
+## Elevation & Depth
 
-- Preserve dense but breathable layouts. This is an education workspace, not a marketing landing page.
-- Use `minmax(0, 1fr)` on grid children to protect CJK wrapping and prevent overflow.
-- New data panels should collapse to one column on mobile without horizontal scrolling except for tables.
+The system combines flat reading surfaces, thin separating lines and restrained elevation for controls or outer containers. Article rows and the updated research hero are flat. Existing section cards keep their low-opacity white surface and soft shadow; the open navigation menu floats above the page.
 
-## 5. Components
+- **Section card:** `0 10px 28px rgb(15 35 55 / 0.05)`.
+- **Open navigation:** `0 18px 40px rgb(11 31 51 / 0.12)`.
+- **Mobile navigation:** `0 -8px 24px rgb(11 31 51 / 0.08)`.
+- **Primary button:** `0 8px 18px rgba(15,118,110,0.18)`.
 
-### Site Header
+**The Flat Reading Rule.** Use section dividers and spacing inside an article; do not wrap every paragraph or evidence block in another raised card.
 
-- **Structure**: desktop brand plus seven task-based links: 學習、指標百科、比較、港股實例、回測研究、工具、信任中心. Mobile uses a fixed five-item task bar.
-- **States**: current links use `aria-current="page"` plus navy/teal emphasis; hover, active, and focus-visible states are distinct.
-- **Accessibility**: preserve skip link, `aria-label` on brand/nav, and sticky header scroll offset.
-- **Motion**: no decorative motion.
+## Shapes
 
-### Research Status Banner
+Corners are restrained and functional: small field and action corners, slightly broader cards and navigation items, and the existing panel radius. Article figures use the card radius with a thin border; their captions sit below a dividing line. Existing informational badges remain rounded pills, while article metadata stays plain text.
 
-- **Purpose**: state whether a page is 已核對、部分核對、研究中、不採用, or 已封存 before any claim.
-- **Structure**: status label, plain-language meaning, method version, last review date, named responsibility or an explicit unresolved-person warning, and a report-error link.
-- **Rules**: green is reserved for genuinely human-reviewed content. Missing named reviewers forces `研究中` and `noindex,follow`.
-- **Accessibility**: status is always written in text; colour never carries the state alone.
+Rules and line geometry organize content. Diagram marks communicate a concept, relation or measurement rather than serving as an ornamental market chart.
 
-### Direct Answer And Key Takeaways
-
-- **Purpose**: answer the page's primary question in the first two screens.
-- **Structure**: one 40–70 Chinese-character direct answer followed by no more than three takeaways.
-- **Responsive**: answer precedes decorative or supporting visuals on mobile.
-
-### Evidence Pipeline
-
-- **Purpose**: replace fake-market hero photography with a transparent six-stage method diagram.
-- **Structure**: raw data, formula and parameters, market regime, normal/failure pair, out-of-sample and costs, named review.
-- **Surface**: deep navy field, paper ledger modules, restrained teal connectors, and subtle harbour-grid geometry made with CSS.
-- **Accessibility**: semantic ordered list with a concise visible explanation; no canvas-only or image-only information.
-- **Motion**: none.
-
-### Accountability Footer
-
-- **Purpose**: make responsibility and correction routes available on every page.
-- **Structure**: trust-centre, editorial policy, data method, backtest method, AI disclosure, conflicts, corrections, risk disclosure, and report-error links.
-- **Rules**: never invent a person, qualification, organisation, review date, or legal approval. Missing information is shown as missing.
-
-### Policy Page
-
-- **Purpose**: publish compact, versioned trust and method policies without decorative hero imagery.
-- **Structure**: breadcrumb, status, H1, direct answer, version/effective-date row, table of contents, question-led sections, related policies, report-error link.
-- **Responsive**: article width is `760px`; table of contents becomes a compact disclosure below `768px`.
-- **Legal state**: privacy, terms, and risk language remain labelled as drafts and `noindex` until reviewed by a qualified Hong Kong professional.
-
-### Page Band
-
-- **Structure**: `.page-band`, optionally `.visual-band`, `.hero-grid`, `.content-grid`.
-- **Spacing**: `clamp(1rem, 2.5vw, 1.5rem)` padding, `1rem` section rhythm.
-- **Surface**: white alpha background, default border, and `--shadow`.
-- **Accessibility**: sections with anchors use `[data-section]` scroll margin.
-
-### Card Family
-
-- **Structure**: `.indicator-card`, `.info-card`, `.comparison-card`, `.term-card`, `.review-panel`, `.trade-card`, `.danger-card`.
-- **Variants**: neutral info, teal research/review, teal trade/action, red danger/risk.
-- **States**: indicator cards gain teal border and stronger shadow on hover.
-- **Accessibility**: cards should keep headings, labels, and lists in semantic order.
-- **Surface**: 8px radius, 1px border, light shadow, gradient tone for semantic variants.
+## Components
 
 ### Buttons
 
-- **Structure**: `.button` with optional `.secondary`, `.ghost`, `.warning`.
-- **States**: hover raises by `translateY(-1px)`; form controls have teal focus ring.
-- **Accessibility**: use real `button` or `a href`; minimum height is about `2.55rem`.
-- **Motion**: only transform motion is allowed.
+Compact, legible actions use the existing four variants: teal primary, bordered white secondary, amber warning and quiet ghost. Default height is 44px. Hover changes color or border; active state scales to 0.98. Existing transitions use 150ms ease-out. Preserve disabled semantics and visible keyboard focus. The reading tools also use a 46px plain button with the action radius.
 
-### Chips, Badges, And Labels
+### Inputs and topic links
 
-- **Structure**: `.chip`, `.badge`, `.lesson-label`, `.eyebrow`.
-- **Variants**: active chips, orange badges, blue badges.
-- **States**: chips support hover/active teal tone.
-- **Accessibility**: badges and labels summarize status; they should not carry meaning through color alone.
+Reading search, selection and tool fields have visible labels, white backgrounds, a clear border and a minimum 48px height. Topic links have a minimum 44px target and deep-teal selected state. Search and filters retain a visible result count, reset or pagination controls where supplied, and a useful empty result state.
 
-### Forms And Result Panels
+### Navigation
 
-- **Structure**: `.field`, `.select`, `.result-panel`.
-- **Variants**: `.result-good`, `.result-warn`, `.result-bad`.
-- **States**: inputs use teal border and soft focus ring; result panels use green/amber/red tint.
-- **Accessibility**: error or warning panels must include explicit text.
+The six desktop destinations are 學習、指標百科、研究札記、策略方法、工具、關於. The all-pages menu groups learning, methods, tools and site information in native `details`/`summary`. The mobile destinations are 首頁、札記、指標、工具、導覽. Current primary and mobile links use `aria-current="page"` and visible emphasis. Preserve the skip link, named navigation regions, sticky-header anchor clearance and safe-area padding.
 
-### Tables And Lists
+### Article lists and reading pages
 
-- **Structure**: `.score-table`, `.fact-list`, `.plain-list`, `.step-list`.
-- **Responsive**: score tables may scroll horizontally on small screens.
-- **Accessibility**: tables are for label/value evidence; lists are for procedural reading.
+Article entries use category metadata, serif title, a short summary and a reading link, separated by thin rules. A reading page contains breadcrumbs, title, deck, date and reading time, contents, prose, diagrams, references and related reading. Category metadata is useful once in its intended context; it is not a decorative eyebrow above each visual.
 
-### Empty State
+Figures have descriptive alternative text, a caption and a labelled enlargement action. The illustration title and numbered caption explain the figure without adding a second category label or ornamental top rule. References are visible links with a recorded consultation date.
 
-- **Structure**: `.empty-state`.
-- **Surface**: dashed default border, translucent white background, centered copy.
-- **Accessibility**: explain the next action in text and include a button when useful.
+### Evidence and learning components
 
-### Site Data Panels
+The shared evidence figure uses a navy field, a concise heading and numbered explanatory rows. Row count follows the subject; the current home figure has four steps. The original six-stage ledger is not a universal requirement.
 
-- **Purpose**: reusable P1/P2 panels for generated site-data stats, research readiness, comparison coverage, market/evidence status, and review health.
-- **Structure**:
-  - Use `.site-data-panel` on the outer section or article.
-  - Use `.site-data-grid` for metric groups.
-  - Use `.site-data-metric` for a metric tile. `.site-data-card` is supported as a compatibility alias.
-  - Use `.site-data-kpi` for the main number or short status.
-  - Use `.site-data-label` for the metric explanation.
-  - Use `.site-data-list` for label/value evidence rows.
-  - Use `.site-data-status` with `.is-good`, `.is-warn`, `.is-bad`, or `.is-info` for compact status pills.
-  - Use `.site-data-note` for cautionary source notes.
-- **Variants**: default info, good, warning, bad, info status pills.
-- **States**: static panels have no hover motion. If B renders links or buttons inside them, reuse existing `.button`, `.chip`, or `.badge`.
-- **Accessibility**: status pills must contain readable text; metric tiles should use nearby headings or labels rather than anonymous numbers.
-- **Motion**: none.
+Retain the established beginner order: role, chart focus, use, misuse, market context, confirmation, invalidation and practice. Advanced formulas and comparisons can follow in native disclosures. Equations remain selectable and naturally wrapping; historical charts retain adjacent data-source and limitation text. Tables can scroll where their comparisons require it. Input outcomes, errors and risk states need explicit text.
 
-### Formula Evidence
+### Sources, policies and footer
 
-- **Purpose**: distinguish a directly reproducible formula from a multi-step algorithm or a charting method before a learner treats it as a platform-ready rule.
-- **Structure**: `.formula` holds the mathematical or procedural definition; `.formula-meta` states the calculation type and the warm-up, smoothing, data-source, or platform caveat.
-- **Variants**: `可重現公式`, `可重現算法`, and `圖表方法，不是單一公式` are written as text, not colour-only states.
-- **Accessibility**: preserve line breaks with `white-space: pre-wrap`; do not hide qualifications in a tooltip or visual-only badge.
+The navy footer gives routes to policies, methods, corrections and risk information. Policy pages use readable headings, article sections and useful version or scope information. Sources and limitations stay close to the claims they qualify.
 
-### Teaching Charts
+Research status is contextual evidence, not a compulsory banner before every article. Do not infer publication indexing from the presence of a named reviewer, or require blanket draft notices on public pages. Any statement of human review, credentials, legal approval, measured performance or responsibility must be supported. Missing evidence is described where it affects understanding; it is never replaced by an invented approval.
 
-- **Purpose**: show a price example only when the local OHLCV snapshot matches the indicator's data needs; market breadth and options indicators show a data-requirement card until their own series is available.
-- **Structure**: `.chart-shell` contains `.chart-viewport`, `.chart-scroll`, and the SVG; `.chart-data-requirement` replaces the price chart when the correct source data is unavailable.
-- **Mobile state**: the chart stays horizontally readable at a stable intrinsic width and exposes a clear `放大圖表` command. Expanded charts close with the same command or `Esc`.
-- **Accessibility**: SVG keeps an informative `role="img"` label; every chart source, status, and limitation is stated in adjacent text.
+### Interaction and print
 
-### Indicator Learning Header
+Motion is brief and functional: button feedback and stateful disclosure chevrons. The existing reduced-motion rule disables smooth scrolling and non-essential transition or animation duration. Global keyboard focus uses a teal outline; existing components retain their more specific focus rings. Print removes site navigation, footer and article controls while keeping the reading content and figures usable.
 
-- **Purpose**: replace the generic detail-page image with a compact orientation panel that states what the indicator measures, the market regime where it is most useful, and what it cannot prove.
-- **Structure**: one title column plus a flat three-row evidence summary; the section navigation sits beneath the summary and links to chart, calculation, usage, and sources.
-- **Variants**: core indicators carry a `核心 20 深度頁` status; non-core indicators carry a transparent `研究條目` status without implying that a dedicated chart has been validated.
-- **Responsive**: two columns above `960px`, one column below. Navigation wraps without horizontal scrolling.
-- **Accessibility**: section links use descriptive labels, visible focus states, and stable anchor targets.
+## Do's and Don'ts
 
-### Indicator Library Controls
+### Do:
+- **Do** extend the navy, teal and pale-paper identity with source-led reading content.
+- **Do** keep actions, labels, text contrast and keyboard focus clear at every viewport.
+- **Do** preserve distinctions between historical evidence, teaching examples and assumptions.
+- **Do** keep references, risk limits and correction routes available without repetitive production commentary.
 
-- **Purpose**: let learners narrow the 82-item library by query, category, difficulty, core status, and learning order.
-- **Structure**: labelled search input, native select menus, a core-only checkbox, result count, and a clear-filter command.
-- **States**: default, filtered, and no-results states. Filtering never hides the active result count or reset action.
-- **Responsive**: four controls become a single column on mobile; labels remain visible rather than relying on placeholders.
-- **Accessibility**: controls use native form semantics and a polite live result count.
-
-### Indicator Evidence Blocks
-
-- **Purpose**: make formulas reproducible and distinguish a signal from a complete trade decision.
-- **Structure**: formula type, inputs, smoothing or warm-up rule, worked example, valid regime, failure example, related indicators, and visible research materials.
-- **Surface**: use existing teal guidance, amber caution, and red risk tints. Evidence blocks inside a section remain flat and do not become nested cards.
-- **Accessibility**: equations use selectable text with natural wrapping; source material is visible in the page rather than hidden in tooltips.
-
-### Beginner Indicator Sequence
-
-- **Purpose**: every indicator detail page must teach a repeatable order before showing formula or research depth: plain-language role, chart focus, simplest use, common misuse, market context, signal, confirmation, invalidation, and practice.
-- **Structure**: three orientation blocks followed by a four-step numbered flow. The same structure is shared by all 82 indicators, while category and core-indicator copy changes the actual lesson.
-- **Variants**: teal for the intended role, blue for where to look, amber for operating boundaries, and red for misuse or invalidation.
-- **Accessibility**: steps remain semantic ordered lists; headings and explanations stay visible without hover or tooltip interaction.
-- **Responsive**: three columns on wide screens, one column on mobile. CJK text wraps naturally inside `minmax(0, 1fr)` content columns.
-
-### Advanced Disclosure
-
-- **Purpose**: keep formula details and research comparisons available without placing advanced material before the beginner workflow.
-- **Structure**: native `details` and `summary` using `.advanced-disclosure`, `.advanced-disclosure-icon`, and `.advanced-disclosure-body`.
-- **States**: collapsed by default; opening rotates the chevron to communicate state and reveals the bordered body.
-- **Accessibility**: native keyboard and screen-reader semantics are preserved; the summary has a visible focus ring and descriptive helper text.
-- **Motion**: only the stateful chevron rotation uses the 150ms micro-interaction timing.
-
-## 6. Motion & Interaction
-
-### Timing
-
-The existing stylesheet uses restrained CSS transitions by implication and small transform feedback. Any new motion should stay within these bounds:
-
-| Type | Duration | Easing | Usage |
-|------|----------|--------|-------|
-| Micro | `100ms` to `150ms` | `ease-out` | Button press, chip hover, focus feedback |
-| Standard | `200ms` to `300ms` | `ease-in-out` | Panel reveal if one is introduced later |
-
-### Rules
-
-- Animate `transform` and `opacity`; avoid layout-changing animation.
-- Do not add decorative animation to static education panels.
-- Preserve `scroll-behavior: smooth` and the existing focus-visible treatment.
-- If reduced-motion support is added later, disable non-essential transitions under `prefers-reduced-motion`.
-- At `640px` and below, `.nav-links` becomes a visible three-column grid instead of relying on undisclosed horizontal scrolling.
-
-## 7. Depth & Surface
-
-### Strategy
-
-The project uses a mixed strategy: soft borders for structure, low-opacity white surfaces for depth, teal/amber/red tonal gradients for meaning, and restrained shadows for elevated page bands and cards.
-
-| Level | Value | Usage |
-|-------|-------|-------|
-| Flat tile | `1px solid var(--line)`, no large shadow | Audit/stat/data metric tiles |
-| Card | `1px solid var(--line)`, `0 10px 28px rgba(15, 35, 55, 0.05)` | Repeated cards and panels |
-| Elevated band | `var(--shadow)` | Major page bands |
-| Hover emphasis | stronger teal border plus `0 16px 36px rgba(15, 35, 55, 0.08)` | Indicator cards only |
-
-### Rules
-
-- Keep nested data tiles flat when they sit inside a panel; avoid card-within-card visual weight.
-- Use semantic surface tints instead of adding new shadows for status.
-- Print styles remove decorative chrome and shadows; new panels should remain readable when printed.
+### Don't:
+- **Don't** use fake market charts, profit promises or invented human-review credentials.
+- **Don't** treat status color or a high backtest metric as proof of reliability.
+- **Don't** turn article paragraphs into nested cards or repeat decorative category eyebrows.
+- **Don't** make obsolete draft banners or reviewer-based indexing gates part of the visual system.

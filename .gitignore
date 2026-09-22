@@ -29,3 +29,5 @@ __pycache__/
 # operating systems
 .DS_Store
 Thumbs.db
+.content-cache/
+.impeccable/review/

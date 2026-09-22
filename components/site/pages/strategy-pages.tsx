@@ -1,214 +1,23 @@
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 import { HeroPanel, PrimaryLink, Section } from "@/components/site/page-shell";
-import { ResearchStatusBanner } from "@/components/site/research-status-banner";
-import { StrategyFilter } from "@/components/site/strategy-filter";
-import { findStrategy, strategies, tradingViewData } from "@/lib/site-data";
-import {
-  evidenceStatusLabel,
-  parameterRoleLabel,
-  parameterStatusLabel,
-  parameterNoteLabel,
-  rubricLabel,
-  rubricValueLabel,
-  sourceCodeStatusLabel,
-  strategyDisplayValue,
-  strategyCaveat,
-  strategyStatusLabel,
-  strategyStatusTone,
-  unavailableReasonLabel,
-} from "@/lib/strategy-copy";
-
+import { strategyLessonFor, strategyLessons } from "@/lib/strategy-lessons";
 export function StrategyCasesPage() {
-  return (
-    <div>
-      <HeroPanel
-        eyebrow="回測研究庫"
-        title="來源聲稱，不等於本站結論"
-        body="外部頁面的盈利因子、勝率或回撤，在本站獨立重現前只會標示為來源聲稱。每張研究卡先列證據缺口，再交代參數、成本、樣本期與原始碼狀態。"
-        imageKey="tv"
-        actions={<PrimaryLink href="/tv-strategies">了解回測審核方法</PrimaryLink>}
-      />
-      <Section title="研究發布狀態" body="完整發布閘門包括可重現資料、完整設定、保守成本、失效測試、樣本外測試與具名覆核。">
-        <div className="empty-state">
-          <strong>目前沒有研究通過完整發布閘門</strong>
-          <p>以下項目保留作方法與風險教材；狀態並不代表本站認可其績效或適合實盤。</p>
-          <PrimaryLink href="/methodology/backtesting" variant="secondary">查看回測發布閘門</PrimaryLink>
-        </div>
-      </Section>
-      <Section title="待核對研究條目" body="篩選只按證據狀態與程式碼可見度分類，不按績效數字排名。">
-        <StrategyFilter items={strategies.map((item) => ({
-          slug: item.slug,
-          title: item.shortTitle || item.title,
-          market: item.market,
-          symbol: item.symbol,
-          timeframe: item.timeframe,
-          statusLabel: strategyStatusLabel(item.includeStatus),
-          statusTone: strategyStatusTone(item.includeStatus),
-          hasCode: Boolean(item.pineScript.code),
-          caveat: strategyCaveat(item.slug, item.displayCaveat),
-          evidenceLabel: evidenceStatusLabel(item.evidenceStatus),
-          sourceCodeLabel: sourceCodeStatusLabel(item.scriptAccess.sourceCodeStatus),
-          isPending: item.includeStatus === "support-only",
-          isExcluded: item.includeStatus === "rejected",
-        }))} />
-      </Section>
-    </div>
-  );
+ return <><HeroPanel eyebrow="策略方法" title="把一個構思，拆成可以檢驗的條件。" body="十種方法，從趨勢、區間到形態與程式框架。逐項閱讀它需要甚麼資料、何時產生訊號、怎樣退出，以及哪些環境容易失效。" imageKey="tv" actions={<PrimaryLink href="/tv-strategies">先了解回測方法</PrimaryLink>}/><Section title="十個研究起點"><div className="article-list">{strategyLessons.map(s=><article key={s.slug}><span className="article-meta">{s.category}</span><h2><Link href={`/strategy-cases/${s.slug}`}>{s.title}</Link></h2><p>{s.intro}</p><Link className="text-link" href={`/strategy-cases/${s.slug}`}>拆解研究方法 →</Link></article>)}</div></Section><Section title="怎樣閱讀這些方法"><p>這些頁面整理教學構思與測試設計。所列參數用來說明規則，不提供績效預測；實際結果取決於資料、期間、成本和執行條件。</p><Link className="text-link" href="/blog/category/backtesting">閱讀回測專題 →</Link></Section></>;
 }
-
+export function StrategyDetailPage({slug}:{slug:string}) {
+ const s=strategyLessonFor(slug);if(!s)notFound();
+ const sections=[["資料與前提",s.setup],["觸發與時間",s.trigger],["退出與股數",s.exit],["容易失效的地方",s.failure],["如何設計比較",s.test]];
+ return <><nav className="breadcrumbs" aria-label="頁面路徑"><Link href="/">首頁</Link><span>/</span><Link href="/strategy-cases">策略方法</Link></nav><HeroPanel eyebrow={s.category} title={s.title} body={s.intro} imageKey="tv"/><div className="method-article">{sections.map(([title,body])=><Section key={title} title={title!}><p>{body}</p></Section>)}</div><Section title="延伸工具與原始文件"><div className="topic-links"><Link href={`/indicators/${s.indicator}`}>相關指標</Link><Link href="/toolbox">風險計算</Link><Link href="/journal">記錄研究結果</Link></div><p className="source-line"><a href="https://www.tradingview.com/pine-script-docs/concepts/strategies/" target="_blank" rel="noreferrer">TradingView：策略計算與訂單模擬 ↗</a></p></Section><Section title="其他方法"><div className="link-index">{strategyLessons.filter(x=>x.slug!==slug).slice(0,4).map(x=><Link key={x.slug} href={`/strategy-cases/${x.slug}`}>{x.title}</Link>)}</div></Section></>;
+}
 export function TradingViewTeachingPage() {
-  const rawLeadCount = tradingViewData.stats.rawLeadsCollected;
-  const caseCount = tradingViewData.stats.totalCases;
-  const completedCaseCount = tradingViewData.stats.acceptedCases;
-  const pendingCaseCount = tradingViewData.stats.supportOnlyCases;
-  const excludedCaseCount = tradingViewData.stats.rejectedCases;
-  const missingOosCount = tradingViewData.stats.missingOosCount;
-
-  return (
-    <div>
-      <HeroPanel
-        eyebrow="策略測試報告審核"
-        title="盈利因子再高，也不等於可以實盤"
-        body="TradingView 的策略測試報告（Strategy Report）可以協助驗證交易構思，但不能只看最亮眼的數字。測試前後都應核對策略屬性（Properties）、輸入參數（Inputs）、交易次數、手續費、滑價及樣本外測試（OOS）。"
-        imageKey="tv"
-        actions={<PrimaryLink href="/strategy-cases">查看本站案例</PrimaryLink>}
-      />
-      <Section title="合格案例最低門檻">
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {rules.map((item) => (
-            <Card key={item.title}>
-              <CardHeader>
-                <Badge variant={item.tone} className="w-fit">
-                  {item.badge}
-                </Badge>
-                <CardTitle>{item.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm leading-6 text-[var(--muted)]">{item.body}</CardContent>
-            </Card>
-          ))}
-        </div>
-      </Section>
-      <Section title="為何目前仍屬「待完成核對」" body="本站已整理詳細設定及教學程式範本，但要列作正式案例，仍須取得可重建的策略測試報告、完整交易設定及原始碼授權證明。">
-        <table className="data-table">
-          <tbody>
-            <Row label="已收集原始線索" value={rawLeadCount} />
-            <Row label="已整理案例" value={caseCount} />
-            <Row label="已完成核對" value={completedCaseCount} />
-            <Row label="待完成核對" value={pendingCaseCount} />
-            <Row label="不採用" value={excludedCaseCount} />
-            <Row label="未有樣本外測試" value={missingOosCount} />
-          </tbody>
-        </table>
-      </Section>
-    </div>
-  );
-}
-
-export function StrategyDetailPage({ slug }: { readonly slug: string }) {
-  const item = findStrategy(slug);
-  if (!item) {
-    return (
-      <Section title="找不到策略案例" body="這個 slug 未有納入本地 TradingView 策略資料包。">
-        <PrimaryLink href="/strategy-cases">返回策略案例庫</PrimaryLink>
-      </Section>
-    );
-  }
-  const canShowCode = Boolean(item.pineScript.code);
-  return (
-    <div>
-      <HeroPanel
-        eyebrow={`${strategyStatusLabel(item.includeStatus)} · ${item.timeframe}`}
-        title={item.shortTitle || item.title}
-        body={strategyCaveat(item.slug, item.displayCaveat)}
-        imageKey="tv"
-        actions={<PrimaryLink href="/strategy-cases" variant="secondary">返回案例庫</PrimaryLink>}
-      />
-      <ResearchStatusBanner
-        status={item.includeStatus === "rejected" ? "rejected" : "source-claim"}
-        methodVersion="回測方法 v1.0"
-      />
-      <Section title="來源資料摘要" body="下列數字只用來辨認原始聲稱與待核對缺口，不是本站績效排名。">
-        <table className="data-table">
-          <tbody>
-            <Row label="來源列出的盈利因子" value={item.pfNumeric} />
-            <Row label="來源列出的勝率" value={item.winRate} />
-            <Row label="來源列出的交易次數" value={item.trades} />
-            <Row label="設定資料完整度" value={`${item.settingsAudit.completenessPercent ?? 0}%`} />
-          </tbody>
-        </table>
-      </Section>
-      <Section title="策略屬性設定（Properties）">
-        <table className="data-table">
-          <tbody>
-            <Row label="初始資金" value={item.strategyProperties.initialCapital} />
-            <Row label="基礎貨幣" value={item.strategyProperties.baseCurrency} />
-            <Row label="下單數量" value={item.strategyProperties.orderSize} />
-            <Row label="加倉設定" value={item.strategyProperties.pyramiding} />
-            <Row label="手續費" value={item.strategyProperties.commission} />
-            <Row label="滑價" value={item.strategyProperties.slippage} />
-            <Row label="成交假設" value={item.strategyProperties.fillAssumptions} />
-            <Row label="重算設定" value={item.strategyProperties.recalculation} />
-          </tbody>
-        </table>
-      </Section>
-      <Section title="輸入參數（Inputs）">
-        <div className="grid gap-3">
-          {item.inputParameters.map((param) => (
-            <Card key={`${param.name}-${param.value}`}>
-              <CardHeader>
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge variant="info">{parameterRoleLabel(param.role)}</Badge>
-                  <Badge variant={param.status === "blocked-source" ? "bad" : "warn"}>{parameterStatusLabel(param.status)}</Badge>
-                </div>
-                <CardTitle>{param.name}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm leading-6 text-[var(--muted)]">
-                <p>
-                  <strong className="text-[var(--ink)]">{strategyDisplayValue(param.value)}</strong>
-                </p>
-                <p>{parameterNoteLabel(param.note)}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </Section>
-      <Section title="Pine Script 程式碼狀態" body={item.scriptAccess.policyNoteZh ?? "原作者的程式碼授權尚未確認時，本站只會展示教學重建範本，或不公開程式碼。"}>
-        {canShowCode ? (
-          <div className="code-panel">
-            <pre>
-              <code>{item.pineScript.code}</code>
-            </pre>
-          </div>
-        ) : (
-          <div className="rounded-[8px] border border-[#f3d7ad] bg-[#fff7ed] p-4 text-sm text-[#9a3412]">{unavailableReasonLabel(item.pineScript.unavailableReason)}</div>
-        )}
-      </Section>
-      <Section title="審核項目">
-        <table className="data-table">
-          <tbody>
-            {Object.entries(item.rubricBadges).map(([label, value]) => (
-              <Row key={label} label={rubricLabel(label)} value={rubricValueLabel(value)} />
-            ))}
-          </tbody>
-        </table>
-      </Section>
-    </div>
-  );
-}
-
-const rules = [
-  { badge: "資料", title: "真實 OHLCV 及標準圖表", body: "如使用非標準圖表或合成價格，又沒有交代除淨、拆股等公司行動，結果最多只可作初步研究。", tone: "info" },
-  { badge: "樣本", title: "樣本期與交易次數", body: "盈利因子要連同交易次數、測試期間及當時市況一併閱讀。測試期太短，很容易出現過度擬合。", tone: "warn" },
-  { badge: "成本", title: "交易成本與成交假設", body: "短線策略尤其要列明手續費、滑價及成交假設，否則回測結果往往過分樂觀。", tone: "bad" },
-  { badge: "原始碼", title: "程式碼授權與署名", body: "公開可見不等於可以任意重製。本站只展示已清楚標示的教學重建範本，或已確認授權的原始程式碼。", tone: "info" },
-] satisfies readonly { readonly badge: string; readonly title: string; readonly body: string; readonly tone: "info" | "warn" | "bad" | "good" }[];
-
-function Row({ label, value }: { readonly label: string; readonly value: string | number | null }) {
-  return (
-    <tr>
-      <th>{label}</th>
-      <td>{strategyDisplayValue(value)}</td>
-    </tr>
-  );
+ const steps=[
+ ["先固定研究問題","記錄市場、證券、資料週期、日期與貨幣。指定要研究的是哪種事件，以及比較的基準；不要先調參數，再替結果尋找理由。"],
+ ["把規則寫成可執行條件","分開市況、訊號、訂單和退出。說明一根燭何時確認、是否允許加倉、反向訂單如何處理，以及日內同時碰到止賺止蝕時採用甚麼成交模型。"],
+ ["在標準圖表上檢查","以真實 OHLC 作成交基礎。平均燭、Renko 等轉換圖可以用於訊號研究，但合成價格與可成交價格須分開。"],
+ ["在策略屬性加入成本","記錄初始資金、股數、佣金、滑價和保證金設定。滑價的單位可能是最小跳動，必須乘以該商品的最小價位，才知道價格距離。"],
+ ["逐筆對照交易明細","選幾笔可以手算的交易，核對訊號時間、成交時間、數量、費用和退出。只有总收益相近，未必代表成交明細一致。"],
+ ["用另一段資料檢驗","把設計資料與測試資料按時間分開。使用測試期調參數之後，那段資料已參與設計，需要重新保留獨立期間。"],
+ ];
+ return <><HeroPanel eyebrow="TradingView 回測教學" title="曲線之下，還有一整套假設。" body="回測把規則放進歷史資料，回答的是「按這組設定會發生甚麼」。閱讀報告時，要把收益、交易次數、回撤與成交條件放在一起。" imageKey="tv"/><Section title="一個可以重現的工作次序"><ol className="learning-road">{steps.map(([t,b],i)=><li key={t}><span>{i+1}</span><div><h3>{t}</h3><p>{b}</p></div></li>)}</ol></Section><Section title="四項數字，一起閱讀"><dl className="glossary-list"><div><dt>總收益</dt><dd>先對齊起始資金、複利、投入資金和成本，再與同期間基準比較。</dd></div><div><dt>盈利因子</dt><dd>總盈利除以總虧損的絕對值；少量樣本或極少虧損可令比率不穩定。</dd></div><div><dt>最大回撤</dt><dd>由歷史資金高點向下量度；只用收市資金與包含盤中損益的口徑不同。</dd></div><div><dt>交易次數</dt><dd>留意交易是否集中於同一波行情；數量多不等於每筆彼此獨立。</dd></div></dl></Section><Section title="繼續研究"><div className="topic-links"><Link href="/blog/category/backtesting">16 篇回測方法文章</Link><Link href="/blog/category/pine-script">Pine Script 專題</Link><Link href="/methodology/backtesting">本站回測方法</Link></div><p className="source-line"><a href="https://www.tradingview.com/pine-script-docs/concepts/strategies/" target="_blank" rel="noreferrer">TradingView 官方策略文件 ↗</a></p></Section></>;
 }

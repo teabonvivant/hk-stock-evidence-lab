@@ -4,9 +4,14 @@ import { SimplePage } from "@/components/site/pages/simple-pages";
 import { StrategyCasesPage, StrategyDetailPage, TradingViewTeachingPage } from "@/components/site/pages/strategy-pages";
 import { TrustPage } from "@/components/site/pages/trust-pages";
 import type { SiteRoute } from "@/lib/routes";
+import { BlogPage, ArticlePage } from "@/components/site/pages/blog-pages";
 
 export function RoutePage({ route }: { readonly route: SiteRoute }) {
   switch (route.kind) {
+    case "blog":
+      return <BlogPage {...(route.categorySlug ? { categorySlug: route.categorySlug } : {})} />;
+    case "article":
+      return <ArticlePage slug={route.slug} />;
     case "home":
       return <HomePage />;
     case "indicators":

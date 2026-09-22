@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/site/json-ld";
 import { Badge } from "@/components/ui/badge";
 import { trustContentFor } from "@/lib/trust-content";
 import type { TrustRoutePath } from "@/lib/trust-content";
+import { CorrectionNote } from "@/components/site/learning-tools";
 
 export function TrustPage({ path }: { readonly path: TrustRoutePath }) {
   const content = trustContentFor(path);
@@ -20,7 +21,7 @@ export function TrustPage({ path }: { readonly path: TrustRoutePath }) {
           description: content.description,
           url: pageUrl,
           inLanguage: "zh-Hant-HK",
-          dateModified: "2026-07-24",
+          dateModified: "2026-09-22",
         }}
       />
       <nav aria-label="頁面路徑" className="breadcrumbs">
@@ -28,17 +29,12 @@ export function TrustPage({ path }: { readonly path: TrustRoutePath }) {
         {path === "trust" ? <span>信任中心</span> : <><Link href="/trust">信任中心</Link><span aria-hidden="true">/</span><span>{content.eyebrow}</span></>}
       </nav>
       <header className="policy-header">
-        <div className="flex flex-wrap gap-2">
-          <Badge variant="warn">草擬／待具名覆核</Badge>
-          {!content.indexable ? <Badge variant="info">暫不編入索引</Badge> : null}
-        </div>
         <p>{content.eyebrow}</p>
         <h1>{content.title}</h1>
         <p>{content.description}</p>
         <dl>
           <div><dt>{content.versionLabel}</dt><dd>{content.version}</dd></div>
-          <div><dt>生效／更新日期</dt><dd>2026-07-24</dd></div>
-          <div><dt>具名覆核</dt><dd>尚未完成</dd></div>
+          <div><dt>更新日期</dt><dd>2026-09-22</dd></div>
         </dl>
       </header>
 
@@ -64,6 +60,7 @@ export function TrustPage({ path }: { readonly path: TrustRoutePath }) {
         ))}
       </div>
 
+      {path === "contact/report-error" ? <section className="policy-sections"><h2>整理修訂筆記</h2><CorrectionNote /></section> : null}
       <section className="related-policies">
         <h2>相關政策與方法</h2>
         <div>
@@ -76,7 +73,7 @@ export function TrustPage({ path }: { readonly path: TrustRoutePath }) {
 
       <aside className="policy-report">
         <div><strong>發現內容、公式或資料問題？</strong><p>請保存網址、重現步驟與可核對來源。</p></div>
-        <Link href="/contact/report-error">報告錯誤／提交可重現資料</Link>
+        <Link href="/contact/report-error">整理修訂筆記</Link>
       </aside>
     </article>
   );

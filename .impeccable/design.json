@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-22T05:30:50.7916815Z",
+  "title": "Design System: 港股證據研究室",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Teal",
+        "tonalRamp": [
+          "oklch(15% 0.096 186)",
+          "oklch(25% 0.096 186)",
+          "oklch(35% 0.096 186)",
+          "oklch(45% 0.096 186)",
+          "oklch(55% 0.096 186)",
+          "oklch(65% 0.096 186)",
+          "oklch(80% 0.096 186)",
+          "oklch(95% 0.096 186)"
+        ]
+      },
+      "primary-strong": {
+        "role": "primary",
+        "displayName": "Deep teal",
+        "tonalRamp": [
+          "oklch(15% 0.078 188)",
+          "oklch(25% 0.078 188)",
+          "oklch(35% 0.078 188)",
+          "oklch(45% 0.078 188)",
+          "oklch(55% 0.078 188)",
+          "oklch(65% 0.078 188)",
+          "oklch(80% 0.078 188)",
+          "oklch(95% 0.078 188)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Navy ink",
+        "tonalRamp": [
+          "oklch(15% 0.049 249)",
+          "oklch(25% 0.049 249)",
+          "oklch(35% 0.049 249)",
+          "oklch(45% 0.049 249)",
+          "oklch(55% 0.049 249)",
+          "oklch(65% 0.049 249)",
+          "oklch(80% 0.049 249)",
+          "oklch(95% 0.049 249)"
+        ]
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15% 0.004 264)",
+          "oklch(25% 0.004 264)",
+          "oklch(35% 0.004 264)",
+          "oklch(45% 0.004 264)",
+          "oklch(55% 0.004 264)",
+          "oklch(65% 0.004 264)",
+          "oklch(80% 0.004 264)",
+          "oklch(95% 0.004 264)"
+        ]
+      },
+      "bg-strong": {
+        "role": "neutral",
+        "displayName": "Slate wash",
+        "tonalRamp": [
+          "oklch(15% 0.009 250)",
+          "oklch(25% 0.009 250)",
+          "oklch(35% 0.009 250)",
+          "oklch(45% 0.009 250)",
+          "oklch(55% 0.009 250)",
+          "oklch(65% 0.009 250)",
+          "oklch(80% 0.009 250)",
+          "oklch(95% 0.009 250)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(25% 0 0)",
+          "oklch(35% 0 0)",
+          "oklch(45% 0 0)",
+          "oklch(55% 0 0)",
+          "oklch(65% 0 0)",
+          "oklch(80% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "surface-soft": {
+        "role": "neutral",
+        "displayName": "Quiet paper",
+        "tonalRamp": [
+          "oklch(15% 0.004 264)",
+          "oklch(25% 0.004 264)",
+          "oklch(35% 0.004 264)",
+          "oklch(45% 0.004 264)",
+          "oklch(55% 0.004 264)",
+          "oklch(65% 0.004 264)",
+          "oklch(80% 0.004 264)",
+          "oklch(95% 0.004 264)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted ink",
+        "tonalRamp": [
+          "oklch(15% 0.039 257)",
+          "oklch(25% 0.039 257)",
+          "oklch(35% 0.039 257)",
+          "oklch(45% 0.039 257)",
+          "oklch(55% 0.039 257)",
+          "oklch(65% 0.039 257)",
+          "oklch(80% 0.039 257)",
+          "oklch(95% 0.039 257)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Default border",
+        "tonalRamp": [
+          "oklch(15% 0.009 250)",
+          "oklch(25% 0.009 250)",
+          "oklch(35% 0.009 250)",
+          "oklch(45% 0.009 250)",
+          "oklch(55% 0.009 250)",
+          "oklch(65% 0.009 250)",
+          "oklch(80% 0.009 250)",
+          "oklch(95% 0.009 250)"
+        ]
+      },
+      "accent": {
+        "role": "secondary",
+        "displayName": "Amber",
+        "tonalRamp": [
+          "oklch(15% 0.163 49)",
+          "oklch(25% 0.163 49)",
+          "oklch(35% 0.163 49)",
+          "oklch(45% 0.163 49)",
+          "oklch(55% 0.163 49)",
+          "oklch(65% 0.163 49)",
+          "oklch(80% 0.163 49)",
+          "oklch(95% 0.163 49)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Reading headline",
+        "purpose": "Article and reading-index headline; preferred local serif families are described in DESIGN.md."
+      },
+      "article-title": {
+        "displayName": "Article list title",
+        "purpose": "Serif title in article lists."
+      },
+      "article-section": {
+        "displayName": "Article section",
+        "purpose": "Sections within long-form reading."
+      },
+      "body": {
+        "displayName": "Article body",
+        "purpose": "Long reading at the bounded article measure."
+      },
+      "label": {
+        "displayName": "Control label",
+        "purpose": "Search, filter and tool labels."
+      },
+      "caption": {
+        "displayName": "Figure caption",
+        "purpose": "Figure explanation and qualifications."
+      }
+    },
+    "shadows": [
+      {
+        "purpose": "Existing outer section containers.",
+        "value": "0 10px 28px rgb(15 35 55 / 0.05)",
+        "name": "section-card"
+      },
+      {
+        "purpose": "Grouped menu above page content.",
+        "value": "0 18px 40px rgb(11 31 51 / 0.12)",
+        "name": "open-navigation"
+      },
+      {
+        "purpose": "Fixed mobile task bar.",
+        "value": "0 -8px 24px rgb(11 31 51 / 0.08)",
+        "name": "mobile-navigation"
+      },
+      {
+        "purpose": "Primary action depth.",
+        "value": "0 8px 18px rgba(15,118,110,0.18)",
+        "name": "primary-button"
+      }
+    ],
+    "motion": [
+      {
+        "purpose": "Existing button feedback and disclosure chevron.",
+        "value": "150ms ease-out",
+        "name": "micro"
+      },
+      {
+        "purpose": "Non-essential transition and animation duration under reduced motion; smooth scrolling becomes auto.",
+        "value": "0.01ms",
+        "name": "reduced-motion"
+      }
+    ],
+    "breakpoints": [
+      {
+        "value": "620px",
+        "name": "compact-reading"
+      },
+      {
+        "value": "760px",
+        "name": "compact-shell"
+      },
+      {
+        "value": "900px",
+        "name": "mobile-navigation"
+      },
+      {
+        "value": "950px",
+        "name": "single-reading-column"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary reading or learning action.",
+      "html": "<button class=\"ds-button\">閱讀研究札記</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:44px;height:44px;padding:.5rem 1rem;border:0;border-radius:8px;font-family:var(--font-sans,sans-serif);font-size:.875rem;font-weight:600;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out,transform 150ms ease-out,box-shadow 150ms ease-out}.ds-button:focus-visible{outline:2px solid var(--primary,#0f766e);outline-offset:2px}.ds-button:active{transform:scale(.98)}.ds-button:disabled{pointer-events:none;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-button{transition-duration:.01ms}}.ds-button{background:var(--primary,#0f766e);color:white;box-shadow:0 8px 18px rgba(15,118,110,.18)}.ds-button:hover{background:var(--primary-strong,#115e59)}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A parallel, quieter action.",
+      "html": "<button class=\"ds-button\">從基礎開始</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:44px;height:44px;padding:.5rem 1rem;border:0;border-radius:8px;font-family:var(--font-sans,sans-serif);font-size:.875rem;font-weight:600;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out,transform 150ms ease-out,box-shadow 150ms ease-out}.ds-button:focus-visible{outline:2px solid var(--primary,#0f766e);outline-offset:2px}.ds-button:active{transform:scale(.98)}.ds-button:disabled{pointer-events:none;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-button{transition-duration:.01ms}}.ds-button{background:var(--surface,#fff);color:var(--ink,#0b1f33);border:1px solid var(--line,#e9eef3)}.ds-button:hover{border-color:var(--primary,#0f766e);color:var(--primary-strong,#115e59)}"
+    },
+    {
+      "name": "Warning button",
+      "kind": "button",
+      "refersTo": "button-warning",
+      "description": "Existing caution-action variant.",
+      "html": "<button class=\"ds-button\">核對風險</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:44px;height:44px;padding:.5rem 1rem;border:0;border-radius:8px;font-family:var(--font-sans,sans-serif);font-size:.875rem;font-weight:600;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out,transform 150ms ease-out,box-shadow 150ms ease-out}.ds-button:focus-visible{outline:2px solid var(--primary,#0f766e);outline-offset:2px}.ds-button:active{transform:scale(.98)}.ds-button:disabled{pointer-events:none;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-button{transition-duration:.01ms}}.ds-button{background:var(--accent,#b45309);color:white}.ds-button:hover{background:#b45309}"
+    },
+    {
+      "name": "Ghost button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Quiet utility action.",
+      "html": "<button class=\"ds-button\">清除篩選</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:44px;height:44px;padding:.5rem 1rem;border:0;border-radius:8px;font-family:var(--font-sans,sans-serif);font-size:.875rem;font-weight:600;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out,transform 150ms ease-out,box-shadow 150ms ease-out}.ds-button:focus-visible{outline:2px solid var(--primary,#0f766e);outline-offset:2px}.ds-button:active{transform:scale(.98)}.ds-button:disabled{pointer-events:none;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-button{transition-duration:.01ms}}.ds-button{background:transparent;color:var(--muted,#334155)}.ds-button:hover{background:var(--surface-soft,#f7f8fa);color:var(--ink,#0b1f33)}"
+    },
+    {
+      "name": "Reading input",
+      "kind": "input",
+      "refersTo": "reading-input",
+      "description": "Visible labels and a generous field target.",
+      "html": "<label class=\"ds-field\">搜尋文章<input type=\"search\" placeholder=\"輸入題目或關鍵字\"></label>",
+      "css": ".ds-field{display:grid;gap:.55rem;font-family:var(--font-sans,sans-serif);font-size:.9375rem;font-weight:600;color:var(--ink,#0b1f33)}.ds-field input{width:100%;min-height:48px;border:1px solid #9aafbf;border-radius:5px;padding:.7rem .85rem;background:white;font:inherit;font-size:1rem;color:var(--ink,#0b1f33);caret-color:var(--primary,#0f766e)}.ds-field input:focus-visible{outline:3px solid var(--primary,#0f766e);outline-offset:4px}"
+    },
+    {
+      "name": "Desktop navigation",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "Plain task links with a visible current page.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"主要導覽\"><a href=\"#learn\">學習</a><a href=\"#articles\" aria-current=\"page\">研究札記</a><a href=\"#tools\">工具</a></nav>",
+      "css": ".ds-nav{display:flex;gap:.1rem;align-items:center;font-family:var(--font-sans,sans-serif)}.ds-nav a{display:inline-flex;align-items:center;justify-content:center;min-height:2.65rem;gap:.4rem;border-radius:10px;padding:.7rem .6rem;color:var(--muted,#334155);font-size:.9375rem;font-weight:800;white-space:nowrap;text-decoration:none}.ds-nav a:hover,.ds-nav a:focus-visible,.ds-nav a[aria-current=\"page\"]{background:white;color:var(--primary-strong,#115e59)}.ds-nav a:focus-visible{outline:2px solid var(--primary,#0f766e);outline-offset:2px}"
+    },
+    {
+      "name": "Topic link",
+      "kind": "chip",
+      "refersTo": "topic-link",
+      "description": "A labelled category with its article count.",
+      "html": "<a class=\"ds-topic\" href=\"#indicators\" aria-current=\"page\">指標與圖表<span>20</span></a>",
+      "css": ".ds-topic{display:inline-flex;align-items:center;gap:1.25rem;min-height:44px;border:1px solid #cad5de;border-radius:6px;padding:.6rem .9rem;color:var(--ink,#0b1f33);font-family:var(--font-sans,sans-serif);font-weight:600;font-size:.9375rem;text-decoration:none}.ds-topic:hover,.ds-topic[aria-current]{color:white;background:var(--primary-strong,#115e59);border-color:var(--primary-strong,#115e59)}.ds-topic:focus-visible{outline:3px solid var(--primary,#0f766e);outline-offset:4px}.ds-topic span{font-variant-numeric:tabular-nums;opacity:.85}"
+    },
+    {
+      "name": "Section card",
+      "kind": "card",
+      "refersTo": "section-card",
+      "description": "The existing soft outer container, with flat content inside.",
+      "html": "<section class=\"ds-card\"><h2>把基礎放穩</h2><p>價格位置、趨勢、動能、成交量和波幅，各自回答不同的問題。</p></section>",
+      "css": ".ds-card{border:1px solid var(--line,#e9eef3);border-radius:8px;padding:1.25rem;background:rgb(255 255 255 / .9);box-shadow:0 10px 28px rgba(15,35,55,.05);font-family:var(--font-sans,sans-serif);color:var(--ink,#0b1f33)}.ds-card h2{font-size:1.25rem;font-weight:700;margin:0}.ds-card p{margin:.5rem 0 0;font-size:.875rem;line-height:1.5rem;color:var(--muted,#334155)}@media(min-width:768px){.ds-card h2{font-size:1.5rem}}"
+    },
+    {
+      "name": "Evidence figure",
+      "kind": "custom",
+      "refersTo": "evidence-figure",
+      "description": "A flat navy explanation with numbered rows and functional rules.",
+      "html": "<figure class=\"ds-evidence\"><figcaption>從觀察走向理解</figcaption><ol><li><span aria-hidden=\"true\">1</span><div><strong>價格位置</strong><small>高低點、區域、突破</small></div></li><li><span aria-hidden=\"true\">2</span><div><strong>成交參與</strong><small>成交股數與價格變化</small></div></li></ol></figure>",
+      "css": ".ds-evidence{margin:0;background:var(--ink,#0b1f33);color:white;border-radius:12px;padding:1.5rem;font-family:var(--font-sans,sans-serif)}.ds-evidence figcaption{font-size:1.1rem;font-weight:700;border-bottom:1px solid rgb(255 255 255 / .16);padding-bottom:.75rem}.ds-evidence ol{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;list-style:none;margin:1.5rem 0 0;padding:0}.ds-evidence li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.55rem;padding:1rem 0;border-top:1px solid #405369}.ds-evidence li>span{font-family:var(--font-mono,monospace);font-weight:900;font-size:.875rem;color:#a9d9d3}.ds-evidence li div{display:grid}.ds-evidence strong{display:block;font-size:1rem}.ds-evidence small{display:block;color:#d9e6ee;font-size:.875rem;line-height:1.7}"
+    }
+  ],
+  "narrative": {
+    "northStar": "港股證據研究室",
+    "overview": "A calm, evidence-led Hong Kong technical-analysis reading library. Navy ink, teal guidance, pale paper and restrained line geometry connect the established research tools with the expanded article collection. The voice is practical, measured Hong Kong Chinese, with literary reading headings and direct learning actions.\n\nThe visual system makes explanations, examples, source material and operating limits easy to find. Historical observations and teaching examples remain distinguishable. Financial education carries meaningful risk and source context; professional presentation does not imply verified performance or named human review.",
+    "keyCharacteristics": [
+      "Navy and teal on pale paper.",
+      "Serif reading headings with readable sans-serif body text.",
+      "Flat article rows, clear diagrams and functional controls.",
+      "Explicit sources and limitations without repeated production notices."
+    ],
+    "rules": [
+      {
+        "name": "The Meaningful Color Rule",
+        "body": "Color supports a written label or explanation; it never establishes review, source quality or risk on its own.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reading Hierarchy Rule",
+        "body": "Use title, introduction, section heading, body and caption to establish hierarchy; repeated decorative category labels do not add another level.",
+        "section": "typography"
+      },
+      {
+        "name": "The Content Measure Rule",
+        "body": "Give long articles a bounded reading measure; let research grids and comparison tools use the wider shell when the task needs it.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Reading Rule",
+        "body": "Use section dividers and spacing inside an article; do not wrap every paragraph or evidence block in another raised card.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** extend the navy, teal and pale-paper identity with source-led reading content.",
+      "**Do** keep actions, labels, text contrast and keyboard focus clear at every viewport.",
+      "**Do** preserve distinctions between historical evidence, teaching examples and assumptions.",
+      "**Do** keep references, risk limits and correction routes available without repetitive production commentary."
+    ],
+    "donts": [
+      "**Don't** use fake market charts, profit promises or invented human-review credentials.",
+      "**Don't** treat status color or a high backtest metric as proof of reliability.",
+      "**Don't** turn article paragraphs into nested cards or repeat decorative category eyebrows.",
+      "**Don't** make obsolete draft banners or reviewer-based indexing gates part of the visual system."
+    ]
+  }
+}

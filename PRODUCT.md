@@ -10,7 +10,7 @@ This product serves Hong Kong and US stock learners, technical-analysis students
 
 ## Product Purpose
 
-The site is a Traditional Chinese technical-analysis research lab. It turns indicator definitions, expert research, Yahoo OHLCV examples, TradingView Strategy Tester cases, and Pine Script teaching templates into a local, inspectable learning system. Success means the reader can distinguish education from trade advice, see what evidence is missing, understand each strategy's settings and limitations, and avoid treating high PF backtests as proof of live profitability.
+The site is a public Traditional Chinese technical-analysis learning and reading library. It connects 100 illustrated research articles, 82 indicator guides, historical OHLCV examples, strategy methods, Pine Script lessons and practical risk tools. Success means readers can follow a source, reproduce a teaching calculation, understand a method's settings and limits, and distinguish financial education from a personal trade recommendation.
 
 ## Brand Personality
 
@@ -24,7 +24,7 @@ Do not look like a crypto signal sales page, a generic AI SaaS dashboard, or a T
 
 ## Design Principles
 
-1. Evidence before excitement: every metric, strategy, and source needs a visible confidence state.
+1. Evidence before excitement: give claims useful source and method context; distinguish historical observations from teaching examples without repetitive production-status banners.
 2. Local first: strategy cases, settings, templates, and summaries should live in the site rather than depending on outbound links.
 3. Teach the workflow: pages should help users inspect setup, signal, risk, exit, and invalidation instead of memorizing indicators.
 4. Protect the learner: historical PF, win rate, and backtests must be framed as parameter-sensitive and not investment advice.

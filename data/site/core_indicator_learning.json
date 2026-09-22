@@ -11,14 +11,23 @@
       "doesNotMeasure": "不量度趨勢強度，也不能預告轉勢時間。",
       "bestRegime": "有方向、回調有秩序的趨勢市。",
       "avoidRegime": "窄幅橫行及頻繁裂口的事件市。",
-      "calculationSteps": ["選定同一頻率及同一調整口徑的收市價。", "把最近 N 根收市價相加。", "除以 N，下一根價格出現後滾動更新。"],
+      "calculationSteps": [
+        "選定同一頻率及同一調整口徑的收市價。",
+        "把最近 N 根收市價相加。",
+        "除以 N，下一根價格出現後滾動更新。"
+      ],
       "workedExample": "5 日收市價為 98、100、101、103、103，SMA5 = 505 / 5 = 101。",
       "validCase": "價格位於上升的 SMA 之上，回調後重新企穩，才屬趨勢延續證據。",
       "failureCase": "橫行市內價格反覆穿越 SMA，金叉死叉會密集出現但沒有延續。",
       "signalBoundary": "均線穿越只是環境提示；入場仍要定義價格觸發、止蝕及倉位。",
       "caseKey": "uptrend",
       "chartLead": "AAPL 2023 日線以調整後收市價計算 SMA20，重點看價格與均線斜率是否同向。",
-      "sources": [{ "label": "StockCharts：Simple Moving Average", "url": "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/moving-averages-simple-and-exponential" }]
+      "sources": [
+        {
+          "label": "StockCharts：Simple Moving Average",
+          "url": "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/moving-averages-simple-and-exponential"
+        }
+      ]
     },
     {
       "slug": "ema",
@@ -31,34 +40,52 @@
       "doesNotMeasure": "不代表成交量支持，也不保證較快便較準。",
       "bestRegime": "節奏清晰的短中線趨勢及有秩序回調。",
       "avoidRegime": "低波動橫行市，短週期 EMA 容易製造過多訊號。",
-      "calculationSteps": ["以 N 決定 alpha。", "用首 N 根收市價 SMA 建立種子。", "逐根套用遞迴公式，不可跳過中間資料。"],
+      "calculationSteps": [
+        "以 N 決定 alpha。",
+        "用首 N 根收市價 SMA 建立種子。",
+        "逐根套用遞迴公式，不可跳過中間資料。"
+      ],
       "workedExample": "N=9 時 alpha=0.2；昨日 EMA=100、今日收市=105，今日 EMA=101。",
       "validCase": "短 EMA 位於長 EMA 上方，而且兩者同步向上，證據比單次交叉完整。",
       "failureCase": "在沒有趨勢的區間內縮短週期，只會把價格雜訊放大。",
       "signalBoundary": "EMA 是平滑器，不是獨立買賣系統。",
       "caseKey": "uptrend",
       "chartLead": "同一段 AAPL 走勢同時畫出 EMA20，觀察它較快貼近價格的代價。",
-      "sources": [{ "label": "StockCharts：Exponential Moving Average", "url": "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/moving-averages-simple-and-exponential" }]
+      "sources": [
+        {
+          "label": "StockCharts：Exponential Moving Average",
+          "url": "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/moving-averages-simple-and-exponential"
+        }
+      ]
     },
     {
       "slug": "rsi",
       "formulaType": "exact",
       "formulaDetail": "RS = WilderRMA(升幅, N) / WilderRMA(跌幅, N)\nRSI = 100 - 100 / (1 + RS)",
       "inputs": "連續收市價變化；預設 N=14。跌幅以正數絕對值計。",
-      "smoothing": "採用 Wilder RMA，alpha=1/N；不是一般 SMA 或 EMA。",
+      "smoothing": "採用 Wilder RMA，alpha=1/N；不是一般 SMA 或 EMA。平均跌幅為零而升幅大於零時為 100；升跌幅同為零時，本站保留空值。",
       "warmup": "首 14 期平均升跌建立種子；宜保留額外歷史資料穩定結果。",
       "measures": "近期上升幅度相對下跌幅度的動能比例。",
       "doesNotMeasure": "70 以上不等於價格必跌，30 以下亦不等於必升。",
       "bestRegime": "區間反轉、趨勢回調及動能背離確認。",
       "avoidRegime": "強趨勢初段只憑超買超賣逆勢交易。",
-      "calculationSteps": ["計算每根收市價變化，拆成升幅和跌幅。", "分別以 Wilder RMA 平滑 14 期。", "計算 RS，再轉換為 0 至 100 的 RSI。"],
+      "calculationSteps": [
+        "計算每根收市價變化，拆成升幅和跌幅。",
+        "分別以 Wilder RMA 平滑 14 期。",
+        "計算 RS，再轉換為 0 至 100 的 RSI。"
+      ],
       "workedExample": "平均升幅 1.2、平均跌幅 0.8，RS=1.5，RSI=100-100/2.5=60。",
       "validCase": "QQQ 低位修復時，RSI 重上 50 並配合價格結構改善，比單看跌穿 30 更可靠。",
       "failureCase": "強勢股可長時間維持 70 以上，過早做空會把趨勢誤當反轉。",
       "signalBoundary": "背離是警號，不是自動入場；價格結構仍須確認。",
       "caseKey": "reversal",
       "chartLead": "QQQ 2022 至 2023 修復段顯示 RSI14，標出 30、50、70 三條參考線。",
-      "sources": [{ "label": "Wilder：New Concepts in Technical Trading Systems", "url": "https://books.google.com/books/about/New_Concepts_in_Technical_Trading_System.html?id=WesJAQAAMAAJ" }]
+      "sources": [
+        {
+          "label": "Wilder：New Concepts in Technical Trading Systems",
+          "url": "https://books.google.com/books/about/New_Concepts_in_Technical_Trading_System.html?id=WesJAQAAMAAJ"
+        }
+      ]
     },
     {
       "slug": "macd",
@@ -71,14 +98,23 @@
       "doesNotMeasure": "金叉本身不代表市場已脫離橫行。",
       "bestRegime": "中期趨勢形成、突破後動能擴張。",
       "avoidRegime": "低波動區間內頻繁追逐金叉死叉。",
-      "calculationSteps": ["分別計算 EMA12 及 EMA26。", "兩者相減得到 MACD 線。", "對 MACD 計算 EMA9，再取得柱狀體。"],
+      "calculationSteps": [
+        "分別計算 EMA12 及 EMA26。",
+        "兩者相減得到 MACD 線。",
+        "對 MACD 計算 EMA9，再取得柱狀體。"
+      ],
       "workedExample": "EMA12=105、EMA26=101，MACD=4；Signal=3.2，柱狀體=0.8。",
       "validCase": "價格突破時 MACD 位於零軸上並擴張，通常比零軸下的單次金叉更有質素。",
       "failureCase": "橫行市內柱狀體反覆轉色，交易成本可吞噬所有小幅優勢。",
       "signalBoundary": "MACD 反映動能變化，不提供止蝕距離。",
       "caseKey": "momentumBreakout",
       "chartLead": "NVDA 2023 突破段同時顯示 MACD、Signal 與 Histogram，讀取零軸位置及擴張方向。",
-      "sources": [{ "label": "CMT Association：Gerald Appel", "url": "https://cmtassociation.org/presenter/gerald-appel/" }]
+      "sources": [
+        {
+          "label": "CMT Association：Gerald Appel",
+          "url": "https://cmtassociation.org/presenter/gerald-appel/"
+        }
+      ]
     },
     {
       "slug": "adx",
@@ -91,14 +127,23 @@
       "doesNotMeasure": "ADX 上升不代表價格一定上升。",
       "bestRegime": "用作趨勢策略的市況濾網。",
       "avoidRegime": "把 20 或 25 當成所有市場及週期的固定真理。",
-      "calculationSteps": ["由相鄰高低價計算 +DM、-DM 及 TR。", "以 Wilder 方法平滑並轉成 +DI、-DI。", "由 DI 差距計算 DX，再平滑成 ADX。"],
+      "calculationSteps": [
+        "由相鄰高低價計算 +DM、-DM 及 TR。",
+        "以 Wilder 方法平滑並轉成 +DI、-DI。",
+        "由 DI 差距計算 DX，再平滑成 ADX。"
+      ],
       "workedExample": "+DI=32、-DI=18，DX=100x14/50=28；ADX 是一連串 DX 的平滑值。",
       "validCase": "ADX 上升且 +DI 高於 -DI，可確認上升趨勢正在增強。",
       "failureCase": "只看到 ADX 上升便買入，可能其實是下跌趨勢正在加速。",
       "signalBoundary": "ADX 是環境濾網，不能獨立決定方向、入場價或止蝕。",
       "caseKey": "uptrend",
       "chartLead": "AAPL 2023 趨勢段以 ADX14 配合 25 參考線，價格方向仍須由圖表本身確認。",
-      "sources": [{ "label": "Wilder：New Concepts in Technical Trading Systems", "url": "https://books.google.com/books/about/New_Concepts_in_Technical_Trading_System.html?id=WesJAQAAMAAJ" }]
+      "sources": [
+        {
+          "label": "Wilder：New Concepts in Technical Trading Systems",
+          "url": "https://books.google.com/books/about/New_Concepts_in_Technical_Trading_System.html?id=WesJAQAAMAAJ"
+        }
+      ]
     },
     {
       "slug": "atr",
@@ -111,14 +156,23 @@
       "doesNotMeasure": "ATR 沒有方向性，升高不等於看好或看淡。",
       "bestRegime": "止蝕距離、倉位控制及波動擴張判讀。",
       "avoidRegime": "事件後仍用事件前的 ATR 設定風險。",
-      "calculationSteps": ["每根比較日內高低差及兩個隔夜裂口距離。", "取三者最大值為 TR。", "以 Wilder RMA 平滑成 ATR。"],
+      "calculationSteps": [
+        "每根比較日內高低差及兩個隔夜裂口距離。",
+        "取三者最大值為 TR。",
+        "以 Wilder RMA 平滑成 ATR。"
+      ],
       "workedExample": "H-L=4、|H-Cprev|=7、|L-Cprev|=3，TR=7；若 ATR14=5，1.5 ATR 距離為 7.5。",
       "validCase": "ATR 擴張時同步縮小倉位，可保持每筆交易的金額風險接近。",
       "failureCase": "把固定兩元止蝕套用所有股票，會令高價高波動資產風險失控。",
       "signalBoundary": "ATR 只決定風險尺度，不決定買賣方向。",
       "caseKey": "breakout",
       "chartLead": "騰訊 2023 日線展示 ATR14，觀察高波動階段為何需要較小倉位。",
-      "sources": [{ "label": "Wilder：New Concepts in Technical Trading Systems", "url": "https://books.google.com/books/about/New_Concepts_in_Technical_Trading_System.html?id=WesJAQAAMAAJ" }]
+      "sources": [
+        {
+          "label": "Wilder：New Concepts in Technical Trading Systems",
+          "url": "https://books.google.com/books/about/New_Concepts_in_Technical_Trading_System.html?id=WesJAQAAMAAJ"
+        }
+      ]
     },
     {
       "slug": "bollinger-bands",
@@ -131,14 +185,23 @@
       "doesNotMeasure": "觸及上軌不等於超買，更不代表必然回落。",
       "bestRegime": "波動壓縮後擴張，或已確認區間內的均值回歸。",
       "avoidRegime": "在強趨勢中機械式逆向沽出上軌。",
-      "calculationSteps": ["計算 20 期 SMA。", "計算同一視窗的收市價標準差。", "以 2 倍標準差建立上下軌。"],
+      "calculationSteps": [
+        "計算 20 期 SMA。",
+        "計算同一視窗的收市價標準差。",
+        "以 2 倍標準差建立上下軌。"
+      ],
       "workedExample": "SMA20=100、標準差=3、K=2，上軌=106、下軌=94。",
       "validCase": "帶寬收窄只提示能量壓縮，方向要等價格突破及成交量確認。",
       "failureCase": "價格沿上軌上升時反覆做空，會把趨勢強度誤當均值回歸。",
       "signalBoundary": "波幅區間不是止賺保證；交易仍需定義突破或回歸條件。",
       "caseKey": "range",
       "chartLead": "SPY 2023 上半年以 20、2 參數展示帶寬收縮與價格沿軌運行的分別。",
-      "sources": [{ "label": "John Bollinger 官方資料", "url": "https://www.bollingerbands.com/" }]
+      "sources": [
+        {
+          "label": "John Bollinger 官方資料",
+          "url": "https://www.bollingerbands.com/"
+        }
+      ]
     },
     {
       "slug": "cci",
@@ -151,54 +214,81 @@
       "doesNotMeasure": "+100 或 -100 並非固定反轉位。",
       "bestRegime": "週期性區間及趨勢加速確認。",
       "avoidRegime": "忽略資產自身波動分布，只套固定門檻。",
-      "calculationSteps": ["逐根計算典型價格 TP。", "取得 TP 的 SMA 及平均絕對偏差。", "用 0.015 常數把讀數縮放。"],
+      "calculationSteps": [
+        "逐根計算典型價格 TP。",
+        "取得 TP 的 SMA 及平均絕對偏差。",
+        "用 0.015 常數把讀數縮放。"
+      ],
       "workedExample": "TP=106、SMA20=100、平均偏差=4，CCI=6/(0.015x4)=100。",
       "validCase": "CCI 突破 +100 並配合價格突破，可反映動能加速。",
       "failureCase": "在沒有價格確認時，只因跌穿 -100 便撈底。",
       "signalBoundary": "CCI 描述偏離幅度，不直接給出合理止蝕。",
       "caseKey": "range",
       "chartLead": "SPY 區間段展示 CCI20 與正負 100 參考線，對照突破後是否有延續。",
-      "sources": [{ "label": "StockCharts：Commodity Channel Index", "url": "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/commodity-channel-index-cci" }]
+      "sources": [
+        {
+          "label": "StockCharts：Commodity Channel Index",
+          "url": "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/commodity-channel-index-cci"
+        }
+      ]
     },
     {
       "slug": "stochastic",
       "formulaType": "exact",
-      "formulaDetail": "%K = 100 x (C - LowestLow_N) / (HighestHigh_N - LowestLow_N)\n%D = SMA(%K, 3)",
-      "inputs": "調整後高、低、收市價；常用 14、3、3。",
-      "smoothing": "Slow Stochastic 會再平滑 %K；比較平台前先核對 Fast、Slow 或 Full。",
-      "warmup": "至少 N 根建立高低範圍，再加平滑所需資料。",
+      "formulaDetail": "Raw %K = 100 × (C − LowestLow_14) / (HighestHigh_14 − LowestLow_14)\nSlow %K = SMA(Raw %K, 3)\n%D = SMA(Slow %K, 3)",
+      "inputs": "同一調整口徑的高、低、收市價；本站圖表採用 Slow Stochastic 14、3、3。",
+      "smoothing": "先把原始 %K 平滑三期，再把 Slow %K 平滑三期得到 %D；比較平台前先對齊 Fast、Slow 或 Full 設定。",
+      "warmup": "原始 %K 至少需要 14 根；Slow %K 需要 16 根，%D 需要 18 根完整資料。高低相同時不計算百分比。",
       "measures": "收市價位於近期高低區間的相對位置。",
       "doesNotMeasure": "80 以上不代表價格過高，只代表收市接近區間上端。",
       "bestRegime": "有明確邊界的橫行市及趨勢回調。",
       "avoidRegime": "強趨勢中只因指標鈍化便逆勢。",
-      "calculationSteps": ["找出最近 N 期最高及最低。", "把今日收市價轉成區間百分比。", "按設定平滑 %K 並計算 %D。"],
-      "workedExample": "14 期高=110、低=90、收=106，%K=80。",
+      "calculationSteps": [
+        "找出最近 14 期最高及最低，計算原始 %K。",
+        "取最近三個原始 %K 的簡單平均，得出 Slow %K。",
+        "再取最近三個 Slow %K 的簡單平均，得出 %D。"
+      ],
+      "workedExample": "14 期高 110、低 90、收 106，原始 %K=80。若最近三個原始讀數為 60、70、80，Slow %K=70；若最近三個 Slow %K 為 60、65、70，%D=65。",
       "validCase": "區間下沿出現 %K 升穿 %D 並重新站上 20，才有較完整的回歸條件。",
       "failureCase": "強勢突破後在 80 以上維持多日，過早沽出會錯失主要升段。",
       "signalBoundary": "交叉只描述位置變化，不等於價格結構已反轉。",
       "caseKey": "range",
-      "chartLead": "SPY 區間段顯示 Stochastic 14、3，對照 20/80 門檻在橫行和突破時的不同含義。",
-      "sources": [{ "label": "StockCharts：Stochastic Oscillator", "url": "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/stochastic-oscillator-fast-slow-and-full" }]
+      "chartLead": "SPY 區間段顯示 Slow Stochastic 14、3、3，%K 及 %D 各平滑三期，對照 20/80 門檻。",
+      "sources": [
+        {
+          "label": "StockCharts：Stochastic Oscillator",
+          "url": "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/stochastic-oscillator-fast-slow-and-full"
+        }
+      ]
     },
     {
       "slug": "mfi",
       "formulaType": "exact",
       "formulaDetail": "TP = (H + L + C) / 3\nRawMoneyFlow = TP x Volume\nMFI = 100 - 100 / (1 + PositiveFlow_N / NegativeFlow_N)",
       "inputs": "調整後高低收及成交量；常用 N=14。",
-      "smoothing": "按 TP 較前一根升跌，把原始資金流分到正或負組別後滾動加總。",
+      "smoothing": "按 TP 較前一根升跌，把原始資金流分到正或負組別後滾動加總。正負流量均為零時，本站保留空值，避免把沒有變化誤作極強買盤。",
       "warmup": "至少 N+1 根 OHLCV。",
       "measures": "價格方向與成交量共同形成的資金流壓力。",
       "doesNotMeasure": "成交量大不等於機構必然吸納。",
       "bestRegime": "有可靠集中成交量的股票及期貨市場。",
       "avoidRegime": "成交量口徑不完整的場外市場或跨平台加密數據。",
-      "calculationSteps": ["計算 TP 及 TPxVolume。", "按 TP 升跌分成正負資金流。", "加總 N 期後轉換成 0 至 100。"],
+      "calculationSteps": [
+        "計算 TP 及 TPxVolume。",
+        "按 TP 升跌分成正負資金流。",
+        "加總 N 期後轉換成 0 至 100。"
+      ],
       "workedExample": "14 期正流量 900、負流量 600，比例=1.5，MFI=60。",
       "validCase": "價格突破時 MFI 同步重上中軸，代表量價配合改善。",
       "failureCase": "單一大成交日可扭曲短期 MFI，不能把一次尖峰當成持續資金流。",
       "signalBoundary": "MFI 是量價確認，不是買賣盤身份辨識工具。",
       "caseKey": "reversal",
       "chartLead": "QQQ 修復段以 MFI14 顯示量價動能，重點看中軸及價格結構是否同步。",
-      "sources": [{ "label": "TradingView：Money Flow Index", "url": "https://www.tradingview.com/support/solutions/43000502348-money-flow-mfi/" }]
+      "sources": [
+        {
+          "label": "TradingView：Money Flow Index",
+          "url": "https://www.tradingview.com/support/solutions/43000502348-money-flow-mfi/"
+        }
+      ]
     },
     {
       "slug": "obv",
@@ -211,14 +301,23 @@
       "doesNotMeasure": "不能分辨主動買盤、主動沽盤或盤中成交位置。",
       "bestRegime": "確認突破及觀察價格與成交量累積方向是否背離。",
       "avoidRegime": "以不同起點的 OBV 絕對值比較兩隻股票。",
-      "calculationSteps": ["比較今日與昨日收市價。", "上升日加全日成交量，下跌日減全日成交量。", "觀察 OBV 趨勢、突破及背離。"],
+      "calculationSteps": [
+        "比較今日與昨日收市價。",
+        "上升日加全日成交量，下跌日減全日成交量。",
+        "觀察 OBV 趨勢、突破及背離。"
+      ],
       "workedExample": "昨日 OBV=1,000 萬，今日上升且成交量 200 萬，今日 OBV=1,200 萬。",
       "validCase": "價格突破前 OBV 已突破自身阻力，可作成交量先行的確認。",
       "failureCase": "一個異常大成交日會永久改變累積基準，之後應重視斜率而非水平。",
       "signalBoundary": "OBV 只確認量價關係，沒有價格目標。",
       "caseKey": "breakout",
       "chartLead": "騰訊高波動案例以 OBV 累積線對照價格，讀取方向一致與背離。",
-      "sources": [{ "label": "Granville：New Key to Stock Market Profits", "url": "https://books.google.com/books/about/New_Key_to_Stock_Market_Profits.html?id=Z8xl5AAACAAJ" }]
+      "sources": [
+        {
+          "label": "Granville：New Key to Stock Market Profits",
+          "url": "https://books.google.com/books/about/New_Key_to_Stock_Market_Profits.html?id=Z8xl5AAACAAJ"
+        }
+      ]
     },
     {
       "slug": "volume",
@@ -231,14 +330,23 @@
       "doesNotMeasure": "每宗交易同時有買賣雙方，成交量本身沒有方向。",
       "bestRegime": "突破確認、恐慌放量、縮量整理。",
       "avoidRegime": "忽略半日市、換月、指數調整或跨平台成交口徑。",
-      "calculationSteps": ["確認市場和交易時段口徑。", "比較當日量與近期平均量。", "把成交量變化放回價格位置及方向解讀。"],
+      "calculationSteps": [
+        "確認市場和交易時段口徑。",
+        "比較當日量與近期平均量。",
+        "把成交量變化放回價格位置及方向解讀。"
+      ],
       "workedExample": "今日成交量 3,000 萬、20 日均量 2,000 萬，相對量=1.5 倍。",
       "validCase": "突破阻力時成交量明顯高於平均，代表參與度增加。",
       "failureCase": "大成交陰燭未必是吸納，也可能是派發；必須看其後價格反應。",
       "signalBoundary": "成交量是確認資料，不是方向預測器。",
       "caseKey": "breakout",
       "chartLead": "騰訊 2023 日線把每日成交量與 20 日均量並列，避免只看柱高作結論。",
-      "sources": [{ "label": "StockCharts：Wyckoff Method", "url": "https://chartschool.stockcharts.com/table-of-contents/market-analysis/wyckoff-analysis-articles/the-wyckoff-method-a-tutorial" }]
+      "sources": [
+        {
+          "label": "StockCharts：Wyckoff Method",
+          "url": "https://chartschool.stockcharts.com/table-of-contents/market-analysis/wyckoff-analysis-articles/the-wyckoff-method-a-tutorial"
+        }
+      ]
     },
     {
       "slug": "vwap",
@@ -246,19 +354,28 @@
       "formulaDetail": "TypicalPrice = (H + L + C) / 3\nVWAP_t = cumulative(TypicalPrice x Volume) / cumulative(Volume)",
       "inputs": "同一交易時段的高、低、收及成交量；錨定版本另需明確起點。",
       "smoothing": "不是移動平均；每個新 session 或指定錨點重新累積。",
-      "warmup": "由 session 開始或錨點開始即時計算，不應混合不同交易日。",
-      "measures": "由指定起點起，成交量加權的平均成交價格。",
+      "warmup": "由交易時段開始或指定錨點累積；日內版本按交易日重設，錨定版本可以跨交易日。",
+      "measures": "由指定起點累積、以成交量加權的典型價格；以每根高低收的平均值近似成交價格。",
       "doesNotMeasure": "價格在 VWAP 上方不保證繼續上升。",
       "bestRegime": "日內執行、事件錨點及突破後平均成本追蹤。",
       "avoidRegime": "沒有說明 reset 規則便比較不同平台 VWAP。",
-      "calculationSteps": ["確定 session 或事件錨點。", "逐根累積 TPxVolume 及 Volume。", "兩個累積值相除，每根更新。"],
+      "calculationSteps": [
+        "確定 session 或事件錨點。",
+        "逐根累積 TPxVolume 及 Volume。",
+        "兩個累積值相除，每根更新。"
+      ],
       "workedExample": "三筆 TPx量為 1,000、2,100、1,650，量為 10、20、15，VWAP=4,750/45=105.56。",
       "validCase": "突破後回踩錨定 VWAP 並企穩，可觀察市場平均成本是否仍受支持。",
       "failureCase": "把每日重設的日內 VWAP 當成多年支撐，時間尺度並不一致。",
       "signalBoundary": "VWAP 是成本基準，不是完整方向策略。",
       "caseKey": "momentumBreakout",
-      "chartLead": "本站示例以 NVDA 2023 案例起點作 Anchored VWAP；這不是日內 session VWAP。",
-      "sources": [{ "label": "Brian Shannon：Maximum Trading Gains with Anchored VWAP", "url": "https://books.google.com/books/about/Maximum_Trading_Gains_With_Anchored_VWAP.html?id=p3aCzwEACAAJ" }]
+      "chartLead": "以 NVDA 2023 年 1 月 3 日為起點，累積日線典型價格乘成交量；畫面只截取後段，計算保留錨點以來全部資料。此為日線錨定 VWAP。",
+      "sources": [
+        {
+          "label": "Brian Shannon：Maximum Trading Gains with Anchored VWAP",
+          "url": "https://books.google.com/books/about/Maximum_Trading_Gains_With_Anchored_VWAP.html?id=p3aCzwEACAAJ"
+        }
+      ]
     },
     {
       "slug": "ichimoku",
@@ -271,14 +388,23 @@
       "doesNotMeasure": "雲層不會預知未來價格，只是把已知結構向前投影。",
       "bestRegime": "中期趨勢及多時間框架方向判斷。",
       "avoidRegime": "未分清五條線的角色便把每次交叉當交易。",
-      "calculationSteps": ["計算 9、26、52 期高低中點。", "由 Tenkan 與 Kijun 取得 Span A。", "把兩條 Span 前移 26 期，收市價另可後移成 Chikou。"],
+      "calculationSteps": [
+        "計算 9、26、52 期高低中點。",
+        "由 Tenkan 與 Kijun 取得 Span A。",
+        "把兩條 Span 前移 26 期，收市價另可後移成 Chikou。"
+      ],
       "workedExample": "Tenkan=102、Kijun=98，Span A=100；數值畫在 26 期之後的位置。",
       "validCase": "價格在雲上、Tenkan 在 Kijun 上，而且未來雲偏多，才是多項證據一致。",
       "failureCase": "橫行市雲層內交叉頻繁，訊號質素明顯下降。",
       "signalBoundary": "一目均衡表提供結構框架，不取代風險預算。",
       "caseKey": "uptrend",
       "chartLead": "AAPL 2023 圖先顯示 Tenkan、Kijun 及雲層區域，按價格在雲上或雲內判讀。",
-      "sources": [{ "label": "Swissquote：Ichimoku Kinko Hyo", "url": "https://www.swissquote.com/en-ch/private/inspire/blog/technical-analysis/what-ichimoku-kinko-hyo-trading-method" }]
+      "sources": [
+        {
+          "label": "Swissquote：Ichimoku Kinko Hyo",
+          "url": "https://www.swissquote.com/en-ch/private/inspire/blog/technical-analysis/what-ichimoku-kinko-hyo-trading-method"
+        }
+      ]
     },
     {
       "slug": "psar",
@@ -291,14 +417,23 @@
       "doesNotMeasure": "點由下轉上不保證形成新趨勢。",
       "bestRegime": "延續性較高的趨勢及移動止蝕管理。",
       "avoidRegime": "橫行市內頻繁反轉。",
-      "calculationSteps": ["判斷目前趨勢並記錄 EP。", "以 AF 推進下一個 SAR，並限制它不可穿越近期價格。", "價格穿越 SAR 時反轉方向並重設狀態。"],
+      "calculationSteps": [
+        "判斷目前趨勢並記錄 EP。",
+        "以 AF 推進下一個 SAR，並限制它不可穿越近期價格。",
+        "價格穿越 SAR 時反轉方向並重設狀態。"
+      ],
       "workedExample": "SAR=100、EP=110、AF=0.06，下一 SAR=100.6，再按近期低位作上限檢查。",
       "validCase": "趨勢清晰時把 SAR 作移動風險線，而非預測頂底。",
       "failureCase": "窄幅區間內點位不斷翻轉，交易成本及滑價會累積。",
       "signalBoundary": "PSAR 是退出及跟蹤工具，入場仍須另有邏輯。",
       "caseKey": "uptrend",
       "chartLead": "AAPL 趨勢段以標準 0.02/0.20 設定顯示 SAR 點，觀察趨勢與橫行時的差異。",
-      "sources": [{ "label": "Wilder：New Concepts in Technical Trading Systems", "url": "https://books.google.com/books/about/New_Concepts_in_Technical_Trading_System.html?id=WesJAQAAMAAJ" }]
+      "sources": [
+        {
+          "label": "Wilder：New Concepts in Technical Trading Systems",
+          "url": "https://books.google.com/books/about/New_Concepts_in_Technical_Trading_System.html?id=WesJAQAAMAAJ"
+        }
+      ]
     },
     {
       "slug": "supertrend",
@@ -311,14 +446,23 @@
       "doesNotMeasure": "轉綠或轉紅不代表下根一定延續。",
       "bestRegime": "有延續性的趨勢及波動調整式退出。",
       "avoidRegime": "低趨勢、頻繁來回穿越的市場。",
-      "calculationSteps": ["先計算 ATR。", "由 HL2 加減 ATR 倍數建立基本 band。", "按前值收緊 band，收市價穿越時才切換方向。"],
+      "calculationSteps": [
+        "先計算 ATR。",
+        "由 HL2 加減 ATR 倍數建立基本 band。",
+        "按前值收緊 band，收市價穿越時才切換方向。"
+      ],
       "workedExample": "HL2=100、ATR=4、倍數=3，基本上軌=112、下軌=88；最終 band 還要套遞迴規則。",
       "validCase": "突破後 Supertrend 翻多且 ATR 擴張，可作趨勢跟隨條件之一。",
       "failureCase": "橫行市反覆翻色，沒有額外趨勢濾網便容易過度交易。",
       "signalBoundary": "Supertrend 把 ATR 轉成追蹤線，不等於已證明策略有正期望值。",
       "caseKey": "momentumBreakout",
       "chartLead": "NVDA 突破段以 10、3 參數計算 Supertrend，顯示遞迴 band 而非簡單 HL2 加減。",
-      "sources": [{ "label": "TradingView：Supertrend", "url": "https://www.tradingview.com/support/solutions/43000634738-supertrend/" }]
+      "sources": [
+        {
+          "label": "TradingView：Supertrend",
+          "url": "https://www.tradingview.com/support/solutions/43000634738-supertrend/"
+        }
+      ]
     },
     {
       "slug": "fibonacci-retracement",
@@ -331,14 +475,23 @@
       "doesNotMeasure": "比例本身不證明該處有真實買盤或賣盤。",
       "bestRegime": "明確單邊波段後的有秩序回調。",
       "avoidRegime": "在無明確 swing 的橫行市任意拉線。",
-      "calculationSteps": ["先用一致規則確認 swing 起點及終點。", "計算完整波幅。", "把波幅乘以各比例並由高點或低點回推。"],
+      "calculationSteps": [
+        "先用一致規則確認 swing 起點及終點。",
+        "計算完整波幅。",
+        "把波幅乘以各比例並由高點或低點回推。"
+      ],
       "workedExample": "由 80 升至 120，波幅 40；38.2% 回調位=120-0.382x40=104.72。",
       "validCase": "比例位與前阻力、均線或成交密集區重疊，才形成較有意義的匯聚。",
       "failureCase": "不斷改動 swing 高低點，任何價格都可被解釋成某個比例。",
       "signalBoundary": "Fibonacci 是位置工具，不是單獨的入場觸發。",
       "caseKey": "reversal",
       "chartLead": "QQQ 修復段以整段 swing 高低計算回調水平，圖中明示起點、終點及比例。",
-      "sources": [{ "label": "Joe DiNapoli：DiNapoli Levels", "url": "https://www.amazon.com/DiNapoli-Levels-Practical-Application-Investment/dp/1891159046" }]
+      "sources": [
+        {
+          "label": "Joe DiNapoli：DiNapoli Levels",
+          "url": "https://www.amazon.com/DiNapoli-Levels-Practical-Application-Investment/dp/1891159046"
+        }
+      ]
     },
     {
       "slug": "pivot-points",
@@ -351,14 +504,23 @@
       "doesNotMeasure": "R1、S1 不是必然反轉位。",
       "bestRegime": "流動性高、session 清晰的日內市場。",
       "avoidRegime": "24 小時市場沒有先定義日界線便直接套用。",
-      "calculationSteps": ["確定交易時段和前一完整時段。", "計算中央 Pivot P。", "按傳統公式推導 R1/S1 及 R2/S2。"],
+      "calculationSteps": [
+        "確定交易時段和前一完整時段。",
+        "計算中央 Pivot P。",
+        "按傳統公式推導 R1/S1 及 R2/S2。"
+      ],
       "workedExample": "前高110、低90、收100，P=100，R1=110，S1=90。",
       "validCase": "Pivot 與開市區間、VWAP 或前高低重疊時，參考價值較高。",
       "failureCase": "市場裂口越過多個 Pivot 後仍機械式逆向交易。",
       "signalBoundary": "Pivot 提供位置，不提供進出確認。",
       "caseKey": "range",
       "chartLead": "SPY 日線示例把前一根 OHLC 推導的 P、R1、S1 畫在下一根位置，避免偷用當日完整資料。",
-      "sources": [{ "label": "Edwards & Magee：Technical Analysis of Stock Trends", "url": "https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X" }]
+      "sources": [
+        {
+          "label": "Edwards & Magee：Technical Analysis of Stock Trends",
+          "url": "https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X"
+        }
+      ]
     },
     {
       "slug": "support-resistance",
@@ -371,14 +533,23 @@
       "doesNotMeasure": "歷史反應不能保證下一次仍然有效。",
       "bestRegime": "結構清晰的區間、突破及回踩。",
       "avoidRegime": "只因一次高低點便宣稱存在重要水平。",
-      "calculationSteps": ["在固定週期找出多次價格反應區。", "以合理容許帶合併接近水平。", "用突破後收市、成交量及回踩確認角色轉換。"],
+      "calculationSteps": [
+        "在固定週期找出多次價格反應區。",
+        "以合理容許帶合併接近水平。",
+        "用突破後收市、成交量及回踩確認角色轉換。"
+      ],
       "workedExample": "價格三次在 99 至 101 回升，應標為 99至101 支撐區，而不是精確的 100.00。",
       "validCase": "阻力突破後回踩不破並重新上升，較單次穿越更有證據。",
       "failureCase": "把每個細小高低點都畫線，圖表最終無法作出取捨。",
       "signalBoundary": "價格區域只回答在哪裡觀察，不回答何時交易。",
       "caseKey": "range",
       "chartLead": "SPY 區間段以近期反覆高低區域示範支撐阻力，標示為帶狀而非精確單線。",
-      "sources": [{ "label": "Edwards & Magee：Technical Analysis of Stock Trends", "url": "https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X" }]
+      "sources": [
+        {
+          "label": "Edwards & Magee：Technical Analysis of Stock Trends",
+          "url": "https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X"
+        }
+      ]
     },
     {
       "slug": "trendline",
@@ -391,14 +562,23 @@
       "doesNotMeasure": "斜率較陡不代表風險較低或趨勢更持久。",
       "bestRegime": "高低點序列清晰的趨勢。",
       "avoidRegime": "為配合想法而不斷重畫角度。",
-      "calculationSteps": ["只連接同類 swing lows 或 swing highs。", "延伸線段但不移動已選錨點。", "以收市穿越、幅度及其後反應判斷是否失效。"],
+      "calculationSteps": [
+        "只連接同類 swing lows 或 swing highs。",
+        "延伸線段但不移動已選錨點。",
+        "以收市穿越、幅度及其後反應判斷是否失效。"
+      ],
       "workedExample": "兩個 swing low 相隔 20 日並上升 10 元，斜率為每日 0.5 元；第三次回踩才作驗證。",
       "validCase": "多次回踩上升趨勢線後價格再創高，結構保持。",
       "failureCase": "盤中短暫穿線未必失效；但收市跌破且回抽不過，結構已改變。",
       "signalBoundary": "趨勢線是結構工具，不能單獨量化倉位。",
       "caseKey": "uptrend",
       "chartLead": "AAPL 2023 以固定起點計算回歸趨勢參考線，避免事後移動錨點。",
-      "sources": [{ "label": "Edwards & Magee：Technical Analysis of Stock Trends", "url": "https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X" }]
+      "sources": [
+        {
+          "label": "Edwards & Magee：Technical Analysis of Stock Trends",
+          "url": "https://www.amazon.com/Technical-Analysis-Stock-Trends-Edwards/dp/113806941X"
+        }
+      ]
     }
   ]
 }

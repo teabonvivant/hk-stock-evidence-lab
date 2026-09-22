@@ -10,9 +10,10 @@
     "dev": "vinext dev",
     "build": "vite build",
     "start": "vinext start",
-    "test": "node --test tests/rendered-html.test.mjs tests/p0-contracts.test.mjs",
+    "test": "node --test tests/rendered-html.test.mjs tests/p0-contracts.test.mjs tests/calculations.test.mjs",
     "test:copy": "node --test scripts/test_copy_integrity.mjs",
-    "test:routes": "node scripts/audit_rendered_routes.mjs",
+    "test:routes": "node scripts/audit-publication.mjs",
+    "content:build": "node scripts/generate-editorial-assets.mjs",
     "sync:hk-copy": "node scripts/apply_hk_editorial_copy.mjs",
     "check": "tsc --noEmit && npm run build && npm test && npm run test:copy && npm run test:routes",
     "doctor": "npx react-doctor@latest"

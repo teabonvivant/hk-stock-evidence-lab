@@ -5,7 +5,6 @@ import { AdvancedDisclosure } from "@/components/site/advanced-disclosure";
 import { IndicatorTeachingChart } from "@/components/site/indicator-chart";
 import { IndicatorBeginnerGuide, IndicatorBeginnerPractice } from "@/components/site/indicator-beginner-guide";
 import { PrimaryLink, Section } from "@/components/site/page-shell";
-import { ResearchStatusBanner } from "@/components/site/research-status-banner";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { beginnerGuideFor } from "@/lib/indicator-beginner-guide";
@@ -13,6 +12,8 @@ import { findCoreIndicatorLearning, formulaTypeLabel, parseMarketCaseKey } from 
 import { comparisonResearchFocus, comparisonVerdictLabel, comparisonVerdictTone } from "@/lib/research-copy";
 import { findIndicator } from "@/lib/site-data";
 import type { Indicator } from "@/lib/site-data";
+import { IndicatorMethodDiagram } from "@/components/site/indicator-method-diagram";
+import { articles } from "@/lib/blog";
 
 export function IndicatorDetail({ item }: { readonly item: Indicator }) {
   const learning = findCoreIndicatorLearning(item.siteSlug);
@@ -59,18 +60,14 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
         </nav>
       </section>
 
-      <ResearchStatusBanner status="research" methodVersion="指標方法 v1.0" />
 
       <IndicatorBeginnerGuide item={item} />
 
-      <Section id="chart" title="以真實數據練習圖表判讀" body={learning ? "閱讀次序是市況、訊號和風險。圖表採用本站保存的歷史開市、最高、最低、收市及成交量（OHLCV）資料計算。" : "此指標需要專屬資料；資料未齊前，頁面不會以不相符的價格圖代替指標結果。"}>
-        {learning && chartCase ? (
+      <Section id="chart" title="圖解與判讀" body="先對齊圖中的量度內容、時間範圍與單位，再觀察訊號。">
+        {["trendline","fibonacci-retracement","support-resistance"].includes(item.siteSlug) ? <IndicatorMethodDiagram slug={item.siteSlug} /> : learning && chartCase ? (
           <IndicatorTeachingChart slug={item.siteSlug} caseKey={chartCase} chartLead={learning.chartLead} />
         ) : (
-          <div className="chart-data-requirement">
-            <strong>圖表尚待覆核</strong>
-            <p>目前保留公式、訊號及限制。由於尚未取得符合指標要求的資料，本站不會以一般股價走勢代替計算結果。</p>
-          </div>
+          <figure className="article-figure"><a href={`/illustrations/indicators/${item.siteSlug}.svg`} target="_blank" rel="noreferrer"><img src={`/illustrations/indicators/${item.siteSlug}.svg`} width="720" height="800" loading="eager" alt={`${item.nameZh}判讀流程：${beginnerGuide.flow.map(s=>s.title).join("、")}`} /></a><figcaption>{beginnerGuide.flowLead}</figcaption></figure>
         )}
       </Section>
 
@@ -104,7 +101,7 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
       <AdvancedDisclosure
         id="calculation"
         title="進階：公式與計算口徑"
-        body={learning ? "掌握實際用法後，再查閱輸入資料、平滑方法、預熱期及例算。" : "此條目目前只提供概念公式，使用前仍須核對平台的計算方式。"}
+        body="查閱公式與參數，並對齊所用平台的計算方式。"
       >
         <div className="formula-evidence-grid">
           <div className="formula-panel">
@@ -115,9 +112,9 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
             <pre className="formula mt-4">{learning?.formulaDetail ?? item.formula}</pre>
           </div>
           <dl className="evidence-list">
-            <EvidenceRow term="輸入資料" detail={learning?.inputs ?? "資料庫暫未分拆輸入欄位。"} />
-            <EvidenceRow term="平滑／運算規則" detail={learning?.smoothing ?? "須按所用平台再行核對。"} />
-            <EvidenceRow term="所需歷史期數" detail={learning?.warmup ?? "資料庫暫未標明。"} />
+            <EvidenceRow term={learning ? "輸入資料" : "量度內容"} detail={learning?.inputs ?? beginnerGuide.measure} />
+            <EvidenceRow term={learning ? "平滑方式" : "判讀口徑"} detail={learning?.smoothing ?? beginnerGuide.look} />
+            <EvidenceRow term={learning ? "起算所需資料" : "適用範圍"} detail={learning?.warmup ?? beginnerGuide.bestFor} />
           </dl>
         </div>
         {learning ? (
@@ -150,13 +147,8 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
             ))}
           </div>
         ) : null}
-        {item.validationFlags.length > 0 ? (
-          <p className="mb-4 rounded-[8px] border border-[#f3d7ad] bg-[#fff7ed] px-4 py-3 text-sm leading-6 text-[#7c3f00]">
-            此條目的分類或概念配對仍在覆核。以下專家比較只供研究參考，不應視作定論。
-          </p>
-        ) : null}
         <div className="grid gap-3">
-          {item.research.comparisonRows.slice(0, 3).map((row) => (
+          {item.research.comparisonRows.filter(() => item.validationFlags.length === 0).slice(0, 2).map((row) => (
             <article key={`${row.expert_id}-${row.comparison_rank}`} className="research-source-row">
               <div className="flex flex-wrap items-center gap-2">
                 <Badge variant={comparisonVerdictTone(row.verdict_zh)}>{comparisonVerdictLabel(row.verdict_zh)}</Badge>
@@ -165,11 +157,11 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
               </div>
               <p><strong>研究重點：</strong>{comparisonResearchFocus(row)}</p>
               <p><strong>參考材料：</strong>{row.representative_materials_zh}</p>
-              <p className="text-xs">{row.evidence_profile_zh}</p>
             </article>
           ))}
         </div>
       </AdvancedDisclosure>
+      <Section title="相關研究札記"><div className="link-index">{articles.filter(a => (a.title+" "+a.excerpt).toLowerCase().includes(item.abbr.toLowerCase())).slice(0,4).map(a=><Link key={a.slug} href={`/blog/${a.slug}`}>{a.title}</Link>)}<Link href="/blog/category/indicators">閱讀指標與圖表專題 →</Link></div></Section>
     </div>
   );
 }

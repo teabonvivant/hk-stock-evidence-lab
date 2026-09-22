@@ -3,5 +3,5 @@ export const siteConfig = {
   englishName: "HK Stock Evidence Lab",
   url: "https://technical-indicators-hk.teabonvivant.chatgpt.site",
   locale: "zh-Hant-HK",
-  description: "以可重現資料、公式、失效條件及回測發布閘門整理港股技術分析。",
+  description: "從價格、成交量到回測方法，讀懂港股技術分析。82 個指標、100 篇研究札記及實用學習工具。",
 } as const;

@@ -1,174 +1,62 @@
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
 import { HeroPanel, PrimaryLink, Section } from "@/components/site/page-shell";
-import { comparisonResearchFocus, comparisonVerdictLabel, comparisonVerdictTone } from "@/lib/research-copy";
-import { indicators, siteData, strategyCodeCases, topComparisonRows } from "@/lib/site-data";
+import { IndicatorTeachingChart } from "@/components/site/indicator-chart";
+import { RiskCalculator, JournalTool, PracticeQuiz, PreparationChecklist } from "@/components/site/learning-tools";
+import { articles, blogCategories } from "@/lib/blog";
+import { indicators } from "@/lib/site-data";
+import marketBundle from "@/data/market_cases_yahoo.json";
+import type { MarketCaseKey } from "@/lib/indicator-chart-model";
 import type { SimpleRouteSlug } from "@/lib/routes";
 
-export function SimplePage({ slug }: { readonly slug: SimpleRouteSlug }) {
-  switch (slug) {
-    case "learn":
-      return <LearningPage />;
-    case "toolbox":
-      return <ToolkitPage />;
-    case "candlesticks":
-      return <CandlestickPage />;
-    case "compare":
-      return <ComparePage />;
-    case "playground":
-      return <PlaygroundPage />;
-    case "casebook":
-      return <CasebookPage />;
-    case "glossary":
-      return <GlossaryPage />;
-    case "subscribe":
-      return <SubscribePage />;
-    case "journal":
-      return <JournalPage />;
-    case "combo":
-      return <ComboPage />;
-    case "script":
-      return <ScriptPage />;
-    case "script-demo":
-      return <ScriptDemoPage />;
-    case "trial":
-      return <TrialPage />;
-  }
+const lessons = [
+ {title:"讀一張沒有指標的圖",body:"固定市場和週期，辨認開市、最高、最低與收市。畫出已完成的高低點，留意價格是在延續方向，還是在同一區域來回。以不同縮放比例重看一次，避免把視覺斜率當成市場強度。",links:[["/candlesticks","陰陽燭"],["/indicators/support-resistance","支持與阻力"]]},
+ {title:"理解平均、位置與變化",body:"移動平均線整理價格，RSI 比較近期升跌，ATR 量度波幅。把三個工具放在同一段資料上，每次只改一個參數，記下哪種訊息改變、哪種沒有。讀數的差異往往來自問題不同。",links:[["/indicators/sma","移動平均線"],["/compare","比較指標"]]},
+ {title:"認識港股的交易環境",body:"圖上的價格要放回交易時段、競價機制、每手股數和公司行動之中。除淨與拆股可改變價格尺度，停牌後的裂口亦會改變執行風險。分析之前，先對齊所用資料的口徑。",links:[["/blog/category/hong-kong","港股市場專題"],["/methodology/data","數據方法"]]},
+ {title:"把風險寫成數字",body:"先定失效位置，才知道每股承擔的價格距離。加入費用和滑價，再由風險預算反推股數；按每手股數向下取整。若結果連一手也不足，這筆構思便超出原定預算。",links:[["/toolbox","風險計算"],["/blog/category/risk","風險與紀律"]]},
+ {title:"把構思交給歷史資料檢驗",body:"寫下確切訊號、訂單時間和退出方法。鎖定參數，分開設計期與測試期，同時保留不理想的結果。檢查策略是否只依靠某段單邊行情，或者被少數大幅盈利推高平均值。",links:[["/tv-strategies","回測教學"],["/script","Pine Script"]]},
+ {title:"在紀錄中看見自己的方法",body:"完成判讀練習後，用日誌保存當時的理由。檢討時先看是否按規則執行，再看盈虧；一次好的結果，可以來自壞的決定。把改動集中在固定檢討時間，較容易分辨方法與情緒。",links:[["/playground","判讀練習"],["/journal","交易日誌"]]},
+];
+const terms = [
+ ["開市價","所選時間區間內第一筆成交價格；日線開市與盤中分線的開市意思不同。"],["收市價","所選時間區間的最後價格。尚未收市的一根燭，收市欄會隨新成交改變。"],["復權","為股息、拆股等公司行動調整歷史價格的處理。不同供應商及設定的口徑可以不同。"],["裂口","相鄰時段的價格範圍出現空隙。它可以與消息、流動性或公司行動有關。"],["成交量","指定期間內成交的股數或合約數；每宗成交同時有買方和賣方。"],["成交額","成交價格乘成交數量的累計。比較不同股價的證券時，不能把股數與金額混用。"],["買賣差價","最佳買入報價與最佳賣出報價的距離，是交易摩擦的一部分。"],["流動性","在合理時間及價格範圍內完成交易的能力；成交量只是觀察角度之一。"],["每手股數","個別證券的整手交易單位。計算股數前須核對該證券當時的交易資料。"],["碎股","不足一個完整交易單位的股數；其交易安排及可成交價格可與整手不同。"],["限價盤","指定可接受價格界線的訂單。價格保障不等於成交保障。"],["滑價","預期價格與實際成交價格之間的差異；可能來自市場移動、價差或成交深度。"],["止蝕","原先判斷失效後的退出安排。觸發價與實際成交價並不必然相同。"],["倉位","持有的數量或金額。風險還取決於價格波幅、退出距離和資產相關性。"],["R 值","以一筆交易事先定義的風險金額作單位。計算前要固定是否包含交易成本。"],["風險回報比","預計收益相對計劃虧損的比例；並未包含兩者發生的概率。"],["期望值","各種結果的概率乘以盈虧後相加。歷史平均值只是對未來期望的估計。"],["回撤","資金由此前高點下降的幅度。最大回撤還取決於衡量頻率與測試期間。"],["盈利因子","總盈利除以總虧損的絕對值。總虧損為零時，不能當成無限可靠。"],["勝率","盈利交易佔交易總數的比例；必須連同平均盈虧、成本及交易次數閱讀。"],["趨勢","一段時間內價格方向的延續，可由高低點結構及平滑價格觀察。"],["動能","價格改變的力度或相對位置，視乎指標的計算定義；不同動能工具未必量度同一件事。"],["波幅","價格變動的幅度。ATR 以價格單位表示；百分比或報酬率波動便於跨資產比較。"],["背離","價格與指標的高低點變化方向不一致；本身未完成價格反轉的確認。"],["假突破","價格越過已定義的邊界後重返原區域。定義要包括時間、價格與確認規則。"],["重繪","圖表上的結果因即時更新、未完成高週期資料或回填邏輯而改變。"],["預熱期","累積足夠資料以初始化指標的時段；遞迴平滑還受初值影響。"],["樣本外測試","以未參與規則或參數選擇的資料評估方法，避免只記住已看過的行情。"],["前視偏誤","計算時使用了當時尚未取得的資料，使歷史結果不切實際。"],["存活者偏誤","只研究今天仍存在的證券，忽略已退市、失敗或移出的成分。"],["過度擬合","規則過於貼近設計樣本的細節，換到另一段資料後便失去效果。"],["基準","用來比較的參考方法或指數；須對齊期間、貨幣、成本與股息口徑。"],
+];
+const pairs = [
+ ["SMA 與 EMA","同樣整理價格方向；EMA 對近期價格給較大權重。","在轉折前後比較反應速度，再觀察橫行期間的穿越次數。","sma","ema"],
+ ["RSI 與隨機指標","RSI 比較升跌幅，隨機指標看收市在高低區間的位置。","兩者同時高位未必是兩項獨立證據，應核對價格結構。","rsi","stochastic"],
+ ["MACD 與 PPO","MACD 是均線價格差；PPO 再除以長期均線作百分比。","比較不同股價水平時，先分清價格單位與百分比。","macd","ppo"],
+ ["ATR 與 NATR","ATR 量度真實波幅；NATR 以收市價作標準化。","一隻高價股的 ATR 較大，不代表相對價格波動也較大。","atr","natr"],
+ ["ADX 與 DMI","ADX 著重方向性差異的強度；+DI 與 −DI 提供方向關係。","ADX 上升可以伴隨升市或跌市，不是看升訊號。","adx","dmi"],
+ ["OBV 與 A/D","OBV 按收市升跌分配成交量；A/D 看收市在當根高低範圍的位置。","裂口後收近低位時，兩者可能給出不同方向，差異來自算法。","obv","accumulation-distribution"],
+ ["保力加與 Keltner","前者以標準差決定寬度；後者常以 ATR 決定距離。","確認中線、週期及倍數，才比較收窄或擴張。","bollinger-bands","keltner-channel"],
+ ["VWAP 與 EMA","VWAP 按成交量加權並取決於起點；EMA 依時間遞迴平滑。","兩條線不同不等於其中一條錯誤；先對齊資料與重設規則。","vwap","ema"],
+];
+export function SimplePage({slug}:{readonly slug:SimpleRouteSlug}) {
+ switch(slug) {
+ case "learn": return <><HeroPanel eyebrow="學習路線" title="從看見走勢，到說清判斷。" body="先理解價格，再閱讀指標。沿着六段路線逐步練習，每一段都有可查閱的內容和可以完成的小功課。" imageKey="home"/><Section title="六段學習路線"><ol className="learning-road">{lessons.map((l,i)=><li key={l.title}><span>{i+1}</span><div><h3>{l.title}</h3><p>{l.body}</p><div>{l.links.map(([url,label])=><Link className="text-link" key={url} href={url!}>{label} →</Link>)}</div></div></li>)}</ol></Section><Section title="按主題閱讀">{topicLinks()}</Section></>;
+ case "toolbox": return <><HeroPanel eyebrow="研究工具" title="把風險，算在決定之前。" body="從可承受的虧損反推股數，比先選股數再尋找理由清楚得多。下面以現金買入的教學算例，拆開距離、費用與每手股數。" imageKey="combo"/><Section title="倉位與風險回報計算"><RiskCalculator/></Section><Section title="數字以外的檢查"><p>持有數隻同類資產，可能仍集中於同一種市場風險。止蝕也不能處理所有裂口。計算結果是計劃的一部分，還要配合交易機制、可承受損失和持倉之間的關係。</p><Link className="text-link" href="/blog/category/risk">閱讀風險與紀律專題 →</Link></Section></>;
+ case "journal": return <><HeroPanel eyebrow="交易日誌" title="留下一頁，給之後的自己。" body="日誌記錄的是決定時已知道的事情。把入市理由、失效條件與執行偏差分開，檢討便不只剩下一個盈虧數字。" imageKey="journal"/><Section title="交易與觀察紀錄"><JournalTool/></Section><Section title="每週檢討三個問題"><ol className="prose-list"><li>計劃與執行有甚麼差異？將追價、漏單、改止蝕與正常波動分開。</li><li>哪一種市況反覆令方法失效？用整組紀錄查看，不只挑印象深刻的一筆。</li><li>下一輪只改哪一項？保留修改日期與原設定，才知道差異來自甚麼。</li></ol></Section></>;
+ case "playground": return <><HeroPanel eyebrow="判讀練習" title="把答案放回條件之中。" body="五道情境題，練習區分指標讀數、價格結構、成交假設和風險距離。選擇後即可查看解釋。" imageKey="playground"/><Section title="情境判讀"><PracticeQuiz/></Section><Section title="再用歷史資料練習"><p>打開一張歷史圖，只看到當時為止的資料；寫下判斷，再逐段往後看。事後回望整張圖，容易忘記當時其實存在多種可能。</p><PrimaryLink href="/casebook">打開歷史圖表</PrimaryLink></Section></>;
+ case "compare": return <><HeroPanel eyebrow="指標比較" title="相似的線，可以回答不同問題。" body="比較指標，先比較輸入、運算和單位。幾條線方向相同，可能只因它們重複整理同一段價格。" imageKey="compare"/><Section title="八組容易混淆的工具"><div className="comparison-rows">{pairs.map(([title,body,practice,a,b])=><article key={title}><h3>{title}</h3><p>{body}</p><p>{practice}</p><div><Link href={`/indicators/${a}`}>查看 {a?.toUpperCase()} →</Link><Link href={`/indicators/${b}`}>查看 {b?.toUpperCase()} →</Link></div></article>)}</div></Section></>;
+ case "candlesticks": return <><HeroPanel eyebrow="陰陽燭" title="一根燭，是一段時間的濃縮。" body="實體記錄開市與收市，影線留下中途曾到過的位置。形態的含義，取決於它出現在甚麼價格區域，以及之後有沒有得到確認。" imageKey="detail"/><Section title="先認識四個價格"><CandleDiagram/><p className="tool-caption">教學算例，單位為元。顏色只表示收市相對開市的升跌；影線長度沒有交代交易的先後次序。</p></Section><Section title="把形態放回位置"><div className="resource-columns"><div><h3>錘頭與長下影</h3><p>小實體靠近上端、下影明顯較長，說明價格曾下探而後收回。它出現在跌勢末端、支持區附近，與出現在升勢高位，判讀條件不同。下一根的價格反應比名稱更重要。</p></div><div><h3>吞噬形態</h3><p>第二根實體包住前一根實體，並不要求連影線也包住。比較時使用同一週期，留意是否存在公司行動或資料口徑差異，再檢查之後的高低點有沒有改變。</p></div><div><h3>十字與窄實體</h3><p>開市與收市接近，表示這一段時間內起點和終點相近。盤中可以仍有很大波幅。十字本身沒有指定下一步方向，也不能證明買賣雙方人數相等。</p></div></div></Section><Section title="從形態走向條件"><ol className="prose-list"><li>固定時段，標記前一段趨勢與附近價格區域。</li><li>寫出形態的數值定義，避免看到結果才改認定標準。</li><li>以後續收市、高低點及成交量觀察確認與失效。</li><li>計算入市價至失效區的距離，再評估成本和股數。</li></ol><Link className="text-link" href="/blog/category/indicators">閱讀圖表專題 →</Link></Section></>;
+ case "casebook": return <><HeroPanel eyebrow="歷史圖表" title="回望行情，練習當時的判斷。" body="這裏保存港股與美股的歷史日線。先看期間、價格口徑和市場，再練習描述走勢；不要讓已知道的結局改寫當時的條件。" imageKey="playground"/>{(["breakout","uptrend","range","reversal","momentumBreakout"] as MarketCaseKey[]).map(key=>{const c=marketBundle.cases[key];return <Section key={key} title={c.symbol+" · "+c.label} body={`資料期間：${c.bars[0]?.date} 至 ${c.bars.at(-1)?.date}；${c.bars.length} 個交易日。圖中展示最後 110 個交易日。`}><IndicatorTeachingChart slug="price" caseKey={key} chartLead="觀察高低點如何排列、波幅何時擴張，以及價格是否反覆回到同一區域。"/><p className="tool-caption">練習：選取一個當時可辨認的轉折，寫下支持原判斷與令它失效的兩項價格條件。</p></Section>;})}</>;
+ case "glossary": return <><HeroPanel eyebrow="詞彙表" title="把字義釐清，判斷便少一層霧。" body="交易、指標與研究常用詞語，按實際用途解釋。公式中的單位、計算期間及資料口徑，比單記英文縮寫更重要。" imageKey="glossary"/><Section title="32 個基礎詞語"><dl className="glossary-list">{terms.map(([t,d])=><div key={t}><dt>{t}</dt><dd>{d}</dd></div>)}</dl></Section><Section title="指標名稱索引"><div className="link-index">{indicators.map(i=><Link key={i.siteSlug} href={`/indicators/${i.siteSlug}`}>{i.nameZh}<small>{i.abbr}</small></Link>)}</div></Section></>;
+ case "combo": return <><HeroPanel eyebrow="指標組合" title="每一個工具，都有一個明確的職位。" body="組合的價值，在於補充不同資料。價格位置、觸發條件和風險距離分開定義，才知道多加一個指標究竟解決了甚麼問題。" imageKey="combo"/><Section title="三種可研究的組合"><div className="comparison-rows"><article><h3>趨勢延續：EMA ＋價格突破＋ ATR</h3><p>EMA 整理中期方向，突破定義觸發事件，ATR 描述近期波幅。先設定突破是否需要收市確認，以及採用前一根已完成的區間；不可用包含當根的最高價作一條永遠追不上的突破線。</p><p>橫行時均線與價格可反覆交叉，交易成本會累積。把假突破和小虧損納入檢討，不只看一段漂亮升勢。</p></article><article><h3>區間研究：支持阻力＋ RSI ＋結構退出</h3><p>價格區域決定在哪裏觀察，RSI 補充升跌力度，失效條件由區間結構定義。RSI 低位不保證反彈；價格跌穿區域並持續走弱時，原先的橫行前提已改變。</p><p>可把每次接近邊界的情況分組，記錄回到中間、原地徘徊與向外突破三種路徑。</p></article><article><h3>成交研究：價格結構＋相對成交量＋ VWAP</h3><p>以成交量比較近期參與，再觀察價格相對指定起點的 VWAP。先固定時段與錨點，並分清日內累積和跨日錨定。若起點事後任意更換，平均成本便失去一致的比較基礎。</p><p>成交增加只說明活動增加，不能從總成交量直接知道是哪一類投資者買入。</p></article></div></Section><Section title="如何知道某個指標有沒有貢獻"><p>固定資料、時段、費用與其餘規則，比較加入這個條件前後的交易明細。若只令樣本變少，卻未改善風險分布或執行清晰度，便要重新考慮它的角色。</p><PrimaryLink href="/tv-strategies">查看回測方法</PrimaryLink></Section></>;
+ case "script": case "script-demo": return <ScriptGuide demo={slug==="script-demo"}/>;
+ case "trial": return <><HeroPanel eyebrow="自學清單" title="把準備工作逐項完成。" body="開始研究程式策略前，檢查資料、規則、成本和紀錄。這份清單用來整理學習進度，可在當前頁面勾選。" imageKey="tv"/><Section title="策略研究準備"><PreparationChecklist/></Section><Section title="準備完成後"><p>在紙上寫一個只有一項觸發條件的構思，用歷史資料核對訊號出現的時間。逐步加入成本與退出規則，每次保留前後版本，避免同時修改太多條件。</p><PrimaryLink href="/script-demo">查看程式示範</PrimaryLink></Section></>;
+ case "subscribe": return <><HeroPanel eyebrow="內容更新" title="讓閱讀，慢慢累積。" body="按主題閱讀研究札記，也可用 RSS 閱讀器追蹤文章。資料修訂集中記錄，方便回看改動內容。" imageKey="subscribe" actions={<><a className="plain-button" href="/feed.xml">開啟 RSS 訂閱來源</a><PrimaryLink href="/corrections" variant="secondary">查看修訂紀錄</PrimaryLink></>}/><Section title="2026 年 9 月內容更新"><p>新增 {articles.length} 篇研究札記及每篇兩幅概念圖解，擴充市場機制、風險管理、回測方法及 Pine Script 教學。同步完善指標讀圖說明、風險計算和網站導覽。</p>{topicLinks()}</Section></>;
+ case "sitemap": return <><header className="editorial-heading"><h1>網站導覽</h1><p>按需要選擇入口，或直接查找每篇文章與指標。</p></header><Section title="學習、實踐與方法"><div className="link-index">{[["/learn","學習路線"],["/indicators","指標百科"],["/blog","研究札記"],["/compare","指標比較"],["/candlesticks","陰陽燭"],["/casebook","歷史圖表"],["/glossary","詞彙表"],["/combo","指標組合"],["/strategy-cases","策略方法"],["/tv-strategies","回測教學"],["/script","Pine Script"],["/script-demo","程式示範"],["/toolbox","風險計算"],["/journal","交易日誌"],["/playground","判讀練習"],["/trial","自學清單"],["/trust","關於本站"],["/subscribe","內容更新"],["/privacy","私隱與本機資料"]].map(([u,t])=><Link key={u} href={u!}>{t}</Link>)}</div></Section>{blogCategories.map(c=><Section key={c.slug} title={c.name}><div className="link-index">{articles.filter(a=>a.category===c.name).map(a=><Link key={a.slug} href={`/blog/${a.slug}`}>{a.title}</Link>)}</div></Section>)}<Section title="全部指標"><div className="link-index">{indicators.map(i=><Link key={i.siteSlug} href={`/indicators/${i.siteSlug}`}>{i.nameZh}</Link>)}</div></Section></>;
+ }
 }
-
-function LearningPage() {
-  return <GenericPage imageKey="home" eyebrow="學習路線" title="技術分析要有先後次序" body="市況決定哪些訊號值得理會；成交量、動能和波幅只負責補充證據。每一步都要寫明條件，免得事後遷就結果。" rows={["大市方向：移動平均線、ADX 及市場廣度", "訊號確認：RSI、MACD、成交量及突破質素", "交易前檢查：止蝕、R 值、倉位及出市條件"]} />;
-}
-
-function ToolkitPage() {
-  return <GenericPage imageKey="playground" eyebrow="工具箱" title="交易前，把風險計清楚" body="R 值、回撤、盈利因子（PF）、勝率和倉位各有不同用途。數字要放回交易次數、止蝕距離和可承受虧損之中閱讀。" rows={["R 值：定下止蝕後，才計算合理目標", "盈利因子：須連同交易次數及回撤一併閱讀", "倉位：按每筆交易可承受的風險金額決定"]} />;
-}
-
-function CandlestickPage() {
-  return <GenericPage imageKey="detail" eyebrow="陰陽燭" title="離開市況，形態便失去意義" body="單一陰陽燭不足以構成交易訊號。判讀時要同時考慮趨勢、成交量、支持阻力及風險回報。" rows={["反轉形態須等待確認，不能看見錘頭便立即買入", "裂口要分辨消息影響、成交量及其後承接", "長上影可能反映派發，也可能只是波幅擴大"]} />;
-}
-
-function ComparePage() {
-  return (
-    <div>
-      <HeroPanel eyebrow="專家比較" title="訊號相似，不等於多一重確認" body="RSI、隨機指標和 MACD 都涉及價格動能，證據難免重疊。這裏並列指標功能、主要來源和補充研究，方便分清各自用途。" imageKey="compare" />
-      <Section title="研究庫比較摘要">
-        <div className="grid gap-3">
-          {topComparisonRows(8).map((item) => (
-            <Card key={`${item.concept_slug}-${item.expert_id}-${item.comparison_rank}`}>
-              <CardHeader>
-                <Badge variant={comparisonVerdictTone(item.verdict_zh)} className="w-fit">
-                  {comparisonVerdictLabel(item.verdict_zh)}
-                </Badge>
-                <CardTitle>
-                  {item.concept_zh} · {item.name_zh}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm leading-6 text-[var(--muted)]">
-                <strong className="text-[var(--ink)]">研究重點：</strong>
-                {comparisonResearchFocus(item)}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </Section>
-    </div>
-  );
-}
-
-function PlaygroundPage() {
-  return <GenericPage imageKey="playground" eyebrow="練習場" title="用市場情境練習，不靠背誦答案" body="把同一個指標放進上升、橫行、反轉及裂口等情境，便能看清它在甚麼時候較有參考價值，又在甚麼時候容易誤導。" rows={["趨勢市：可以接受指標滯後，但止蝕必須跟上", "橫行市：突破訊號較容易演變成假突破", "消息裂口：成交量及其後承接往往比開市第一口價更重要"]} />;
-}
-
-function CasebookPage() {
-  const cases = Object.keys(siteData.marketCases);
-  return <GenericPage imageKey="journal" eyebrow="市場案例" title="用真實 OHLCV 資料練習風險判讀" body={`本站資料庫收錄 ${cases.length} 個 Yahoo Finance 歷史案例。圖表只作教學用途，不代表每個指標都已在這些案例中完成驗證。`} rows={cases} />;
-}
-
-function GlossaryPage() {
-  return (
-    <div>
-      <HeroPanel
-        eyebrow="詞彙表"
-        title={
-          <>
-            術語不清，<span className="whitespace-nowrap">策略也說不清</span>
-          </>
-        }
-        body="止蝕、成交量、裂口、倉位、R 值和樣本外測試（OOS）都有特定含義。用詞一致，才可以核對策略條件。"
-        imageKey="glossary"
-      />
-      <Section title="常用詞彙">
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {indicators.slice(0, 18).map((item) => (
-            <Card key={item.siteSlug}>
-              <CardHeader>
-                <Badge variant="info" className="w-fit">{item.category}</Badge>
-                <CardTitle>{item.nameZh}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm leading-6 text-[var(--muted)]">{item.summary}</CardContent>
-            </Card>
-          ))}
-        </div>
-      </Section>
-    </div>
-  );
-}
-
-function SubscribePage() {
-  return <GenericPage imageKey="subscribe" eyebrow="訂閱" title="只報告資料更新，不發買賣訊號" body="訂閱內容包括新案例、資料修正、策略審核結果和 Pine Script 範本更新，不會推送買賣建議。" rows={["策略審核狀態更新", "新增專家資料或研究材料", "Pine Script 教學範本修訂"]} />;
-}
-
-function JournalPage() {
-  return <GenericPage imageKey="journal" eyebrow="交易日誌" title="日誌要記理由，也要記偏差" body="除了入市理由，還要寫下失效條件、止蝕和出市安排。交易完成後再核對一次：執行有沒有偏離原定規則。" rows={["入市前：寫下哪些情況出現時不會交易", "持倉期間：只按新事實更新判斷，不任意改寫理由", "出市後：分清執行錯誤、運氣成分及策略缺陷"]} />;
-}
-
-function ComboPage() {
-  return <GenericPage imageKey="combo" eyebrow="指標組合" title="指標不必多，分工必須清楚" body="組合指標的目的不是堆疊確認，而是分工：一個判斷市況，一個確認訊號，另一個管理風險。" rows={["市況篩選：移動平均線或 ADX", "訊號觸發：RSI、MACD 或價格突破", "風險管理：ATR、結構止蝕及 R 值"]} />;
-}
-
-function ScriptPage() {
-  const rows = strategyCodeCases().map((item) => `${item.shortTitle || item.title}: ${item.pineScript.status}`);
-  return <GenericPage imageKey="tv" eyebrow="Pine Script" title="教學範本與原作者程式必須分開" body="本站展示自行重建的教學範本。原作者的 TradingView 程式碼，只有在授權、署名和來源均完成核對後才會收錄。" rows={rows} actionHref="/strategy-cases" actionLabel="查看策略程式" />;
-}
-
-function ScriptDemoPage() {
-  return <GenericPage imageKey="playground" eyebrow="程式示範" title="程式只執行已寫清楚的規則" body="市況、訊號、風險和出市條件會分開處理。單一買賣命令不足以交代整套判斷。" rows={["市況符合要求後才查看訊號", "訊號成立後才計算止蝕", "按止蝕距離決定倉位"]} />;
-}
-
-function TrialPage() {
-  return <GenericPage imageKey="subscribe" eyebrow="試用流程" title="腳本權限不等於績效保證" body="試用安排只限教育及研究用途，並須遵守程式碼授權。受邀腳本（invite-only script）同樣要自行回測和評估風險。" rows={["提供 TradingView 用戶名稱", "確認用途為教學或研究", "取得授權後自行進行回測"]} />;
-}
-
-function GenericPage({
-  imageKey,
-  eyebrow,
-  title,
-  body,
-  rows,
-  actionHref,
-  actionLabel,
-}: {
-  readonly imageKey: "home" | "detail" | "compare" | "playground" | "glossary" | "journal" | "combo" | "subscribe" | "tv";
-  readonly eyebrow: string;
-  readonly title: string;
-  readonly body: string;
-  readonly rows: readonly string[];
-  readonly actionHref?: string | undefined;
-  readonly actionLabel?: string | undefined;
-}) {
-  return (
-    <div>
-      <HeroPanel eyebrow={eyebrow} title={title} body={body} imageKey={imageKey} actions={actionHref && actionLabel ? <PrimaryLink href={actionHref}>{actionLabel}</PrimaryLink> : undefined} />
-      <Section title="閱讀重點">
-        <div className="grid gap-3 md:grid-cols-3">
-          {rows.map((row) => (
-            <Card key={row}>
-              <CardContent className="p-5 text-sm leading-6 text-[var(--muted)]">{row}</CardContent>
-            </Card>
-          ))}
-        </div>
-      </Section>
-    </div>
-  );
-}
+function topicLinks(){return <div className="topic-links">{blogCategories.map(c=><Link href={`/blog/category/${c.slug}`} key={c.slug}>{c.name} →</Link>)}</div>;}
+function CandleDiagram(){return <figure className="candle-figure"><svg viewBox="0 0 720 380" role="img" aria-label="陰陽燭教學算例：最高110、最低90；升燭開97收105，跌燭開105收97，長下影開107收109。"><title>相同高低範圍，不同開收位置</title><rect width="720" height="380" fill="#f7f8fa"/>{[{x:120,o:97,c:105,name:"升燭"},{x:355,o:105,c:97,name:"跌燭"},{x:590,o:107,c:109,name:"長下影"}].map(b=><g key={b.name}><text x={b.x} y="40" textAnchor="middle" fontSize="23" fill="#0b1f33">{b.name}</text><line x1={b.x} y1="80" x2={b.x} y2="280" stroke="#0b1f33" strokeWidth="3"/><rect x={b.x-25} y={80+(110-Math.max(b.o,b.c))*10} width="50" height={Math.abs(b.c-b.o)*10} fill={b.c>b.o?"#0f766e":"#b45309"}/><text x={b.x+35} y="85" fontSize="18">高 110</text><text x={b.x+35} y="280" fontSize="18">低 90</text><text x={b.x} y="325" textAnchor="middle" fontSize="22">開 {b.o} / 收 {b.c}</text></g>)}</svg><figcaption>相同最高與最低價，開收位置不同，留下的形態也不同。</figcaption></figure>;}
+const sampleCode=`//@version=6
+indicator("HK Evidence Lab — confirmed crossover", overlay=true)
+length = input.int(20, "EMA period", minval=2)
+average = ta.ema(close, length)
+crossed = ta.crossover(close, average)
+confirmed = barstate.isconfirmed and crossed
+plot(average, "EMA", color=color.teal, linewidth=2)
+plotshape(confirmed, title="Confirmed cross", style=shape.circle,
+  location=location.belowbar, color=color.teal, size=size.tiny)
+alertcondition(confirmed, "Confirmed crossover",
+  "The bar closed above its EMA after a crossover.")`;
+function ScriptGuide({demo}:{demo:boolean}) {return <><HeroPanel eyebrow="Pine Script v6" title={demo?"把一個條件，寫清楚。":"從圖表語言，走進程式邏輯。"} body="先分清每根資料如何計算，再寫訊號與訂單。從簡單的收市確認交叉開始，逐行理解歷史數值、事件和即時更新。" imageKey="tv"/><Section title="收市確認的 EMA 交叉"><p>以下是本站的教學程式。它繪製指數移動平均線，並在價格升穿均線且當根收市時標記圓點。這是一個觀察工具；沒有下單，也沒有計算策略回報。</p><div className="code-panel"><pre><code>{sampleCode}</code></pre></div><ol className="prose-list"><li><code>indicator()</code> 宣告指標；若要模擬訂單，才使用策略宣告。</li><li><code>ta.ema()</code> 每根計算均線，週期由輸入控制。</li><li><code>ta.crossover()</code> 描述從不高於變成高於的事件；不是所有在均線上方的日子都會觸發。</li><li><code>barstate.isconfirmed</code> 把條件限制於當根確認時；歷史資料與即時資料仍須對齊資料來源和週期。</li><li>在 TradingView 建立警報時選擇對應條件，修改程式或輸入後需重新建立相關警報。</li></ol></Section><Section title="從指標走向策略"><div className="resource-columns"><div><h3>計算時間</h3><p>指標可以在即時價格更新時計算；策略的執行設定則影響何時計算條件。先確認這一層，才比較訊號是否一致。</p></div><div><h3>訂單時間</h3><p>建立訂單與成交是兩個事件。預設歷史回測的市價單通常在下一可用 tick 成交，不能把訊號的收市價直接當作成交價。</p></div><div><h3>研究時間</h3><p>鎖定參數後，留下未參與設計的資料作測試。每次修訂要記錄日期，避免把已看過的樣本繼續稱作全新驗證。</p></div></div></Section><Section title="深入閱讀"><PrimaryLink href="/blog/category/pine-script">17 篇 Pine Script 專題</PrimaryLink><p className="source-line"><a href="https://www.tradingview.com/pine-script-docs/" target="_blank" rel="noreferrer">TradingView Pine Script 官方文件 ↗</a></p></Section></>;}

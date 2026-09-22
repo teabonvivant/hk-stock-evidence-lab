@@ -1,158 +1,25 @@
 import Link from "next/link";
-
-import { DirectAnswer } from "@/components/site/direct-answer";
-import { IndicatorCard } from "@/components/site/indicator-card";
 import { JsonLd } from "@/components/site/json-ld";
 import { HeroPanel, PrimaryLink, Section } from "@/components/site/page-shell";
-import { Badge } from "@/components/ui/badge";
-import { beginnerStarterLessons } from "@/lib/indicator-beginner-guide";
+import { articles, blogCategories } from "@/lib/blog";
+import { IndicatorCard } from "@/components/site/indicator-card";
 import { findIndicator } from "@/lib/site-data";
-
-const starterIndicators = beginnerStarterLessons.flatMap((lesson) => {
-  const indicator = findIndicator(lesson.slug);
-  return indicator ? [indicator] : [];
-});
-
-const decisionPaths = [
-  {
-    title: "大市方向是否清楚？",
-    body: "先分辨趨勢、橫行或急劇波動，再決定哪些訊號值得閱讀。",
-    href: "/learn",
-    label: "由市況開始",
-  },
-  {
-    title: "突破是否有證據？",
-    body: "核對價格位置、收市確認與成交量，並預先寫下假突破條件。",
-    href: "/indicators/support-resistance",
-    label: "核對價格位置",
-  },
-  {
-    title: "回測結果能否重現？",
-    body: "檢查資料、參數、成本、樣本期、原始碼與樣本外測試。",
-    href: "/methodology/backtesting",
-    label: "查看發布閘門",
-  },
-] as const;
-
-const evidenceSteps = [
-  ["01", "原始數據", "記錄來源、時區、週期、復權與取得日期。"],
-  ["02", "公式及參數", "保存計算方法、預熱期與版本。"],
-  ["03", "市況分類", "說明結論適用於哪類市場環境。"],
-  ["04", "失效測試", "同時展示正常案例與反例。"],
-  ["05", "成本及樣本外", "加入交易摩擦，避免只迎合既有樣本。"],
-  ["06", "具名覆核", "列明作者、技術及數據責任；缺一便維持研究中。"],
-] as const;
-
 export function HomePage() {
-  return (
-    <div>
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "港股證據研究室",
-          alternateName: "HK Stock Evidence Lab",
-          url: "https://technical-indicators-hk.teabonvivant.chatgpt.site/",
-          inLanguage: "zh-Hant-HK",
-          description: "以可重現資料、公式、失效條件及回測發布閘門整理港股技術分析。",
-        }}
-      />
-      <HeroPanel
-        eyebrow="港股技術分析研究庫"
-        title="不只看訊號，更要核對證據"
-        body="本站把技術指標、港股圖表、失效條件與回測限制拆開記錄。未有資料版本、重現方法或具名覆核的內容，會清楚標示為研究中。"
-        imageKey="home"
-        actions={(
-          <>
-            <PrimaryLink href="/learn">建立判讀次序</PrimaryLink>
-            <PrimaryLink href="/methodology/data" variant="secondary">查看數據方法</PrimaryLink>
-            <PrimaryLink href="/indicators" variant="ghost">瀏覽指標百科</PrimaryLink>
-          </>
-        )}
-      />
-
-      <div className="trust-strip" role="note">
-        <Badge variant="warn">公開責任狀態</Badge>
-        <strong>具名覆核完成前維持研究中</strong>
-        <span>不以漂亮數字、假圖表或 AI 整理結果冒充結論。</span>
-        <Link href="/trust">查看信任中心</Link>
-      </div>
-
-      <DirectAnswer
-        answer="技術訊號只是一項觀察；只有資料、公式、市況、失效條件、成本與覆核責任都可追查時，才值得升級為研究結論。"
-        takeaways={[
-          "先決定要回答的市場問題，再選指標。",
-          "正常案例與失效案例必須同時保留。",
-          "回測數字未獨立重現前，只可標示為來源聲稱。",
-        ]}
-      />
-
-      <Section title="你現在想判斷甚麼？" body="先選問題，不要先堆指標。每條路徑都會交代它能回答甚麼，以及不能證明甚麼。">
-        <div className="decision-grid">
-          {decisionPaths.map((item) => (
-            <article key={item.href} className="decision-card">
-              <span>研究問題</span>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-              <Link href={item.href}>{item.label}<span aria-hidden="true"> →</span></Link>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section title="一個結論，如何變成可核對證據？" body="六個步驟不是裝飾，而是本站的發布閘門。任何缺口都要在頁面開首交代。">
-        <ol className="evidence-step-grid">
-          {evidenceSteps.map(([number, title, body]) => (
-            <li key={number}>
-              <span>{number}</span>
-              <div><h3>{title}</h3><p>{body}</p></div>
-            </li>
-          ))}
-        </ol>
-      </Section>
-
-      <Section title="先由 5 個核心頁開始" body="價格位置、成交確認、趨勢方向、動能強弱與風險幅度各由一個工具負責。">
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {starterIndicators.map((item) => <IndicatorCard key={item.siteSlug} item={item} />)}
-        </div>
-      </Section>
-
-      <Section title="最新港股研究" body="只有通過數據、方法、失效測試及具名覆核的研究才會在此發布。">
-        <div className="empty-state">
-          <strong>暫未有研究通過完整發布閘門</strong>
-          <p>現有內容仍可用作學習，但不會被包裝成已驗證的港股交易結論。</p>
-          <PrimaryLink href="/methodology/data" variant="secondary">查看缺口如何處理</PrimaryLink>
-        </div>
-      </Section>
-
-      <Section title="研究狀態公開" body="狀態說明證據完成度，不代表回報高低。綠色只保留給真正完成具名人手覆核的內容。">
-        <div className="status-legend">
-          <Status label="已核對" body="資料、公式、圖表與文字均完成具名覆核。" tone="good" />
-          <Status label="部分核對" body="已有部分證據，未完成項目仍不可視作結論。" tone="info" />
-          <Status label="研究中" body="尚欠重現資料或具名責任，頁面維持 noindex。" tone="warn" />
-          <Status label="不採用" body="未能通過發布閘門，只保留作錯誤與風險教材。" tone="bad" />
-        </div>
-      </Section>
-
-      <Section title="本站不會做甚麼">
-        <ul className="boundary-list">
-          <li><strong>不發買賣訊號</strong><span>不以「必升」、「必跌」或倒數式文案催促決定。</span></li>
-          <li><strong>不隱藏失效條件</strong><span>指標適用範圍、資料缺口與反例會放在可見位置。</span></li>
-          <li><strong>不把 AI 當覆核人</strong><span>AI 可協助整理，不能取代具名技術、數據或法律審閱。</span></li>
-        </ul>
-      </Section>
-    </div>
-  );
-}
-
-function Status({
-  label,
-  body,
-  tone,
-}: {
-  readonly label: string;
-  readonly body: string;
-  readonly tone: "good" | "info" | "warn" | "bad";
-}) {
-  return <article><Badge variant={tone}>{label}</Badge><p>{body}</p></article>;
+ const selected = [1,8,35,48,68,90].flatMap(id => { const a = articles.find(x => x.id === id); return a ? [a] : []; });
+ return <div>
+  <JsonLd data={{"@context":"https://schema.org","@type":"WebSite",name:"港股證據研究室",url:"https://technical-indicators-hk.teabonvivant.chatgpt.site/",inLanguage:"zh-Hant-HK"}} />
+  <HeroPanel eyebrow="港股技術分析與市場教育" title={<>讀懂價格，<br />也讀懂它的分寸。</>} body="一條線，一次突破，一份漂亮的回測，都值得多問一句。從圖表、公式到市場機制，整理可以查證的知識，讓每個判斷都有來處。" imageKey="home" actions={<><PrimaryLink href="/blog">閱讀研究札記</PrimaryLink><PrimaryLink href="/learn" variant="secondary">從基礎開始</PrimaryLink></>} />
+  <nav className="home-topic-band" aria-label="主題入口">{blogCategories.map(c => <Link key={c.slug} href={`/blog/category/${c.slug}`}><strong>{c.name}</strong><span>{c.description}</span></Link>)}</nav>
+  <Section title="從一個具體問題開始" body="每篇文章附上圖解、例子及參考資料。">
+   <div className="article-list home-articles">{selected.map(a => <article key={a.slug}><span className="article-meta">{a.category}</span><h3><Link href={`/blog/${a.slug}`}>{a.title}</Link></h3><p>{a.excerpt}</p><Link className="text-link" href={`/blog/${a.slug}`}>閱讀全文 →</Link></article>)}</div>
+   <Link className="text-link section-end-link" href="/blog">瀏覽全部 {articles.length} 篇研究札記 →</Link>
+  </Section>
+  <Section title="把基礎放穩" body="價格位置、趨勢、動能、成交量和波幅，各自回答不同的問題。">
+   <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{["support-resistance","ema","rsi","volume","atr"].flatMap(slug => {const i=findIndicator(slug);return i ? [<IndicatorCard key={slug} item={i} />] : [];})}</div>
+  </Section>
+  <Section title="讀過以後，親手核對一次">
+   <div className="resource-columns"><div><h3>風險計算</h3><p>輸入資金、止蝕距離和每手股數，觀察風險預算如何影響持倉。</p><Link href="/toolbox">打開計算工具 →</Link></div><div><h3>歷史圖表</h3><p>從保存的港股與美股日線，練習辨認趨勢、波幅和價格位置。</p><Link href="/casebook">查看圖表案例 →</Link></div><div><h3>策略與程式</h3><p>把構思分成條件、事件、訂單與退出，再檢查回測的時間順序。</p><Link href="/script">閱讀 Pine Script 教學 →</Link></div></div>
+  </Section>
+  <div className="editorial-note"><h2>知識的價值，在於可以追問。</h2><p>原始文件、計算口徑和適用範圍，是這裏每一頁的閱讀線索。歷史圖表用來理解已發生的事情；圖解算例用來拆開概念。兩者各有用途。</p><Link href="/trust">了解本站的內容與方法 →</Link></div>
+ </div>;
 }

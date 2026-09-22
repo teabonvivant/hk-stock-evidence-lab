@@ -33,14 +33,15 @@ export function PageShell({ children }: { readonly children: ReactNode }) {
         <div className="page-wrap accountability-footer__grid">
           <div>
             <strong>港股證據研究室</strong>
-            <p>公式、圖表、回測與結論都應留下可核對路徑。具名覆核完成前，內容維持「研究中」。</p>
+            <p>從價格、成交量與市場機制出發，閱讀有來源的技術分析。© 2026 港股證據研究室。</p>
+            <Link href="/sitemap">網站導覽</Link> · <Link href="/blog">研究札記</Link> · <Link href="/subscribe">內容更新</Link>
           </div>
           <FooterGroup title="責任與政策" links={policyLinks} />
           <FooterGroup title="方法與修訂" links={methodLinks} />
           <div>
-            <strong>重要風險聲明</strong>
-            <p>本站只作教育及研究用途，不構成投資建議、招攬或保證。技術指標會失效，回測亦可能過度樂觀。</p>
-            <Link href="/contact/report-error" className="footer-report-link">報告錯誤或提交可重現資料</Link>
+            <strong>閱讀與使用</strong>
+            <p>內容供金融教育與研究，不構成個人投資建議。歷史表現及教學算例不代表未來結果。</p>
+            <Link href="/contact/report-error" className="footer-report-link">整理內容修訂意見</Link>
           </div>
         </div>
       </footer>
@@ -66,9 +67,6 @@ export function HeroPanel({
     <section className="research-panel overflow-hidden">
       <div className="grid min-w-0 gap-5 p-5 lg:grid-cols-[1.05fr_0.95fr] lg:p-6">
         <div className="flex min-w-0 flex-col justify-center gap-4">
-          <Badge variant="info" className="w-fit">
-            {eyebrow}
-          </Badge>
           <div className="space-y-3">
             <h1 className="hero-title max-w-[18ch] text-4xl font-black leading-[1.05] tracking-normal text-[var(--ink)] md:text-5xl">{title}</h1>
             <p className="hero-copy max-w-[64ch] text-base leading-7 text-[var(--muted)]">{body}</p>
@@ -126,6 +124,7 @@ const policyLinks = [
   { href: "/editorial-policy", label: "編輯政策" },
   { href: "/ai-disclosure", label: "AI 使用披露" },
   { href: "/conflicts", label: "利益衝突政策" },
+  { href: "/privacy", label: "私隱與本機資料" },
 ] as const;
 
 const methodLinks = [

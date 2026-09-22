@@ -1,99 +1,29 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-
-const indicatorBundle = JSON.parse(
-  await readFile(new URL("../data/site/technical_indicators_site_data.json", import.meta.url), "utf8"),
-);
-
-async function render(pathname = "/") {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
-
-  return worker.fetch(
-    new Request(`http://localhost${pathname}`, {
-      headers: { accept: "text/html" },
-    }),
-    {
-      ASSETS: {
-        fetch: async () => new Response("Not found", { status: 404 }),
-      },
-    },
-    {
-      waitUntil() {},
-      passThroughOnException() {},
-    },
-  );
+const indicatorBundle=JSON.parse(await readFile(new URL("../data/site/technical_indicators_site_data.json",import.meta.url),"utf8"));
+const articles=JSON.parse(await readFile(new URL("../data/site/blog-articles.json",import.meta.url),"utf8"));
+const {default:worker}=await import("../dist/server/index.js");
+async function render(pathname="/"){
+ return worker.fetch(new Request("http://localhost"+pathname,{headers:{accept:"text/html"}}),{ASSETS:{fetch:async()=>new Response("Not found",{status:404})}},{waitUntil(){},passThroughOnException(){}});
 }
-
-test("server-renders the Hong Kong evidence lab homepage", async () => {
-  const response = await render();
-  assert.equal(response.status, 200);
-  assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
-
-  const html = await response.text();
-  assert.match(html, /<title>港股技術指標研究｜公式、港股圖表、失效條件與回測證據<\/title>/i);
-  assert.match(html, /不只看訊號，更要核對證據/);
-  assert.match(html, /港股技術分析研究庫/);
-  assert.match(html, /你現在想判斷甚麼？/);
-  assert.match(html, /一個結論，如何變成可核對證據？/);
-  assert.match(html, /研究狀態公開/);
-  assert.match(html, /本站不會做甚麼/);
-  assert.match(html, /具名覆核完成前維持研究中/);
-  assert.match(html, /href="\/methodology\/data"/);
-  assert.match(html, /href="\/trust"/);
-  assert.match(html, /href="#main-content"/);
-  assert.match(html, /type="application\/ld\+json"/);
-  assert.doesNotMatch(html, /generated-pages\/home\.png/);
-  assert.doesNotMatch(html, /100 位專家|311 份材料|資料庫概況/);
-  assert.doesNotMatch(html, /react-grab|react-scan/);
+test("homepage exposes complete reading and learning paths",async()=>{
+ const r=await render(),html=await r.text();assert.equal(r.status,200);
+ for(const term of ["讀懂價格","100 篇研究札記","從觀察走向理解","把基礎放穩",'href="/blog"','href="/sitemap"','href="#main-content"','type="application/ld+json"']) assert.ok(html.includes(term),term);
+ assert.doesNotMatch(html,/具名覆核完成前|尚未完成全部核對|react-grab|react-scan|generated-pages\/home\.png/);
 });
-
-test("server-renders a generated indicator route", async () => {
-  const response = await render("/indicators");
-  assert.equal(response.status, 200);
-
-  const html = await response.text();
-  assert.match(html, /指標百科/);
-  assert.match(html, /港股證據研究室/);
-  assert.match(html, /搜尋名稱、縮寫或用途/);
-  assert.match(html, /只顯示 20 個核心指標/);
-  assert.match(html, /<meta name="description" content="瀏覽 82 個技術指標/);
-  assert.match(html, /先決定要回答甚麼，再選指標/);
-  assert.match(html, /82 個技術指標 · 按用途學習/);
-  assert.match(html, /從五個問題開始/);
-  assert.match(html, /我想看波動或管理風險/);
-  assert.match(html, /我想找區間或關鍵位置/);
-  assert.match(html, /搜尋 RSI、保力加通道、成交量、英文縮寫或用途/);
-  assert.doesNotMatch(html, /generated-pages\/indicators\.png/);
+test("indicator library remains searchable and indexable",async()=>{
+ const r=await render("/indicators"),html=await r.text();assert.equal(r.status,200);
+ for(const term of ["82 個技術指標","搜尋名稱、縮寫或用途","只顯示 20 個核心指標","我想看波動或管理風險"])assert.ok(html.includes(term),term);
 });
-
-test("server-renders a core indicator as a reproducible learning page", async () => {
-  const response = await render("/indicators/rsi");
-  assert.equal(response.status, 200);
-
-  const html = await response.text();
-  assert.match(html, /<meta name="robots" content="noindex, follow"/);
-  assert.match(html, /研究中｜本頁尚未完成全部核對，不應作為交易結論/);
-  assert.match(html, /具名作者：尚未公開/);
-  assert.match(html, /技術覆核：尚未完成/);
-  assert.match(html, /提交可重現資料/);
-  assert.match(html, /核心 20 指標詳解/);
-  assert.match(html, /RSI 的判讀重點/);
-  assert.match(html, /實際使用流程/);
-  assert.match(html, /以真實數據練習圖表判讀/);
-  assert.match(html, /WilderRMA/);
-  assert.match(html, /QQQ 2022 至 2023 修復段/);
-  assert.match(html, /常見失效情況/);
-  assert.match(html, /用歷史圖表驗證理解/);
-  assert.match(html, /參考材料/);
-  assert.doesNotMatch(html, /generated-pages\/indicator-detail\.png/);
-
-  assert.ok(html.indexOf("RSI 的判讀重點") < html.indexOf("以真實數據練習圖表判讀"));
-  assert.ok(html.indexOf("以真實數據練習圖表判讀") < html.indexOf("進階：公式與計算口徑"));
+test("core indicator aligns its lesson and historical chart",async()=>{
+ const r=await render("/indicators/rsi"),html=await r.text();assert.equal(r.status,200);
+ assert.match(html,/<meta name="robots" content="index, follow"/);
+ for(const term of ["RSI 的判讀重點","圖解與判讀","WilderRMA","QQQ 2022 至 2023 修復段","常見失效情況","參考材料"])assert.ok(html.includes(term),term);
+ assert.doesNotMatch(html,/尚未公開|技術覆核：尚未完成|研究中｜/);
+ assert.ok(html.indexOf("RSI 的判讀重點")<html.indexOf("圖解與判讀"));
+ assert.ok(html.indexOf("圖解與判讀")<html.indexOf("進階：公式與計算口徑"));
 });
-
 test("every indicator route teaches a beginner how to use the indicator", async () => {
   assert.equal(indicatorBundle.indicators.length, 82);
 
@@ -131,92 +61,40 @@ test("role-specific pages teach the right decision instead of forcing an entry s
   const betaHtml = await (await render("/indicators/beta")).text();
   assert.doesNotMatch(betaHtml, /先寫失效及風險/);
 });
-
-test("research comparisons read like edited notes, not database templates", async () => {
-  const response = await render("/compare");
-  assert.equal(response.status, 200);
-
-  const html = await response.text();
-  assert.match(html, /主要來源/);
-  assert.match(html, /研究重點：/);
-  assert.doesNotMatch(html, /的角色是「/);
+test("article includes its text, two matching figures and source links",async()=>{
+ const a=articles[0],r=await render("/blog/"+a.slug),html=await r.text();assert.equal(r.status,200);
+ assert.ok(html.includes(a.title));
+ assert.equal([...html.matchAll(/<img\b[^>]+src="\/illustrations\/blog\//g)].length,2);
+ assert.ok(html.includes("BlogPosting"));
+ for(const s of a.sections) assert.ok(html.includes(s.heading),s.heading);
+ for(const s of a.sources) assert.ok(html.includes(s.url.replaceAll("&","&amp;")),s.url);
+ assert.ok(html.includes('href="https://technical-indicators-hk.teabonvivant.chatgpt.site/blog/'+a.slug+'"'));
 });
-
-test("glossary heading keeps its key phrase together on narrow screens", async () => {
-  const response = await render("/glossary");
-  assert.equal(response.status, 200);
-
-  const html = await response.text();
-  assert.match(html, /術語不清，<span class="whitespace-nowrap">策略也說不清<\/span>/);
+test("strategy methods teach conditions without unverified performance claims",async()=>{
+ for(const route of ["/strategy-cases","/strategy-cases/supertrend-ai-adaptive-btc"]){
+  const r=await render(route),html=await r.text();assert.equal(r.status,200);
+  assert.doesNotMatch(html,/待完成核對|來源聲稱｜|needs_manual_strategy_report|local_template_only|teaching-baseline/);
+ }
+ const html=await(await render("/strategy-cases/supertrend-ai-adaptive-btc")).text();
+ for(const term of ["Supertrend","失效","退出","TradingView"])assert.ok(html.includes(term),term);
 });
-
-test("strategy index leads with evidence instead of interface narration", async () => {
-  const response = await render("/strategy-cases");
-  assert.equal(response.status, 200);
-
-  const html = await response.text();
-  assert.match(html, /回測研究庫/);
-  assert.match(html, /來源聲稱，不等於本站結論/);
-  assert.match(html, /目前沒有研究通過完整發布閘門/);
-  assert.doesNotMatch(html, />PF<\/span>|>勝率<\/span>|>交易次數<\/span>/);
-  assert.doesNotMatch(html, /篩選功能只會切換本站案例/);
+test("public policies contain substantive information and no draft labels",async()=>{
+ for(const p of ["trust","about/team","editorial-policy","methodology/data","methodology/backtesting","ai-disclosure","corrections","conflicts","risk-disclosure","contact/report-error","privacy"]){
+  const r=await render("/"+p),html=await r.text();assert.equal(r.status,200,p);
+  assert.ok(html.includes("2026.09"),p);
+  assert.doesNotMatch(html,/具名覆核完成前|作者：尚未公開|技術覆核：尚未完成/);
+ }
 });
-
-test("server-renders strategy research in reader-facing Chinese", async () => {
-  const response = await render("/strategy-cases/supertrend-ai-adaptive-btc");
-  assert.equal(response.status, 200);
-
-  const html = await response.text();
-  assert.match(html, /<meta name="robots" content="noindex, follow"/);
-  assert.match(html, /來源聲稱｜以下數字來自外部來源，本站尚未獨立重現/);
-  assert.match(html, /提交可重現資料/);
-  assert.match(html, /待完成核對/);
-  assert.match(html, /須人工核對策略測試報告及策略屬性/);
-  assert.match(html, /策略屬性設定（Properties）/);
-  assert.match(html, /輸入參數（Inputs）/);
-  assert.match(html, /10,000 美元（本站教學設定）/);
-  assert.match(html, /原作者的程式碼授權尚未確認時/);
-  assert.doesNotMatch(html, /needs_manual_strategy_report/);
-  assert.doesNotMatch(html, /local_template_only/);
-  assert.doesNotMatch(html, /teaching-baseline/);
+test("unknown and malformed routes return a genuine 404",async()=>{
+ for(const route of ["/missing-page","/blog/missing-article","/indicators/missing","/learn/extra","/indicators/rsi/extra","/blog/category/unknown"]){
+  const r=await render(route);assert.equal(r.status,404,route);const html=await r.text();assert.match(html,/404|找不到/);
+ }
 });
-
-test("publishes the P0 trust and methodology routes", async () => {
-  const expected = [
-    ["/trust", "每一個結論，都要留下可核對的路徑"],
-    ["/about/team", "誰撰寫、誰覆核、誰對數據負責"],
-    ["/editorial-policy", "未完成核對的內容，不會包裝成答案"],
-    ["/methodology/data", "先交代數據，才討論結果"],
-    ["/methodology/backtesting", "回測不是預測；它只是對規則的歷史壓力測試"],
-    ["/ai-disclosure", "AI 可以協助整理，不能代替最終覆核"],
-    ["/corrections", "錯誤要留下紀錄，不只悄悄改掉"],
-    ["/conflicts", "讀者有權知道內容背後的利益關係"],
-    ["/risk-disclosure", "技術指標會失效，回測亦會過度樂觀"],
-    ["/contact/report-error", "發現錯誤，請提供可重現資料"],
-  ];
-
-  for (const [pathname, heading] of expected) {
-    const response = await render(pathname);
-    assert.equal(response.status, 200, pathname);
-    const html = await response.text();
-    assert.match(html, new RegExp(heading), pathname);
-    assert.match(html, /政策版本|方法版本|研究狀態/, pathname);
-    assert.match(html, /提交可重現資料|報告錯誤/, pathname);
-  }
-});
-
-test("serves crawler policy and an index-safe sitemap", async () => {
-  const robotsResponse = await render("/robots.txt");
-  assert.equal(robotsResponse.status, 200);
-  const robots = await robotsResponse.text();
-  assert.match(robots, /User-Agent: OAI-SearchBot[\s\S]*Allow: \//i);
-  assert.match(robots, /User-Agent: ChatGPT-User[\s\S]*Allow: \//i);
-  assert.match(robots, /User-Agent: GPTBot[\s\S]*Disallow: \//i);
-
-  const sitemapResponse = await render("/sitemap.xml");
-  assert.equal(sitemapResponse.status, 200);
-  const sitemap = await sitemapResponse.text();
-  assert.match(sitemap, /technical-indicators-hk\.teabonvivant\.chatgpt\.site\/trust/);
-  assert.doesNotMatch(sitemap, /\/indicators\/rsi/);
-  assert.doesNotMatch(sitemap, /\/strategy-cases\/supertrend-ai-adaptive-btc/);
+test("crawler policy and sitemap expose all completed educational pages",async()=>{
+ const robotsR=await render("/robots.txt");assert.equal(robotsR.status,200);const robots=await robotsR.text();
+ assert.match(robots,/User-Agent: OAI-SearchBot[\s\S]*Allow: \//i);
+ assert.match(robots,/User-Agent: ChatGPT-User[\s\S]*Allow: \//i);
+ assert.match(robots,/User-Agent: GPTBot[\s\S]*Disallow: \//i);
+ const r=await render("/sitemap.xml");assert.equal(r.status,200);const xml=await r.text();
+ for(const route of ["/trust","/indicators/rsi","/strategy-cases/supertrend-ai-adaptive-btc",...articles.map(a=>"/blog/"+a.slug)])assert.ok(xml.includes(route),route);
 });

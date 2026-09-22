@@ -1,29 +1,12 @@
 import type { MetadataRoute } from "next";
-
 import { siteConfig } from "@/lib/site-config";
-import { trustContentFor, trustRoutePaths } from "@/lib/trust-content";
-
-const publicPaths = [
-  "",
-  "/learn",
-  "/indicators",
-  "/compare",
-  "/casebook",
-  "/glossary",
-  "/toolbox",
-  "/strategy-cases",
-  "/tv-strategies",
-] as const;
+import { staticRouteParams } from "@/lib/routes";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const trustPaths = trustRoutePaths.flatMap((path) => (
-    trustContentFor(path).indexable ? [`/${path}`] : []
-  ));
-
-  return [...publicPaths, ...trustPaths].map((path) => ({
-    url: `${siteConfig.url}${path}`,
-    lastModified: "2026-07-24",
-    changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : path === "/indicators" ? 0.9 : 0.7,
+  return staticRouteParams().map(({slug}) => ({
+    url: siteConfig.url + (slug.length ? "/" + slug.join("/") : ""),
+    lastModified: "2026-09-22",
+    changeFrequency: slug.length === 0 ? "weekly" : "monthly",
+    priority: slug.length === 0 ? 1 : slug.length === 1 ? 0.9 : 0.7,
   }));
 }

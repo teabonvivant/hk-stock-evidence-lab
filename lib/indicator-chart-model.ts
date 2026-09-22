@@ -75,7 +75,7 @@ export function getIndicatorChartModel(slug: string, caseKey: MarketCaseKey): In
       base.push(line("+DI", result.plusDi, "indicator", "blue"));
       base.push(line("-DI", result.minusDi, "indicator", "danger"));
       references.push(reference("25", 25, "accent"));
-      indicatorDomain = [0, 60];
+      indicatorDomain = [0, 100];
       break;
     }
     case "atr":
@@ -94,8 +94,8 @@ export function getIndicatorChartModel(slug: string, caseKey: MarketCaseKey): In
       break;
     case "stochastic": {
       const result = stochastic(bars, 14, 3);
-      base.push(line("%K", result.middle, "indicator", "primary"));
-      base.push(line("%D", result.upper, "indicator", "accent"));
+      base.push(line("%K（14,3）", result.middle, "indicator", "primary"));
+      base.push(line("%D（3）", result.upper, "indicator", "accent"));
       references.push(reference("80", 80), reference("20", 20));
       indicatorDomain = [0, 100];
       break;
