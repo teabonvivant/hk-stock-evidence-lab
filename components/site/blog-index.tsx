@@ -17,8 +17,8 @@ export function BlogIndex({ items, categories, initialCategory = "全部" }: { i
     </div>
     <p className="result-count" role="status">{filtered.length} 篇文章{filtered.length > 0 ? ` · 第 ${current} / ${pages} 頁` : ""}</p>
     <div className="article-list">{filtered.slice((current - 1) * 12, current * 12).map(a => <article key={a.slug}>
-      <div className="article-meta"><span>{a.category}</span><span>{a.minutes} 分鐘閱讀</span></div>
-      <h2><Link href={`/blog/${a.slug}`}>{a.title}</Link></h2><p>{a.excerpt}</p>
+      <h2><Link href={`/blog/${a.slug}`}>{a.title}</Link></h2>
+      <div className="article-meta"><span>{a.category}</span><span>{a.minutes} 分鐘閱讀</span></div><p>{a.excerpt}</p>
       <Link className="text-link" href={`/blog/${a.slug}`}>閱讀全文<span className="sr-only">：{a.title}</span> →</Link>
     </article>)}</div>
     {filtered.length === 0 ? <div className="empty-state"><h2>沒有符合的文章</h2><p>試試較短的詞語，或查看全部主題。</p><button className="plain-button" onClick={() => { setQuery(""); setCategory("全部"); setPage(1); }}>清除搜尋條件</button></div> : null}

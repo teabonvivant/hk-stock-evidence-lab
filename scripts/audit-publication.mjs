@@ -26,7 +26,7 @@ for(const route of routes){
  for(const term of banned)if(visible.includes(term))error("Unedited public term: "+term);
  for(const m of html.matchAll(/<img\b[^>]*>/g)){
   const src=decode(m[0].match(/\bsrc="([^"]+)"/)?.[1]??"");
-  if(!src)error("Image without source");if(!/\balt="[^"]+"/.test(m[0]))error("Image without text alternative");images.add(src);
+  if(!src)error("Image without source");if(!/\balt="[^"]+"/.test(m[0])&&!(/\balt=""/.test(m[0])&&/\baria-hidden="true"/.test(m[0])))error("Image without text alternative or explicit decorative semantics");images.add(src);
  }
  if(route.startsWith("/blog/")&&!route.startsWith("/blog/category/")&&[...html.matchAll(/<img\b[^>]+src="\/illustrations\/blog\//g)].length!==2)error("Article must display two dedicated figures");
 }
@@ -43,8 +43,11 @@ for(const [route,html]of pages){
  }
 }
 for(const src of images)try{
- const svg=await fs.readFile(path.join(root,"public",src),"utf8");
- assert.match(svg,/<title[^>]*>[^<]+<\/title>/);assert.match(svg,/<desc[^>]*>[^<]+<\/desc>/);
+ const asset=await fs.readFile(path.join(root,"public",src));
+ if(src.endsWith(".svg")){const svg=asset.toString("utf8");assert.match(svg,/<title[^>]*>[^<]+<\/title>/);assert.match(svg,/<desc[^>]*>[^<]+<\/desc>/);}
+ else if(src.endsWith(".png"))assert.equal(asset.subarray(0,8).toString("hex"),"89504e470d0a1a0a");
+ else if(src.endsWith(".webp")){assert.equal(asset.subarray(0,4).toString(),"RIFF");assert.equal(asset.subarray(8,12).toString(),"WEBP");}
+ else assert.ok(asset.length>0,"Image file is empty");
 }catch(e){failures.push({asset:src,why:e.message});}
 const rss=await fs.readFile(path.join(root,"public/feed.xml"),"utf8");
 if([...rss.matchAll(/<item>/g)].length!==100)failures.push({why:"RSS does not contain all articles"});
@@ -53,4 +56,3 @@ await fs.mkdir(path.join(root,".content-cache"),{recursive:true});
 await fs.writeFile(path.join(root,".content-cache/route-audit.json"),JSON.stringify(result,null,2));
 console.log(JSON.stringify(result,null,2));
 if(failures.length)process.exitCode=1;
-

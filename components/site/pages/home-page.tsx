@@ -1,21 +1,24 @@
 import Link from "next/link";
 import { JsonLd } from "@/components/site/json-ld";
-import { HeroPanel, PrimaryLink, Section } from "@/components/site/page-shell";
-import { articles, blogCategories } from "@/lib/blog";
+import { Section } from "@/components/site/page-shell";
+import { articles, blogCategories, figurePath } from "@/lib/blog";
 import { IndicatorCard } from "@/components/site/indicator-card";
 import { findIndicator } from "@/lib/site-data";
+import { HomeCover } from "@/components/site/home-cover";
+import { EvidenceVisual } from "@/components/site/evidence-visual";
 export function HomePage() {
  const selected = [1,8,35,48,68,90].flatMap(id => { const a = articles.find(x => x.id === id); return a ? [a] : []; });
- return <div>
+ return <div className="home-journal">
   <JsonLd data={{"@context":"https://schema.org","@type":"WebSite",name:"港股證據研究室",url:"https://technical-indicators-hk.teabonvivant.chatgpt.site/",inLanguage:"zh-Hant-HK"}} />
-  <HeroPanel eyebrow="港股技術分析與市場教育" title={<>讀懂價格，<br />也讀懂它的分寸。</>} body="一條線，一次突破，一份漂亮的回測，都值得多問一句。從圖表、公式到市場機制，整理可以查證的知識，讓每個判斷都有來處。" imageKey="home" actions={<><PrimaryLink href="/blog">閱讀研究札記</PrimaryLink><PrimaryLink href="/learn" variant="secondary">從基礎開始</PrimaryLink></>} />
+  <HomeCover />
+  <div className="home-observation"><EvidenceVisual variant="home" /></div>
   <nav className="home-topic-band" aria-label="主題入口">{blogCategories.map(c => <Link key={c.slug} href={`/blog/category/${c.slug}`}><strong>{c.name}</strong><span>{c.description}</span></Link>)}</nav>
-  <Section title="從一個具體問題開始" body="每篇文章附上圖解、例子及參考資料。">
-   <div className="article-list home-articles">{selected.map(a => <article key={a.slug}><span className="article-meta">{a.category}</span><h3><Link href={`/blog/${a.slug}`}>{a.title}</Link></h3><p>{a.excerpt}</p><Link className="text-link" href={`/blog/${a.slug}`}>閱讀全文 →</Link></article>)}</div>
+  <Section className="home-reading" title="從一個具體問題開始" body="每篇文章附上圖解、例子及參考資料。">
+   <div className="article-list home-articles">{selected.map((a,index) => <article key={a.slug} className={index === 0 ? "featured-reading" : undefined}><div><h3><Link href={`/blog/${a.slug}`}>{a.title}</Link></h3><span className="article-meta">{a.category}</span><p>{a.excerpt}</p><Link className="text-link" href={`/blog/${a.slug}`}>閱讀全文 →</Link></div>{index === 0 ? <Link className="featured-reading__figure" href={`/blog/${a.slug}`} aria-label={a.title}><img src={figurePath(a,0)} alt={a.figures[0]?.title ?? a.title} width="720" height="640" loading="lazy" /></Link> : null}</article>)}</div>
    <Link className="text-link section-end-link" href="/blog">瀏覽全部 {articles.length} 篇研究札記 →</Link>
   </Section>
-  <Section title="把基礎放穩" body="價格位置、趨勢、動能、成交量和波幅，各自回答不同的問題。">
-   <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{["support-resistance","ema","rsi","volume","atr"].flatMap(slug => {const i=findIndicator(slug);return i ? [<IndicatorCard key={slug} item={i} />] : [];})}</div>
+  <Section className="home-foundations" title="把基礎放穩" body="價格位置、趨勢、動能、成交量和波幅，各自回答不同的問題。">
+   <div className="foundation-list">{["support-resistance","ema","rsi","volume","atr"].flatMap(slug => {const i=findIndicator(slug);return i ? [<IndicatorCard key={slug} item={i} />] : [];})}</div>
   </Section>
   <Section title="讀過以後，親手核對一次">
    <div className="resource-columns"><div><h3>風險計算</h3><p>輸入資金、止蝕距離和每手股數，觀察風險預算如何影響持倉。</p><Link href="/toolbox">打開計算工具 →</Link></div><div><h3>歷史圖表</h3><p>從保存的港股與美股日線，練習辨認趨勢、波幅和價格位置。</p><Link href="/casebook">查看圖表案例 →</Link></div><div><h3>策略與程式</h3><p>把構思分成條件、事件、訂單與退出，再檢查回測的時間順序。</p><Link href="/script">閱讀 Pine Script 教學 →</Link></div></div>

@@ -52,7 +52,6 @@ export function TrustPage({ path }: { readonly path: TrustRoutePath }) {
       <div className="policy-sections">
         {content.sections.map((section, index) => (
           <section key={section.title} id={`policy-section-${index + 1}`}>
-            <span>0{index + 1}</span>
             <h2>{section.title}</h2>
             <p>{section.body}</p>
             <ul>{section.points.map((point) => <li key={point}>{point}</li>)}</ul>

@@ -4,7 +4,6 @@ import type { ReactNode } from "react";
 import { EvidenceVisual } from "@/components/site/evidence-visual";
 import type { EvidenceVisualVariant } from "@/components/site/evidence-visual";
 import { MobileNavigation, SiteNavigation } from "@/components/site/site-navigation";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -64,7 +63,7 @@ export function HeroPanel({
   readonly actions?: ReactNode | undefined;
 }) {
   return (
-    <section className="research-panel overflow-hidden">
+    <section className="research-panel section-cover overflow-hidden">
       <div className="grid min-w-0 gap-5 p-5 lg:grid-cols-[1.05fr_0.95fr] lg:p-6">
         <div className="flex min-w-0 flex-col justify-center gap-4">
           <div className="space-y-3">
@@ -93,8 +92,8 @@ export function Section({
   readonly className?: string | undefined;
 }) {
   return (
-    <section id={id} className={cn("mt-5 scroll-mt-44 rounded-[8px] border border-[var(--line)] bg-white/90 p-5 shadow-[0_10px_28px_rgba(15,35,55,0.05)] md:scroll-mt-24", className)}>
-      <div className="mb-4 max-w-[68ch]">
+    <section id={id} className={cn("lab-section scroll-mt-44 md:scroll-mt-24", className)}>
+      <div className="lab-section__heading">
         <h2 className="text-xl font-bold text-[var(--ink)] md:text-2xl">{title}</h2>
         {body ? <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{body}</p> : null}
       </div>
@@ -113,7 +112,7 @@ export function PrimaryLink({
   readonly variant?: "default" | "secondary" | "warning" | "ghost";
 }) {
   return (
-    <Button asChild variant={variant}>
+    <Button asChild variant={variant} className={`site-action site-action--${variant}`}>
       <Link href={href}>{children}</Link>
     </Button>
   );

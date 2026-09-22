@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import { IndicatorDetail } from "@/components/site/indicator-detail";
 import { IndicatorLibrary } from "@/components/site/indicator-library";
 import { HeroPanel, PrimaryLink, Section } from "@/components/site/page-shell";
@@ -10,7 +9,7 @@ export function IndicatorsPage() {
     <div>
       <HeroPanel
         eyebrow="82 個技術指標 · 按用途學習"
-        title="先決定要回答甚麼，再選指標"
+        title={<><span className="hero-phrase">先決定要回答甚麼，</span><span className="hero-phrase">再選指標</span></>}
         body="由價格位置、成交確認、趨勢方向、動能強弱和風險幅度五個問題入手。每個問題先用一個工具回答，較容易分清訊號、限制與失效條件。"
         imageKey="indicators"
         actions={
@@ -26,8 +25,8 @@ export function IndicatorsPage() {
             const indicator = findIndicator(lesson.slug);
             return indicator ? (
               <li key={lesson.slug} className="flat-evidence-block flex min-w-0 flex-col items-start">
-                <Badge variant="good">第 {lesson.step} 步 · {lesson.role}</Badge>
-                <h3 className="mt-3 font-bold text-[var(--ink)]">{lesson.title}</h3>
+                <h3 className="font-bold text-[var(--ink)]">{lesson.title}</h3>
+                <p className="mt-2 text-xs font-medium text-[var(--primary-strong)]">第 {lesson.step} 步 · {lesson.role}</p>
                 <p className="mt-2 flex-1 text-sm leading-6 text-[var(--muted)]">{lesson.body}</p>
                 <PrimaryLink href={`/indicators/${lesson.slug}`} variant="ghost">學習 {indicator.abbr}</PrimaryLink>
               </li>

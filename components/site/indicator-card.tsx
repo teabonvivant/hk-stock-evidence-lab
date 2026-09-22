@@ -7,13 +7,13 @@ import type { IndicatorSummary } from "@/lib/site-data";
 
 export function IndicatorCard({ item }: { readonly item: IndicatorSummary }) {
   return (
-    <Card className="pressable lift-hover h-full">
+    <Card className="indicator-card h-full">
       <CardHeader>
-        <div className="flex flex-wrap items-center gap-2">
+        <CardTitle>{item.nameZh}</CardTitle>
+        <div className="indicator-card__meta flex flex-wrap items-center gap-2">
           <Badge variant={item.core ? "good" : "default"}>{item.difficulty}</Badge>
           <Badge variant="info">{item.category}</Badge>
         </div>
-        <CardTitle>{item.nameZh}</CardTitle>
         <CardDescription>
           {item.nameEn} · {item.abbr}
         </CardDescription>
