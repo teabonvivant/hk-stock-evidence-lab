@@ -15,5 +15,5 @@ export function findArticle(slug: string) { return articles.find(a => a.slug ===
 export function readingMinutes(a: BlogArticle) { return Math.max(3, Math.ceil((a.intro + a.sections.flatMap(s => s.paragraphs).join("")).length / 320)); }
 export function articlesIn(category: string) { return articles.filter(a => a.category === category); }
 export function figurePath(a: BlogArticle, i: number) { return `/illustrations/blog/${a.slug}-${i + 1}.svg`; }
-export function articleSummary(a: BlogArticle) { return { slug: a.slug, title: a.title, category: a.category, excerpt: a.excerpt, minutes: readingMinutes(a) }; }
+export function articleSummary(a: BlogArticle) { return { slug: a.slug, title: a.title, category: a.category, excerpt: a.excerpt, minutes: readingMinutes(a), preview: a.figures[0]!, date: articleDate }; }
 export type ArticleSummary = ReturnType<typeof articleSummary>;

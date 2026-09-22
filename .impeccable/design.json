@@ -1,536 +1,499 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-22T11:41:21.461Z",
+  "generatedAt": "2026-09-22T15:04:04.876Z",
   "title": "Design System: 港股證據研究室",
   "extensions": {
     "colorMeta": {
       "primary": {
         "role": "primary",
-        "displayName": "Ultramarine",
+        "displayName": "Reference Blue",
+        "canonical": "#185bd1",
         "tonalRamp": [
-          "oklch(15% 0.1957 273.50)",
-          "oklch(25% 0.1957 273.50)",
-          "oklch(35% 0.1957 273.50)",
-          "oklch(45% 0.1957 273.50)",
-          "oklch(55% 0.1957 273.50)",
-          "oklch(65% 0.1957 273.50)",
-          "oklch(80% 0.1957 273.50)",
-          "oklch(95% 0.1957 273.50)"
+          "oklch(15% 0.1939 261.05)",
+          "oklch(26% 0.1939 261.05)",
+          "oklch(37% 0.1939 261.05)",
+          "oklch(48% 0.1939 261.05)",
+          "oklch(59% 0.1939 261.05)",
+          "oklch(70% 0.1939 261.05)",
+          "oklch(83% 0.1939 261.05)",
+          "oklch(95% 0.1939 261.05)"
         ]
       },
       "primary-strong": {
         "role": "primary",
-        "displayName": "Deep ultramarine",
+        "displayName": "Deep Reference Blue",
+        "canonical": "#164da8",
         "tonalRamp": [
-          "oklch(15% 0.1470 274.53)",
-          "oklch(25% 0.1470 274.53)",
-          "oklch(35% 0.1470 274.53)",
-          "oklch(45% 0.1470 274.53)",
-          "oklch(55% 0.1470 274.53)",
-          "oklch(65% 0.1470 274.53)",
-          "oklch(80% 0.1470 274.53)",
-          "oklch(95% 0.1470 274.53)"
+          "oklch(15% 0.1573 260.28)",
+          "oklch(26% 0.1573 260.28)",
+          "oklch(37% 0.1573 260.28)",
+          "oklch(48% 0.1573 260.28)",
+          "oklch(59% 0.1573 260.28)",
+          "oklch(70% 0.1573 260.28)",
+          "oklch(83% 0.1573 260.28)",
+          "oklch(95% 0.1573 260.28)"
         ]
       },
-      "citron": {
+      "navy": {
         "role": "secondary",
-        "displayName": "Citron",
+        "displayName": "Navigation Navy",
+        "canonical": "#10263f",
         "tonalRamp": [
-          "oklch(15% 0.1154 112.71)",
-          "oklch(25% 0.1154 112.71)",
-          "oklch(35% 0.1154 112.71)",
-          "oklch(45% 0.1154 112.71)",
-          "oklch(55% 0.1154 112.71)",
-          "oklch(65% 0.1154 112.71)",
-          "oklch(80% 0.1154 112.71)",
-          "oklch(95% 0.1154 112.71)"
+          "oklch(15% 0.0548 253.15)",
+          "oklch(26% 0.0548 253.15)",
+          "oklch(37% 0.0548 253.15)",
+          "oklch(48% 0.0548 253.15)",
+          "oklch(59% 0.0548 253.15)",
+          "oklch(70% 0.0548 253.15)",
+          "oklch(83% 0.0548 253.15)",
+          "oklch(95% 0.0548 253.15)"
+        ]
+      },
+      "navy-active": {
+        "role": "secondary",
+        "displayName": "Active Navy",
+        "canonical": "#233e5f",
+        "tonalRamp": [
+          "oklch(15% 0.0665 254.32)",
+          "oklch(26% 0.0665 254.32)",
+          "oklch(37% 0.0665 254.32)",
+          "oklch(48% 0.0665 254.32)",
+          "oklch(59% 0.0665 254.32)",
+          "oklch(70% 0.0665 254.32)",
+          "oklch(83% 0.0665 254.32)",
+          "oklch(95% 0.0665 254.32)"
         ]
       },
       "bg": {
         "role": "neutral",
-        "displayName": "Lavender paper",
+        "displayName": "White Ground",
+        "canonical": "#ffffff",
         "tonalRamp": [
-          "oklch(15% 0.0080 293.91)",
-          "oklch(25% 0.0080 293.91)",
-          "oklch(35% 0.0080 293.91)",
-          "oklch(45% 0.0080 293.91)",
-          "oklch(55% 0.0080 293.91)",
-          "oklch(65% 0.0080 293.91)",
-          "oklch(80% 0.0080 293.91)",
-          "oklch(95% 0.0080 293.91)"
+          "oklch(15% 0.0000 0)",
+          "oklch(26% 0.0000 0)",
+          "oklch(37% 0.0000 0)",
+          "oklch(48% 0.0000 0)",
+          "oklch(59% 0.0000 0)",
+          "oklch(70% 0.0000 0)",
+          "oklch(83% 0.0000 0)",
+          "oklch(95% 0.0000 0)"
         ]
       },
       "bg-strong": {
         "role": "neutral",
-        "displayName": "Lavender wash",
+        "displayName": "Cool Gray Ground",
+        "canonical": "#edf2f7",
         "tonalRamp": [
-          "oklch(15% 0.0176 293.12)",
-          "oklch(25% 0.0176 293.12)",
-          "oklch(35% 0.0176 293.12)",
-          "oklch(45% 0.0176 293.12)",
-          "oklch(55% 0.0176 293.12)",
-          "oklch(65% 0.0176 293.12)",
-          "oklch(80% 0.0176 293.12)",
-          "oklch(95% 0.0176 293.12)"
+          "oklch(15% 0.0086 247.92)",
+          "oklch(26% 0.0086 247.92)",
+          "oklch(37% 0.0086 247.92)",
+          "oklch(48% 0.0086 247.92)",
+          "oklch(59% 0.0086 247.92)",
+          "oklch(70% 0.0086 247.92)",
+          "oklch(83% 0.0086 247.92)",
+          "oklch(95% 0.0086 247.92)"
         ]
       },
       "surface": {
         "role": "neutral",
-        "displayName": "White",
+        "displayName": "White Surface",
+        "canonical": "#ffffff",
         "tonalRamp": [
-          "oklch(15% 0.0000 0.00)",
-          "oklch(25% 0.0000 0.00)",
-          "oklch(35% 0.0000 0.00)",
-          "oklch(45% 0.0000 0.00)",
-          "oklch(55% 0.0000 0.00)",
-          "oklch(65% 0.0000 0.00)",
-          "oklch(80% 0.0000 0.00)",
-          "oklch(95% 0.0000 0.00)"
+          "oklch(15% 0.0000 0)",
+          "oklch(26% 0.0000 0)",
+          "oklch(37% 0.0000 0)",
+          "oklch(48% 0.0000 0)",
+          "oklch(59% 0.0000 0)",
+          "oklch(70% 0.0000 0)",
+          "oklch(83% 0.0000 0)",
+          "oklch(95% 0.0000 0)"
         ]
       },
       "surface-soft": {
         "role": "neutral",
-        "displayName": "Soft lavender",
+        "displayName": "Soft Gray Surface",
+        "canonical": "#f5f7fa",
         "tonalRamp": [
-          "oklch(15% 0.0148 294.47)",
-          "oklch(25% 0.0148 294.47)",
-          "oklch(35% 0.0148 294.47)",
-          "oklch(45% 0.0148 294.47)",
-          "oklch(55% 0.0148 294.47)",
-          "oklch(65% 0.0148 294.47)",
-          "oklch(80% 0.0148 294.47)",
-          "oklch(95% 0.0148 294.47)"
+          "oklch(15% 0.0045 258.32)",
+          "oklch(26% 0.0045 258.32)",
+          "oklch(37% 0.0045 258.32)",
+          "oklch(48% 0.0045 258.32)",
+          "oklch(59% 0.0045 258.32)",
+          "oklch(70% 0.0045 258.32)",
+          "oklch(83% 0.0045 258.32)",
+          "oklch(95% 0.0045 258.32)"
         ]
       },
       "ink": {
         "role": "neutral",
-        "displayName": "Midnight ink",
+        "displayName": "Navy Ink",
+        "canonical": "#13243a",
         "tonalRamp": [
-          "oklch(15% 0.0457 280.53)",
-          "oklch(25% 0.0457 280.53)",
-          "oklch(35% 0.0457 280.53)",
-          "oklch(45% 0.0457 280.53)",
-          "oklch(55% 0.0457 280.53)",
-          "oklch(65% 0.0457 280.53)",
-          "oklch(80% 0.0457 280.53)",
-          "oklch(95% 0.0457 280.53)"
+          "oklch(15% 0.0476 255.45)",
+          "oklch(26% 0.0476 255.45)",
+          "oklch(37% 0.0476 255.45)",
+          "oklch(48% 0.0476 255.45)",
+          "oklch(59% 0.0476 255.45)",
+          "oklch(70% 0.0476 255.45)",
+          "oklch(83% 0.0476 255.45)",
+          "oklch(95% 0.0476 255.45)"
         ]
       },
       "muted": {
         "role": "neutral",
-        "displayName": "Muted ink",
+        "displayName": "Slate Text",
+        "canonical": "#536174",
         "tonalRamp": [
-          "oklch(15% 0.0340 282.83)",
-          "oklch(25% 0.0340 282.83)",
-          "oklch(35% 0.0340 282.83)",
-          "oklch(45% 0.0340 282.83)",
-          "oklch(55% 0.0340 282.83)",
-          "oklch(65% 0.0340 282.83)",
-          "oklch(80% 0.0340 282.83)",
-          "oklch(95% 0.0340 282.83)"
+          "oklch(15% 0.0352 256.10)",
+          "oklch(26% 0.0352 256.10)",
+          "oklch(37% 0.0352 256.10)",
+          "oklch(48% 0.0352 256.10)",
+          "oklch(59% 0.0352 256.10)",
+          "oklch(70% 0.0352 256.10)",
+          "oklch(83% 0.0352 256.10)",
+          "oklch(95% 0.0352 256.10)"
         ]
       },
       "line": {
         "role": "neutral",
-        "displayName": "Lavender rule",
+        "displayName": "Quiet Divider",
+        "canonical": "#dfe5ec",
         "tonalRamp": [
-          "oklch(15% 0.0220 291.68)",
-          "oklch(25% 0.0220 291.68)",
-          "oklch(35% 0.0220 291.68)",
-          "oklch(45% 0.0220 291.68)",
-          "oklch(55% 0.0220 291.68)",
-          "oklch(65% 0.0220 291.68)",
-          "oklch(80% 0.0220 291.68)",
-          "oklch(95% 0.0220 291.68)"
+          "oklch(15% 0.0115 252.09)",
+          "oklch(26% 0.0115 252.09)",
+          "oklch(37% 0.0115 252.09)",
+          "oklch(48% 0.0115 252.09)",
+          "oklch(59% 0.0115 252.09)",
+          "oklch(70% 0.0115 252.09)",
+          "oklch(83% 0.0115 252.09)",
+          "oklch(95% 0.0115 252.09)"
         ]
       },
-      "control-line": {
+      "field-border": {
         "role": "neutral",
-        "displayName": "Control stroke",
+        "displayName": "Field Stroke",
+        "canonical": "#a9b8ca",
         "tonalRamp": [
-          "oklch(15% 0.0390 292.18)",
-          "oklch(25% 0.0390 292.18)",
-          "oklch(35% 0.0390 292.18)",
-          "oklch(45% 0.0390 292.18)",
-          "oklch(55% 0.0390 292.18)",
-          "oklch(65% 0.0390 292.18)",
-          "oklch(80% 0.0390 292.18)",
-          "oklch(95% 0.0390 292.18)"
+          "oklch(15% 0.0306 252.99)",
+          "oklch(26% 0.0306 252.99)",
+          "oklch(37% 0.0306 252.99)",
+          "oklch(48% 0.0306 252.99)",
+          "oklch(59% 0.0306 252.99)",
+          "oklch(70% 0.0306 252.99)",
+          "oklch(83% 0.0306 252.99)",
+          "oklch(95% 0.0306 252.99)"
         ]
       },
-      "placeholder": {
-        "role": "neutral",
-        "displayName": "Placeholder ink",
-        "tonalRamp": [
-          "oklch(15% 0.0299 292.55)",
-          "oklch(25% 0.0299 292.55)",
-          "oklch(35% 0.0299 292.55)",
-          "oklch(45% 0.0299 292.55)",
-          "oklch(55% 0.0299 292.55)",
-          "oklch(65% 0.0299 292.55)",
-          "oklch(80% 0.0299 292.55)",
-          "oklch(95% 0.0299 292.55)"
-        ]
-      },
-      "on-primary-soft": {
+      "focus": {
         "role": "primary",
-        "displayName": "Pale text on ultramarine",
+        "displayName": "Focus Blue",
+        "canonical": "#3479eb",
         "tonalRamp": [
-          "oklch(15% 0.0351 285.70)",
-          "oklch(25% 0.0351 285.70)",
-          "oklch(35% 0.0351 285.70)",
-          "oklch(45% 0.0351 285.70)",
-          "oklch(55% 0.0351 285.70)",
-          "oklch(65% 0.0351 285.70)",
-          "oklch(80% 0.0351 285.70)",
-          "oklch(95% 0.0351 285.70)"
-        ]
-      },
-      "primary-divider": {
-        "role": "primary",
-        "displayName": "Blue-field divider",
-        "tonalRamp": [
-          "oklch(15% 0.1419 280.39)",
-          "oklch(25% 0.1419 280.39)",
-          "oklch(35% 0.1419 280.39)",
-          "oklch(45% 0.1419 280.39)",
-          "oklch(55% 0.1419 280.39)",
-          "oklch(65% 0.1419 280.39)",
-          "oklch(80% 0.1419 280.39)",
-          "oklch(95% 0.1419 280.39)"
+          "oklch(15% 0.1860 260.00)",
+          "oklch(26% 0.1860 260.00)",
+          "oklch(37% 0.1860 260.00)",
+          "oklch(48% 0.1860 260.00)",
+          "oklch(59% 0.1860 260.00)",
+          "oklch(70% 0.1860 260.00)",
+          "oklch(83% 0.1860 260.00)",
+          "oklch(95% 0.1860 260.00)"
         ]
       },
       "accent": {
         "role": "secondary",
-        "displayName": "Retained amber",
+        "displayName": "Warning Amber",
+        "canonical": "#b45309",
         "tonalRamp": [
           "oklch(15% 0.1455 49.00)",
-          "oklch(25% 0.1455 49.00)",
-          "oklch(35% 0.1455 49.00)",
-          "oklch(45% 0.1455 49.00)",
-          "oklch(55% 0.1455 49.00)",
-          "oklch(65% 0.1455 49.00)",
-          "oklch(80% 0.1455 49.00)",
+          "oklch(26% 0.1455 49.00)",
+          "oklch(37% 0.1455 49.00)",
+          "oklch(48% 0.1455 49.00)",
+          "oklch(59% 0.1455 49.00)",
+          "oklch(70% 0.1455 49.00)",
+          "oklch(83% 0.1455 49.00)",
           "oklch(95% 0.1455 49.00)"
+        ]
+      },
+      "blue": {
+        "role": "secondary",
+        "displayName": "Information Blue",
+        "canonical": "#2563eb",
+        "tonalRamp": [
+          "oklch(15% 0.2152 262.88)",
+          "oklch(26% 0.2152 262.88)",
+          "oklch(37% 0.2152 262.88)",
+          "oklch(48% 0.2152 262.88)",
+          "oklch(59% 0.2152 262.88)",
+          "oklch(70% 0.2152 262.88)",
+          "oklch(83% 0.2152 262.88)",
+          "oklch(95% 0.2152 262.88)"
         ]
       },
       "danger": {
         "role": "secondary",
-        "displayName": "Retained danger",
+        "displayName": "Error Red",
+        "canonical": "#b42318",
         "tonalRamp": [
           "oklch(15% 0.1821 29.51)",
-          "oklch(25% 0.1821 29.51)",
-          "oklch(35% 0.1821 29.51)",
-          "oklch(45% 0.1821 29.51)",
-          "oklch(55% 0.1821 29.51)",
-          "oklch(65% 0.1821 29.51)",
-          "oklch(80% 0.1821 29.51)",
+          "oklch(26% 0.1821 29.51)",
+          "oklch(37% 0.1821 29.51)",
+          "oklch(48% 0.1821 29.51)",
+          "oklch(59% 0.1821 29.51)",
+          "oklch(70% 0.1821 29.51)",
+          "oklch(83% 0.1821 29.51)",
           "oklch(95% 0.1821 29.51)"
         ]
       },
       "success": {
         "role": "secondary",
-        "displayName": "Retained success",
+        "displayName": "Confirmation Green",
+        "canonical": "#18794e",
         "tonalRamp": [
           "oklch(15% 0.1102 158.44)",
-          "oklch(25% 0.1102 158.44)",
-          "oklch(35% 0.1102 158.44)",
-          "oklch(45% 0.1102 158.44)",
-          "oklch(55% 0.1102 158.44)",
-          "oklch(65% 0.1102 158.44)",
-          "oklch(80% 0.1102 158.44)",
+          "oklch(26% 0.1102 158.44)",
+          "oklch(37% 0.1102 158.44)",
+          "oklch(48% 0.1102 158.44)",
+          "oklch(59% 0.1102 158.44)",
+          "oklch(70% 0.1102 158.44)",
+          "oklch(83% 0.1102 158.44)",
           "oklch(95% 0.1102 158.44)"
         ]
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Cover display",
-        "purpose": "Two-line cover invitation; 42–64px desktop, intermediate clamps at 1100px and 950px, a 32–43px clamp at 700px, and 29px at 400px."
+        "displayName": "Page title",
+        "purpose": "Article and index headings; 28px on compact screens."
+      },
+      "home-title": {
+        "displayName": "Compact home introduction",
+        "purpose": "34px wide, 30px at 1100px, 27px at 620px."
       },
       "headline": {
-        "displayName": "Subject headline",
-        "purpose": "Research and indicator subject introductions; 32px at 700px and below."
+        "displayName": "Section heading",
+        "purpose": "25px subsections, with documented compact overrides."
       },
-      "index-headline": {
-        "displayName": "Index headline",
-        "purpose": "The research index; 42px at 700px and below."
-      },
-      "reading-headline": {
-        "displayName": "Reading headline",
-        "purpose": "Long-form article title; 32px with 1.6 leading at 700px and below."
-      },
-      "section-headline": {
-        "displayName": "Section headline",
-        "purpose": "Shared page sections; 27px at 700px and below."
-      },
-      "article-title": {
-        "displayName": "Article title",
-        "purpose": "Titles in open article lists; 24px at 700px and below."
-      },
-      "article-section": {
-        "displayName": "Article section",
-        "purpose": "Headings within long-form prose; 25px at 700px and below."
-      },
-      "indicator-title": {
-        "displayName": "Indicator title",
-        "purpose": "Title-first indicator cards."
+      "title": {
+        "displayName": "Article card title",
+        "purpose": "20px sans-serif card title preceding category metadata."
       },
       "body": {
-        "displayName": "Body",
-        "purpose": "Lab Sans shared base; compact tool layouts may retain their own denser sizes."
+        "displayName": "Interface body",
+        "purpose": "Controls and summaries; article summaries use 1.8 leading."
       },
-      "reading-body": {
-        "displayName": "Reading body",
-        "purpose": "17px, 2.1-leading long-form prose; 16px and 2 leading at 700px and below."
+      "reading": {
+        "displayName": "Longform reading",
+        "purpose": "18px / 1.85 within the 760px reading measure."
       },
-      "reading-intro": {
-        "displayName": "Reading introduction",
-        "purpose": "Lab Serif opening paragraph; 19px at 700px and below."
-      },
-      "reading-deck": {
-        "displayName": "Reading deck",
-        "purpose": "Sans-serif article summary beneath the title; 16px at 700px and below."
-      },
-      "summary": {
-        "displayName": "Summary",
-        "purpose": "Article-list and resource summaries."
+      "reading-compact": {
+        "displayName": "Compact reading",
+        "purpose": "17px / 1.85 at 620px."
       },
       "label": {
-        "displayName": "Label",
-        "purpose": "Visible search, filter and tool labels; the desktop navigation shares this size and weight."
+        "displayName": "Metadata and captions",
+        "purpose": "Readable supporting information, distinct from a subject title."
       },
-      "action": {
-        "displayName": "Action",
-        "purpose": "Shared site action and text-link role; cover actions have contextual overrides."
+      "navigation": {
+        "displayName": "Navigation and categories",
+        "purpose": "15px navigation; 14px at 1100px."
       },
-      "caption": {
-        "displayName": "Caption",
-        "purpose": "Figure explanations and qualifications."
-      },
-      "metadata": {
-        "displayName": "Metadata",
-        "purpose": "Article category, date and reading time; plain information, not approval badges."
-      },
-      "code": {
-        "displayName": "Code",
-        "purpose": "Retained system monospace stack for code and technical notation."
+      "button": {
+        "displayName": "Shared button",
+        "purpose": "14px semibold shared action text."
       }
     },
     "shadows": [
       {
-        "name": "default-surface",
+        "name": "flat-surface",
         "value": "none",
-        "purpose": "Final shared surface token and named editorial panels."
+        "purpose": "Finance override for ordinary cards, panels and reading surfaces."
       },
       {
-        "name": "open-navigation",
-        "value": "0 18px 46px rgb(27 28 52 / .16)",
-        "purpose": "Grouped navigation floating above the page."
-      },
-      {
-        "name": "retained-base-card",
-        "value": "0 10px 28px rgba(15,35,55,0.05)",
-        "purpose": "Underlying Card compatibility style where a named editorial override does not apply."
-      },
-      {
-        "name": "retained-base-button",
-        "value": "0 8px 18px rgba(15,118,110,0.18)",
-        "purpose": "Underlying Button compatibility style; shared site actions explicitly remove this shadow."
+        "name": "navigation-overlay",
+        "value": "0 14px 40px rgb(16 38 63 / .16)",
+        "purpose": "Expanded all-navigation panel only."
       }
     ],
     "motion": [
       {
-        "name": "cover-arrival",
-        "value": "1.3s cubic-bezier(.16,1,.3,1)",
-        "purpose": "Visible photographic arrival from scale(1.06), opacity .82 to scale(1), opacity 1; only under prefers-reduced-motion: no-preference."
-      },
-      {
-        "name": "surface-feedback",
-        "value": "180ms ease",
-        "purpose": "Indicator background and topic colour transitions."
-      },
-      {
-        "name": "button-feedback",
+        "name": "control-state",
         "value": "150ms ease-out",
-        "purpose": "Existing button colour, border, transform and shadow feedback; the base Button retains active scale(.98)."
+        "purpose": "Shared button state transitions and contents chevron."
+      },
+      {
+        "name": "button-press",
+        "value": "scale(.98)",
+        "purpose": "Shared Button active feedback."
       },
       {
         "name": "reduced-motion",
-        "value": "0.01ms",
-        "purpose": "Non-essential transition and animation duration; smooth scrolling becomes auto and animation iterations become one."
+        "value": "animation:none!important; transition:none!important; scroll-behavior:auto",
+        "purpose": "Preserve the reduced-motion preference."
       }
     ],
     "breakpoints": [
       {
-        "name": "small-cover",
-        "value": "400px"
+        "name": "navigation-density",
+        "value": "1100px"
       },
       {
-        "name": "compact-specialist-grids",
-        "value": "560px"
-      },
-      {
-        "name": "single-tool-field-column",
-        "value": "620px"
-      },
-      {
-        "name": "compact-editorial-layout",
-        "value": "700px"
-      },
-      {
-        "name": "retained-technical-layout",
-        "value": "760px"
-      },
-      {
-        "name": "mobile-navigation-and-direct-answer",
-        "value": "900px"
-      },
-      {
-        "name": "single-reading-column-and-menu-only-header",
-        "value": "950px"
-      },
-      {
-        "name": "subject-grid-lg-min-width",
-        "value": "1024px"
-      },
-      {
-        "name": "two-column-footer",
+        "name": "footer-two-columns",
         "value": "1080px"
       },
       {
-        "name": "medium-shell-and-cover",
-        "value": "1100px"
+        "name": "library-and-reading-stack",
+        "value": "999px"
+      },
+      {
+        "name": "tool-and-menu-stack",
+        "value": "950px"
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "900px"
+      },
+      {
+        "name": "footer-one-column",
+        "value": "760px"
+      },
+      {
+        "name": "compact",
+        "value": "620px"
+      },
+      {
+        "name": "legacy-small-content",
+        "value": "560px"
       }
     ]
   },
   "components": [
     {
-      "name": "Primary site action",
+      "name": "Primary button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Ultramarine reading and learning action, with shared site overrides applied.",
-      "html": "<button class=\"ds-primary\">閱讀研究札記</button>",
-      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;height:44px;width:fit-content;padding:12px 20px;border:0;border-radius:100px;box-shadow:none;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",sans-serif);font-size:14px;line-height:20px;font-weight:600;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out,transform 150ms ease-out,box-shadow 150ms ease-out}.ds-primary:focus-visible{outline:3px solid var(--primary,#3538b8);outline-offset:5px;box-shadow:0 0 0 2px var(--bg,#f2f1f7),0 0 0 4px var(--primary,#3538b8)}.ds-primary:active{transform:scale(.98)}.ds-primary:disabled{pointer-events:none;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-primary{transition-duration:.01ms}}.ds-primary{background:var(--primary,#3538b8);color:var(--surface,#ffffff)}.ds-primary:hover{background:var(--primary-strong,#272983)}"
+      "description": "Shared primary action. Its source retains a legacy colored shadow; that shadow is not new elevation guidance.",
+      "html": "<button class=\"ds-primary\">瀏覽指標</button>",
+      "css": ".ds-primary{display:inline-flex;min-height:44px;height:44px;align-items:center;justify-content:center;gap:8px;border:0;border-radius:8px;padding:8px 16px;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",\"PingFang HK\",\"Microsoft JhengHei\",sans-serif);font-size:14px;font-weight:600;line-height:20px;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out,transform 150ms ease-out,box-shadow 150ms ease-out}.ds-primary:focus-visible{outline:none;box-shadow:0 0 0 2px var(--bg,#ffffff),0 0 0 4px var(--primary,#185bd1)}.ds-primary:active{transform:scale(.98)}.ds-primary:disabled{pointer-events:none;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}.ds-primary{background:var(--primary,#185bd1);color:var(--surface,#ffffff);box-shadow:0 8px 18px rgba(15,118,110,.18)}.ds-primary:hover{background:var(--primary-strong,#164da8)}"
     },
     {
-      "name": "Secondary site action",
+      "name": "Secondary button",
       "kind": "button",
       "refersTo": "button-secondary",
-      "description": "Outlined, quieter parallel route.",
-      "html": "<button class=\"ds-secondary\">比較指標用途</button>",
-      "css": ".ds-secondary{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;height:44px;width:fit-content;padding:12px 20px;border:0;border-radius:100px;box-shadow:none;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",sans-serif);font-size:14px;line-height:20px;font-weight:600;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out,transform 150ms ease-out,box-shadow 150ms ease-out}.ds-secondary:focus-visible{outline:3px solid var(--primary,#3538b8);outline-offset:5px;box-shadow:0 0 0 2px var(--bg,#f2f1f7),0 0 0 4px var(--primary,#3538b8)}.ds-secondary:active{transform:scale(.98)}.ds-secondary:disabled{pointer-events:none;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-secondary{transition-duration:.01ms}}.ds-secondary{background:transparent;color:var(--primary-strong,#272983);border:1px solid var(--line,#d4d2e2)}.ds-secondary:hover{background:var(--surface,#ffffff);border-color:var(--primary,#3538b8)}"
+      "description": "Outlined parallel action with a clear focus ring.",
+      "html": "<button class=\"ds-secondary\">重設指標庫</button>",
+      "css": ".ds-secondary{display:inline-flex;min-height:44px;height:44px;align-items:center;justify-content:center;gap:8px;border:0;border-radius:8px;padding:8px 16px;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",\"PingFang HK\",\"Microsoft JhengHei\",sans-serif);font-size:14px;font-weight:600;line-height:20px;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out,transform 150ms ease-out,box-shadow 150ms ease-out}.ds-secondary:focus-visible{outline:none;box-shadow:0 0 0 2px var(--bg,#ffffff),0 0 0 4px var(--primary,#185bd1)}.ds-secondary:active{transform:scale(.98)}.ds-secondary:disabled{pointer-events:none;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-secondary{transition:none}}.ds-secondary{border:1px solid var(--line,#dfe5ec);background:var(--surface,#ffffff);color:var(--ink,#13243a)}.ds-secondary:hover{border-color:var(--primary,#185bd1);color:var(--primary-strong,#164da8)}"
     },
     {
-      "name": "Ghost site action",
+      "name": "Ghost button",
       "kind": "button",
       "refersTo": "button-ghost",
-      "description": "A text-like learning route within a larger section.",
-      "html": "<button class=\"ds-ghost\">學習 RSI</button>",
-      "css": ".ds-ghost{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;height:44px;width:fit-content;padding:12px 20px;border:0;border-radius:100px;box-shadow:none;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",sans-serif);font-size:14px;line-height:20px;font-weight:600;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out,transform 150ms ease-out,box-shadow 150ms ease-out}.ds-ghost:focus-visible{outline:3px solid var(--primary,#3538b8);outline-offset:5px;box-shadow:0 0 0 2px var(--bg,#f2f1f7),0 0 0 4px var(--primary,#3538b8)}.ds-ghost:active{transform:scale(.98)}.ds-ghost:disabled{pointer-events:none;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-ghost{transition-duration:.01ms}}.ds-ghost{background:transparent;color:var(--primary-strong,#272983);padding-left:0}.ds-ghost:hover{background:transparent;text-decoration:underline;text-underline-offset:.3em}"
+      "description": "Quiet reset or secondary control within a filter area.",
+      "html": "<button class=\"ds-ghost\">清除篩選</button>",
+      "css": ".ds-ghost{display:inline-flex;min-height:44px;height:44px;align-items:center;justify-content:center;gap:8px;border:0;border-radius:8px;padding:8px 16px;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",\"PingFang HK\",\"Microsoft JhengHei\",sans-serif);font-size:14px;font-weight:600;line-height:20px;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out,transform 150ms ease-out,box-shadow 150ms ease-out}.ds-ghost:focus-visible{outline:none;box-shadow:0 0 0 2px var(--bg,#ffffff),0 0 0 4px var(--primary,#185bd1)}.ds-ghost:active{transform:scale(.98)}.ds-ghost:disabled{pointer-events:none;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-ghost{transition:none}}.ds-ghost{background:transparent;color:var(--muted,#536174)}.ds-ghost:hover{background:var(--surface-soft,#f5f7fa);color:var(--ink,#13243a)}"
     },
     {
-      "name": "Warning site action",
+      "name": "Warning button",
       "kind": "button",
       "refersTo": "button-warning",
-      "description": "Retained warning variant; amber remains a specialist state.",
+      "description": "Retained semantic warning variant, not a decorative call to action.",
       "html": "<button class=\"ds-warning\">核對風險</button>",
-      "css": ".ds-warning{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;height:44px;width:fit-content;padding:12px 20px;border:0;border-radius:100px;box-shadow:none;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",sans-serif);font-size:14px;line-height:20px;font-weight:600;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out,transform 150ms ease-out,box-shadow 150ms ease-out}.ds-warning:focus-visible{outline:3px solid var(--primary,#3538b8);outline-offset:5px;box-shadow:0 0 0 2px var(--bg,#f2f1f7),0 0 0 4px var(--primary,#3538b8)}.ds-warning:active{transform:scale(.98)}.ds-warning:disabled{pointer-events:none;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-warning{transition-duration:.01ms}}.ds-warning{background:var(--accent,#b45309);color:var(--surface,#ffffff)}.ds-warning:hover{background:#b45309}"
-    },
-    {
-      "name": "Cover actions",
-      "kind": "custom",
-      "refersTo": "cover-action",
-      "description": "Citron primary and pale outlined secondary actions on the ultramarine cover.",
-      "html": "<div class=\"ds-cover-actions\"><a class=\"ds-cover-main\" href=\"/blog\">閱讀研究札記<svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg></a><a class=\"ds-cover-secondary\" href=\"/learn\">從基礎開始</a></div>",
-      "css": ".ds-cover-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;padding:24px;background:var(--primary,#3538b8)}.ds-cover-actions a{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:12px 22px;border:0;border-radius:100px;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",sans-serif);font-size:15px;font-weight:600;line-height:20px;text-decoration:none;white-space:nowrap;box-shadow:none;transition:background-color 150ms ease-out,transform 150ms ease-out}.ds-cover-main{background:var(--citron,#e6ee92);color:var(--ink,#1b1c34)}.ds-cover-main:hover{background:#f3fac0}.ds-cover-actions .ds-cover-secondary{border:1px solid #b0b1eb;background:transparent;color:var(--surface,#ffffff)}.ds-cover-secondary:hover{background:#4a4dc8}.ds-cover-actions a:focus-visible{outline:3px solid var(--citron,#e6ee92);outline-offset:5px}.ds-cover-actions a:active{transform:scale(.98)}@media(max-width:700px){.ds-cover-actions{gap:12px}.ds-cover-actions a{min-height:46px;padding:11px 16px;font-size:13px}}@media(max-width:400px){.ds-cover-actions{gap:10px}.ds-cover-actions a{padding-inline:14px;font-size:12px}}@media(prefers-reduced-motion:reduce){.ds-cover-actions a{transition-duration:.01ms}}"
+      "css": ".ds-warning{display:inline-flex;min-height:44px;height:44px;align-items:center;justify-content:center;gap:8px;border:0;border-radius:8px;padding:8px 16px;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",\"PingFang HK\",\"Microsoft JhengHei\",sans-serif);font-size:14px;font-weight:600;line-height:20px;text-decoration:none;cursor:pointer;transition:background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out,transform 150ms ease-out,box-shadow 150ms ease-out}.ds-warning:focus-visible{outline:none;box-shadow:0 0 0 2px var(--bg,#ffffff),0 0 0 4px var(--primary,#185bd1)}.ds-warning:active{transform:scale(.98)}.ds-warning:disabled{pointer-events:none;opacity:.5}@media(prefers-reduced-motion:reduce){.ds-warning{transition:none}}.ds-warning{background:var(--accent,#b45309);color:var(--surface,#ffffff)}.ds-warning:hover{background:#b45309}"
     },
     {
       "name": "Reading input",
       "kind": "input",
       "refersTo": "reading-input",
-      "description": "A visible label, stronger stroke and generous field target.",
-      "html": "<label class=\"ds-field\" for=\"ds-article-search\">搜尋文章<input id=\"ds-article-search\" type=\"search\" placeholder=\"例如：RSI、倉位、重繪、港股…\"></label>",
-      "css": ".ds-field{display:grid;gap:10px;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",sans-serif);font-size:14px;line-height:1.65;font-weight:500;color:var(--ink,#1b1c34)}.ds-field input{width:100%;min-height:50px;border:1px solid #a4a0bb;border-radius:12px;padding:.7rem .85rem;background:var(--surface,#ffffff);font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",sans-serif);font-size:16px;font-weight:400;line-height:1.65;color:var(--ink,#1b1c34);caret-color:var(--primary,#3538b8)}.ds-field input::placeholder{color:#676477;opacity:1}.ds-field input:focus-visible{outline:3px solid var(--primary,#3538b8);outline-offset:5px}"
+      "description": "Visible label, clear boundary and a comfortable search field.",
+      "html": "<label class=\"ds-field\" for=\"ds-search\">搜尋文章<input id=\"ds-search\" type=\"search\" placeholder=\"例如：RSI、倉位、重繪、港股…\"></label>",
+      "css": ".ds-field{display:grid;gap:.55rem;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",\"PingFang HK\",\"Microsoft JhengHei\",sans-serif);font-size:15px;font-weight:600;color:var(--ink,#13243a)}.ds-field input{width:100%;min-height:46px;border:1px solid var(--field-border,#a9b8ca);border-radius:7px;padding:.7rem .85rem;background:var(--surface,#ffffff);font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",\"PingFang HK\",\"Microsoft JhengHei\",sans-serif);font-size:16px;font-weight:400;line-height:1.65;color:var(--ink,#13243a);caret-color:var(--primary,#185bd1)}.ds-field input::placeholder{color:#647186;opacity:1}.ds-field input:focus-visible{outline:3px solid var(--focus,#3479eb);outline-offset:4px;}"
     },
     {
-      "name": "Desktop navigation",
+      "name": "Navy navigation",
       "kind": "nav",
       "refersTo": "navigation-link",
-      "description": "Compact pill links with current-page and keyboard states.",
+      "description": "Principal navigation uses light text on navy and a distinct current-page surface.",
       "html": "<nav class=\"ds-nav\" aria-label=\"主要導覽\"><a href=\"/learn\">學習</a><a href=\"/indicators\">指標百科</a><a href=\"/blog\" aria-current=\"page\">研究札記</a><a href=\"/toolbox\">工具</a></nav>",
-      "css": ".ds-nav{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",sans-serif);background:var(--bg,#f2f1f7)}.ds-nav a{display:inline-flex;min-height:2.65rem;align-items:center;justify-content:center;gap:.4rem;padding:10px 11px;border-radius:100px;color:var(--muted,#55566b);font-size:14px;font-weight:500;line-height:1.65;white-space:nowrap;text-decoration:none}.ds-nav a[aria-current=\"page\"]{background:var(--primary,#3538b8);color:var(--surface,#ffffff)}.ds-nav a:hover{background:var(--bg-strong,#e5e3f0);color:var(--primary-strong,#272983)}.ds-nav a:focus-visible{background:white;color:var(--primary-strong,#272983);outline:2px solid var(--primary,#3538b8);outline-offset:2px}@media(max-width:1100px){.ds-nav a{padding-inline:8px;font-size:13px}}"
+      "css": ".ds-nav{display:flex;align-items:center;flex-wrap:wrap;gap:4px;padding:16px;background:var(--navy,#10263f);font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",\"PingFang HK\",\"Microsoft JhengHei\",sans-serif);}.ds-nav a{display:inline-flex;min-height:2.65rem;align-items:center;justify-content:center;border-radius:6px;padding:10px 13px;color:#dfe8f4;font-size:15px;font-weight:500;line-height:1.65;white-space:nowrap;text-decoration:none}.ds-nav a:hover,.ds-nav a[aria-current=\"page\"],.ds-nav a:focus-visible{background:var(--navy-active,#233e5f);color:#ffffff}.ds-nav a:focus-visible{outline:2px solid var(--primary,#185bd1);outline-offset:2px}@media(max-width:1100px){.ds-nav a{padding:9px;font-size:14px}}"
     },
     {
-      "name": "Category link",
+      "name": "Category route",
       "kind": "chip",
       "refersTo": "topic-link",
-      "description": "An article-category route; actual pages append the live article count.",
+      "description": "A category route with a pale selected state; live pages append actual counts.",
       "html": "<a class=\"ds-topic\" href=\"/blog/category/indicators\" aria-current=\"page\">指標與圖表</a>",
-      "css": ".ds-topic{display:inline-flex;align-items:center;gap:16px;min-height:44px;border:1px solid var(--line,#d4d2e2);border-radius:100px;padding:10px 18px;background:transparent;color:var(--ink,#1b1c34);font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",sans-serif);font-size:14px;font-weight:500;line-height:1.65;text-decoration:none}.ds-topic:hover,.ds-topic[aria-current]{background:var(--primary,#3538b8);border-color:var(--primary,#3538b8);color:var(--surface,#ffffff)}.ds-topic:focus-visible{outline:3px solid var(--primary,#3538b8);outline-offset:5px}.ds-topic span{font-size:12px;font-variant-numeric:tabular-nums;opacity:.85}@media(max-width:700px){.ds-topic{gap:12px;font-size:13px;padding:9px 14px}}"
+      "css": ".ds-topic{display:inline-flex;min-height:44px;align-items:center;gap:18px;padding:.6rem .9rem;border:1px solid var(--line,#dfe5ec);border-radius:7px;background:transparent;color:var(--ink,#13243a);font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",\"PingFang HK\",\"Microsoft JhengHei\",sans-serif);font-size:15px;line-height:1.65;font-weight:500;text-decoration:none}.ds-topic:hover,.ds-topic[aria-current]{background:#eaf1fd;color:var(--primary-strong,#164da8);border-color:#b9cdee}.ds-topic:focus-visible{outline:3px solid var(--focus,#3479eb);outline-offset:4px;}@media(max-width:620px){.ds-topic{gap:14px;font-size:14px;min-height:42px;padding:8px 12px}}"
     },
     {
-      "name": "Indicator card",
+      "name": "Illustrated article card",
       "kind": "card",
-      "refersTo": "indicator-card",
-      "description": "Title-first white panel with category information beneath and a descriptive learning route.",
-      "html": "<article class=\"ds-indicator\"><div class=\"ds-indicator-head\"><h3>支持阻力</h3><div class=\"ds-indicator-meta\"><span>價格位置</span></div></div><div class=\"ds-indicator-body\"><a href=\"/indicators/support-resistance\">查看用法、公式及失效條件<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-7-7 7 7-7 7\"/></svg></a></div></article>",
-      "css": ".ds-indicator{background:var(--surface,#ffffff);color:var(--ink,#1b1c34);border:0;border-radius:12px;box-shadow:none;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",sans-serif);transition:background-color .18s ease}.ds-indicator:hover{background:#e9e7f6}.ds-indicator-head{display:grid;gap:12px;padding:28px 28px 16px}.ds-indicator h3{margin:0;font-family:var(--reading-serif,\"Lab Serif\",\"Noto Serif HK\",serif);font-size:24px;line-height:1.6;font-weight:600}.ds-indicator-meta{display:flex;flex-wrap:wrap;gap:8px}.ds-indicator-meta span{display:inline-flex;align-items:center;border:0;border-radius:100px;background:var(--surface-soft,#efedf8);color:var(--primary-strong,#272983);padding:4px 10px;font-size:12px;line-height:16px;font-weight:500}.ds-indicator-body{display:grid;gap:16px;padding:0 28px 28px}.ds-indicator a{display:inline-flex;align-items:center;gap:8px;margin-top:2px;font-size:13px;font-weight:600;line-height:1.8;color:var(--primary-strong,#272983);text-decoration:none}.ds-indicator a:focus-visible{outline:3px solid var(--primary,#3538b8);outline-offset:5px}@media(max-width:700px){.ds-indicator-head{padding:24px 24px 14px}.ds-indicator-body{padding:0 24px 24px}}@media(prefers-reduced-motion:reduce){.ds-indicator{transition-duration:.01ms}}"
+      "refersTo": "article-card",
+      "description": "Structural preview with placeholder copy; production values and diagrams come from each article record.",
+      "html": "<article class=\"ds-article\"><div class=\"ds-preview\" aria-hidden=\"true\"><svg viewBox=\"0 0 600 290\" focusable=\"false\"><rect width=\"600\" height=\"290\" fill=\"#f2f6fc\"/><text x=\"28\" y=\"39\" fill=\"#233b59\" font-size=\"22\" font-weight=\"650\">文章教學圖解</text><rect x=\"28\" y=\"90\" width=\"256\" height=\"124\" rx=\"7\" fill=\"#fff\" stroke=\"#c9d7e8\"/><rect x=\"316\" y=\"90\" width=\"256\" height=\"124\" rx=\"7\" fill=\"#fff\" stroke=\"#c9d7e8\"/><circle cx=\"50\" cy=\"153\" r=\"11\" fill=\"#2465bd\"/><text x=\"50\" y=\"158\" fill=\"#fff\" font-size=\"15\" text-anchor=\"middle\">1</text><text x=\"74\" y=\"160\" fill=\"#233b59\" font-size=\"21\">觀察條件</text><circle cx=\"338\" cy=\"153\" r=\"11\" fill=\"#2465bd\"/><text x=\"338\" y=\"158\" fill=\"#fff\" font-size=\"15\" text-anchor=\"middle\">2</text><text x=\"362\" y=\"160\" fill=\"#233b59\" font-size=\"21\">核對限制</text></svg></div><div class=\"ds-article-body\"><h3><a href=\"/blog\">文章標題</a></h3><span class=\"ds-category\">文章分類</span><p>文章摘要以清晰文字交代主題，讀者可由標題進入完整內容。</p><div class=\"ds-article-footer\"><span>閱讀時間</span><span>更新日期</span><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg></div></div></article>",
+      "css": ".ds-article{display:flex;flex-direction:column;min-width:0;border:1px solid var(--line,#dfe5ec);border-radius:12px;background:var(--surface,#ffffff);color:var(--ink,#13243a);overflow:hidden;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",\"PingFang HK\",\"Microsoft JhengHei\",sans-serif);}.ds-article:hover{border-color:var(--field-border,#a9b8ca)}.ds-preview{border-bottom:1px solid var(--line,#dfe5ec);background:#f1f5f8}.ds-preview svg{display:block;width:100%;height:auto;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",\"PingFang HK\",\"Microsoft JhengHei\",sans-serif);}.ds-article-body{display:flex;flex-direction:column;flex:1;padding:20px 22px 17px}.ds-article h3{font-size:20px;font-weight:700;line-height:1.55;margin:0 0 10px}.ds-article a{color:inherit;text-decoration:none}.ds-article a:hover{color:var(--primary-strong,#164da8)}.ds-article a:focus-visible{outline:3px solid var(--focus,#3479eb);outline-offset:4px;}.ds-category{color:var(--primary-strong,#164da8);font-size:14px;line-height:1.6;font-weight:600;margin-bottom:7px}.ds-article p{font-size:16px;line-height:1.8;color:var(--muted,#536174);margin:0 0 19px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}.ds-article-footer{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:auto;padding-top:13px;border-top:1px solid var(--line,#dfe5ec);font-size:14px;line-height:1.65;color:var(--muted,#536174);font-variant-numeric:tabular-nums}.ds-article-footer svg{margin-left:auto;color:var(--primary,#185bd1)}@media(max-width:1100px){.ds-article-body{padding:18px}}@media(max-width:620px){.ds-article-body{padding:19px}}"
     },
     {
       "name": "Evidence Pipeline",
       "kind": "custom",
       "refersTo": "evidence-figure",
-      "description": "Subject-header teaching sequence; the home variant is an open rail documented in DESIGN.md.",
+      "description": "Subject-specific ordered teaching sequence; the current homepage does not mount it.",
       "html": "<figure class=\"ds-evidence\"><figcaption><strong>五種問題，五種工具</strong></figcaption><ol><li><span aria-hidden=\"true\">1</span><div><strong>方向</strong><small>均線與價格結構</small></div></li><li><span aria-hidden=\"true\">2</span><div><strong>動能</strong><small>RSI、MACD</small></div></li><li><span aria-hidden=\"true\">3</span><div><strong>成交</strong><small>成交量、OBV</small></div></li><li><span aria-hidden=\"true\">4</span><div><strong>波幅</strong><small>ATR、通道</small></div></li><li><span aria-hidden=\"true\">5</span><div><strong>位置</strong><small>支持阻力、前期高低</small></div></li></ol></figure>",
-      "css": ".ds-evidence{margin:0;min-width:0;overflow:hidden;background:var(--primary,#3538b8);color:var(--surface,#ffffff);border:0;border-radius:12px;padding:28px;box-shadow:none;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",sans-serif);line-height:1.65}.ds-evidence figcaption{display:flex;align-items:end;justify-content:space-between;gap:16px;border-bottom:1px solid #7476d5;padding-bottom:12px}.ds-evidence figcaption strong{font-family:var(--reading-serif,\"Lab Serif\",\"Noto Serif HK\",serif);font-size:19px;font-weight:600;text-align:right}.ds-evidence ol{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;list-style:none;margin:1.5rem 0 0;padding:0}.ds-evidence li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.55rem;padding:1rem 0;border-top:1px solid #7476d5}.ds-evidence li>span{font-family:var(--reading-serif,\"Lab Serif\",\"Noto Serif HK\",serif);font-size:20px;font-weight:900;color:var(--citron,#e6ee92)}.ds-evidence li div{display:grid}.ds-evidence li strong{font-size:15px}.ds-evidence small{color:#e5e5ff;font-size:13px;line-height:1.7}@media(max-width:700px){.ds-evidence{padding:24px}}@media(max-width:620px){.ds-evidence ol{gap:.2rem 1rem}}@media(max-width:560px){.ds-evidence figcaption{align-items:flex-start;flex-direction:column}.ds-evidence figcaption strong{text-align:left}}"
+      "css": ".ds-evidence{margin:0;min-width:0;overflow:hidden;background:var(--surface-soft,#f5f7fa);color:var(--ink,#13243a);border:0;border-radius:10px;padding:21px;box-shadow:none;font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",\"PingFang HK\",\"Microsoft JhengHei\",sans-serif);line-height:1.65}.ds-evidence figcaption{display:flex;align-items:end;gap:16px;border-bottom:1px solid rgb(255 255 255 / .16);padding-bottom:12px}.ds-evidence figcaption strong{font-size:17px;text-align:right}.ds-evidence ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px;list-style:none;margin:14px 0 0;padding:0}.ds-evidence li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;padding:12px 0 0;border-top:1px solid var(--line,#dfe5ec)}.ds-evidence li>span{font-family:var(--font-mono,\"SFMono-Regular\",Consolas,\"Liberation Mono\",Menlo,monospace);font-size:14px;font-weight:900;color:var(--primary-strong,#164da8)}.ds-evidence li div{display:grid}.ds-evidence li strong{font-size:15px}.ds-evidence small{color:var(--muted,#536174);font-size:14px;line-height:1.7}@media(max-width:620px){.ds-evidence{padding:17px}.ds-evidence ol{gap:10px 18px}}@media(max-width:560px){.ds-evidence figcaption{align-items:flex-start;flex-direction:column}.ds-evidence figcaption strong{text-align:left}}"
+    },
+    {
+      "name": "Reading contents",
+      "kind": "custom",
+      "refersTo": "article-contents",
+      "description": "Expanded structural preview. The production React control exposes and toggles expanded state, defaulting to collapsed below 1000px.",
+      "html": "<aside class=\"ds-contents\"><button type=\"button\" aria-expanded=\"true\" aria-controls=\"ds-contents-links\">本篇目錄<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></button><div id=\"ds-contents-links\"><ol><li><a href=\"#section-1\">觀察條件</a></li><li><a href=\"#section-2\">方法與限制</a></li></ol><a href=\"/blog\">全部研究札記 →</a></div></aside>",
+      "css": ".ds-contents{max-width:240px;padding:0 0 0 22px;border-left:1px solid var(--line,#dfe5ec);color:var(--ink,#13243a);font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",\"PingFang HK\",\"Microsoft JhengHei\",sans-serif);font-size:14px}.ds-contents button{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:36px;padding:0;border:0;background:none;color:var(--ink,#13243a);font-family:var(--font-sans,\"Lab Sans\",\"Noto Sans HK\",\"PingFang HK\",\"Microsoft JhengHei\",sans-serif);font-size:16px;font-weight:650;text-align:left;cursor:pointer}.ds-contents button svg{transform:rotate(180deg);transition:transform .15s ease-out}.ds-contents ol{list-style:none;padding:0;margin:14px 0 20px}.ds-contents li{line-height:1.8;margin-bottom:12px}.ds-contents a{color:inherit;text-decoration:none}.ds-contents a:hover{color:var(--primary-strong,#164da8);text-decoration:underline}.ds-contents div>a{color:var(--primary-strong,#164da8)}.ds-contents a:focus-visible,.ds-contents button:focus-visible{outline:3px solid var(--focus,#3479eb);outline-offset:4px;}@media(max-width:999px){.ds-contents{max-width:none;border:1px solid var(--line,#dfe5ec);background:var(--surface-soft,#f5f7fa);border-radius:8px;padding:10px 16px}}@media(prefers-reduced-motion:reduce){.ds-contents button svg{transition:none}}"
     }
   ],
   "narrative": {
-    "northStar": "The Hong Kong Exhibition Journal",
-    "overview": "A contemporary Hong Kong museum journal applied to financial learning. Ultramarine fields, lavender paper, midnight ink and a restrained citron accent give the library an authored identity. Locally served Hong Kong serif headlines carry the reading voice; measured sans-serif text keeps navigation, explanations and tools direct.\n\nThe system shifts density with the task: broad colour fields introduce a subject, open ruled rows support browsing, a bounded column supports sustained reading, and compact panels support calculation. Sources, teaching diagrams and qualifications retain their own meaning. Architectural imagery supplies atmosphere without standing in for market evidence.",
+    "northStar": "The Financial Reference Library",
+    "overview": "A practical Hong Kong financial reference library: white reading surfaces, light-gray grouping, navy navigation and restrained blue controls. Self-hosted Chinese sans-serif type supports scanning, comparison and sustained study. Borders, alignment and informative illustrations carry the visual identity.\n\nThe approved reference world draws on TradingView indicator cards, StockCharts ChartSchool reading structure and Futu Chinese article cards. The prior purple museum-journal direction, serif display voice and architecture cover are rejected. The replacement changes presentation while preserving the 100 articles, 82 indicator records, 200 teaching figures, historical examples and calculation behavior.",
     "keyCharacteristics": [
-      "Ultramarine and citron on cool lavender paper.",
-      "Self-hosted Hong Kong serif headings and sans-serif reading text.",
-      "Square editorial fields, softly cornered functional panels and pill actions.",
-      "Open article rows, useful teaching geometry and clearly separated tool results.",
-      "Sources and limitations remain available without repetitive production notices."
+      "White surfaces and light-gray groups with a navy navigation frame.",
+      "Self-hosted Lab Sans / Noto Sans HK across headings, reading and controls.",
+      "Illustrated article cards with the title before category and reading metadata.",
+      "A bounded reading column with a right-hand contents rail that collapses on smaller screens.",
+      "Real sources, explicit limitations and functional educational tools."
     ],
     "rules": [
       {
         "name": "The Meaningful Color Rule",
-        "body": "Color supports a written label or explanation; it never establishes review, source quality or risk on its own.",
+        "body": "Color supports written labels and state; it never establishes review, reliability or risk on its own.",
         "section": "colors"
       },
       {
-        "name": "The Reading Hierarchy Rule",
-        "body": "Establish hierarchy with the title, introduction, section heading, body and caption. Put learning-step roles below their headings as plain text, and use numbering only when the order carries meaning.",
+        "name": "The Title First Rule",
+        "body": "Lead cards with their subject title. Put category and reading metadata beneath it; use numbers only when their order teaches something.",
         "section": "typography"
       },
       {
-        "name": "The Content Measure Rule",
-        "body": "Give long articles a bounded reading measure; let research grids and comparison tools use the wider shell when the task needs it.",
+        "name": "The Reading Measure Rule",
+        "body": "Keep sustained prose within the reading measure while allowing libraries, comparisons and tools to use the wider site shell.",
         "section": "layout"
       },
       {
         "name": "The Flat Reading Rule",
-        "body": "Use section dividers and spacing inside an article; do not wrap every paragraph or evidence block in another raised card.",
+        "body": "Separate reading surfaces with spacing, borders and light-gray grouping. Reserve a diffuse shadow for the expanded navigation overlay; do not turn every paragraph into a raised card.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** extend the ultramarine, lavender-paper and citron identity using the documented Lab Serif and Lab Sans roles.",
-      "**Do** shift density to suit reading, browsing or calculation while preserving the established content and behaviour.",
-      "**Do** keep actions, labels, source links, text contrast and keyboard focus clear at every viewport.",
-      "**Do** preserve distinctions between historical evidence, teaching examples and assumptions.",
-      "**Do** retain raster provenance, font licences, meaningful figure descriptions and reduced-motion support."
+      "**Do** use the white, light-gray, navy and blue palette with the documented Lab Sans roles.",
+      "**Do** preserve real article metadata, indicator filters, query parameters, source links and calculation behavior.",
+      "**Do** keep the article title before its category; use each article's own diagram data for its thumbnail.",
+      "**Do** keep numbered diagram markers visibly separate from their labels and preserve full figures in the article.",
+      "**Do** provide clear focus states, meaningful figure descriptions, mobile wrapping and reduced-motion support.",
+      "**Do** preserve the distinction between historical observations, teaching examples, assumptions and review status."
     ],
     "donts": [
-      "**Don't** use fake market charts, profit promises or invented human-review credentials.",
-      "**Don't** treat a status colour, check icon or high backtest metric as proof of reliability.",
-      "**Don't** turn article paragraphs into nested cards or repeat decorative category eyebrows.",
-      "**Don't** add section numbers where there is no informative sequence.",
-      "**Don't** use the fictional architectural cover as evidence of a real location, event or market result."
+      "**Don't** reintroduce the rejected purple/serif museum-journal world or architecture hero.",
+      "**Don't** replace explanatory thumbnails with fabricated market feeds, returns or unrelated decoration.",
+      "**Don't** infer author credentials, completed review or investment suitability from a badge or component.",
+      "**Don't** add decorative eyebrows or section numbers that do not convey subject or sequence.",
+      "**Don't** promote inherited styling defects or unimported archival CSS into the shipping design system."
     ]
   }
 }

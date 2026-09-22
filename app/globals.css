@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f7f8fa;
-  --bg-strong: #e9eef3;
+  --bg: #ffffff;
+  --bg-strong: #edf2f7;
   --surface: #ffffff;
-  --surface-soft: #f7f8fa;
-  --ink: #0b1f33;
-  --muted: #334155;
-  --line: #e9eef3;
-  --primary: #0f766e;
-  --primary-strong: #115e59;
+  --surface-soft: #f5f7fa;
+  --ink: #13243a;
+  --muted: #536174;
+  --line: #dfe5ec;
+  --primary: #185bd1;
+  --primary-strong: #164da8;
   --accent: #b45309;
   --blue: #2563eb;
   --danger: #b42318;
@@ -20,7 +20,7 @@
 }
 
 @theme {
-  --font-sans: "Noto Sans HK", "PingFang HK", "Microsoft JhengHei", system-ui, sans-serif;
+  --font-sans: "Lab Sans", "Noto Sans HK", "PingFang HK", "Microsoft JhengHei", sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
@@ -35,7 +35,7 @@ html {
 
 body {
   margin: 0;
-  background: linear-gradient(180deg, #ffffff 0, var(--bg) 22rem, var(--bg) 100%);
+  background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
   line-height: 1.65;

@@ -1,7 +1,7 @@
 "use client";
 
 import { RotateCcw, Search } from "lucide-react";
-import { useMemo, useReducer } from "react";
+import { useEffect, useMemo, useReducer } from "react";
 
 import { IndicatorCard } from "@/components/site/indicator-card";
 import { Button } from "@/components/ui/button";
@@ -50,6 +50,7 @@ export function IndicatorLibrary({
   readonly categories: readonly string[];
 }) {
   const [{ query, category, difficulty, coreOnly, sort, goal }, dispatch] = useReducer(libraryReducer, initialLibraryState);
+  useEffect(() => { dispatch({ kind: "query", value: new URLSearchParams(window.location.search).get("q") ?? "" }); }, []);
   const goalUses = useMemo(() => new Set(goal?.uses ?? []), [goal]);
 
   const filtered = useMemo(() => {
@@ -70,7 +71,7 @@ export function IndicatorLibrary({
   const reset = () => dispatch({ kind: "reset" });
 
   return (
-    <div>
+    <div className="indicator-browser">
       <fieldset className="mb-5 rounded-[8px] border border-[var(--line)] bg-[var(--surface-soft)] p-4">
         <legend className="px-2 text-sm font-bold text-[var(--ink)]">你想用指標解決甚麼問題？</legend>
         <p className="mb-3 text-sm leading-6 text-[var(--muted)]">先選一個目的，系統只會顯示相關工具。每次先處理一個問題，會比同時堆疊多個指標更容易判讀。</p>

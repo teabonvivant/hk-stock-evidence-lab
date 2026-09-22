@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BlogIndex } from "@/components/site/blog-index";
+import { ArticleContents } from "@/components/site/article-contents";
 import { JsonLd } from "@/components/site/json-ld";
 import { articles, articleDate, articleSummary, blogCategories, figurePath, findArticle, readingMinutes } from "@/lib/blog";
 import type { BlogArticle } from "@/lib/blog";
@@ -31,7 +32,7 @@ export function ArticlePage({ slug }: { slug: string }) {
     <JsonLd data={{ "@context": "https://schema.org", "@type": "BlogPosting", headline: article.title, description: article.excerpt, datePublished: articleDate, dateModified: articleDate, inLanguage: "zh-Hant-HK", mainEntityOfPage: `${siteConfig.url}/blog/${slug}`, publisher: { "@type": "Organization", name: siteConfig.name }, image: article.figures.map((_, i) => siteConfig.url + figurePath(article, i)) }} />
     <nav className="breadcrumbs" aria-label="頁面路徑"><Link href="/">首頁</Link><span>/</span><Link href="/blog">研究札記</Link><span>/</span><Link href={`/blog/category/${category?.slug ?? "indicators"}`}>{article.category}</Link></nav>
     <header className="reading-header"><h1>{article.title}</h1><p className="article-deck">{article.excerpt}</p><div className="article-meta"><span>{article.category}</span><time dateTime={articleDate}>2026 年 9 月 22 日</time><span>{readingMinutes(article)} 分鐘閱讀</span></div></header>
-    <div className="reading-layout"><aside className="article-toc"><strong>本篇目錄</strong><ol>{article.sections.map((s,i) => <li key={s.heading}><a href={`#section-${i + 1}`}>{s.heading}</a></li>)}</ol><Link href="/blog">全部研究札記</Link></aside>
+    <div className="reading-layout"><ArticleContents sections={article.sections.map(s => s.heading)} />
     <div className="article-prose"><p className="article-intro">{article.intro}</p>
       {article.sections.map((s,i) => <div key={s.heading}><section id={`section-${i + 1}`}><h2>{s.heading}</h2>{s.paragraphs.map((p,j) => <p key={j}>{p}</p>)}</section>{i === 0 ? <ArticleFigure article={article} index={0} /> : null}{i === Math.max(2, article.sections.length - 2) ? <ArticleFigure article={article} index={1} /> : null}</div>)}
       <section className="article-sources"><h2>參考資料</h2><ol>{article.sources.map(s => <li key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{s.label} ↗</a></li>)}</ol><p>資料查閱日期：2026 年 9 月 22 日。</p></section>

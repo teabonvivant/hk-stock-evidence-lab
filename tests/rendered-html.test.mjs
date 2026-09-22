@@ -9,7 +9,7 @@ async function render(pathname="/"){
 }
 test("homepage exposes complete reading and learning paths",async()=>{
  const r=await render(),html=await r.text();assert.equal(r.status,200);
- for(const term of ["讀懂價格","100 篇研究札記","從觀察走向理解","把基礎放穩",'href="/blog"','href="/sitemap"','href="#main-content"','type="application/ld+json"']) assert.ok(html.includes(term),term);
+ for(const term of ["讀懂價格","100 篇研究札記","搜尋技術指標","把基礎放穩",'href="/blog"','href="/sitemap"','href="#main-content"','type="application/ld+json"']) assert.ok(html.includes(term),term);
  assert.doesNotMatch(html,/具名覆核完成前|尚未完成全部核對|react-grab|react-scan|generated-pages\/home\.png/);
 });
 test("indicator library remains searchable and indexable",async()=>{

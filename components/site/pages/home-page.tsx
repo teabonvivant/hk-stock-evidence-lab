@@ -1,20 +1,19 @@
 import Link from "next/link";
 import { JsonLd } from "@/components/site/json-ld";
 import { Section } from "@/components/site/page-shell";
-import { articles, blogCategories, figurePath } from "@/lib/blog";
+import { articles, articleSummary, blogCategories } from "@/lib/blog";
+import { ArticleCard } from "@/components/site/article-card";
 import { IndicatorCard } from "@/components/site/indicator-card";
 import { findIndicator } from "@/lib/site-data";
 import { HomeCover } from "@/components/site/home-cover";
-import { EvidenceVisual } from "@/components/site/evidence-visual";
 export function HomePage() {
  const selected = [1,8,35,48,68,90].flatMap(id => { const a = articles.find(x => x.id === id); return a ? [a] : []; });
  return <div className="home-journal">
   <JsonLd data={{"@context":"https://schema.org","@type":"WebSite",name:"港股證據研究室",url:"https://technical-indicators-hk.teabonvivant.chatgpt.site/",inLanguage:"zh-Hant-HK"}} />
   <HomeCover />
-  <div className="home-observation"><EvidenceVisual variant="home" /></div>
-  <nav className="home-topic-band" aria-label="主題入口">{blogCategories.map(c => <Link key={c.slug} href={`/blog/category/${c.slug}`}><strong>{c.name}</strong><span>{c.description}</span></Link>)}</nav>
+  <nav className="home-topic-band" aria-label="主題入口">{blogCategories.map(c => <Link key={c.slug} href={`/blog/category/${c.slug}`}><strong>{c.name}<span>{articles.filter(a => a.category === c.name).length}</span></strong><span>{c.description}</span></Link>)}</nav>
   <Section className="home-reading" title="從一個具體問題開始" body="每篇文章附上圖解、例子及參考資料。">
-   <div className="article-list home-articles">{selected.map((a,index) => <article key={a.slug} className={index === 0 ? "featured-reading" : undefined}><div><h3><Link href={`/blog/${a.slug}`}>{a.title}</Link></h3><span className="article-meta">{a.category}</span><p>{a.excerpt}</p><Link className="text-link" href={`/blog/${a.slug}`}>閱讀全文 →</Link></div>{index === 0 ? <Link className="featured-reading__figure" href={`/blog/${a.slug}`} aria-label={a.title}><img src={figurePath(a,0)} alt={a.figures[0]?.title ?? a.title} width="720" height="640" loading="lazy" /></Link> : null}</article>)}</div>
+   <div className="article-list home-articles">{selected.map(a => <ArticleCard key={a.slug} article={articleSummary(a)} heading="h3" />)}</div>
    <Link className="text-link section-end-link" href="/blog">瀏覽全部 {articles.length} 篇研究札記 →</Link>
   </Section>
   <Section className="home-foundations" title="把基礎放穩" body="價格位置、趨勢、動能、成交量和波幅，各自回答不同的問題。">

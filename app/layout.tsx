@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 import "./editorial.css";
 import "./fonts.css";
-import "./atelier.css";
+import "./finance.css";
 
 const enableReactDevTools = process.env.NODE_ENV === "development"
   && process.env["NEXT_PUBLIC_DISABLE_REACT_DEVTOOLS"] !== "1";
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { readonly children: ReactNode 
   return (
     <html lang="zh-Hant-HK">
       <head>
-        <link rel="preload" href="/fonts/notoserifhk-core.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/notosanshk-core.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="alternate" type="application/rss+xml" title="港股證據研究室：研究札記" href="/feed.xml" />
         {enableReactDevTools ? (

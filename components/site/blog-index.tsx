@@ -1,6 +1,6 @@
 "use client";
 import { useMemo, useState } from "react";
-import Link from "next/link";
+import { ArticleCard } from "@/components/site/article-card";
 import type { ArticleSummary } from "@/lib/blog";
 
 export function BlogIndex({ items, categories, initialCategory = "全部" }: { items: ArticleSummary[]; categories: string[]; initialCategory?: string }) {
@@ -16,11 +16,7 @@ export function BlogIndex({ items, categories, initialCategory = "全部" }: { i
       <label htmlFor="article-category">主題<select id="article-category" value={category} onChange={e => { setCategory(e.target.value); setPage(1); }}><option>全部</option>{categories.map(c => <option key={c}>{c}</option>)}</select></label>
     </div>
     <p className="result-count" role="status">{filtered.length} 篇文章{filtered.length > 0 ? ` · 第 ${current} / ${pages} 頁` : ""}</p>
-    <div className="article-list">{filtered.slice((current - 1) * 12, current * 12).map(a => <article key={a.slug}>
-      <h2><Link href={`/blog/${a.slug}`}>{a.title}</Link></h2>
-      <div className="article-meta"><span>{a.category}</span><span>{a.minutes} 分鐘閱讀</span></div><p>{a.excerpt}</p>
-      <Link className="text-link" href={`/blog/${a.slug}`}>閱讀全文<span className="sr-only">：{a.title}</span> →</Link>
-    </article>)}</div>
+    <div className="article-list">{filtered.slice((current - 1) * 12, current * 12).map(a => <ArticleCard key={a.slug} article={a} />)}</div>
     {filtered.length === 0 ? <div className="empty-state"><h2>沒有符合的文章</h2><p>試試較短的詞語，或查看全部主題。</p><button className="plain-button" onClick={() => { setQuery(""); setCategory("全部"); setPage(1); }}>清除搜尋條件</button></div> : null}
     {pages > 1 ? <nav aria-label="博客分頁" className="pagination"><button disabled={current === 1} onClick={() => setPage(current - 1)}>上一頁</button>{Array.from({ length: pages }, (_, i) => <button key={i} aria-current={current === i + 1 ? "page" : undefined} onClick={() => setPage(i + 1)}>{i + 1}</button>)}<button disabled={current === pages} onClick={() => setPage(current + 1)}>下一頁</button></nav> : null}
     <noscript><p>全部文章亦可從<a href="/sitemap">網站導覽</a>直接開啟。</p></noscript>

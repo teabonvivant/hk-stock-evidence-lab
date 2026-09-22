@@ -9,7 +9,7 @@ export function IndicatorCard({ item }: { readonly item: IndicatorSummary }) {
   return (
     <Card className="indicator-card h-full">
       <CardHeader>
-        <CardTitle>{item.nameZh}</CardTitle>
+        <CardTitle><Link href={`/indicators/${item.siteSlug}`}>{item.nameZh}</Link></CardTitle>
         <div className="indicator-card__meta flex flex-wrap items-center gap-2">
           <Badge variant={item.core ? "good" : "default"}>{item.difficulty}</Badge>
           <Badge variant="info">{item.category}</Badge>

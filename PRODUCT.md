@@ -33,3 +33,7 @@ Do not look like a crypto signal sales page, a generic AI SaaS dashboard, or a T
 ## Accessibility & Inclusion
 
 Target WCAG 2.2 AA for contrast, focus states, semantic landmarks, and keyboard access. Use Traditional Chinese that wraps naturally on mobile. Do not rely on color alone for source status, risk level, or validation state. Motion should be brief, purposeful, and disabled or reduced under `prefers-reduced-motion`.
+
+## Approved visual direction — 2026-09-22
+
+Financial reference library: white and light gray surfaces, navy navigation, restrained blue actions, Chinese sans-serif typography and illustrated article cards. Prioritize direct search, clear topic navigation and comfortable article reading. References: TradingView, StockCharts ChartSchool, Futu. The previous purple museum-journal direction and architectural cover were rejected. Preserve existing educational content and tools.
