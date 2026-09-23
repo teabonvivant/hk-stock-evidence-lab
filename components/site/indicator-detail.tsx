@@ -1,6 +1,6 @@
 import { publicPath } from "@/lib/site-config";
 import { ArrowLeft, BookOpen, ChartNoAxesCombined, ExternalLink, Link2, ListChecks, ShieldAlert } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/site/site-link";
 
 import { AdvancedDisclosure } from "@/components/site/advanced-disclosure";
 import { IndicatorTeachingChart } from "@/components/site/indicator-chart";

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/site/site-link";
 import type { ReactNode } from "react";
 
 import { EvidenceVisual } from "@/components/site/evidence-visual";

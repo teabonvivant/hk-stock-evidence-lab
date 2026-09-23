@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/site/site-link";
 import { ArrowUpRight } from "lucide-react";
 import type { ArticleSummary } from "@/lib/blog";
 import { ArticlePreview } from "@/components/site/article-preview";

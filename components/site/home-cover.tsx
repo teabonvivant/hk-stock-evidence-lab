@@ -1,5 +1,5 @@
 import { publicPath } from "@/lib/site-config";
-import Link from "next/link";
+import Link from "@/components/site/site-link";
 import { Search, ArrowRight } from "lucide-react";
 
 export function HomeCover() {

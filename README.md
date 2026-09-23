@@ -29,6 +29,8 @@ npm run preview:pages
 
 推送至 `main` 後，`.github/workflows/pages.yml` 會檢查型別、內容、計算規則與匯出的連結及資源，再透過 GitHub Actions 發佈。GitHub 儲存庫的 Pages 發佈來源須設為 **GitHub Actions**。
 
+GitHub Pages 不提供 React 導覽資料所需的自訂回應類型，因此 Pages 版本使用標準頁面連結；搜尋、文章分頁及計算工具仍在瀏覽器內互動。原有 Sites 版本保留框架的頁面切換方式。
+
 `scripts/build-pages.mjs` 只在 Pages 建置期間設定子目錄網址。它亦包含 Vinext 0.0.50 預先產生頁面時遺漏 `basePath` 的版本限定相容修正，完成後會還原套件檔案；升級 Vinext 時需重新核對此處。RSS、XML 網站地圖及頁面標準網址會採用 GitHub Pages 網址。
 
 ## 驗證

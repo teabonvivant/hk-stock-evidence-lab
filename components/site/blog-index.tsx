@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import Link from "@/components/site/site-link";
 import { useMemo, useState } from "react";
 import { ArticleCard } from "@/components/site/article-card";
 import type { ArticleSummary } from "@/lib/blog";

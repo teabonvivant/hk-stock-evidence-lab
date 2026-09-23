@@ -1,5 +1,5 @@
 import { siteConfig } from "@/lib/site-config";
-import Link from "next/link";
+import Link from "@/components/site/site-link";
 import { JsonLd } from "@/components/site/json-ld";
 import { Section } from "@/components/site/page-shell";
 import { articles, articleSummary, blogCategories } from "@/lib/blog";

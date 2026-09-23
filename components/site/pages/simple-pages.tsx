@@ -1,5 +1,5 @@
 import { publicPath } from "@/lib/site-config";
-import Link from "next/link";
+import Link from "@/components/site/site-link";
 import { HeroPanel, PrimaryLink, Section } from "@/components/site/page-shell";
 import { IndicatorTeachingChart } from "@/components/site/indicator-chart";
 import { RiskCalculator, JournalTool, PracticeQuiz, PreparationChecklist } from "@/components/site/learning-tools";

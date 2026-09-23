@@ -1,5 +1,5 @@
 import { siteConfig } from "@/lib/site-config";
-import Link from "next/link";
+import Link from "@/components/site/site-link";
 
 import { DirectAnswer } from "@/components/site/direct-answer";
 import { JsonLd } from "@/components/site/json-ld";

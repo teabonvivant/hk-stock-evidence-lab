@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/site/site-link";
 import { notFound } from "next/navigation";
 import { HeroPanel, PrimaryLink, Section } from "@/components/site/page-shell";
 import { strategyLessonFor, strategyLessons } from "@/lib/strategy-lessons";

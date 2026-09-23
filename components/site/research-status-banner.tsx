@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/site/site-link";
 
 import { Badge } from "@/components/ui/badge";
 import { researchStatusDescriptor } from "@/lib/research-status";

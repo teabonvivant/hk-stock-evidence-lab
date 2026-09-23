@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/site/site-link";
 import { ChevronDown } from "lucide-react";
 
 export function ArticleContents({ sections }: { sections: string[] }) {

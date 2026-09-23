@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/site/site-link";
 import { notFound } from "next/navigation";
 import { BlogIndex } from "@/components/site/blog-index";
 import { ArticleContents } from "@/components/site/article-contents";
