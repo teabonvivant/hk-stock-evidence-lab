@@ -16,7 +16,10 @@
     "content:build": "node scripts/generate-editorial-assets.mjs",
     "sync:hk-copy": "node scripts/apply_hk_editorial_copy.mjs",
     "check": "tsc --noEmit && npm run build && npm test && npm run test:copy && npm run test:routes",
-    "doctor": "npx react-doctor@latest"
+    "doctor": "npx react-doctor@latest",
+    "build:pages": "node scripts/build-pages.mjs",
+    "test:pages": "node scripts/audit-pages.mjs",
+    "preview:pages": "node scripts/preview-pages.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",

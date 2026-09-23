@@ -9,6 +9,7 @@ import { strategyCaveat } from "@/lib/strategy-copy";
 import { trustContentFor } from "@/lib/trust-content";
 import { findArticle, blogCategories } from "@/lib/blog";
 import { strategyLessonFor } from "@/lib/strategy-lessons";
+import { siteConfig, basePath } from "@/lib/site-config";
 
 type RouteParams = { readonly slug?: readonly string[] };
 type RoutePageProps = { readonly params: Promise<RouteParams> };
@@ -20,7 +21,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: RoutePageProps): Promise<Metadata> {
   const resolvedParams = await params;
   const route = parseRoute(resolvedParams.slug ?? []);
-  const alternates = { canonical: canonicalPathFor(route) };
+  const canonicalPath = canonicalPathFor(route);
+  const alternates = { canonical: `${siteConfig.url}${canonicalPath}${basePath && canonicalPath !== "/" ? "/" : ""}` };
   if (route.kind === "blog") {
     const category = blogCategories.find(c => c.slug === route.categorySlug);
     return { title: `${category?.name ?? "研究札記"}｜港股證據研究室`, description: category?.description ?? "100 篇香港繁體中文研究札記，附概念圖解、計算例子與原始參考資料。", alternates };

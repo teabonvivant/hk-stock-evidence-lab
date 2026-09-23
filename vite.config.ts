@@ -32,6 +32,10 @@ const localBindingConfig = {
 };
 
 export default defineConfig(async () => {
+  if (process.env["GITHUB_PAGES"] === "true") {
+    return { plugins: [vinext()] };
+  }
+
   process.env["WRANGLER_WRITE_LOGS"] ??= "false";
   process.env["WRANGLER_LOG_PATH"] ??= ".wrangler/logs";
   process.env["MINIFLARE_REGISTRY_PATH"] ??= ".wrangler/registry";

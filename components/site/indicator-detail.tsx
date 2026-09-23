@@ -1,3 +1,4 @@
+import { publicPath } from "@/lib/site-config";
 import { ArrowLeft, BookOpen, ChartNoAxesCombined, ExternalLink, Link2, ListChecks, ShieldAlert } from "lucide-react";
 import Link from "next/link";
 
@@ -67,7 +68,7 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
         {["trendline","fibonacci-retracement","support-resistance"].includes(item.siteSlug) ? <IndicatorMethodDiagram slug={item.siteSlug} /> : learning && chartCase ? (
           <IndicatorTeachingChart slug={item.siteSlug} caseKey={chartCase} chartLead={learning.chartLead} />
         ) : (
-          <figure className="article-figure"><a href={`/illustrations/indicators/${item.siteSlug}.svg`} target="_blank" rel="noreferrer"><img src={`/illustrations/indicators/${item.siteSlug}.svg`} width="720" height="800" loading="eager" alt={`${item.nameZh}判讀流程：${beginnerGuide.flow.map(s=>s.title).join("、")}`} /></a><figcaption>{beginnerGuide.flowLead}</figcaption></figure>
+          <figure className="article-figure"><a href={publicPath(`/illustrations/indicators/${item.siteSlug}.svg`)} target="_blank" rel="noreferrer"><img src={publicPath(`/illustrations/indicators/${item.siteSlug}.svg`)} width="720" height="800" loading="eager" alt={`${item.nameZh}判讀流程：${beginnerGuide.flow.map(s=>s.title).join("、")}`} /></a><figcaption>{beginnerGuide.flowLead}</figcaption></figure>
         )}
       </Section>
 

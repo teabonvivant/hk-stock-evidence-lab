@@ -1,3 +1,4 @@
+import { siteConfig } from "@/lib/site-config";
 import Link from "next/link";
 import { JsonLd } from "@/components/site/json-ld";
 import { Section } from "@/components/site/page-shell";
@@ -9,7 +10,7 @@ import { HomeCover } from "@/components/site/home-cover";
 export function HomePage() {
  const selected = [1,8,35,48,68,90].flatMap(id => { const a = articles.find(x => x.id === id); return a ? [a] : []; });
  return <div className="home-journal">
-  <JsonLd data={{"@context":"https://schema.org","@type":"WebSite",name:"港股證據研究室",url:"https://technical-indicators-hk.teabonvivant.chatgpt.site/",inLanguage:"zh-Hant-HK"}} />
+  <JsonLd data={{"@context":"https://schema.org","@type":"WebSite",name:"港股證據研究室",url:siteConfig.url+"/",inLanguage:"zh-Hant-HK"}} />
   <HomeCover />
   <nav className="home-topic-band" aria-label="主題入口">{blogCategories.map(c => <Link key={c.slug} href={`/blog/category/${c.slug}`}><strong>{c.name}<span>{articles.filter(a => a.category === c.name).length}</span></strong><span>{c.description}</span></Link>)}</nav>
   <Section className="home-reading" title="從一個具體問題開始" body="每篇文章附上圖解、例子及參考資料。">

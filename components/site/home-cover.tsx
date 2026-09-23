@@ -1,3 +1,4 @@
+import { publicPath } from "@/lib/site-config";
 import Link from "next/link";
 import { Search, ArrowRight } from "lucide-react";
 
@@ -7,7 +8,7 @@ export function HomeCover() {
       <div><h1>讀懂價格，也讀懂它的分寸。</h1><p>一條線，一次突破，一份漂亮的回測，都值得多問一句。從圖表、公式到市場機制，整理可以查證的知識，讓每個判斷都有來處。</p></div>
       <Link href="/learn" className="start-learning"><strong>第一次接觸技術分析？</strong><span>從基礎開始，逐步建立判讀方法<ArrowRight size={18} aria-hidden="true" /></span></Link>
     </div>
-    <form action="/indicators" className="home-search" role="search">
+    <form action={publicPath("/indicators/")} className="home-search" role="search">
       <label htmlFor="home-indicator-search" className="sr-only">搜尋技術指標</label>
       <Search size={21} aria-hidden="true" />
       <input id="home-indicator-search" name="q" type="search" placeholder="搜尋指標、名稱或用途，例如 RSI、成交量、趨勢…" />

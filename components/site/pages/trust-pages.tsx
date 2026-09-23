@@ -1,3 +1,4 @@
+import { siteConfig } from "@/lib/site-config";
 import Link from "next/link";
 
 import { DirectAnswer } from "@/components/site/direct-answer";
@@ -9,7 +10,7 @@ import { CorrectionNote } from "@/components/site/learning-tools";
 
 export function TrustPage({ path }: { readonly path: TrustRoutePath }) {
   const content = trustContentFor(path);
-  const pageUrl = `https://technical-indicators-hk.teabonvivant.chatgpt.site/${path}`;
+  const pageUrl = `${siteConfig.url}/${path}`;
 
   return (
     <article className="policy-page">
