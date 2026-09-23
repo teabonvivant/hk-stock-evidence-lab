@@ -119,7 +119,7 @@ export function PrimaryLink({
 }
 
 const policyLinks = [
-  { href: "/trust", label: "信任中心" },
+  { href: "/trust", label: "關於與方法" },
   { href: "/editorial-policy", label: "編輯政策" },
   { href: "/ai-disclosure", label: "AI 使用披露" },
   { href: "/conflicts", label: "利益衝突政策" },

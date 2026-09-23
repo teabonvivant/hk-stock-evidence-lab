@@ -11,7 +11,7 @@ const groups = [
 export function SiteNavigation() {
  const pathname = usePathname();
  const links = [["/learn","學習"],["/indicators","指標百科"],["/blog","研究札記"],["/strategy-cases","策略方法"],["/toolbox","工具"],["/trust","關於"]];
- return <><nav aria-label="主要導覽" className="site-nav">{links.map(([href,label]) => <Link href={href!} key={href} aria-current={pathname.startsWith(href!) ? "page" : undefined}>{label}</Link>)}</nav><details className="all-navigation"><summary aria-label="開啟所有分頁"><Menu size={21} /><span>選單</span></summary><nav aria-label="所有分頁" className="navigation-panel">{groups.map(group => <div key={group.title}><strong>{group.title}</strong>{group.links.map(([href,label]) => <Link key={href} href={href!} onClick={e => { e.currentTarget.closest("details")?.removeAttribute("open"); }}>{label}</Link>)}</div>)}</nav></details></>;
+ return <><nav aria-label="主要導覽" className="site-nav">{links.map(([href,label]) => <Link href={href!} key={href} aria-label={href === "/trust" ? "關於與方法" : undefined} aria-current={pathname.startsWith(href!) ? "page" : undefined}>{label}</Link>)}</nav><details className="all-navigation"><summary aria-label="開啟所有分頁"><Menu size={21} /><span>選單</span></summary><nav aria-label="所有分頁" className="navigation-panel">{groups.map(group => <div key={group.title}><strong>{group.title}</strong>{group.links.map(([href,label]) => <Link key={href} href={href!} onClick={e => { e.currentTarget.closest("details")?.removeAttribute("open"); }}>{label}</Link>)}</div>)}</nav></details></>;
 }
 export function MobileNavigation() {
  const pathname = usePathname();

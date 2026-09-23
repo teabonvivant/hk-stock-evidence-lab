@@ -1,10 +1,10 @@
 import { publicPath } from "@/lib/site-config";
-import { ArrowLeft, BookOpen, ChartNoAxesCombined, ExternalLink, Link2, ListChecks, ShieldAlert } from "lucide-react";
+import { ArrowLeft, ChartNoAxesCombined, ExternalLink, Link2, ListChecks, ShieldAlert } from "lucide-react";
 import Link from "@/components/site/site-link";
 
 import { AdvancedDisclosure } from "@/components/site/advanced-disclosure";
 import { IndicatorTeachingChart } from "@/components/site/indicator-chart";
-import { IndicatorBeginnerGuide, IndicatorBeginnerPractice } from "@/components/site/indicator-beginner-guide";
+import { IndicatorBeginnerGuide, IndicatorBeginnerPractice, IndicatorUsageFlow } from "@/components/site/indicator-beginner-guide";
 import { PrimaryLink, Section } from "@/components/site/page-shell";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -29,7 +29,7 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
   const boundary = learning?.doesNotMeasure ?? beginnerGuide.boundary;
 
   return (
-    <div>
+    <div className="indicator-detail-page">
       <section className="research-panel overflow-hidden">
         <div className="grid min-w-0 gap-5 p-5 lg:grid-cols-[1.05fr_0.95fr] lg:p-6">
           <div className="flex min-w-0 flex-col justify-center gap-4">
@@ -47,24 +47,20 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
             </div>
             <PrimaryLink href="/indicators" variant="secondary"><ArrowLeft className="size-4" aria-hidden="true" />返回指標庫</PrimaryLink>
           </div>
-          <div className="learning-orientation" aria-label="指標閱讀重點">
-            <OrientationRow label="量度內容" value={measures} tone="good" />
-            <OrientationRow label="適用市況" value={bestRegime} tone="info" />
-            <OrientationRow label="不能反映" value={boundary} tone="warn" />
-          </div>
         </div>
         <nav className="detail-nav" aria-label="本頁章節">
-          <a href="#beginner"><BookOpen className="size-4" aria-hidden="true" />先理解</a>
-          <a href="#usage"><ShieldAlert className="size-4" aria-hidden="true" />實際用法</a>
           <a href="#chart"><ChartNoAxesCombined className="size-4" aria-hidden="true" />圖表判讀</a>
+          <a href="#usage"><ShieldAlert className="size-4" aria-hidden="true" />實際用法</a>
           <a href="#practice"><ListChecks className="size-4" aria-hidden="true" />動手練習</a>
+          <a href="#calculation">公式與計算</a>
+          <a href="#sources"><ExternalLink className="size-4" aria-hidden="true" />來源</a>
         </nav>
       </section>
 
 
       <IndicatorBeginnerGuide item={item} />
 
-      <Section id="chart" title="圖解與判讀" body="先對齊圖中的量度內容、時間範圍與單位，再觀察訊號。">
+      <Section id="chart" title="圖解與判讀">
         {["trendline","fibonacci-retracement","support-resistance"].includes(item.siteSlug) ? <IndicatorMethodDiagram slug={item.siteSlug} /> : learning && chartCase ? (
           <IndicatorTeachingChart slug={item.siteSlug} caseKey={chartCase} chartLead={learning.chartLead} />
         ) : (
@@ -72,7 +68,12 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
         )}
       </Section>
 
-      <Section id="signals" title="讀到訊號後，應如何判斷" body="以下分開列出可供參考的現象、常見誤用，以及令原來判斷失效的情況。">
+      <Section id="signals" title="訊號、誤用與限制">
+        <div className="learning-orientation mb-5" aria-label="指標閱讀重點">
+          <OrientationRow label="量度內容" value={measures} tone="good" />
+          <OrientationRow label="適用市況" value={bestRegime} tone="info" />
+          <OrientationRow label="不能反映" value={boundary} tone="warn" />
+        </div>
         {learning ? (
           <div className="scenario-grid mb-5">
             <Scenario label="訊號較可靠的情況" value={learning.validCase} tone="good" />
@@ -87,9 +88,11 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
         </div>
       </Section>
 
+      <IndicatorUsageFlow item={item} />
+
       <IndicatorBeginnerPractice item={item} />
 
-      <Section title="相關指標" body="比較不同指標的功能，避免把三個本質相近的指標誤作多重確認。">
+      <Section title="相關指標">
         <div className="flex flex-wrap gap-2">
           {related.map((target) => (
             <Link key={target.siteSlug} href={`/indicators/${target.siteSlug}`} className="related-link">
@@ -122,13 +125,13 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
           <div className="mt-5 grid gap-4 lg:grid-cols-[1fr_1fr]">
             <div className="flat-evidence-block">
               <h3>逐步計算</h3>
-              <ol className="mt-3 grid gap-2 text-sm leading-6 text-[var(--muted)]">
+              <ol className="mt-3 grid gap-2 leading-7 text-[var(--muted)]">
                 {learning.calculationSteps.map((step, index) => <li key={step}><strong className="mr-2 text-[var(--primary-strong)]">{index + 1}.</strong>{step}</li>)}
               </ol>
             </div>
             <div className="flat-evidence-block is-info">
               <h3>計算示例</h3>
-              <p className="mt-3 text-sm leading-6 text-[var(--muted)]">{learning.workedExample}</p>
+              <p className="mt-3 leading-7 text-[var(--muted)]">{learning.workedExample}</p>
             </div>
           </div>
         ) : null}
@@ -183,7 +186,7 @@ function ListCard({ title, rows, tone }: { readonly title: string; readonly rows
   return (
     <Card className="h-full shadow-none">
       <CardHeader><Badge variant={tone} className="w-fit">{title}</Badge><CardTitle>{title}</CardTitle></CardHeader>
-      <CardContent><ul className="grid gap-2 text-sm leading-6 text-[var(--muted)]">{rows.map((row) => <li key={row}>{row}</li>)}</ul></CardContent>
+      <CardContent><ul className="grid gap-2 leading-7 text-[var(--muted)]">{rows.map((row) => <li key={row}>{row}</li>)}</ul></CardContent>
     </Card>
   );
 }

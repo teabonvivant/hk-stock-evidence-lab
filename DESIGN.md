@@ -269,9 +269,11 @@ Article-category routes are outlined rounded rectangles with a pale-blue selecte
 
 Article cards have a one-pixel divider border and white surface. Each thumbnail is a compact rendering of that article's actual first teaching diagram; bar values come from data, and flow markers occupy a separate horizontal space from labels. Thumbnails are decorative duplicates, removed from the accessibility and tab order; the linked title supplies the destination.
 
-The order is illustration, title, category, excerpt, then reading time and date. Titles are 20px; excerpts use 16px text with a three-line clamp. The footer has a dividing rule and tabular metadata. Card-body padding is 20px/22px/17px on wide screens, 18px at 1100px and 19px at 620px.
+The reading order is title, category, excerpt, a compact thumbnail of the article's first teaching diagram, then reading time and date. Titles are 20px; excerpts use 16px text with a three-line clamp. Thumbnails are 108px high on wide layouts and 112px on mobile. The footer has a dividing rule and tabular metadata. Card-body padding is 20px/22px/17px on wide screens, 18px at 1100px and 19px at 620px.
 
 Indicator cards retain a title, difficulty/category metadata, English name and abbreviation, explanation, usage badges and a descriptive detail link. They use the same white panel language and a 20px sans-serif title. Preserve existing filters, empty results and reset actions.
+
+Indicator reading pages lead with a plain definition and three focused takeaways, then show the chart before the detailed usage flow, practice, calculation and sources. Explanatory body copy uses at least 16px text with 1.75 line height. At widths up to 620px, the teaching chart uses its dedicated 360px viewBox so the complete chart remains readable without page overflow.
 
 ### Reading Contents and Figures
 

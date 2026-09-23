@@ -7,6 +7,7 @@ import { IndicatorCard } from "@/components/site/indicator-card";
 import { Button } from "@/components/ui/button";
 import { indicatorLearningGoals } from "@/lib/indicator-beginner-guide";
 import type { IndicatorLearningGoal } from "@/lib/indicator-beginner-guide";
+import { matchesIndicatorSearch } from "@/lib/indicator-search";
 import type { IndicatorSummary } from "@/lib/site-data";
 
 const difficultyOrder = new Map([
@@ -54,11 +55,9 @@ export function IndicatorLibrary({
   const goalUses = useMemo(() => new Set(goal?.uses ?? []), [goal]);
 
   const filtered = useMemo(() => {
-    const needle = query.trim().toLocaleLowerCase("zh-HK");
     return [...items]
       .filter((item) => {
-        const searchable = [item.nameZh, item.nameEn, item.abbr, item.category, ...item.uses].join(" ").toLocaleLowerCase("zh-HK");
-        return (!needle || searchable.includes(needle))
+        return matchesIndicatorSearch(query, [item.nameZh, item.nameEn, item.abbr, item.category, item.summary, ...item.uses])
           && (category === "全部分類" || item.category === category)
           && (difficulty === "全部難度" || item.difficulty === difficulty)
           && (!coreOnly || item.core)
@@ -95,7 +94,7 @@ export function IndicatorLibrary({
           <span>搜尋名稱、縮寫或用途</span>
           <span className="relative block">
             <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[var(--muted)]" aria-hidden="true" />
-            <input value={query} onChange={(event) => dispatch({ kind: "query", value: event.target.value })} placeholder="搜尋 RSI、保力加通道、成交量、英文縮寫或用途" className="library-input pl-10" />
+            <input value={query} onChange={(event) => dispatch({ kind: "query", value: event.target.value })} placeholder="搜尋 RSI、保歷加通道、成交量、英文縮寫或用途" className="library-input pl-10" />
           </span>
         </label>
         <label className="library-field">

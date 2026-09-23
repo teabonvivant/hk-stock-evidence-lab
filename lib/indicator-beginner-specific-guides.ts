@@ -3,7 +3,7 @@ import type { BeginnerPlainLanguage } from "@/lib/indicator-beginner-types";
 export const plainLanguageBySlug: Readonly<Record<string, BeginnerPlainLanguage>> = {
   rsi: {
     plain: "RSI 像價格力度的溫度計，反映近期升得太急、跌得太急，或力度開始轉弱。",
-    look: "價格位置是背景。接近支撐、阻力或趨勢中段時，再看 RSI 是否接近 30／70，或與價格背離。",
+    look: "價格位置是背景。接近支持位、阻力位或趨勢中段時，再看 RSI 是否接近 30／70，或與價格背馳。",
     simple: "RSI 只提示力度；30 和 70 並非自動買賣線。",
     avoid: "強勢股可以長時間高於 70，弱勢股也可以長時間低於 30；沒有價格確認便不要逆勢入場。",
   },
@@ -37,8 +37,14 @@ export const plainLanguageBySlug: Readonly<Record<string, BeginnerPlainLanguage>
     simple: "把 ATR 當作風險尺，不要把它當成方向指標。",
     avoid: "ATR 上升只代表波動變大，並不代表價格一定上升或下跌。",
   },
+  obv: {
+    plain: "收市較前日高，OBV 把當日成交量加進累積值；收市較低便減去，平收不變。",
+    look: "比較 OBV 累積線與價格走勢，留意兩者是否同步；OBV 並非實際資金流量。",
+    simple: "OBV 按收市方向為當日成交量加上正、負或零，再累積成線。",
+    avoid: "不要把 OBV 的升跌當成真實資金流入流出；每宗成交同時有買方和賣方。",
+  },
   "bollinger-bands": {
-    plain: "布林帶顯示價格的相對波動範圍，可看出波幅正在收窄、擴張或沿着邊界運行。",
+    plain: "保歷加通道顯示價格的相對波動範圍，可看出波幅正在收窄、擴張或沿着邊界運行。",
     look: "帶寬反映波幅收窄或擴張；價格到達上軌或下軌時，還要核對趨勢和成交量。",
     simple: "碰上軌不等於要賣，碰下軌也不等於要買。趨勢和價格位置才是背景。",
     avoid: "強趨勢中的價格可以沿上軌或下軌走很久，不要只因觸及邊界便逆勢操作。",
@@ -50,9 +56,9 @@ export const plainLanguageBySlug: Readonly<Record<string, BeginnerPlainLanguage>
     avoid: "不要看到 ADX 上升便自動買入；方向必須由價格結構另行確認。",
   },
   "support-resistance": {
-    plain: "支撐阻力是價格過去多次停下、反彈或受壓的區域，是閱讀任何訊號前的地圖。",
+    plain: "支持位與阻力位是價格過去多次停下、反彈或受壓的區域，是閱讀任何訊號前的地圖。",
     look: "找出前高、前低、密集成交區和多次反應的位置，並觀察價格接近時的走勢和成交量。",
     simple: "它要回答的是：價格接近有意義的位置，還是只在區間中段。",
-    avoid: "支撐阻力通常是一個區域，不是一條絕對精準而且永遠有效的線。",
+    avoid: "支持位與阻力位通常是一個區域，不是一條絕對精準而且永遠有效的線。",
   },
 };

@@ -67,7 +67,7 @@
       "warmup": "首 14 期平均升跌建立種子；宜保留額外歷史資料穩定結果。",
       "measures": "近期上升幅度相對下跌幅度的動能比例。",
       "doesNotMeasure": "70 以上不等於價格必跌，30 以下亦不等於必升。",
-      "bestRegime": "區間反轉、趨勢回調及動能背離確認。",
+      "bestRegime": "區間反轉、趨勢回調及動能背馳確認。",
       "avoidRegime": "強趨勢初段只憑超買超賣逆勢交易。",
       "calculationSteps": [
         "計算每根收市價變化，拆成升幅和跌幅。",
@@ -77,7 +77,7 @@
       "workedExample": "平均升幅 1.2、平均跌幅 0.8，RS=1.5，RSI=100-100/2.5=60。",
       "validCase": "QQQ 低位修復時，RSI 重上 50 並配合價格結構改善，比單看跌穿 30 更可靠。",
       "failureCase": "強勢股可長時間維持 70 以上，過早做空會把趨勢誤當反轉。",
-      "signalBoundary": "背離是警號，不是自動入場；價格結構仍須確認。",
+      "signalBoundary": "背馳是警號，不是自動入場；價格結構仍須確認。",
       "caseKey": "reversal",
       "chartLead": "QQQ 2022 至 2023 修復段顯示 RSI14，標出 30、50、70 三條參考線。",
       "sources": [
@@ -296,22 +296,22 @@
       "formulaDetail": "若 C_t > C_{t-1}：OBV_t = OBV_{t-1} + Volume_t\n若 C_t < C_{t-1}：OBV_t = OBV_{t-1} - Volume_t\n相同則不變",
       "inputs": "連續收市價及一致口徑的成交量。",
       "smoothing": "OBV 是累積序列；起始絕對值任意，應比較方向而非跨資產數值。",
-      "warmup": "兩根資料即可更新，但較長歷史有助判斷趨勢及背離。",
+      "warmup": "兩根資料即可更新，但較長歷史有助判斷趨勢及背馳。",
       "measures": "把整日成交量按收市方向累積後的量價壓力。",
       "doesNotMeasure": "不能分辨主動買盤、主動沽盤或盤中成交位置。",
-      "bestRegime": "確認突破及觀察價格與成交量累積方向是否背離。",
+      "bestRegime": "確認突破及觀察價格與成交量累積方向是否背馳。",
       "avoidRegime": "以不同起點的 OBV 絕對值比較兩隻股票。",
       "calculationSteps": [
         "比較今日與昨日收市價。",
         "上升日加全日成交量，下跌日減全日成交量。",
-        "觀察 OBV 趨勢、突破及背離。"
+        "觀察 OBV 趨勢、突破及背馳。"
       ],
       "workedExample": "昨日 OBV=1,000 萬，今日上升且成交量 200 萬，今日 OBV=1,200 萬。",
       "validCase": "價格突破前 OBV 已突破自身阻力，可作成交量先行的確認。",
       "failureCase": "一個異常大成交日會永久改變累積基準，之後應重視斜率而非水平。",
       "signalBoundary": "OBV 只確認量價關係，沒有價格目標。",
       "caseKey": "breakout",
-      "chartLead": "騰訊高波動案例以 OBV 累積線對照價格，讀取方向一致與背離。",
+      "chartLead": "騰訊高波動案例以 OBV 累積線對照價格，讀取方向一致與背馳。",
       "sources": [
         {
           "label": "Granville：New Key to Stock Market Profits",
@@ -366,7 +366,7 @@
       ],
       "workedExample": "三筆 TPx量為 1,000、2,100、1,650，量為 10、20、15，VWAP=4,750/45=105.56。",
       "validCase": "突破後回踩錨定 VWAP 並企穩，可觀察市場平均成本是否仍受支持。",
-      "failureCase": "把每日重設的日內 VWAP 當成多年支撐，時間尺度並不一致。",
+      "failureCase": "把每日重設的日內 VWAP 當成多年支持位，時間尺度並不一致。",
       "signalBoundary": "VWAP 是成本基準，不是完整方向策略。",
       "caseKey": "momentumBreakout",
       "chartLead": "以 NVDA 2023 年 1 月 3 日為起點，累積日線典型價格乘成交量；畫面只截取後段，計算保留錨點以來全部資料。此為日線錨定 VWAP。",
@@ -384,7 +384,7 @@
       "inputs": "調整後高、低、收市價；標準參數 9、26、52。",
       "smoothing": "使用期間高低中點，不是移動平均；位移是圖表位置而非偷看未來。",
       "warmup": "至少 52 根計算 Span B，完整前移雲層需額外顯示空間。",
-      "measures": "趨勢方向、價格位置、動能節奏與未來支撐阻力區。",
+      "measures": "趨勢方向、價格位置、動能節奏與未來支持位與阻力區。",
       "doesNotMeasure": "雲層不會預知未來價格，只是把已知結構向前投影。",
       "bestRegime": "中期趨勢及多時間框架方向判斷。",
       "avoidRegime": "未分清五條線的角色便把每次交叉當交易。",
@@ -525,7 +525,7 @@
     {
       "slug": "support-resistance",
       "formulaType": "chartMethod",
-      "formulaDetail": "支撐／阻力是價格區域，不是單一公式；本站以多次轉折、收市反應及成交活動共同標記。",
+      "formulaDetail": "支持位／阻力位是價格區域，不是單一公式；本站以多次轉折、收市反應及成交活動共同標記。",
       "inputs": "調整後 OHLC、觀察週期、轉折確認規則及價格容許帶。",
       "smoothing": "用區域而非一條極細直線，避免把正常價差誤判為突破。",
       "warmup": "至少需要多個已確認轉折；兩點只可作候選。",
@@ -538,12 +538,12 @@
         "以合理容許帶合併接近水平。",
         "用突破後收市、成交量及回踩確認角色轉換。"
       ],
-      "workedExample": "價格三次在 99 至 101 回升，應標為 99至101 支撐區，而不是精確的 100.00。",
+      "workedExample": "價格三次在 99 至 101 回升，應標為 99至101 支持區，而不是精確的 100.00。",
       "validCase": "阻力突破後回踩不破並重新上升，較單次穿越更有證據。",
       "failureCase": "把每個細小高低點都畫線，圖表最終無法作出取捨。",
       "signalBoundary": "價格區域只回答在哪裡觀察，不回答何時交易。",
       "caseKey": "range",
-      "chartLead": "SPY 區間段以近期反覆高低區域示範支撐阻力，標示為帶狀而非精確單線。",
+      "chartLead": "SPY 區間段以近期反覆高低區域示範支持位與阻力位，標示為帶狀而非精確單線。",
       "sources": [
         {
           "label": "Edwards & Magee：Technical Analysis of Stock Trends",

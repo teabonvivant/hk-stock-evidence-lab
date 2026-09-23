@@ -25,7 +25,7 @@ jobs:
       - name: Check types, content and calculations
         run: |
           npx tsc --noEmit
-          node --test tests/p0-contracts.test.mjs tests/calculations.test.mjs scripts/test_copy_integrity.mjs
+          node --test tests/p0-contracts.test.mjs tests/calculations.test.mjs tests/indicator-search.test.mjs scripts/test_copy_integrity.mjs
       - run: npm run build:pages
       - run: npm run test:pages
       - uses: actions/configure-pages@v5

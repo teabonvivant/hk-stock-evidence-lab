@@ -5,7 +5,7 @@ export type TrustRoutePath = (typeof trustRoutePaths)[number];
 const contents: Readonly<Record<TrustRoutePath,TrustContent>> = {
   "trust": {
     "eyebrow": "關於本站",
-    "title": "知識有來處，判斷有分寸。",
+    "title": "關於與方法",
     "description": "港股證據研究室是一個以香港繁體中文整理市場知識的金融教育網站。",
     "directAnswer": "從圖表和公式讀懂技術分析，再把概念放回交易機制、成本與風險。文章以原始文件、計算例子及清楚的適用範圍，支持讀者自行核對。",
     "sections": [
@@ -433,7 +433,7 @@ const contents: Readonly<Record<TrustRoutePath,TrustContent>> = {
       },
       {
         "title": "網站託管",
-        "body": "網站由 Sites 平台提供託管。一般訪問所涉及的服務紀錄及平台處理方式，受平台適用的私隱與服務政策約束。",
+        "body": "網站由 GitHub Pages 託管。GitHub 服務的資料處理方式，請參閱 GitHub 公布的適用政策。",
         "points": [
           "本頁說明本站功能本身的資料處理",
           "不代替外部服務的政策",

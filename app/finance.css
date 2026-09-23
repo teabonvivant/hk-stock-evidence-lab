@@ -69,9 +69,8 @@ main.page-wrap { padding-block:30px 64px; }
 .article-list { grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
 .article-list .research-card { padding:0; border:1px solid var(--line); border-radius:12px; background:#fff; overflow:hidden; display:flex; flex-direction:column; min-width:0; }
 .research-card:hover { border-color:#a9b8ca; }
-.research-card__image { display:block; background:#f1f5f8; border-bottom:1px solid var(--line); overflow:hidden; }
-.research-card__image img { width:100%; height:216px; object-fit:contain; display:block; }
-.article-preview { display:block; width:100%; height:auto; font-family:var(--font-sans); }
+.research-card__image { display:block; width:100%; height:108px; margin-top:2px; background:#f1f5f8; border:1px solid var(--line); border-radius:7px; overflow:hidden; }
+.article-preview { display:block; width:100%; height:100%; object-fit:cover; font-family:var(--font-sans); }
 .research-card__body { padding:20px 22px 17px; display:flex; flex-direction:column; flex:1; }
 .research-card__category { color:var(--primary-strong); font-size:14px; line-height:1.6; font-weight:600; margin-bottom:7px; }
 .article-list .research-card h2,.article-list .research-card h3 { font-size:20px; font-weight:700; line-height:1.55; margin:0 0 10px; text-wrap:pretty; }
@@ -143,6 +142,19 @@ main.page-wrap { padding-block:30px 64px; }
 .related-reading a { font-size:16px; line-height:1.8; border-color:var(--line); }
 .research-panel { border-color:var(--line); border-radius:12px; box-shadow:none; background:#fff; }
 .research-panel > .grid { padding:28px; gap:32px; }
+.indicator-detail-page .research-panel .site-action { align-self:flex-start; width:fit-content; }
+.indicator-detail-page > .research-panel > .grid { grid-template-columns:minmax(0, 800px); }
+.indicator-detail-page .lab-section p,.indicator-detail-page .lab-section li { font-size:16px; line-height:1.75; }
+.indicator-detail-page .lab-section__heading > p { font-size:16px; line-height:1.75; }
+.indicator-detail-page .research-source-row p { font-size:16px; line-height:1.75; }
+.indicator-detail-page .advanced-disclosure summary small { font-size:16px; line-height:1.7; }
+.indicator-takeaways { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin:0; padding:0; list-style:none; }
+.indicator-takeaways li { display:grid; align-content:start; gap:7px; padding:14px 0 0; border-top:1px solid var(--line); color:var(--muted); }
+.indicator-takeaways strong { color:var(--ink); font-size:15px; }
+.indicator-takeaways span { font-size:16px; line-height:1.75; }
+.task-page-heading { max-width:920px; padding:6px 0 8px; }
+.task-page-heading h1 { margin:0; }
+.task-page-heading p { max-width:64ch; margin:10px 0 0; }
 .hero-title { font-family:var(--font-sans); font-size:34px; font-weight:700; line-height:1.45; max-width:22ch; }
 .hero-copy { font-size:16px; line-height:1.85; }
 .hero-phrase { display:inline; }
@@ -184,7 +196,6 @@ main.page-wrap { padding-block:30px 64px; }
   .home-topic-band a { padding:15px 12px; }
   .article-list { gap:18px; }
   .research-card__body { padding:18px; }
-  .research-card__image img { height:190px; }
 }
 @media (max-width:999px) {
   .page-wrap { width:calc(100% - 40px); }
@@ -205,7 +216,6 @@ main.page-wrap { padding-block:30px 64px; }
   .resource-columns { grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
   .research-start__intro { grid-template-columns:1fr; gap:18px; }
   .start-learning { padding:0; border:0; display:flex; flex-wrap:wrap; gap:8px 20px; }
-  .research-card__image img { height:220px; }
   .research-panel > .grid { padding:24px; }
   .evidence-visual ol { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
@@ -242,10 +252,12 @@ main.page-wrap { padding-block:30px 64px; }
   .lab-section__heading h2 { font-size:22px; }
   .lab-section__heading > p { font-size:14px; margin-top:5px; }
   .article-list,.foundation-list { grid-template-columns:1fr; gap:20px; }
-  .research-card__image img { height:220px; }
+  .research-card__image { height:112px; }
   .research-card__body { padding:19px; }
   .article-list .research-card h2,.article-list .research-card h3 { font-size:20px; }
   .article-list .research-card p { font-size:16px; }
+  .indicator-takeaways { grid-template-columns:1fr; gap:12px; }
+  .indicator-takeaways li { padding-top:10px; }
   .research-card__footer { font-size:14px; }
   .indicator-card > div:first-child { padding:20px 20px 10px; }
   .indicator-card > div:last-child { padding:6px 20px 20px; }

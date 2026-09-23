@@ -22,12 +22,12 @@ export function TrustPage({ path }: { readonly path: TrustRoutePath }) {
           description: content.description,
           url: pageUrl,
           inLanguage: "zh-Hant-HK",
-          dateModified: "2026-09-22",
+          dateModified: path === "privacy" || path === "trust" ? "2026-09-23" : "2026-09-22",
         }}
       />
       <nav aria-label="頁面路徑" className="breadcrumbs">
         <Link href="/">首頁</Link><span aria-hidden="true">/</span>
-        {path === "trust" ? <span>信任中心</span> : <><Link href="/trust">信任中心</Link><span aria-hidden="true">/</span><span>{content.eyebrow}</span></>}
+        {path === "trust" ? <span>關於與方法</span> : <><Link href="/trust">關於與方法</Link><span aria-hidden="true">/</span><span>{content.eyebrow}</span></>}
       </nav>
       <header className="policy-header">
         <p>{content.eyebrow}</p>
@@ -35,7 +35,7 @@ export function TrustPage({ path }: { readonly path: TrustRoutePath }) {
         <p>{content.description}</p>
         <dl>
           <div><dt>{content.versionLabel}</dt><dd>{content.version}</dd></div>
-          <div><dt>更新日期</dt><dd>2026-09-22</dd></div>
+          <div><dt>更新日期</dt><dd>{path === "privacy" || path === "trust" ? "2026-09-23" : "2026-09-22"}</dd></div>
         </dl>
       </header>
 

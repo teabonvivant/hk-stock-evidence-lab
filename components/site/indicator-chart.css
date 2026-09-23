@@ -1,0 +1,138 @@
+.indicator-chart__desktop {
+  display: block;
+}
+
+.indicator-chart__mobile {
+  display: none;
+}
+
+.indicator-chart .chart-viewport {
+  height: auto;
+}
+
+.indicator-chart__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  border-top: 1px solid var(--line);
+  padding: 12px 16px;
+}
+
+.indicator-chart__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.indicator-chart__legend-swatch {
+  width: 20px;
+  height: 3px;
+  flex: none;
+  border-radius: 999px;
+}
+
+.indicator-chart__source {
+  display: grid;
+  gap: 8px;
+  border-top: 1px solid var(--line);
+  background: var(--surface-soft);
+  padding: 12px 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.indicator-chart__observations {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  background: var(--surface-soft);
+}
+
+.indicator-chart__observation {
+  display: grid;
+  align-content: start;
+  gap: 3px;
+  padding: 10px 16px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.indicator-chart__observation + .indicator-chart__observation {
+  border-left: 1px solid var(--line);
+}
+
+.indicator-chart__observation-date {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.chart-panel-label {
+  fill: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (min-width: 621px) {
+  .indicator-chart__desktop {
+    display: block;
+  }
+
+  .indicator-chart__mobile {
+    display: none;
+  }
+
+  .indicator-chart__source {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .indicator-chart__desktop {
+    display: none;
+  }
+
+  .indicator-chart__mobile {
+    display: block;
+  }
+
+  .indicator-chart__mobile .chart-viewport {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .indicator-chart__legend {
+    gap: 8px 14px;
+    padding: 11px 12px;
+  }
+
+  .indicator-chart__source {
+    padding: 12px;
+  }
+
+  .indicator-chart__observations {
+    grid-template-columns: 1fr;
+  }
+
+  .indicator-chart__observation {
+    padding: 10px 12px;
+  }
+
+  .indicator-chart__observation + .indicator-chart__observation {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .indicator-chart__mobile .chart-axis-label,
+  .indicator-chart__mobile .chart-reference-label {
+    font-size: 14px;
+  }
+}
