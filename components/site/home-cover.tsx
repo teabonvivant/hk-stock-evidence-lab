@@ -16,13 +16,13 @@ export function HomeCover() {
     </div>
     <nav className="home-pathways" aria-label="選擇閱讀方式">
       <Link href="/learn" className="home-pathway home-pathway--learn">
-        <strong>開始學習</strong><span>由價格、圖表和基本概念入手</span><ArrowRight size={18} aria-hidden="true" />
+        <strong>初學入門</strong><span>由價格、圖表和基本概念開始</span><ArrowRight size={18} aria-hidden="true" />
       </Link>
       <Link href="/indicators" className="home-pathway home-pathway--find">
-        <strong>查找指標</strong><span>搜尋用法、公式和適用範圍</span><ArrowRight size={18} aria-hidden="true" />
+        <strong>查找某項指標</strong><span>搜尋公式、用法和適用範圍</span><ArrowRight size={18} aria-hidden="true" />
       </Link>
       <Link href="/blog" className="home-pathway home-pathway--read">
-        <strong>閱讀研究</strong><span>從圖解和例子理解具體問題</span><ArrowRight size={18} aria-hidden="true" />
+        <strong>按問題閱讀</strong><span>從圖解和例子看一個具體問題</span><ArrowRight size={18} aria-hidden="true" />
       </Link>
     </nav>
     <form action={publicPath("/indicators/")} className="home-search" role="search" aria-label="搜尋技術指標">

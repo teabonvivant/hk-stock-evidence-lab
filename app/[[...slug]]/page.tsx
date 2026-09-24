@@ -100,7 +100,7 @@ const simplePageMetadata = {
   playground: { title: "技術指標練習場｜比較不同市場情境", description: "把同一指標放進上升、橫行、反轉及裂口情境，辨別何時有效及何時容易誤導。" },
   casebook: { title: "歷史市場案例｜真實 OHLCV 教學資料", description: "以真實歷史開市、最高、最低、收市及成交量資料練習技術分析與風險判讀。" },
   glossary: { title: "技術分析詞彙表｜香港常用交易術語", description: "查閱止蝕、成交量、裂口、倉位、R 值及樣本外測試等常用技術分析詞彙。" },
-  subscribe: { title: "研究資料更新｜港股證據研究室", description: "追蹤指標資料修訂、策略審核結果及 Pine Script 教學範本更新。" },
+  subscribe: { title: "文章更新與 RSS｜港股證據研究室", description: "以 RSS 閱讀器追蹤研究札記，並查閱本站的實質修訂紀錄。" },
   journal: { title: "交易日誌｜記錄入市理由、止蝕及檢討", description: "用交易日誌記錄入市理由、失效條件、止蝕、出市安排及流程偏差。" },
   combo: { title: "技術指標組合｜市況、訊號及風險分工", description: "按市況判斷、訊號確認及風險管理三種功能，建立精簡而清楚的指標組合。" },
   script: { title: "Pine Script 教學範本｜港股證據研究室", description: "查看本站重建的 Pine Script 教學範本，以及原始程式碼授權及署名原則。" },

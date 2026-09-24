@@ -11,6 +11,7 @@ import { CorrectionNote } from "@/components/site/learning-tools";
 export function TrustPage({ path }: { readonly path: TrustRoutePath }) {
   const content = trustContentFor(path);
   const pageUrl = `${siteConfig.url}/${path}`;
+  const updatedDate = path === "trust" ? "2026-09-24" : path === "privacy" ? "2026-09-23" : "2026-09-22";
 
   return (
     <article className="policy-page">
@@ -22,7 +23,7 @@ export function TrustPage({ path }: { readonly path: TrustRoutePath }) {
           description: content.description,
           url: pageUrl,
           inLanguage: "zh-Hant-HK",
-          dateModified: path === "privacy" || path === "trust" ? "2026-09-23" : "2026-09-22",
+          dateModified: updatedDate,
         }}
       />
       <nav aria-label="頁面路徑" className="breadcrumbs">
@@ -35,7 +36,7 @@ export function TrustPage({ path }: { readonly path: TrustRoutePath }) {
         <p>{content.description}</p>
         <dl>
           <div><dt>{content.versionLabel}</dt><dd>{content.version}</dd></div>
-          <div><dt>更新日期</dt><dd>{path === "privacy" || path === "trust" ? "2026-09-23" : "2026-09-22"}</dd></div>
+          <div><dt>更新日期</dt><dd>{updatedDate}</dd></div>
         </dl>
       </header>
 

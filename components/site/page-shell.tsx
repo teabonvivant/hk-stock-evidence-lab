@@ -33,7 +33,7 @@ export function PageShell({ children }: { readonly children: ReactNode }) {
           <div>
             <strong>港股證據研究室</strong>
             <p>從價格、成交量與市場機制出發，閱讀有來源的技術分析。© 2026 港股證據研究室。</p>
-            <Link href="/sitemap">網站導覽</Link> · <Link href="/blog">研究札記</Link> · <Link href="/subscribe">內容更新</Link>
+            <Link href="/sitemap">網站導覽</Link> · <Link href="/blog">研究札記</Link> · <Link href="/subscribe">文章更新與 RSS</Link>
           </div>
           <FooterGroup title="責任與政策" links={policyLinks} />
           <FooterGroup title="方法與修訂" links={methodLinks} />

@@ -41,7 +41,8 @@ const contents: Readonly<Record<TrustRoutePath,TrustContent>> = {
       "editorial-policy",
       "methodology/data",
       "methodology/backtesting",
-      "ai-disclosure"
+      "ai-disclosure",
+      "about/team"
     ],
     "versionLabel": "內容版本",
     "version": "2026.09",

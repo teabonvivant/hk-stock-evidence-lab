@@ -18,7 +18,7 @@ export function ArticleCard({ article, heading = "h2", featured = false }: { art
         {hasCover ? <span className="article-preview--cover" aria-hidden="true" style={{ backgroundImage: `url("${publicPath(`/illustrations/covers/${article.slug}.svg`)}")` }} /> : null}
         <ArticlePreview diagram={article.preview} />
       </Link>
-      <div className="research-card__footer"><span>{article.minutes} 分鐘閱讀</span><time dateTime={article.date}>{article.date.replaceAll("-", ".")}</time><ArrowUpRight size={17} aria-hidden="true" /></div>
+      <div className="research-card__footer"><span>{article.minutes} 分鐘閱讀</span><time dateTime={article.date}>刊登日期 {article.date.replaceAll("-", ".")}</time><ArrowUpRight size={17} aria-hidden="true" /></div>
     </div>
   </article>;
 }
