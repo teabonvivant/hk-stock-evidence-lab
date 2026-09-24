@@ -7,6 +7,10 @@ import "./globals.css";
 import "./editorial.css";
 import "./fonts.css";
 import "./finance.css";
+import "./premium-system.css";
+import "./premium-home-blog.css";
+import "./premium-indicators.css";
+import "./premium-tools-trust.css";
 
 const enableReactDevTools = process.env.NODE_ENV === "development"
   && process.env["NEXT_PUBLIC_DISABLE_REACT_DEVTOOLS"] !== "1";
@@ -30,6 +34,7 @@ export default function RootLayout({ children }: { readonly children: ReactNode 
   return (
     <html lang="zh-Hant-HK">
       <head>
+        <meta name="theme-color" content="#152b42" />
         <link rel="preload" href={publicPath("/fonts/notosanshk-core.woff2")} as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="icon" href={publicPath("/favicon.svg")} type="image/svg+xml" />
         <link rel="alternate" type="application/rss+xml" title="港股證據研究室：研究札記" href={publicPath("/feed.xml")} />

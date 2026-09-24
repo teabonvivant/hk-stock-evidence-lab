@@ -32,11 +32,11 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
     <div className="indicator-detail-page">
       <section className="research-panel overflow-hidden">
         <div className="grid min-w-0 gap-5 p-5 lg:grid-cols-[1.05fr_0.95fr] lg:p-6">
-          <div className="flex min-w-0 flex-col justify-center gap-4">
-            <div className="flex flex-wrap gap-2">
-              <Badge variant={learning ? "good" : "info"}>{learning ? "核心 20 指標詳解" : "指標研究條目"}</Badge>
-              <Badge>{item.category}</Badge>
-              <Badge>{item.difficulty}</Badge>
+          <div className="indicator-hero flex min-w-0 flex-col justify-center gap-4">
+            <div className="indicator-kicker">
+              <span className="indicator-kicker__lead">{learning ? "核心指標詳解" : "指標研究條目"}</span>
+              <span>{item.category}</span>
+              <span>{item.difficulty}</span>
             </div>
             <div className="space-y-3">
               <h1 className="hero-title max-w-[13ch] text-4xl font-black leading-[1.05] text-[var(--ink)] md:text-5xl">
@@ -171,7 +171,7 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
 }
 
 function OrientationRow({ label, value, tone }: { readonly label: string; readonly value: string; readonly tone: "good" | "info" | "warn" }) {
-  return <div><Badge variant={tone}>{label}</Badge><p>{value}</p></div>;
+  return <div data-tone={tone}><h3>{label}</h3><p>{value}</p></div>;
 }
 
 function EvidenceRow({ term, detail }: { readonly term: string; readonly detail: string }) {
@@ -179,13 +179,13 @@ function EvidenceRow({ term, detail }: { readonly term: string; readonly detail:
 }
 
 function Scenario({ label, value, tone }: { readonly label: string; readonly value: string; readonly tone: "good" | "warn" | "bad" }) {
-  return <div className={`scenario-block is-${tone}`}><Badge variant={tone}>{label}</Badge><p>{value}</p></div>;
+  return <div className={`scenario-block is-${tone}`}><h3>{label}</h3><p>{value}</p></div>;
 }
 
 function ListCard({ title, rows, tone }: { readonly title: string; readonly rows: readonly string[]; readonly tone: "good" | "warn" | "bad" }) {
   return (
-    <Card className="h-full shadow-none">
-      <CardHeader><Badge variant={tone} className="w-fit">{title}</Badge><CardTitle>{title}</CardTitle></CardHeader>
+    <Card className={`indicator-evidence-card is-${tone} h-full shadow-none`}>
+      <CardHeader><CardTitle>{title}</CardTitle></CardHeader>
       <CardContent><ul className="grid gap-2 leading-7 text-[var(--muted)]">{rows.map((row) => <li key={row}>{row}</li>)}</ul></CardContent>
     </Card>
   );

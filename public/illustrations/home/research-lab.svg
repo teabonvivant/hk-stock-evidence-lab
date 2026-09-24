@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="260" viewBox="0 0 720 260" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">價格與成交量的觀察示意</title>
+  <desc id="desc">上方以抽象折線表示價格路徑，下方以柱形表示成交量。兩者共用時間方向，沒有標示實際數據或價位。</desc>
+  <rect x="1" y="1" width="718" height="258" rx="10" fill="#EEF3F7" stroke="#DCE4EA" stroke-width="2"/>
+  <rect x="18" y="14" width="684" height="145" rx="7" fill="#FFFFFF"/>
+  <rect x="36" y="66" width="648" height="34" rx="4" fill="#E7F0F7"/>
+  <path d="M36 42H684M36 66H684M36 100H684M36 130H684" stroke="#DCE4EA" stroke-width="1.3"/>
+  <path d="M36 100H684" stroke="#7391AC" stroke-width="1.5" stroke-dasharray="6 7"/>
+  <path d="M36 133L88 124L132 136L180 94L225 105L272 77L318 91L364 65L410 82L457 59L501 73L548 48L594 60L640 39L684 49" stroke="#285F96" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="272" cy="77" r="4.5" fill="#FFFFFF" stroke="#285F96" stroke-width="3"/>
+  <circle cx="548" cy="48" r="4.5" fill="#FFFFFF" stroke="#285F96" stroke-width="3"/>
+  <path d="M36 174H684" stroke="#AFC0CF" stroke-width="1.5"/>
+  <g fill="#9CB3C7">
+    <rect x="53" y="213" width="18" height="24" rx="2.5"/><rect x="99" y="202" width="18" height="35" rx="2.5"/>
+    <rect x="145" y="216" width="18" height="21" rx="2.5"/><rect x="191" y="194" width="18" height="43" rx="2.5"/>
+    <rect x="237" y="207" width="18" height="30" rx="2.5"/><rect x="283" y="190" width="18" height="47" rx="2.5"/>
+    <rect x="329" y="211" width="18" height="26" rx="2.5"/><rect x="375" y="198" width="18" height="39" rx="2.5"/>
+    <rect x="421" y="216" width="18" height="21" rx="2.5"/><rect x="467" y="193" width="18" height="44" rx="2.5"/>
+    <rect x="513" y="206" width="18" height="31" rx="2.5"/><rect x="559" y="184" width="18" height="53" rx="2.5"/>
+    <rect x="605" y="201" width="18" height="36" rx="2.5"/><rect x="651" y="190" width="18" height="47" rx="2.5"/>
+  </g>
+  <path d="M36 245H684" stroke="#8293A4" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

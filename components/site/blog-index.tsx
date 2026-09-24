@@ -49,7 +49,7 @@ export function BlogIndex({ items, categories, initialCategory = "全部" }: { i
     </details>
     {query ? <div className="indicator-active-filters" aria-label="已套用搜尋"><button type="button" onClick={() => { setQuery(""); setPage(1); updateUrl("", 1); }}>搜尋：{query}<X size={14} aria-hidden="true" /></button></div> : null}
     <p id="article-results" className="result-count" role="status" aria-live="polite" tabIndex={-1}>{filtered.length} 篇文章{filtered.length > 0 ? ` · 第 ${current} / ${pages} 頁` : ""}</p>
-    <div className="article-list">{filtered.slice((current - 1) * 12, current * 12).map(a => <ArticleCard key={a.slug} article={a} />)}</div>
+    <div className="article-list">{filtered.slice((current - 1) * 12, current * 12).map((a, index) => <ArticleCard key={a.slug} article={a} featured={index === 0} />)}</div>
     {filtered.length === 0 ? <div className="empty-state"><h2>沒有符合的文章</h2><p>試試較短的搜尋詞，或展開主題分類。</p><button className="plain-button" onClick={() => { setQuery(""); setPage(1); updateUrl("", 1); }}>清除搜尋</button></div> : null}
     {pages > 1 ? <nav aria-label="文章分頁" className="pagination"><button disabled={current === 1} onClick={() => goToPage(current - 1)}>上一頁</button>{visiblePages.map((number, index) => <Fragment key={number}>{index > 0 && number - (visiblePages[index - 1] ?? number) > 1 ? <span aria-hidden="true">…</span> : null}<button aria-label={`第 ${number} 頁`} aria-current={current === number ? "page" : undefined} onClick={() => goToPage(number)}>{number}</button></Fragment>)}<button disabled={current === pages} onClick={() => goToPage(current + 1)}>下一頁</button></nav> : null}
     <noscript><p>全部文章亦可從<Link href="/sitemap">網站導覽</Link>直接開啟。</p></noscript>

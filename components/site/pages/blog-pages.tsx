@@ -7,6 +7,8 @@ import { articles, articleDate, articleSummary, blogCategories, figurePath, find
 import type { BlogArticle } from "@/lib/blog";
 import { siteConfig } from "@/lib/site-config";
 
+const compactEditorialFigures = new Set(["support-resistance-zones", "rsi-in-strong-trends", "hong-kong-trading-day", "position-size-stop-distance"]);
+
 export function BlogPage({ categorySlug }: { categorySlug?: string }) {
   const category = blogCategories.find(c => c.slug === categorySlug);
   if (categorySlug && !category) notFound();
@@ -21,7 +23,7 @@ export function BlogPage({ categorySlug }: { categorySlug?: string }) {
 function ArticleFigure({ article, index }: { article: BlogArticle; index: number }) {
   const figure = article.figures[index];
   if (!figure) return null;
-  return <figure className="article-figure"><a href={figurePath(article, index)} target="_blank" rel="noreferrer" aria-label={`放大圖 ${index + 1}：${figure.title}`}><img src={figurePath(article, index)} width="720" height="640" loading="eager" alt={`${figure.title}。${figure.items.map(i => i.label + "：" + i.detail).join("；")}`} /></a><figcaption><strong>圖 {index + 1} · {figure.title}</strong><p>{figure.caption}</p></figcaption></figure>;
+  return <figure className="article-figure"><a href={figurePath(article, index)} target="_blank" rel="noreferrer" aria-label={`放大圖 ${index + 1}：${figure.title}`}><img src={figurePath(article, index)} width="720" height={compactEditorialFigures.has(article.slug) ? 480 : 640} loading="eager" alt={`${figure.title}。${figure.items.map(i => i.label + "：" + i.detail).join("；")}`} /></a><figcaption><div className="article-figure__heading"><strong>圖 {index + 1} · {figure.title}</strong><span>按圖放大 ↗</span></div><p>{figure.caption}</p></figcaption></figure>;
 }
 export function ArticlePage({ slug }: { slug: string }) {
   const article = findArticle(slug);

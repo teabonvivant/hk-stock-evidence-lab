@@ -9,6 +9,10 @@ export function HomeCover() {
         <h1 id="home-title">讀懂價格，也讀懂它的分寸。</h1>
         <p>港股技術指標、圖表教學與研究方法。從基本概念到市場案例，讀懂指標回答甚麼、資料從哪裏來，以及方法有甚麼限制。</p>
       </div>
+      <figure className="research-start__visual">
+        <img src={publicPath("/illustrations/home/research-lab.svg")} width="720" height="260" alt="價格路徑與下方成交量柱共用時間軸，價格在參考區域附近反覆移動；圖形只示範觀察方式，沒有使用市場數據。" />
+        <figcaption>價格位置 × 成交量 <span>觀察示意 · 非市場數據</span></figcaption>
+      </figure>
     </div>
     <nav className="home-pathways" aria-label="選擇閱讀方式">
       <Link href="/learn" className="home-pathway home-pathway--learn">

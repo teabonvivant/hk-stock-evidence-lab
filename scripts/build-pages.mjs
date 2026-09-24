@@ -38,7 +38,7 @@ const manifest = JSON.parse(await readFile(new URL("../dist/server/vinext-preren
 const routes = manifest.routes.filter(route => route.status === "rendered" && route.path).map(route => route.path);
 if (routes.length !== 227) throw new Error(`Expected 227 public routes, exported ${routes.length}. Review the publication audit when adding pages.`);
 const sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-  + routes.map(route => `  <url><loc>${siteUrl}${route === "/" ? "/" : `${route}/`}</loc><lastmod>2026-09-22</lastmod></url>`).join("\n")
+  + routes.map(route => `  <url><loc>${siteUrl}${route === "/" ? "/" : `${route}/`}</loc><lastmod>2026-09-24</lastmod></url>`).join("\n")
   + "\n</urlset>\n";
 await writeFile(new URL("../dist/client/sitemap.xml", import.meta.url), sitemap);
 await writeFile(new URL("../dist/client/robots.txt", import.meta.url), `User-agent: *\nAllow: ${basePath}/\n\nUser-agent: GPTBot\nDisallow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`);
