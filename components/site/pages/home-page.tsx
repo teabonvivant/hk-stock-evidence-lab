@@ -2,19 +2,24 @@ import { siteConfig } from "@/lib/site-config";
 import Link from "@/components/site/site-link";
 import { JsonLd } from "@/components/site/json-ld";
 import { Section } from "@/components/site/page-shell";
-import { articles, articleSummary, blogCategories } from "@/lib/blog";
+import { articles, articleSummary } from "@/lib/blog";
 import { ArticleCard } from "@/components/site/article-card";
 import { IndicatorCard } from "@/components/site/indicator-card";
 import { findIndicator } from "@/lib/site-data";
 import { HomeCover } from "@/components/site/home-cover";
 export function HomePage() {
- const selected = [1,8,35,48,68,90].flatMap(id => { const a = articles.find(x => x.id === id); return a ? [a] : []; });
+ const selected = [1,8,35,48].flatMap(id => { const a = articles.find(x => x.id === id); return a ? [a] : []; });
  return <div className="home-journal">
   <JsonLd data={{"@context":"https://schema.org","@type":"WebSite",name:"港股證據研究室",url:siteConfig.url+"/",inLanguage:"zh-Hant-HK"}} />
   <HomeCover />
-  <nav className="home-topic-band" aria-label="主題入口">{blogCategories.map(c => <Link key={c.slug} href={`/blog/category/${c.slug}`}><strong>{c.name}<span>{articles.filter(a => a.category === c.name).length}</span></strong><span>{c.description}</span></Link>)}</nav>
   <Section className="home-reading" title="從一個具體問題開始" body="每篇文章附上圖解、例子及參考資料。">
-   <div className="article-list home-articles">{selected.map(a => <ArticleCard key={a.slug} article={articleSummary(a)} heading="h3" />)}</div>
+   <div className="home-featured-reading">
+    {selected[0] && <div className="home-featured-primary"><ArticleCard article={articleSummary(selected[0])} heading="h3" /></div>}
+    <aside className="home-featured-related" aria-label="更多精選研究">
+     <h3>繼續閱讀</h3>
+     <ul className="home-quick-reads">{selected.slice(1).map(a => <li key={a.slug}><Link className="home-quick-read" href={`/blog/${a.slug}`}><span>{a.category}</span><strong>{a.title}</strong></Link></li>)}</ul>
+    </aside>
+   </div>
    <Link className="text-link section-end-link" href="/blog">瀏覽全部 {articles.length} 篇研究札記 →</Link>
   </Section>
   <Section className="home-foundations" title="把基礎放穩" body="價格位置、趨勢、動能、成交量和波幅，各自回答不同的問題。">

@@ -10,11 +10,11 @@ import { siteConfig } from "@/lib/site-config";
 export function BlogPage({ categorySlug }: { categorySlug?: string }) {
   const category = blogCategories.find(c => c.slug === categorySlug);
   if (categorySlug && !category) notFound();
+  const shownArticles = category ? articles.filter(article => article.category === category.name).length : articles.length;
   return <div className="editorial-index">
     <nav className="breadcrumbs" aria-label="頁面路徑"><Link href="/">首頁</Link><span>/</span>{category ? <><Link href="/blog">研究札記</Link><span>/</span><span>{category.name}</span></> : <span>研究札記</span>}</nav>
-    <header className="editorial-heading"><h1>{category?.name ?? "研究札記"}</h1><p>{category?.description ?? "在價格的起落之間，練習把問題問得更準。從第一張圖表，到一段可以重現的程式，逐篇讀懂市場、方法與取捨。"}</p><span>{articles.length} 篇文章 · 5 個主題 · 每篇附圖解</span></header>
-    <nav className="topic-links" aria-label="博客分類">{blogCategories.map(c => <Link key={c.slug} href={`/blog/category/${c.slug}`} aria-current={category?.slug === c.slug ? "page" : undefined}>{c.name}<span>{articles.filter(a => a.category === c.name).length}</span></Link>)}</nav>
-    <BlogIndex key={categorySlug ?? "all"} items={articles.map(articleSummary)} categories={blogCategories.map(c => c.name)} initialCategory={category?.name ?? "全部"} />
+    <header className="editorial-heading"><h1>{category?.name ?? "研究札記"}</h1><p>{category?.description ?? "在價格的起落之間，練習把問題問得更準。從第一張圖表，到一段可以重現的程式，逐篇讀懂市場、方法與取捨。"}</p><span>{shownArticles} 篇文章 · 每篇附圖解</span></header>
+    <BlogIndex key={categorySlug ?? "all"} items={articles.map(articleSummary)} categories={blogCategories.map(c => ({ name: c.name, slug: c.slug, count: articles.filter(a => a.category === c.name).length }))} initialCategory={category?.name ?? "全部"} />
   </div>;
 }
 

@@ -1,35 +1,21 @@
 import Link from "@/components/site/site-link";
-import { ArrowRight } from "lucide-react";
-
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowUpRight } from "lucide-react";
 import type { IndicatorSummary } from "@/lib/site-data";
 
 export function IndicatorCard({ item }: { readonly item: IndicatorSummary }) {
   return (
-    <Card className="indicator-card h-full">
-      <CardHeader>
-        <CardTitle><Link href={`/indicators/${item.siteSlug}`}>{item.nameZh}</Link></CardTitle>
-        <div className="indicator-card__meta flex flex-wrap items-center gap-2">
-          <Badge variant={item.core ? "good" : "default"}>{item.difficulty}</Badge>
-          <Badge variant="info">{item.category}</Badge>
-        </div>
-        <CardDescription>
-          {item.nameEn} · {item.abbr}
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="grid gap-4">
-        <p className="text-sm leading-6 text-[var(--muted)]">{item.summary}</p>
-        <div className="flex flex-wrap gap-2">
-          {item.uses.map((use) => (
-            <Badge key={use}>{use}</Badge>
-          ))}
-        </div>
-        <Link href={`/indicators/${item.siteSlug}`} className="inline-flex items-center gap-2 text-sm font-bold text-[var(--primary-strong)]">
-          查看用法、公式及失效條件
-          <ArrowRight className="size-4" aria-hidden="true" />
-        </Link>
-      </CardContent>
-    </Card>
+    <article className="indicator-card">
+      <div className="indicator-card__heading">
+        <h3><Link href={`/indicators/${item.siteSlug}`}>{item.nameZh}</Link></h3>
+        <ArrowUpRight size={18} aria-hidden="true" />
+      </div>
+      <p className="indicator-card__english">{item.nameEn} · {item.abbr}</p>
+      <p className="indicator-card__summary">{item.summary}</p>
+      <div className="indicator-card__footer">
+        <span>{item.difficulty}</span>
+        <span>{item.category}</span>
+        <span className="indicator-card__uses">{item.uses.join(" · ")}</span>
+      </div>
+    </article>
   );
 }

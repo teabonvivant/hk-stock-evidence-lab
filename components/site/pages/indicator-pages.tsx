@@ -7,7 +7,7 @@ import { categoryCounts, findIndicator, indicatorSummaries } from "@/lib/site-da
 export function IndicatorsPage() {
   return (
     <div>
-      <header className="editorial-heading library-heading"><h1>指標百科</h1><p>先決定要回答甚麼，再選指標。由價格位置、成交確認、趨勢方向、動能強弱和風險幅度五個問題入手。</p><span>82 個技術指標 · 公式、用途與失效條件</span></header>
+      <header className="editorial-heading library-heading"><h1>指標百科</h1><p>先問價格位置、趨勢、動能、成交或風險，再按用途查找指標。</p><span>82 個技術指標 · 公式、用途與失效條件</span></header>
       <IndicatorLibrary items={indicatorSummaries} categories={categoryCounts().map((item) => item.name)} />
       <Section title="從五個問題開始" body="以下五個指標各負責一項工作。完成後，再按自己的分析需要延伸。">
         <ol className="grid gap-3 md:grid-cols-2 xl:grid-cols-5">

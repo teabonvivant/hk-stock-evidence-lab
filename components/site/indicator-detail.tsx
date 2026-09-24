@@ -58,8 +58,6 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
       </section>
 
 
-      <IndicatorBeginnerGuide item={item} />
-
       <Section id="chart" title="圖解與判讀">
         {["trendline","fibonacci-retracement","support-resistance"].includes(item.siteSlug) ? <IndicatorMethodDiagram slug={item.siteSlug} /> : learning && chartCase ? (
           <IndicatorTeachingChart slug={item.siteSlug} caseKey={chartCase} chartLead={learning.chartLead} />
@@ -67,6 +65,8 @@ export function IndicatorDetail({ item }: { readonly item: Indicator }) {
           <figure className="article-figure"><a href={publicPath(`/illustrations/indicators/${item.siteSlug}.svg`)} target="_blank" rel="noreferrer"><img src={publicPath(`/illustrations/indicators/${item.siteSlug}.svg`)} width="720" height="800" loading="eager" alt={`${item.nameZh}判讀流程：${beginnerGuide.flow.map(s=>s.title).join("、")}`} /></a><figcaption>{beginnerGuide.flowLead}</figcaption></figure>
         )}
       </Section>
+
+      <IndicatorBeginnerGuide item={item} />
 
       <Section id="signals" title="訊號、誤用與限制">
         <div className="learning-orientation mb-5" aria-label="指標閱讀重點">

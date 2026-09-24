@@ -3,17 +3,29 @@ import Link from "@/components/site/site-link";
 import { Search, ArrowRight } from "lucide-react";
 
 export function HomeCover() {
-  return <section className="research-start">
+  return <section className="research-start" aria-labelledby="home-title">
     <div className="research-start__intro">
-      <div><h1>讀懂價格，也讀懂它的分寸。</h1><p>一條線，一次突破，一份漂亮的回測，都值得多問一句。從圖表、公式到市場機制，整理可以查證的知識，讓每個判斷都有來處。</p></div>
-      <Link href="/learn" className="start-learning"><strong>第一次接觸技術分析？</strong><span>從基礎開始，逐步建立判讀方法<ArrowRight size={18} aria-hidden="true" /></span></Link>
+      <div className="research-start__copy">
+        <h1 id="home-title">讀懂價格，也讀懂它的分寸。</h1>
+        <p>港股技術指標、圖表教學與研究方法。從基本概念到市場案例，讀懂指標回答甚麼、資料從哪裏來，以及方法有甚麼限制。</p>
+      </div>
     </div>
-    <form action={publicPath("/indicators/")} className="home-search" role="search">
-      <label htmlFor="home-indicator-search" className="sr-only">搜尋技術指標</label>
-      <Search size={21} aria-hidden="true" />
-      <input id="home-indicator-search" name="q" type="search" placeholder="搜尋指標、名稱或用途，例如 RSI、保歷加通道、成交量…" />
-      <button type="submit">搜尋指標<ArrowRight size={17} aria-hidden="true" /></button>
+    <nav className="home-pathways" aria-label="選擇閱讀方式">
+      <Link href="/learn" className="home-pathway home-pathway--learn">
+        <strong>開始學習</strong><span>由價格、圖表和基本概念入手</span><ArrowRight size={18} aria-hidden="true" />
+      </Link>
+      <Link href="/indicators" className="home-pathway home-pathway--find">
+        <strong>查找指標</strong><span>搜尋用法、公式和適用範圍</span><ArrowRight size={18} aria-hidden="true" />
+      </Link>
+      <Link href="/blog" className="home-pathway home-pathway--read">
+        <strong>閱讀研究</strong><span>從圖解和例子理解具體問題</span><ArrowRight size={18} aria-hidden="true" />
+      </Link>
+    </nav>
+    <form action={publicPath("/indicators/")} className="home-search" role="search" aria-label="搜尋技術指標">
+      <Search size={20} aria-hidden="true" />
+      <label htmlFor="home-indicator-search" className="home-search__label">直接搜尋指標</label>
+      <input id="home-indicator-search" name="q" type="search" autoComplete="off" placeholder="輸入名稱或用途，例如 RSI、成交量…" />
+      <button type="submit">搜尋<ArrowRight size={17} aria-hidden="true" /></button>
     </form>
-    <div className="home-search__shortcuts"><span>常用指標</span>{[["rsi","RSI"],["macd","MACD"],["bollinger-bands","保歷加通道"],["volume","成交量"],["atr","ATR"]].map(([slug,label]) => <Link href={`/indicators/${slug}`} key={slug}>{label}</Link>)}<Link href="/indicators" className="all-indicators">全部 82 個指標 →</Link></div>
   </section>;
 }

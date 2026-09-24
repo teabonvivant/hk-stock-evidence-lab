@@ -5,11 +5,33 @@ import type { PositionInputs } from "@/lib/risk-math";
 const money = (n:number) => n.toLocaleString("zh-HK",{minimumFractionDigits:2, maximumFractionDigits:2});
 export function RiskCalculator() {
   const [values,setValues] = useState<Record<keyof PositionInputs,string>>({capital:"100000",riskPercent:"1",entry:"100",stop:"95",target:"110",lot:"100",fees:"100",slippage:"0.2"});
+  const [hasEdited,setHasEdited] = useState(false);
   const result = positionSize(Object.fromEntries(Object.entries(values).map(([k,v])=>[k,v.trim() === "" ? NaN : Number(v)])) as PositionInputs);
   const [drawdown,setDrawdown]=useState("20");
+  const [hasEditedDrawdown,setHasEditedDrawdown]=useState(false);
   const recovery=drawdown.trim() === "" ? null : recoveryPercent(Number(drawdown));
   const fields: [keyof PositionInputs,string,string][] = [["capital","可用資金（港元）","1"],["riskPercent","單筆風險預算（%）","0.1"],["entry","買入價（港元）","0.01"],["stop","止蝕參考價（港元）","0.01"],["target","目標參考價（港元）","0.01"],["lot","每手股數","1"],["fees","估計來回費用（港元）","1"],["slippage","來回滑價預留（每股港元）","0.01"]];
-  return <div><div className="calculator-grid"><div className="tool-fields">{fields.map(([key,label,step])=><label key={key} htmlFor={key}>{label}<input id={key} type="number" min="0" step={step} value={values[key]} onChange={e=>setValues({...values,[key]:e.target.value})}/></label>)}</div><div className="calculation-result" aria-live="polite">{result ? <><h3>按輸入條件計算</h3><strong>{result.shares.toLocaleString("zh-HK")} 股</strong><p>{result.lots} 手 · 持倉金額 HK$ {money(result.amount)}</p><dl><div><dt>風險預算</dt><dd>HK$ {money(result.budget)}</dd></div><div><dt>計劃虧損連預留成本</dt><dd>HK$ {money(result.loss)}</dd></div><div><dt>目標淨收益算例</dt><dd>HK$ {money(result.profit)}</dd></div><div><dt>淨回報／風險</dt><dd>{result.ratio === null ? "不適用" : result.ratio.toFixed(2) + " 倍"}</dd></div></dl>{result.shares === 0 ? <p>現有預算不足一手；可修改輸入重新計算。</p> : null}</> : <p role="alert">請輸入有效數字：止蝕價須低於買入價、目標價須高於買入價；每手股數為正整數，風險比例介乎 0 至 100%。</p>}</div></div><p className="tool-caption">適用於不借貸的現金買入算例。股數同時受風險預算和可用資金限制，並向下取整至一手。費用為自行填寫的來回總額，並非券商報價。裂口或流動性不足可令實際虧損超出計劃。</p><details className="formula-explanation"><summary>查看計算方法</summary><p>可承受股數 =（風險預算 − 來回費用）÷（買入價 − 止蝕價 + 每股來回滑價）。再與現金可買股數比較，採用較低者並向下取整至一手。</p><p>目標淨收益 = 股數 ×（目標價 − 買入價 − 每股來回滑價）− 來回費用。</p></details><div className="drawdown-tool"><h3>回撤後，需要升多少才回到原點？</h3><label htmlFor="drawdown">回撤幅度（%）<input id="drawdown" type="number" min="0" max="99.99" step="1" value={drawdown} onChange={e=>setDrawdown(e.target.value)}/></label><output>{recovery === null ? "請輸入 0 至低於 100 的數字。" : `回到原值需要上升 ${money(recovery)}%`}</output><p>算式：回撤幅度 ÷（100 − 回撤幅度）× 100。20% 的回撤，需要 25% 的升幅修復。</p></div></div>;
+  return <div>
+    <div className="calculator-grid">
+      <div className="tool-fields">
+        <p className="calculator-state">{hasEdited ? "已修改輸入；未修改欄位仍沿用示範數值。" : "以下為示範數值，可直接修改。"}</p>
+        {fields.map(([key,label,step])=><label key={key} htmlFor={key}>{label}<input id={key} name={key} autoComplete="off" type="number" min="0" step={step} value={values[key]} onChange={e=>{setValues({...values,[key]:e.target.value});setHasEdited(true);}}/></label>)}
+      </div>
+      <div className="calculation-result" aria-live="polite">
+        <p className="calculator-state">{hasEdited ? "按目前輸入計算（未修改欄位沿用示範數值）" : "示範數值計算"}</p>
+        {result ? <><h3>{hasEdited ? "按目前條件計算" : "按示範條件計算"}</h3><strong>{result.shares.toLocaleString("zh-HK")} 股</strong><p>{result.lots} 手 · 持倉金額 HK$ {money(result.amount)}</p><dl><div><dt>風險預算</dt><dd>HK$ {money(result.budget)}</dd></div><div><dt>計劃虧損連預留成本</dt><dd>HK$ {money(result.loss)}</dd></div><div><dt>目標淨收益估算</dt><dd>HK$ {money(result.profit)}</dd></div><div><dt>淨回報／風險</dt><dd>{result.ratio === null ? "不適用" : result.ratio.toFixed(2) + " 倍"}</dd></div></dl>{result.shares === 0 ? <p>現有預算不足一手；可修改輸入重新計算。</p> : null}</> : <p role="alert">請輸入有效數字：止蝕價須低於買入價、目標價須高於買入價；每手股數為正整數，風險比例介乎 0 至 100%。</p>}
+      </div>
+    </div>
+    <p className="tool-caption">適用於不借貸的現金買入算例。股數同時受風險預算和可用資金限制，並向下取整至一手。費用為自行填寫的來回總額，並非券商報價。裂口或流動性不足可令實際虧損超出計劃。</p>
+    <details className="formula-explanation"><summary>查看計算方法</summary><p>可承受股數 =（風險預算 − 來回費用）÷（買入價 − 止蝕價 + 每股來回滑價）。再與現金可買股數比較，採用較低者並向下取整至一手。</p><p>目標淨收益 = 股數 ×（目標價 − 買入價 − 每股來回滑價）− 來回費用。</p></details>
+    <div className="drawdown-tool">
+      <h3>回撤後，需要升多少才回到原點？</h3>
+      <label htmlFor="drawdown">回撤幅度（%）<input id="drawdown" name="drawdown" autoComplete="off" type="number" min="0" max="99.99" step="1" value={drawdown} onChange={e=>{setDrawdown(e.target.value);setHasEditedDrawdown(true);}}/></label>
+      <p className="calculator-state">{hasEditedDrawdown ? "按你輸入的回撤幅度計算。" : "示範數值：20%。"}</p>
+      <output>{recovery === null ? "請輸入 0 至低於 100 的數字。" : `回到原值需要上升 ${money(recovery)}%`}</output>
+      <p>算式：回撤幅度 ÷（100 − 回撤幅度）× 100。20% 的回撤，需要 25% 的升幅修復。</p>
+    </div>
+  </div>;
 }
 function download(name:string,text:string) {
   const url=URL.createObjectURL(new Blob([text],{type:"text/plain;charset=utf-8"}));
