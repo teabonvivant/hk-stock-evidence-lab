@@ -1,10 +1,10 @@
 /* Indicator pages put the teaching figure first and keep evidence blocks quiet. */
 .indicator-card {
   padding-block: 23px 25px;
-  transition: border-color .16s ease, background-color .16s ease;
+  transition: border-color var(--motion-feedback) ease-out, background-color var(--motion-feedback) ease-out;
 }
 .indicator-card:hover,
-.indicator-card:focus-within { border-color: #aebfcf; background: linear-gradient(90deg, #f7fafc, #fff 74%); }
+.indicator-card:focus-within { border-color: #aebfcf; background: #f7fafc; }
 .indicator-card__heading { gap: 18px; }
 .indicator-card h3 { font-size: 21px; letter-spacing: -.012em; }
 .indicator-card__english { margin-bottom: 9px; }
@@ -89,7 +89,9 @@
 }
 .indicator-detail-page .detail-nav a:focus-visible { outline: 2px solid var(--focus); outline-offset: -3px; box-shadow: none; }
 .indicator-detail-page > #chart { margin-top: 42px; }
-.indicator-detail-page .lab-section { max-width: 1120px; }
+.indicator-detail-page .lab-section { max-width: 1120px; margin-top: 52px; }
+.indicator-detail-page .lab-section p,
+.indicator-detail-page .lab-section li { line-height: 1.85; }
 .indicator-detail-page .lab-section__heading { margin-bottom: 22px; }
 .indicator-detail-page .lab-section__heading h2 { font-size: 25px; }
 .indicator-detail-page .article-figure { max-width: 980px; margin-top: 0; }
@@ -105,7 +107,7 @@
 }
 .indicator-detail-page .learning-orientation > div {
   display: block;
-  padding: 21px 23px 23px;
+  padding: 24px 26px 26px;
 }
 .indicator-detail-page .learning-orientation > div + div { border-top: 0; border-left: 1px solid var(--line); }
 .indicator-detail-page .learning-orientation > div[data-tone="warn"] {
@@ -116,18 +118,18 @@
 .indicator-detail-page .scenario-block h3 {
   margin: 0 0 10px;
   color: var(--ink);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
 }
 .indicator-detail-page .learning-orientation p,
-.indicator-detail-page .scenario-block p { color: var(--muted); font-size: 15px; line-height: 1.75; }
-.indicator-detail-page .scenario-grid { gap: 16px; }
+.indicator-detail-page .scenario-block p { color: var(--muted); font-size: 16px; line-height: 1.85; }
+.indicator-detail-page .scenario-grid { gap: 20px; }
 .indicator-detail-page .scenario-block {
   border-color: var(--line);
   border-radius: 10px;
   background: #fff;
-  padding: 20px 22px;
+  padding: 24px;
 }
 .indicator-detail-page .scenario-block.is-good { border-top: 3px solid #548e86; }
 .indicator-detail-page .scenario-block.is-bad { border-top: 3px solid #ad7772; }
@@ -146,7 +148,7 @@
 
 @media (max-width: 900px) {
   .indicator-detail-page .learning-orientation { grid-template-columns: 1fr; }
-  .indicator-detail-page .learning-orientation > div { padding: 16px 18px; }
+  .indicator-detail-page .learning-orientation > div { padding: 20px; }
   .indicator-detail-page .learning-orientation > div + div { border-left: 0; border-top: 1px solid var(--line); }
   .indicator-detail-page .scenario-grid { grid-template-columns: 1fr; }
 }
@@ -158,13 +160,14 @@
   .indicator-kicker { font-size: 12px; gap: 5px 16px; }
   .indicator-kicker span + span::before { left: -9px; }
   .indicator-detail-page .hero-title { font-size: 29px; line-height: 1.32; }
-  .indicator-detail-page .hero-copy { font-size: 15px; line-height: 1.75; }
+  .indicator-detail-page .hero-copy { font-size: 16px; line-height: 1.85; }
   .indicator-detail-page .detail-nav { flex-wrap: wrap; overflow: visible; column-gap: 4px; }
   .indicator-detail-page .detail-nav a { min-height: 44px; padding: 9px 10px; font-size: 13px; }
   .indicator-detail-page > #chart { margin-top: 30px; }
+  .indicator-detail-page .lab-section { margin-top: 40px; }
   .indicator-detail-page .lab-section__heading { margin-bottom: 16px; }
   .indicator-detail-page .lab-section__heading h2 { font-size: 22px; }
-  .indicator-detail-page .scenario-block { padding: 16px 18px; }
+  .indicator-detail-page .scenario-block { padding: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

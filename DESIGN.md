@@ -313,6 +313,14 @@ The page is bounded at 960px, with policy sections bounded at 760px. White frame
 
 Print removes the site navigation, footer, article contents, search controls and pagination while preserving reading content and figures. Print prose uses 12pt.
 
+### Reading Motion And Comfort
+
+Motion answers an action; article text and teaching figures are visible immediately. The navigation menu opens over 180ms with a 4px upward starting offset and an exponential ease-out. Disclosure contents and the reading contents list use a short 160ms opacity change from .9 to 1. Controls use 140ms color feedback, and disclosure arrows rotate over 180ms. Do not add staggered reading entrances, automatic carousels or diagram zoom on hover.
+
+On long reading, indicator and method pages, a two-pixel blue line below the masthead shows the position within the page. It uses a CSS root scroll timeline and transform only, inside a feature query. Unsupported browsers retain the ordinary masthead; reduced-motion readers receive the static interface without the line or entrance effects. No JavaScript scroll listener or additional motion dependency is required.
+
+Indicator explanations and scenario text use 16px/1.85, including the mobile introduction. Wide indicator sections have 52px separation, reducing to 40px on mobile; the first teaching figure retains its tighter relationship to the introduction. Orientation and scenario blocks use 20–26px internal spacing. Diagram previews stay at their original scale; an underlined title identifies the link on hover or keyboard focus.
+
 ## Do's and Don'ts
 
 ### Do:

@@ -133,8 +133,10 @@
   .home-pathway, .home-pathway svg { transition: none; }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .research-card__image .article-preview--cover { transition: transform .28s ease-out; }
-  .research-card:hover .article-preview--cover,
-  .research-card:focus-within .article-preview--cover { transform: scale(1.025); }
+/* Keep teaching diagrams still and make the reading destination clear. */
+.research-card:hover :is(h2, h3),
+.research-card:focus-within :is(h2, h3) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
 }
